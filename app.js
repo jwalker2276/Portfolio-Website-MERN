@@ -1,37 +1,26 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const routes = require('./routes/index');
+const passport = require('passport');
 
-// Route Files
-const projects = require('./routes/api/projects');
-const profile = require('./routes/api/profile');
-
-// Start express
+// Express
 const app = express();
 
-// Database Config
-const db = require('./config/keys').mongoURI;
+//* Middleware ********************************************
 
-// Database Connection
-mongoose
-  .connect(db, {
-    useNewUrlParser: true
-  })
-  .then(() => console.log("MongoDB Connected Successfully"))
-  .catch(error => console.log(error));
+// Take requests and turn them into properites on req.body
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-//* Routes
+//Passport
+app.use(passport.initialize());
 
-// Home
-app.get('/', (req, res) => res.send('Hello World!!!'));
+// Load passport config
+require('./config/passport')(passport);
 
-// Project Routes
-app.use('/api/projects', projects);
+//* Routes ************************************************
+app.use('/', routes);
 
-// Profile Routes
-app.use('/api/profile', profile);
-
-// Port
-const port = process.env.PORT || 5000;
-
-// Listen for connection
-app.listen(port, () => console.log(`Server running on port ${port}`)); // port, callback
+// Done
+module.exports = app;

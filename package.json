@@ -1,11 +1,10 @@
 {
   "name": "portfolio-website-mern",
   "version": "0.1.0",
-  "description": "My portfolio website built on the MERN stack.",
-  "main": "app.js",
+  "description": "My portfolio built on the MERN stack.",
+  "main": "start.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "server": "nodemon app.js"
+    "start": "nodemon start.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.3.1",
