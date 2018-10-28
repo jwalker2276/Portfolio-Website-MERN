@@ -80,9 +80,9 @@ exports.setProfile = (req, res) => {
         { user: req.user.id },
         { $set: profileFields },
         { new: true }
-      ).then(profile =>
-        res.json(profile).catch((error = res.status(400).json(error)))
-      );
+      )
+        .then(profile => res.json(profile))
+        .catch(error => res.status(400).json(error));
     } else {
       console.log('Creating new profile');
       // Save profile

@@ -7,7 +7,7 @@ require('dotenv').config({ path: 'variables.env' });
 mongoose
   .connect(
     process.env.DATABASE,
-    { useNewUrlParser: true }
+    { useNewUrlParser: true, useFindAndModify: false }
   )
   .then(() => console.log('Connected to database'))
   .catch(error => console.error(error));
