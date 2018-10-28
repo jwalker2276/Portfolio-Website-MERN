@@ -5,7 +5,10 @@ const Profile = require('../models/Profile');
 // @desc get profile data
 // @access Public
 exports.getProfile = (req, res) => {
-  res.send('profile info');
+  // Get the profile
+  Profile.findOne()
+    .then(profile => res.json(profile))
+    .catch(() => console.log('Error with profile look up'));
 };
 
 // Middleware to validate data before updating or setting

@@ -6,8 +6,6 @@ const passport = require('passport');
 const profileController = require('../controllers/profileController');
 const userController = require('../controllers/userController');
 
-//* Main page routes
-
 //* Profile routes
 
 // Get profile data
