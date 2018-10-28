@@ -1,5 +1,5 @@
 const JwtStrategy = require('passport-jwt').Strategy;
-const ExtractJwt = require('passport-jwt').ExtractJwt;
+const { ExtractJwt } = require('passport-jwt');
 
 // Load User model
 const User = require('../models/User');
@@ -10,9 +10,9 @@ options.secretOrKey = process.env.SECRETORKEY;
 
 module.exports = passport => {
   passport.use(
-    new JwtStrategy(options, (jwt_payload, done) => {
+    new JwtStrategy(options, (jwtPayload, done) => {
       // Check for user
-      User.findById(jwt_payload.id)
+      User.findById(jwtPayload.id)
         .then(user => {
           if (user) {
             // Found the user, move on to route

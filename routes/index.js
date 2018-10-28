@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 const passport = require('passport');
 
 // Load controllers
@@ -25,11 +23,12 @@ router.post(
 //* User routes
 
 // Register a new admin after validating data
-router.post('/register', userController.validateRegister, userController.register);
+router.post(
+  '/register',
+  userController.validateRegister,
+  userController.register
+);
 // Login in admin after validating data
 router.post('/login', userController.validateLogin, userController.login);
-
-//! Remove this test route
-router.get('/userinfo', passport.authenticate('jwt', { session: false }), userController.userinfo);
 
 module.exports = router;

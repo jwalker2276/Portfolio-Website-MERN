@@ -1,5 +1,3 @@
-const Validator = require('validator');
-
 // Load model
 const Profile = require('../models/Profile');
 
@@ -15,14 +13,17 @@ exports.checkProfileData = (req, res, next) => {
   const errors = {};
   let hasErrors = false;
 
+  const keys = Object.keys(req.body);
+  const values = Object.values(req.body);
+
   // Check for undefined or empty values.
-  for (const key in req.body) {
-    // Check if value is undefined or empty
-    if (req.body[key] === undefined || req.body[key] === '') {
-      errors[key] = `${key} was left blank`;
+  values.forEach((value, index) => {
+    if (value === undefined || value === '') {
+      // Found error, add to errors object with message.
+      errors[keys[index]] = `${keys[index]} was left blank!`;
       hasErrors = true;
     }
-  }
+  });
 
   if (hasErrors) {
     // Check for any problems before moving on.
@@ -81,14 +82,13 @@ exports.setProfile = (req, res) => {
         { $set: profileFields },
         { new: true }
       )
-        .then(profile => res.json(profile))
+        .then(() => res.json(profile))
         .catch(error => res.status(400).json(error));
     } else {
-      console.log('Creating new profile');
       // Save profile
       new Profile(profileFields)
         .save()
-        .then(profile => res.json(profile))
+        .then(() => res.json(profile))
         .catch(error => res.status(400).json(error));
     }
   });

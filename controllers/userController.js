@@ -9,9 +9,7 @@ const User = require('../models/User');
 exports.validateRegister = (req, res, next) => {
   const errors = {};
 
-  const email = req.body.email;
-  const username = req.body.username;
-  const password = req.body.password;
+  const { email, username, password } = req.body;
 
   if (!Validator.isEmail(email)) {
     errors.email = 'Email is invalid';
@@ -29,24 +27,27 @@ exports.validateRegister = (req, res, next) => {
     errors.password = 'Password is required';
   }
 
-  if (!Validator.isLength(password, { min: 10, max: undefined })) {
+  if (
+    !Validator.isLength(password, {
+      min: 10,
+      max: undefined
+    })
+  ) {
     errors.password = 'Password must be at least 10 characters';
   }
 
   // Check for any errors
   if (Object.keys(errors).length !== 0) {
     return res.status(400).json(errors);
-  } else {
-    next(); // No errors move to registering user.
   }
+  next(); // No errors move to registering user.
 };
 
 // Middleware to validate data before login
 exports.validateLogin = (req, res, next) => {
   const errors = {};
 
-  const username = req.body.username;
-  const password = req.body.password;
+  const { username, password } = req.body;
 
   if (Validator.isEmpty(username)) {
     errors.username = 'Username is required';
@@ -59,9 +60,10 @@ exports.validateLogin = (req, res, next) => {
   // Check for any errors
   if (Object.keys(errors).length !== 0) {
     return res.status(400).json(errors);
-  } else {
-    next(); // No errors move to login user.
   }
+
+  // No errors move to login user.
+  next();
 };
 
 // @route POST /register
@@ -72,30 +74,32 @@ exports.register = (req, res) => {
   User.findOne({ role: req.body.role }).then(isAdmin => {
     // Check if admin exist
     if (isAdmin) {
-      return res.status(400).json({ error: 'No more users are allowed at this time.' });
-    } else {
-      // Create admin
-      const newAdmin = new User({
-        username: req.body.username,
-        password: req.body.password,
-        email: req.body.email,
-        role: req.body.role
-      });
-
-      // Encrypt password
-      bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newAdmin.password, salt, (err, hash) => {
-          if (err) throw err;
-          // Replace password with hash
-          newAdmin.password = hash;
-          // Save to db
-          newAdmin
-            .save()
-            .then(user => res.json({ message: 'New admin was added successfully' }))
-            .catch(err => console.log(err));
-        });
-      });
+      return res
+        .status(400)
+        .json({ error: 'No more users are allowed at this time.' });
     }
+    // Create admin
+    const newAdmin = new User({
+      username: req.body.username,
+      password: req.body.password,
+      email: req.body.email,
+      role: req.body.role
+    });
+
+    // Encrypt password
+    bcrypt.genSalt(10, (genErr, salt) => {
+      bcrypt.hash(newAdmin.password, salt, (hashErr, hash) => {
+        if (genErr) throw genErr;
+        if (hashErr) throw hashErr;
+        // Replace password with hash
+        newAdmin.password = hash;
+        // Save to db
+        newAdmin
+          .save()
+          .then(() => res.json({ message: 'New admin was added successfully' }))
+          .catch(err => console.log(err));
+      });
+    });
   });
 };
 
@@ -103,11 +107,10 @@ exports.register = (req, res) => {
 // @desc login user to make changes
 // @access Public
 exports.login = (req, res) => {
-  const username = req.body.username;
-  const password = req.body.password;
+  const { username, password } = req.body;
 
   // Query db and check to see if an admin has registered
-  User.findOne({ username: username }).then(user => {
+  User.findOne({ username }).then(user => {
     // Check for a user
     if (!user) {
       return res.status(400).json({ error: 'User does not exist' });
@@ -126,12 +129,17 @@ exports.login = (req, res) => {
           };
 
           // Sign token
-          jwt.sign(payload, process.env.SECRETORKEY, { expiresIn: 3600 }, (err, token) => {
-            res.json({
-              success: true,
-              token: 'Bearer ' + token
-            });
-          });
+          jwt.sign(
+            payload,
+            process.env.SECRETORKEY,
+            { expiresIn: 3600 },
+            (err, token) => {
+              res.json({
+                success: true,
+                token: `Bearer ${token}`
+              });
+            }
+          );
         } else {
           return res.status(400).json({ error: 'Password is incorrect' });
         }
@@ -139,14 +147,5 @@ exports.login = (req, res) => {
     } else {
       return res.status(401).json({ error: 'Access denied' });
     }
-  });
-};
-
-//! Delete this
-exports.userinfo = (req, res) => {
-  res.json({
-    id: req.user.id,
-    user: req.user.username,
-    role: req.user.role
   });
 };
