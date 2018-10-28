@@ -5,6 +5,7 @@ const passport = require('passport');
 // Load controllers
 const profileController = require('../controllers/profileController');
 const userController = require('../controllers/userController');
+const projectController = require('../controllers/projectController');
 
 //* Profile routes
 
@@ -28,5 +29,21 @@ router.post(
 );
 // Login in admin after validating data
 router.post('/login', userController.validateLogin, userController.login);
+
+//* Project routes
+
+// Get all projects
+router.get('/project/all', projectController.getProjects);
+
+// Get a single project
+router.get('/project/:project_id', projectController.getProject);
+
+// Set up a new project
+router.post(
+  '/project',
+  passport.authenticate('jwt', { session: false }),
+  projectController.checkProjectData,
+  projectController.setProject
+);
 
 module.exports = router;
