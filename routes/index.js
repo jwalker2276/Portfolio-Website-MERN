@@ -8,12 +8,21 @@ const passport = require('passport');
 const profileController = require('../controllers/profileController');
 const userController = require('../controllers/userController');
 
-//* Routes
+//* Main page routes
 
-// Main route to get data for home page
-router.get('/', profileController.homePage);
+//* Profile routes
 
-// User routes
+// Get profile data
+router.get('/profile', profileController.getProfile);
+// Set profile data
+router.post(
+  '/profile',
+  passport.authenticate('jwt', { session: false }),
+  profileController.checkProfileData,
+  profileController.setProfile
+);
+
+//* User routes
 
 // Register a new admin after validating data
 router.post('/register', userController.validateRegister, userController.register);

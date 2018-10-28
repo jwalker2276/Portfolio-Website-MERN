@@ -1,5 +1,3 @@
-const express = require('express');
-const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Validator = require('validator');
@@ -144,6 +142,7 @@ exports.login = (req, res) => {
   });
 };
 
+//! Delete this
 exports.userinfo = (req, res) => {
   res.json({
     id: req.user.id,
