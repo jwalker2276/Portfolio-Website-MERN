@@ -1,14 +1,25 @@
 // Load model
 const Project = require('../models/Project');
 
+// Return all projects
 exports.getProjects = (req, res) => {
-  res.json('returning all projects');
+  Project.find()
+    .then(projects => {
+      if (projects.length !== 0) {
+        res.json(projects);
+      } else {
+        res.json({ message: 'No projects are listed' });
+      }
+    })
+    .catch(error => res.status(404).json(error));
 };
 
+// Return a specific project
 exports.getProject = (req, res) => {
   res.json('getting a single project');
 };
 
+// Middleware to validate data
 exports.checkProjectData = (req, res, next) => {
   const errors = {};
   let hasErrors = false;
@@ -51,6 +62,7 @@ exports.checkProjectData = (req, res, next) => {
   }
 };
 
+// Add project to database
 exports.setProject = (req, res) => {
   const projectFields = {};
 
@@ -120,7 +132,6 @@ exports.setProject = (req, res) => {
     projectFields.imageURLs.push(image5);
   }
 
-  // TODO search for existing projects and update
   // Search for existing project
   Project.findOne({ id: req.body.projectId }).then(project => {
     if (project) {
