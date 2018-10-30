@@ -14,9 +14,14 @@ exports.checkProjectData = (req, res, next) => {
   let hasErrors = false;
 
   // These values must have data
-  const { title, type, link, description } = req.body;
+  const { projectId, title, type, link, description } = req.body;
 
   // Check for undefined or empty values
+  if (projectId === undefined || projectId === '') {
+    errors.projectId = 'Project id was left blank';
+    hasErrors = true;
+  }
+
   if (title === undefined || title === '') {
     errors.title = 'Title was left blank';
     hasErrors = true;
@@ -51,6 +56,7 @@ exports.setProject = (req, res) => {
 
   // Destructure req.body
   const {
+    projectId,
     title,
     type,
     link,
@@ -64,6 +70,9 @@ exports.setProject = (req, res) => {
     image4,
     image5
   } = req.body;
+
+  // Set project search id
+  projectFields.id = projectId;
 
   // Set project name
   projectFields.title = title;
@@ -81,13 +90,13 @@ exports.setProject = (req, res) => {
   projectFields.tech = {};
 
   // Set values if data was provided
-  if (frontendTech !== undefined || frontendTech !== '') {
+  if (frontendTech !== undefined && frontendTech !== '') {
     projectFields.tech.frontend = frontendTech.split(',');
   }
-  if (frontendTech !== undefined || backendTech !== '') {
+  if (frontendTech !== undefined && backendTech !== '') {
     projectFields.tech.backend = backendTech.split(',');
   }
-  if (frontendTech !== undefined || toolsTech !== '') {
+  if (frontendTech !== undefined && toolsTech !== '') {
     projectFields.tech.tools = toolsTech.split(',');
   }
 
@@ -107,16 +116,16 @@ exports.setProject = (req, res) => {
   if (image4 !== undefined && image4 !== '') {
     projectFields.imageURLs.push(image4);
   }
-  if (image5 !== undefined || image5 !== '') {
+  if (image5 !== undefined && image5 !== '') {
     projectFields.imageURLs.push(image5);
   }
 
   // TODO search for existing projects and update
   // Search for existing project
-  Project.findOne({ title: req.body.title }).then(project => {
+  Project.findOne({ id: req.body.projectId }).then(project => {
     if (project) {
       Project.findOneAndUpdate(
-        { title: req.body.title },
+        { id: req.body.projectId },
         { $set: projectFields },
         { new: true }
       )
@@ -126,7 +135,7 @@ exports.setProject = (req, res) => {
       // Save new project
       new Project(projectFields)
         .save()
-        .then(() => res.json(project))
+        .then(() => res.json({ message: 'Added new project' }))
         .catch(error => res.status(400).json(error));
     }
   });
