@@ -16,7 +16,17 @@ exports.getProjects = (req, res) => {
 
 // Return a specific project
 exports.getProject = (req, res) => {
-  res.json('getting a single project');
+  Project.findOne({ id: req.params.id })
+    .then(project => {
+      if (project !== null) {
+        res.json(project);
+      } else {
+        res
+          .status(404)
+          .json({ message: 'Project with that name was not found' });
+      }
+    })
+    .catch(error => res.json(error));
 };
 
 // Middleware to validate data

@@ -36,7 +36,7 @@ router.post('/login', userController.validateLogin, userController.login);
 router.get('/project/all', projectController.getProjects);
 
 // Get a single project
-router.get('/project/:project_id', projectController.getProject);
+router.get('/project/:id', projectController.getProject);
 
 // Set up a new project
 router.post(
