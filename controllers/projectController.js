@@ -15,15 +15,13 @@ exports.getProjects = (req, res) => {
 };
 
 // Return a specific project
-exports.getProject = (req, res) => {
+exports.getProject = (req, res, next) => {
   Project.findOne({ id: req.params.id })
     .then(project => {
       if (project !== null) {
         res.json(project);
       } else {
-        res
-          .status(404)
-          .json({ message: 'Project with that name was not found' });
+        return next('No project with that name was found');
       }
     })
     .catch(error => res.json(error));

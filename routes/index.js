@@ -11,6 +11,7 @@ const projectController = require('../controllers/projectController');
 
 // Get profile data
 router.get('/profile', profileController.getProfile);
+
 // Set profile data
 router.post(
   '/profile',
@@ -27,6 +28,7 @@ router.post(
   userController.validateRegister,
   userController.register
 );
+
 // Login in admin after validating data
 router.post('/login', userController.validateLogin, userController.login);
 
