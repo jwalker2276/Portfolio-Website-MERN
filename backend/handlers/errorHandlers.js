@@ -4,7 +4,7 @@ exports.notFound = (req, res, next) => {
   next(err);
 };
 
-exports.developmentErrors = (err, req, res, next) => {
+exports.developmentErrors = (err, req, res) => {
   res.status(err.status || 500).json({
     error: {
       message: err.message,
