@@ -2,3 +2,4 @@ node_modules
 variables.env
 notes.md
 .eslintrc.json
+.vscode

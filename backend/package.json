@@ -1,7 +1,8 @@
 {
-  "name": "portfolio-website-mern",
+  "name": "portfolio-website-mern-backend",
   "version": "0.1.0",
-  "description": "My portfolio built on the MERN stack.",
+  "private": true,
+  "description": "My portfolio backend built with express and node as part of the MERN stack.",
   "main": "start.js",
   "scripts": {
     "start": "nodemon start.js"
