@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "description": "My portfolio backend built with express and node as part of the MERN stack.",
-  "main": "start.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "build": "next build"
   },
   "repository": {
     "type": "git",

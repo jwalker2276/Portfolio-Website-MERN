@@ -3,3 +3,4 @@ variables.env
 notes.md
 .eslintrc.json
 .vscode
+.next

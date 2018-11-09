@@ -18,6 +18,11 @@ See the initial design here.
 
 <https://www.figma.com/file/IJRLdBm9z2W1huZADVlx02sS/Website-v2?node-id=0%3A1>
 
+## Not Included
+
+- .next
+- variables.env
+
 ## Author
 
 Jordan Walker

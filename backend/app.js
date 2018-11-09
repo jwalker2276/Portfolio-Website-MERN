@@ -6,6 +6,8 @@ const passport = require('passport');
 const logger = require('morgan');
 const routes = require('./routes/index');
 const errorHandlers = require('./handlers/errorHandlers');
+const dev = process.env.NODE_ENV !== 'production';
+const port = process.env.PORT || 5000;
 
 // Import info from .env file
 require('dotenv').config({ path: 'variables.env' });
@@ -19,42 +21,46 @@ mongoose
   .then(() => console.log('Connected to database'))
   .catch(error => console.error(error));
 
-// Express
-const app = express();
+// Next js
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-//* Middleware ********************************************
+app.prepare().then(() => {
+  // Express
+  const server = express();
 
-// Take requests and turn them into properites on req.body
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+  //* Middleware ********************************************
 
-// Passport
-app.use(passport.initialize());
+  // Take requests and turn them into properites on req.body
+  server.use(bodyParser.urlencoded({ extended: false }));
+  server.use(bodyParser.json());
 
-// Load passport config
-require('./config/passport')(passport);
+  // Passport
+  server.use(passport.initialize());
 
-//! Development logger
-app.use(logger('dev'));
+  // Load passport config
+  require('./config/passport')(passport);
 
-//* Routes ************************************************
-app.use('/', routes);
+  //! Development logger
+  server.use(logger('dev'));
 
-//* Errors ************************************************
+  //* Routes ************************************************
+  server.use('/', routes);
 
-// If a route was not found 404 them and forward to error handler
-app.use(errorHandlers.notFound);
+  //* Errors ************************************************
 
-// Handle development errors
-app.use(errorHandlers.developmentErrors);
+  // If a route was not found, forward to error handler
+  server.get('*', (req, res) => {
+    return handle(req, res);
+  });
+  //server.use(errorHandlers.notFound);
 
-// Port
-app.set('port', process.env.PORT || 5000);
+  // Handle development errors
+  server.use(errorHandlers.developmentErrors);
 
-// Run server
-const server = app.listen(app.get('port'), () => {
-  console.log(`Server running on ${server.address().port}`);
+  // Run server
+  server.listen(port, err => {
+    if (err) throw err;
+    console.log(`Server running on Port > ${port}`);
+  });
 });
-
-// Done
-module.exports = app;
