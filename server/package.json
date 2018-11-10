@@ -19,6 +19,10 @@
     "url": "https://github.com/jwalker2276/Portfolio-Website-MERN/issues"
   },
   "homepage": "https://github.com/jwalker2276/Portfolio-Website-MERN#readme",
+  "browserslist": [
+    "last 3 versions",
+    "> 1%"
+  ],
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "bcryptjs": "^2.4.3",
@@ -33,6 +37,7 @@
     "passport-jwt": "^4.0.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
+    "sass-loader": "^7.1.0",
     "validator": "^10.8.0"
   },
   "devDependencies": {
