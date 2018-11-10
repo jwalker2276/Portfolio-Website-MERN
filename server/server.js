@@ -50,10 +50,7 @@ app.prepare().then(() => {
   //* Errors ************************************************
 
   // If a route was not found, forward to error handler
-  server.get('*', (req, res) => {
-    return handle(req, res);
-  });
-  //server.use(errorHandlers.notFound);
+  server.get('*', (req, res) => handle(req, res));
 
   // Handle development errors
   server.use(errorHandlers.developmentErrors);
