@@ -23,6 +23,19 @@ See the initial design here.
 - .next
 - variables.env
 
+## Notes
+
+Currently nextjs does not transform a custom server with babel.
+
+This includes the following folders and files :
+
+- config folder
+- controllers
+- handlers
+- models
+- routes
+- server.js
+
 ## Author
 
 Jordan Walker
