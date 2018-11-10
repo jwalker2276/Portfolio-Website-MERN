@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/jwalker2276/Portfolio-Website-MERN#readme",
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "dotenv": "^6.1.0",
@@ -27,6 +28,7 @@
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.3.1",
     "next": "^7.0.2",
+    "node-sass": "^4.10.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "react": "^16.6.1",
@@ -34,6 +36,7 @@
     "validator": "^10.8.0"
   },
   "devDependencies": {
+    "autoprefixer": "^9.3.1",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
