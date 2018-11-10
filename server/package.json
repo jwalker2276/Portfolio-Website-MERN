@@ -5,8 +5,8 @@
   "description": "My portfolio backend built with express and node as part of the MERN stack.",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "build": "next build"
   },
   "repository": {
