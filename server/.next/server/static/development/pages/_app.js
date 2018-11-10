@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -105,14 +105,14 @@ module.exports = __webpack_require__(/*! next/app */ "next/app")
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!****************************************************!*\
   !*** multi ./node_modules/next/dist/pages/_app.js ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/backend/node_modules/next/dist/pages/_app.js */"./node_modules/next/dist/pages/_app.js");
+module.exports = __webpack_require__(/*! /Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/node_modules/next/dist/pages/_app.js */"./node_modules/next/dist/pages/_app.js");
 
 
 /***/ }),

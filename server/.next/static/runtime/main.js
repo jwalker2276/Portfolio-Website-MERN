@@ -5690,7 +5690,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/backend/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/.next");
       return error;
     }
   };
@@ -17966,7 +17966,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/backend/node_modules/next/dist/client/next-dev */"./node_modules/next/dist/client/next-dev.js");
+module.exports = __webpack_require__(/*! /Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/node_modules/next/dist/client/next-dev */"./node_modules/next/dist/client/next-dev.js");
 
 
 /***/ }),
