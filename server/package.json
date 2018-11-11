@@ -31,15 +31,20 @@
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.3.1",
+    "morgan": "^1.9.1",
     "next": "^7.0.2",
+    "next-redux-wrapper": "^2.0.0",
     "node-sass": "^4.10.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
-    "validator": "^10.8.0",
-    "morgan": "^1.9.1"
+    "validator": "^10.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
