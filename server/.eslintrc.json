@@ -16,6 +16,7 @@
     "no-underscore-dangle": 0,
     "max-len": 1,
     "space-before-function-paren": 1,
-    "react/prefer-stateless-function": 0
+    "react/prefer-stateless-function": 0,
+    "react/destructuring-assignment": 1
   }
 }
