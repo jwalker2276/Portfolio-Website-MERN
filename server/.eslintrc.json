@@ -17,6 +17,12 @@
     "max-len": 1,
     "space-before-function-paren": 1,
     "react/prefer-stateless-function": 0,
-    "react/destructuring-assignment": 1
+    "react/destructuring-assignment": 1,
+    "react/prop-types": 0,
+    "react/no-did-update-set-state": 1,
+    "no-unused-vars": 1,
+    "import/prefer-default-export": 1,
+    "implicit-arrow-linebreak": 1,
+    "function-paren-newline": 1
   }
 }

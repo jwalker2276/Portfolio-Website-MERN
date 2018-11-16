@@ -1,17 +1,14 @@
-export const actionTypes = {
-  ADD: 'ADD',
-  TICK: 'TICK'
-};
+import axios from 'axios';
+import actions from './types';
 
-// Actions
-export const serverRenderClock = isServer => dispatch => {
-  return dispatch({ type: actionTypes.TICK, light: !isServer, ts: Date.now() });
-};
-
-export const startClock = () => dispatch => {
-  return setInterval(() => dispatch({ type: actionTypes.TICK, light: true, ts: Date.now() }), 1000);
-};
-
-export const addCount = () => dispatch => {
-  return dispatch({ type: actionTypes.ADD });
+export const login = userData => dispatch => {
+  axios
+    .post('/login', userData)
+    .then(() => console.log('Redirecting to dashboard'))
+    .catch(err =>
+      dispatch({
+        type: actions.GET_ERRORS,
+        payload: err.response.data
+      })
+    );
 };

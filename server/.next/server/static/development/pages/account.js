@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -104,8 +104,9 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../reduxState/actions/authActions */ "./reduxState/actions/authActions.js");
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/user/Login.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -131,6 +132,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 
+
 var Login =
 /*#__PURE__*/
 function (_React$Component) {
@@ -141,38 +143,48 @@ function (_React$Component) {
 
     _classCallCheck(this, Login);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Login).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Login).call(this, props)); // Login state
+
     _this.state = {
       username: '',
       password: '',
       errors: {}
-    };
+    }; // Bind these methods to this instance
+
     _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
-  }
+  } // Check for new props
+
 
   _createClass(Login, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      var errors = this.props.errors; // Check for new errors
+
+      if (prevProps.errors !== errors) {
+        this.setState({
+          errors: errors
+        });
+      }
+    } // Form submission
+
+  }, {
     key: "onSubmit",
     value: function onSubmit(event) {
-      var _this2 = this;
+      event.preventDefault(); // User data
 
-      event.preventDefault();
       var _this$state = this.state,
           username = _this$state.username,
           password = _this$state.password;
       var user = {
         username: username,
         password: password
-      };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/login', user).then(function (res) {
-        return console.log(res.data);
-      }).catch(function (error) {
-        return _this2.setState({
-          errors: error.response.data
-        });
-      });
-    }
+      }; // Redux Action
+
+      this.props.login(user);
+    } // Changed state when input is detected
+
   }, {
     key: "handleChange",
     value: function handleChange(event) {
@@ -183,26 +195,28 @@ function (_React$Component) {
     value: function render() {
       var _this$state2 = this.state,
           username = _this$state2.username,
-          password = _this$state2.password;
+          password = _this$state2.password,
+          errors = _this$state2.errors; // TODO : Add error elements under form inputs.
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         method: "POST",
         onSubmit: this.onSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 54
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 55
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "username",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 56
         },
         __self: this
       }, "Username", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -212,14 +226,14 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 58
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "password",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 60
         },
         __self: this
       }, "Password", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -229,7 +243,7 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 62
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -237,7 +251,7 @@ function (_React$Component) {
         value: "Submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 64
         },
         __self: this
       }, "Login")));
@@ -245,9 +259,19 @@ function (_React$Component) {
   }]);
 
   return Login;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // Add to props
 
-/* harmony default export */ __webpack_exports__["default"] = (Login);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    auth: state.auth,
+    errors: state.errors
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
+  login: _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_2__["login"]
+})(Login));
 
 /***/ }),
 
@@ -329,7 +353,53 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ "./reduxState/actions/authActions.js":
+/*!*******************************************!*\
+  !*** ./reduxState/actions/authActions.js ***!
+  \*******************************************/
+/*! exports provided: login */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./reduxState/actions/types.js");
+
+
+var login = function login(userData) {
+  return function (dispatch) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/login', userData).then(function () {
+      return console.log('Redirecting to dashboard');
+    }).catch(function (err) {
+      return dispatch({
+        type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_ERRORS,
+        payload: err.response.data
+      });
+    });
+  };
+};
+
+/***/ }),
+
+/***/ "./reduxState/actions/types.js":
+/*!*************************************!*\
+  !*** ./reduxState/actions/types.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var actions = {
+  GET_ERRORS: 'GET_ERRORS'
+};
+/* harmony default export */ __webpack_exports__["default"] = (actions);
+
+/***/ }),
+
+/***/ 4:
 /*!********************************!*\
   !*** multi ./pages/account.js ***!
   \********************************/
@@ -360,6 +430,17 @@ module.exports = require("axios");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-redux":
+/*!******************************!*\
+  !*** external "react-redux" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
 
 /***/ })
 

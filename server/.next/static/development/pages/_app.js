@@ -11978,6 +11978,22 @@ function (_App) {
 
 /***/ }),
 
+/***/ "./reduxState/actions/types.js":
+/*!*************************************!*\
+  !*** ./reduxState/actions/types.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var actions = {
+  GET_ERRORS: 'GET_ERRORS'
+};
+/* harmony default export */ __webpack_exports__["default"] = (actions);
+
+/***/ }),
+
 /***/ "./reduxState/reducers/authReducer.js":
 /*!********************************************!*\
   !*** ./reduxState/reducers/authReducer.js ***!
@@ -11987,10 +12003,11 @@ function (_App) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+// Default state
 var authState = {
   isAuth: false,
   user: {}
-};
+}; // Check for action type
 
 var reducer = function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : authState;
@@ -12006,6 +12023,36 @@ var reducer = function reducer() {
 
 /***/ }),
 
+/***/ "./reduxState/reducers/errorReducer.js":
+/*!*********************************************!*\
+  !*** ./reduxState/reducers/errorReducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./reduxState/actions/types.js");
+ // Default state
+
+var errorState = {}; // Check for action type
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : errorState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["default"].GET_ERRORS:
+      // Return errors
+      return action.payload;
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
 /***/ "./reduxState/reducers/index.js":
 /*!**************************************!*\
   !*** ./reduxState/reducers/index.js ***!
@@ -12017,10 +12064,13 @@ var reducer = function reducer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _authReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./authReducer */ "./reduxState/reducers/authReducer.js");
+/* harmony import */ var _errorReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errorReducer */ "./reduxState/reducers/errorReducer.js");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  auth: _authReducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  auth: _authReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  errors: _errorReducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 }));
 
 /***/ }),
