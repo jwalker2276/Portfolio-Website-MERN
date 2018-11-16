@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Router from 'next/router';
 import { login } from '../../reduxState/actions/authActions';
 
 class Login extends React.Component {
@@ -22,6 +23,18 @@ class Login extends React.Component {
     // Check for new errors
     if (prevProps.errors !== errors) {
       this.setState({ errors });
+    }
+
+    // Current props state
+    const currentIsAuth = this.props.auth.isAuth;
+
+    // Check for change in auth
+    if (currentIsAuth !== prevProps.auth.isAuth) {
+      // Check if user logged in.
+      if (currentIsAuth) {
+        // Redirect to dashboard
+        Router.push('/dashboard');
+      }
     }
   }
 
@@ -70,7 +83,7 @@ class Login extends React.Component {
   }
 }
 
-// Add to props
+// Add to props from redux state
 const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors

@@ -248,7 +248,8 @@ function (_App) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var actions = {
-  GET_ERRORS: 'GET_ERRORS'
+  GET_ERRORS: 'GET_ERRORS',
+  SET_CURRENT_USER: 'SET_CURRENT_USER'
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 
@@ -263,7 +264,13 @@ var actions = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Default state
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./reduxState/actions/types.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+ // Default state
+
 var authState = {
   isAuth: false,
   user: {}
@@ -274,6 +281,12 @@ var reducer = function reducer() {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["default"].SET_CURRENT_USER:
+      return _objectSpread({}, state, {
+        isAuth: true,
+        user: action.payload
+      });
+
     default:
       return state;
   }
