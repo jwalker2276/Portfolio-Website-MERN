@@ -17,6 +17,14 @@ class Login extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  componentDidMount() {
+    // Check if login is needed
+    if (this.props.auth.isAuth) {
+      // Move to dashboard page
+      Router.push('/dashboard');
+    }
+  }
+
   // Check for new props
   componentDidUpdate(prevProps) {
     const { errors } = this.props;

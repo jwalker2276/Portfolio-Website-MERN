@@ -157,10 +157,19 @@ function (_React$Component) {
     _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
-  } // Check for new props
-
+  }
 
   _createClass(Login, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // Check if login is needed
+      if (this.props.auth.isAuth) {
+        // Move to dashboard page
+        next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/dashboard');
+      }
+    } // Check for new props
+
+  }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
       var errors = this.props.errors; // Check for new errors
@@ -217,20 +226,20 @@ function (_React$Component) {
         onSubmit: this.onSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 75
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 76
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "username",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 77
         },
         __self: this
       }, "Username", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -240,14 +249,14 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 79
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "password",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 81
         },
         __self: this
       }, "Password", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -257,7 +266,7 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 83
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -265,7 +274,7 @@ function (_React$Component) {
         value: "Submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 85
         },
         __self: this
       }, "Login")));
@@ -399,13 +408,14 @@ function (_React$Component) {
 /*!*******************************************!*\
   !*** ./reduxState/actions/authActions.js ***!
   \*******************************************/
-/*! exports provided: setCurrentUser, login */
+/*! exports provided: setCurrentUser, login, logout */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setCurrentUser", function() { return setCurrentUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var jwt_decode__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jwt-decode */ "jwt-decode");
@@ -442,6 +452,17 @@ var login = function login(userData) {
         payload: err.response.data
       });
     });
+  };
+}; // Log out the user
+
+var logout = function logout() {
+  return function (dispatch) {
+    // Remove token from localStorage
+    localStorage.removeItem('jwtToken'); // Remove auth header from requests
+
+    Object(_helpers_setAuthToken__WEBPACK_IMPORTED_MODULE_3__["default"])(false); // Set current user to {}
+
+    dispatch(setCurrentUser({}));
   };
 };
 

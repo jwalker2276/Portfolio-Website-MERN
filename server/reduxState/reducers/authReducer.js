@@ -1,3 +1,4 @@
+import _isEmpty from 'lodash.isempty';
 import actions from '../actions/types';
 
 // Default state
@@ -12,7 +13,7 @@ const reducer = (state = authState, action) => {
     case actions.SET_CURRENT_USER:
       return {
         ...state,
-        isAuth: true,
+        isAuth: !_isEmpty(action.payload),
         user: action.payload
       };
     default:

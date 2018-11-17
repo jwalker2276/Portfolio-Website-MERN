@@ -14,10 +14,6 @@
     "/account": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/dashboard": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }

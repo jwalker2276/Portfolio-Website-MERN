@@ -93,6 +93,34 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./helpers/setAuthToken.js":
+/*!*********************************!*\
+  !*** ./helpers/setAuthToken.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var setAuthToken = function setAuthToken(token) {
+  // Check for token to attach
+  if (token) {
+    // Apply to every request
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.headers.common['Authorization'] = token;
+  } else {
+    // Delete auth header
+    delete axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.headers.common['Authorization'];
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (setAuthToken);
+
+/***/ }),
+
 /***/ "./pages/_app.js":
 /*!***********************!*\
   !*** ./pages/_app.js ***!
@@ -112,7 +140,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next-redux-wrapper */ "next-redux-wrapper");
 /* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_redux_wrapper__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _reduxState_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reduxState/store */ "./reduxState/store.js");
+/* harmony import */ var jwt_decode__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jwt-decode */ "jwt-decode");
+/* harmony import */ var jwt_decode__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jwt_decode__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _reduxState_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../reduxState/store */ "./reduxState/store.js");
+/* harmony import */ var _helpers_setAuthToken__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../helpers/setAuthToken */ "./helpers/setAuthToken.js");
+/* harmony import */ var _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../reduxState/actions/authActions */ "./reduxState/actions/authActions.js");
 
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/pages/_app.js";
 
@@ -145,7 +177,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (next_redux_wrapper__WEBPACK_IMPORTED_MODULE_4___default()(_reduxState_store__WEBPACK_IMPORTED_MODULE_5__["initStore"])(
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (next_redux_wrapper__WEBPACK_IMPORTED_MODULE_4___default()(_reduxState_store__WEBPACK_IMPORTED_MODULE_6__["initStore"])(
 /*#__PURE__*/
 function (_App) {
   _inherits(MyApp, _App);
@@ -157,6 +192,19 @@ function (_App) {
   }
 
   _createClass(MyApp, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // Check if token is in local storage
+      if (localStorage.jwtToken) {
+        // Set token to header for requests
+        Object(_helpers_setAuthToken__WEBPACK_IMPORTED_MODULE_7__["default"])(localStorage.jwtDecode); // Decode the token for user info
+
+        var decoded = jwt_decode__WEBPACK_IMPORTED_MODULE_5___default()(localStorage.jwtToken); // Set user data
+
+        this.props.store.dispatch(Object(_reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_8__["setCurrentUser"])(decoded));
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -166,20 +214,20 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_3__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 34
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
         store: store,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 35
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, _extends({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 36
         },
         __self: this
       }))));
@@ -238,6 +286,70 @@ function (_App) {
 
 /***/ }),
 
+/***/ "./reduxState/actions/authActions.js":
+/*!*******************************************!*\
+  !*** ./reduxState/actions/authActions.js ***!
+  \*******************************************/
+/*! exports provided: setCurrentUser, login, logout */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setCurrentUser", function() { return setCurrentUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jwt_decode__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jwt-decode */ "jwt-decode");
+/* harmony import */ var jwt_decode__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jwt_decode__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types */ "./reduxState/actions/types.js");
+/* harmony import */ var _helpers_setAuthToken__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../helpers/setAuthToken */ "./helpers/setAuthToken.js");
+
+
+
+ // Set the current user data
+
+var setCurrentUser = function setCurrentUser(tokenData) {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_2__["default"].SET_CURRENT_USER,
+    payload: tokenData
+  };
+}; // Login in user and store token
+
+var login = function login(userData) {
+  return function (dispatch) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/login', userData).then(function (res) {
+      // Save token to localStorage
+      var token = res.data.token;
+      localStorage.setItem('jwtToken', token); // Set token to auth header
+
+      Object(_helpers_setAuthToken__WEBPACK_IMPORTED_MODULE_3__["default"])(token); // Decode jwt for user data
+
+      var decoded = jwt_decode__WEBPACK_IMPORTED_MODULE_1___default()(token); // Set user data
+
+      dispatch(setCurrentUser(decoded));
+    }).catch(function (err) {
+      return dispatch({
+        type: _types__WEBPACK_IMPORTED_MODULE_2__["default"].GET_ERRORS,
+        payload: err.response.data
+      });
+    });
+  };
+}; // Log out the user
+
+var logout = function logout() {
+  return function (dispatch) {
+    // Remove token from localStorage
+    localStorage.removeItem('jwtToken'); // Remove auth header from requests
+
+    Object(_helpers_setAuthToken__WEBPACK_IMPORTED_MODULE_3__["default"])(false); // Set current user to {}
+
+    dispatch(setCurrentUser({}));
+  };
+};
+
+/***/ }),
+
 /***/ "./reduxState/actions/types.js":
 /*!*************************************!*\
   !*** ./reduxState/actions/types.js ***!
@@ -264,10 +376,13 @@ var actions = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./reduxState/actions/types.js");
+/* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash.isempty */ "lodash.isempty");
+/* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_isempty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/types */ "./reduxState/actions/types.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
  // Default state
 
@@ -281,9 +396,9 @@ var reducer = function reducer() {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["default"].SET_CURRENT_USER:
+    case _actions_types__WEBPACK_IMPORTED_MODULE_1__["default"].SET_CURRENT_USER:
       return _objectSpread({}, state, {
-        isAuth: true,
+        isAuth: !lodash_isempty__WEBPACK_IMPORTED_MODULE_0___default()(action.payload),
         user: action.payload
       });
 
@@ -396,6 +511,39 @@ module.exports = __webpack_require__(/*! ./pages/_app.js */"./pages/_app.js");
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+
+/***/ "jwt-decode":
+/*!*****************************!*\
+  !*** external "jwt-decode" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("jwt-decode");
+
+/***/ }),
+
+/***/ "lodash.isempty":
+/*!*********************************!*\
+  !*** external "lodash.isempty" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("lodash.isempty");
 
 /***/ }),
 
