@@ -88,15 +88,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/user/Login.js":
-/*!**********************************!*\
-  !*** ./components/user/Login.js ***!
-  \**********************************/
+/***/ "./components/user/LogoutButton.js":
+/*!*****************************************!*\
+  !*** ./components/user/LogoutButton.js ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -106,16 +106,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../reduxState/actions/authActions */ "./reduxState/actions/authActions.js");
-/* harmony import */ var _scss_login_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../scss/login.scss */ "./scss/login.scss");
-/* harmony import */ var _scss_login_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_login_scss__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/user/Login.js";
+/* harmony import */ var _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../reduxState/actions/authActions */ "./reduxState/actions/authActions.js");
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/user/LogoutButton.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -125,207 +119,60 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 
 
 
-
-
-
-var Login =
+var LogoutButton =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Login, _React$Component);
+  _inherits(LogoutButton, _React$Component);
 
-  function Login(props) {
-    var _this;
+  function LogoutButton() {
+    _classCallCheck(this, LogoutButton);
 
-    _classCallCheck(this, Login);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Login).call(this, props)); // Login state
-
-    _this.state = {
-      username: '',
-      password: '',
-      errors: {}
-    }; // Bind these methods to this instance
-
-    _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(LogoutButton).apply(this, arguments));
   }
 
-  _createClass(Login, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      // Check if login is needed
-      if (this.props.auth.isAuth) {
-        // Move to dashboard page
-        next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/dashboard');
-      }
-    } // Check for new props
-
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps) {
-      var errors = this.props.errors; // Check for new errors
-
-      if (prevProps.errors !== errors) {
-        this.setState({
-          errors: errors
-        });
-      } // Current props state
-
-
-      var currentIsAuth = this.props.auth.isAuth; // Check for change in auth
-
-      if (currentIsAuth !== prevProps.auth.isAuth) {
-        // Check if user logged in.
-        if (currentIsAuth) {
-          // Redirect to dashboard
-          next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/dashboard');
-        }
-      }
-    } // Form submission
-
-  }, {
-    key: "onSubmit",
-    value: function onSubmit(event) {
-      event.preventDefault(); // User data
-
-      var _this$state = this.state,
-          username = _this$state.username,
-          password = _this$state.password;
-      var user = {
-        username: username,
-        password: password
-      }; // Redux Action
-
-      this.props.login(user);
-    } // Changed state when input is detected
-
-  }, {
-    key: "handleChange",
-    value: function handleChange(event) {
-      this.setState(_defineProperty({}, event.target.name, event.target.value));
+  _createClass(LogoutButton, [{
+    key: "handleClick",
+    value: function handleClick() {
+      // Use redux action
+      this.props.logout();
     }
   }, {
     key: "render",
     value: function render() {
-      var _this$state2 = this.state,
-          username = _this$state2.username,
-          password = _this$state2.password,
-          errors = _this$state2.errors; // TODO : Add error elements under form inputs.
+      var _this = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "form",
-        method: "POST",
-        onSubmit: this.onSubmit,
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        onClick: function onClick() {
+          return _this.handleClick();
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 13
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-        className: "form__heading",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 78
-        },
-        __self: this
-      }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", {
-        className: "form__set",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 79
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "username",
-        className: "form__label",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 80
-        },
-        __self: this
-      }, "Username", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "form__error",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 82
-        },
-        __self: this
-      }, errors.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        name: "username",
-        value: username,
-        onChange: this.handleChange,
-        className: "form__input",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 83
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "password",
-        className: "form__label",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 91
-        },
-        __self: this
-      }, "Password", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "form__error",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 93
-        },
-        __self: this
-      }, errors.password || errors.error), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "password",
-        name: "password",
-        value: password,
-        onChange: this.handleChange,
-        className: "form__input",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 94
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
-        value: "Submit",
-        className: " form__button",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 102
-        },
-        __self: this
-      }, "Sign in")));
+      }, "Logout");
     }
   }]);
 
-  return Login;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // Add to props from redux state
+  return LogoutButton;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    auth: state.auth,
-    errors: state.errors
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
-  login: _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_3__["login"]
-})(Login));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, {
+  logout: _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_2__["logout"]
+})(LogoutButton));
 
 /***/ }),
 
@@ -357,10 +204,10 @@ var setAuthToken = function setAuthToken(token) {
 
 /***/ }),
 
-/***/ "./pages/account.js":
-/*!**************************!*\
-  !*** ./pages/account.js ***!
-  \**************************/
+/***/ "./pages/dashboard.js":
+/*!****************************!*\
+  !*** ./pages/dashboard.js ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -368,10 +215,12 @@ var setAuthToken = function setAuthToken(token) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_user_Login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/user/Login */ "./components/user/Login.js");
-/* harmony import */ var _scss_account_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/account.scss */ "./scss/account.scss");
-/* harmony import */ var _scss_account_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_account_scss__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/pages/account.js";
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_user_LogoutButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/user/LogoutButton */ "./components/user/LogoutButton.js");
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/pages/dashboard.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -395,41 +244,79 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var Account =
+
+var Dashboard =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Account, _React$Component);
+  _inherits(Dashboard, _React$Component);
 
-  function Account() {
-    _classCallCheck(this, Account);
+  function Dashboard() {
+    _classCallCheck(this, Dashboard);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Account).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Dashboard).apply(this, arguments));
   }
 
-  _createClass(Account, [{
+  _createClass(Dashboard, [{
+    key: "componentDidMount",
+    // Check if user is authenticated client side
+    value: function componentDidMount() {
+      if (!this.props.auth.isAuth) {
+        // User should not be here, redirect to login page.
+        next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/account');
+      }
+    } // Check if user clicked logout
+
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      // Check if logout button was pressed
+      if (this.props.auth.isAuth !== prevProps.auth.isAuth) {
+        // Redirect back to login screen
+        next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/account');
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "page-wrapper",
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 27
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_user_Login__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_user_LogoutButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 28
         },
         __self: this
-      }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, "Dashboard page"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, "Logged in"));
     }
   }]);
 
-  return Account;
+  return Dashboard;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Account);
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    auth: state.auth,
+    errors: state.errors
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Dashboard));
 
 /***/ }),
 
@@ -514,36 +401,14 @@ var actions = {
 
 /***/ }),
 
-/***/ "./scss/account.scss":
-/*!***************************!*\
-  !*** ./scss/account.scss ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ "./scss/login.scss":
-/*!*************************!*\
-  !*** ./scss/login.scss ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ 3:
-/*!********************************!*\
-  !*** multi ./pages/account.js ***!
-  \********************************/
+/***/ 4:
+/*!**********************************!*\
+  !*** multi ./pages/dashboard.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./pages/account.js */"./pages/account.js");
+module.exports = __webpack_require__(/*! ./pages/dashboard.js */"./pages/dashboard.js");
 
 
 /***/ }),
@@ -604,4 +469,4 @@ module.exports = require("react-redux");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=account.js.map
+//# sourceMappingURL=dashboard.js.map

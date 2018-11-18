@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/jwalker2276/Portfolio-Website-MERN#readme",
   "browserslist": [
-    "last 3 versions",
+    "last 2 versions",
     "> 1%"
   ],
   "dependencies": {

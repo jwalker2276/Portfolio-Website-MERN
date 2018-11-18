@@ -1,13 +1,14 @@
 import React from 'react';
 import Login from '../components/user/Login';
 
+import '../scss/account.scss';
+
 class Account extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <p>Account Page</p>
+      <div className="page-wrapper">
         <Login />
-      </React.Fragment>
+      </div>
     );
   }
 }

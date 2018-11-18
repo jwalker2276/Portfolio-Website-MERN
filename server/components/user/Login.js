@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Router from 'next/router';
 import { login } from '../../reduxState/actions/authActions';
 
+import '../../scss/login.scss';
+
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -72,18 +74,33 @@ class Login extends React.Component {
     // TODO : Add error elements under form inputs.
 
     return (
-      <form method="POST" onSubmit={this.onSubmit}>
-        <fieldset>
-          <label htmlFor="username">
+      <form className="form" method="POST" onSubmit={this.onSubmit}>
+        <h2 className="form__heading">Login</h2>
+        <fieldset className="form__set">
+          <label htmlFor="username" className="form__label">
             Username
-            <input type="text" name="username" value={username} onChange={this.handleChange} />
+            <span className="form__error">{errors.username}</span>
+            <input
+              type="text"
+              name="username"
+              value={username}
+              onChange={this.handleChange}
+              className="form__input"
+            />
           </label>
-          <label htmlFor="password">
+          <label htmlFor="password" className="form__label">
             Password
-            <input type="password" name="password" value={password} onChange={this.handleChange} />
+            <span className="form__error">{errors.password || errors.error}</span>
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleChange}
+              className="form__input"
+            />
           </label>
-          <button type="submit" value="Submit">
-            Login
+          <button type="submit" value="Submit" className=" form__button">
+            Sign in
           </button>
         </fieldset>
       </form>

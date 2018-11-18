@@ -1,2 +1,13 @@
-$color: black;
-$font: white;
+// Fonts
+$font-light: #eff8ff;
+$font-dark: #263745;
+$font-error: red;
+// Icons
+$icon-dark: rgba(38, 55, 69, 0.75);
+// Backgrounds
+$bk-light: $font-light;
+$bk-dark: #3e5a71;
+$bk-darker: #06131c;
+$bk-darkest: #05111a;
+// Box shadows
+$box-shad-dark: rgba($bk-dark, 0.25);
