@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Router from 'next/router';
 
 import LogoutButton from '../components/user/LogoutButton';
+import '../scss/dashboard.scss';
 
 class Dashboard extends React.Component {
   // Check if user is authenticated client side
@@ -24,11 +25,9 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="dashboard-wrapper">
         <LogoutButton />
-        <h1>Dashboard page</h1>
-        <p>Logged in</p>
-      </React.Fragment>
+      </div>
     );
   }
 }

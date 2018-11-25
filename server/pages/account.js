@@ -6,7 +6,7 @@ import '../scss/account.scss';
 class Account extends React.Component {
   render() {
     return (
-      <div className="page-wrapper">
+      <div className="account-wrapper">
         <Login />
       </div>
     );

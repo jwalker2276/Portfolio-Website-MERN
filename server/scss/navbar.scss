@@ -1,0 +1,23 @@
+@import '_colors.scss';
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.nav__items {
+  margin: 0;
+  margin-top: 1em;
+  padding: 0;
+  display: flex;
+}
+
+.nav__item {
+  list-style: none;
+  padding-right: 1em;
+}
+
+.nav__link {
+  color: $font-light;
+  text-decoration: none;
+}

@@ -71,7 +71,6 @@ class Login extends React.Component {
 
   render() {
     const { username, password, errors } = this.state;
-    // TODO : Add error elements under form inputs.
 
     return (
       <form className="form" method="POST" onSubmit={this.onSubmit}>

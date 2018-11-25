@@ -1,4 +1,21 @@
 @import '_colors';
-body {
-  background: $bk-dark;
+.dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.dashboard-wrapper:after {
+  content: '';
+  background-image: url(/static/hexabump.png);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }

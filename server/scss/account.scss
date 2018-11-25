@@ -1,5 +1,4 @@
 @import '_colors';
-// Rules
 html,
 body {
   height: 100%;
@@ -15,7 +14,8 @@ body {
   height: 100%;
 }
 
-.page-wrapper {
+// Rules
+.account-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@ body {
   position: relative;
 }
 
-.page-wrapper:after {
+.account-wrapper:after {
   content: '';
   background-image: url(/static/hexabump.png);
   opacity: 0.5;

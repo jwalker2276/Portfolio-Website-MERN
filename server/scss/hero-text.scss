@@ -1,0 +1,11 @@
+@import '_colors.scss';
+.hero__text__wrapper {
+  margin-top: 200px;
+  margin-left: 100px;
+  width: 400px;
+}
+
+.hero__text {
+  color: $font-light;
+  font-size: 3em;
+}
