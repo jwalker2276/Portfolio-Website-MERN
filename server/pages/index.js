@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Navbar from '../components/layout/Navbar';
-import Hero from '../components/layout/Hero';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
 
 import '../scss/common.scss';
 

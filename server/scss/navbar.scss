@@ -1,8 +1,10 @@
 @import '_colors.scss';
+@import '_sizes.scss';
 .nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
+  max-width: $desktop-max-width;
 }
 
 .nav__items {

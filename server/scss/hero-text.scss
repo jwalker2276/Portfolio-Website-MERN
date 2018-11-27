@@ -1,11 +1,18 @@
 @import '_colors.scss';
+@import '_sizes.scss';
 .hero__text__wrapper {
-  margin-top: 200px;
-  margin-left: 100px;
-  width: 400px;
+  margin: auto;
+  max-width: $desktop-max-width;
+  height: 100%;
+  padding-top: 60px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
 .hero__text {
   color: $font-light;
-  font-size: 3em;
+  font-size: 5em;
+  max-width: 600px;
+  text-align: left;
 }

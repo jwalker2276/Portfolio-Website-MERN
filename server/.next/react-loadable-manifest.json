@@ -7,7 +7,7 @@
       "publicPath": "static/chunks/0.js"
     }
   ],
-  "../../scss/logo.scss": [
+  "../scss/logo.scss": [
     {
       "id": "./scss/logo.scss",
       "name": "./scss/logo.scss",
@@ -47,7 +47,7 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../../scss/navbar.scss": [
+  "../scss/navbar.scss": [
     {
       "id": "./scss/navbar.scss",
       "name": "./scss/navbar.scss",
@@ -55,7 +55,7 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../../scss/hero-text.scss": [
+  "../scss/hero-text.scss": [
     {
       "id": "./scss/hero-text.scss",
       "name": "./scss/hero-text.scss",
@@ -63,7 +63,7 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../../scss/hero.scss": [
+  "../scss/hero.scss": [
     {
       "id": "./scss/hero.scss",
       "name": "./scss/hero.scss",

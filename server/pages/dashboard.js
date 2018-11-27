@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Router from 'next/router';
 
-import LogoutButton from '../components/user/LogoutButton';
+import LogoutButton from '../components/LogoutButton';
 import '../scss/dashboard.scss';
 
 class Dashboard extends React.Component {
