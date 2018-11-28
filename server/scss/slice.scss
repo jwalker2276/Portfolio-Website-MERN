@@ -1,0 +1,14 @@
+@import '_colors.scss';
+.slice__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.slice__svg {
+  max-width: 1400px;
+  margin: auto; //transform: translateY(-100%);
+}
+
+.slice__path {
+  fill: $bk-light;
+}

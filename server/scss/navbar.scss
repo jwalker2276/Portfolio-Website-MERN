@@ -3,8 +3,10 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  margin: 10px auto 0 auto;
+  margin: 0px auto;
   max-width: $desktop-max-width;
+  padding-top: 20px;
+  width: $desktop-max-width;
 }
 
 .nav__items {

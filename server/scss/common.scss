@@ -7,4 +7,14 @@ body {
 
 body {
   font-family: 'Raleway', sans-serif;
+  background-color: $bk-light;
+}
+
+.landing__wrapper {
+  background-image: url('/static/website_hero.jpg');
+  background-size: cover;
+  z-index: -5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
