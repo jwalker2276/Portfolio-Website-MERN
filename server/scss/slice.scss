@@ -4,10 +4,17 @@
 }
 
 .slice__svg {
-  max-width: 1400px;
-  margin: auto; //transform: translateY(-100%);
+  margin: auto;
 }
 
-.slice__path {
+.slice__path--white {
   fill: $bk-light;
+}
+
+.slice__path--blue {
+  fill: $bk-dark;
+}
+
+.slice__path--darkblue {
+  fill: $bk-darker;
 }

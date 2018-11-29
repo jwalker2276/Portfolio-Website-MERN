@@ -53,11 +53,25 @@
   display: flex; }
 
 .slice__svg {
-  max-width: 1400px;
   margin: auto; }
 
-.slice__path {
+.slice__path--white {
   fill: #eff8ff; }
+
+.slice__path--blue {
+  fill: #3e5a71; }
+
+.slice__path--darkblue {
+  fill: #06131c; }
+
+.skills__wrapper {
+  height: 1000px;
+  background: #eff8ff;
+  margin: auto; }
+
+.skills__wrapper h1 {
+  text-align: center;
+  margin: 0; }
 
 html,
 body {
@@ -65,7 +79,7 @@ body {
 
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: #eff8ff; }
+  background-color: #06131c; }
 
 .landing__wrapper {
   background-image: url("/static/website_hero.jpg");
