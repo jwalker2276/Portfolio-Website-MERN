@@ -3,14 +3,10 @@
 .hero__text__wrapper {
   margin: auto;
   max-width: $desktop-max-width;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
 }
 
 .hero__text {
   color: $font-light;
   font-size: 5em;
   max-width: 600px;
-  text-align: left;
 }

@@ -1,7 +1,6 @@
 @import '_colors';
 html,
 body {
-  height: 100%;
   margin: 0;
 }
 
@@ -13,7 +12,6 @@ body {
 .landing__wrapper {
   background-image: url('/static/website_hero.jpg');
   background-size: cover;
-  z-index: -5;
   height: 100vh;
   display: flex;
   flex-direction: column;
