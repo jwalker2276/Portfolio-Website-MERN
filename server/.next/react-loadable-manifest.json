@@ -9,7 +9,7 @@
   ],
   "undefined": [
     {
-      "id": 7,
+      "id": 4,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -21,19 +21,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 5,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 4,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 9,
+      "id": 7,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -45,32 +33,50 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
+      "id": 9,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 5,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
       "id": 10,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/common.scss": [
+    },
     {
-      "id": "./scss/common.scss",
-      "name": "./scss/common.scss",
+      "id": 11,
+      "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/hero-text.scss": [
+    },
     {
-      "id": "./scss/hero-text.scss",
-      "name": "./scss/hero-text.scss",
+      "id": 12,
+      "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/hero.scss": [
+    },
     {
-      "id": "./scss/hero.scss",
-      "name": "./scss/hero.scss",
+      "id": 13,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 14,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 15,
+      "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -83,10 +89,50 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../scss/navbar.scss": [
+  "../scss/hero.scss": [
     {
-      "id": "./scss/navbar.scss",
-      "name": "./scss/navbar.scss",
+      "id": "./scss/hero.scss",
+      "name": "./scss/hero.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/about.scss": [
+    {
+      "id": "./scss/about.scss",
+      "name": "./scss/about.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/slice.scss": [
+    {
+      "id": "./scss/slice.scss",
+      "name": "./scss/slice.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/map.scss": [
+    {
+      "id": "./scss/map.scss",
+      "name": "./scss/map.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/hero-text.scss": [
+    {
+      "id": "./scss/hero-text.scss",
+      "name": "./scss/hero-text.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/contact.scss": [
+    {
+      "id": "./scss/contact.scss",
+      "name": "./scss/contact.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -99,10 +145,34 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../scss/slice.scss": [
+  "../scss/footer.scss": [
     {
-      "id": "./scss/slice.scss",
-      "name": "./scss/slice.scss",
+      "id": "./scss/footer.scss",
+      "name": "./scss/footer.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/navbar.scss": [
+    {
+      "id": "./scss/navbar.scss",
+      "name": "./scss/navbar.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/common.scss": [
+    {
+      "id": "./scss/common.scss",
+      "name": "./scss/common.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/work.scss": [
+    {
+      "id": "./scss/work.scss",
+      "name": "./scss/work.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }

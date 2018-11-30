@@ -73,13 +73,37 @@
   text-align: center;
   margin: 0; }
 
+.work__wrapper {
+  margin: auto;
+  background-color: #3e5a71;
+  height: 2000px; }
+
+.about__wrapper {
+  height: 1000px;
+  background-color: #eff8ff; }
+
+.map__wrapper {
+  height: auto;
+  background-color: gray; }
+
+.map {
+  height: 250px; }
+
+.contact__wrapper {
+  height: 1000px;
+  background-color: #06131c; }
+
+.footer__wrapper {
+  height: 100px;
+  background-color: #05111a; }
+
 html,
 body {
   margin: 0; }
 
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: #06131c; }
+  background-color: #3e5a71; }
 
 .landing__wrapper {
   background-image: url("/static/website_hero.jpg");
