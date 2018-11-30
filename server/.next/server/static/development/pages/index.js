@@ -756,8 +756,9 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_skills_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/skills.scss */ "./scss/skills.scss");
-/* harmony import */ var _scss_skills_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_skills_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Title */ "./components/Title.js");
+/* harmony import */ var _scss_skills_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/skills.scss */ "./scss/skills.scss");
+/* harmony import */ var _scss_skills_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_skills_scss__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/Skills.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -778,6 +779,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+ // Components
+
+ // Styles
 
 
 
@@ -799,16 +803,19 @@ function (_React$Component) {
         className: "skills__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 6
+          lineNumber: 10
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        title: "skills",
+        accent: "my",
+        color: "dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 11
         },
         __self: this
-      }, "Skills"));
+      }));
     }
   }]);
 
@@ -941,6 +948,107 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./components/Title.js":
+/*!*****************************!*\
+  !*** ./components/Title.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_title_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/title.scss */ "./scss/title.scss");
+/* harmony import */ var _scss_title_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_title_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/Title.js";
+ // Style
+
+
+
+var Title = function Title(props) {
+  // Define the title word, accent word and font color
+  var title = props.title,
+      accent = props.accent,
+      color = props.color; // Determine font color class
+
+  var colorClass = 'title__dark';
+
+  if (color === 'dark') {
+    colorClass = 'title__font--dark';
+  } else {
+    colorClass = 'title__font--light';
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title__wrapper",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title__top",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "title__accent--clear",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, accent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "title__svg",
+    viewBox: "0 0 100 100",
+    xmlns: "http://www.w3.org/2000/svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "title__svg__path",
+    x1: "50",
+    y1: "0",
+    x2: "50",
+    y2: "100",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "title__accent ".concat(colorClass),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, accent)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title__bottom",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "title__main ".concat(colorClass),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, title)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Title);
+
+/***/ }),
+
 /***/ "./components/Work.js":
 /*!****************************!*\
   !*** ./components/Work.js ***!
@@ -952,8 +1060,9 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_work_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/work.scss */ "./scss/work.scss");
-/* harmony import */ var _scss_work_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_work_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Title */ "./components/Title.js");
+/* harmony import */ var _scss_work_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/work.scss */ "./scss/work.scss");
+/* harmony import */ var _scss_work_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_work_scss__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/Work.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -974,6 +1083,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+ // Components
+
+ // Styles
 
 
 
@@ -995,10 +1107,19 @@ function (_React$Component) {
         className: "work__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 5
+          lineNumber: 9
         },
         __self: this
-      });
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        title: "work",
+        accent: "my",
+        color: "light",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      }));
     }
   }]);
 
@@ -1288,6 +1409,17 @@ function (_React$Component) {
 /***/ "./scss/slice.scss":
 /*!*************************!*\
   !*** ./scss/slice.scss ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./scss/title.scss":
+/*!*************************!*\
+  !*** ./scss/title.scss ***!
   \*************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
