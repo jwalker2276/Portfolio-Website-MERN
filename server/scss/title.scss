@@ -15,7 +15,6 @@
 }
 
 .title__svg__path {
-  stroke: black;
   stroke-width: 5;
 }
 
@@ -32,8 +31,6 @@
   opacity: 0;
 }
 
-.title__bottom {}
-
 .title__main {
   font-weight: 700;
   font-size: 5em;
@@ -48,4 +45,12 @@
 
 .title__font--light {
   color: $font-light;
+}
+
+.title__stroke--dark {
+  stroke: $font-dark;
+}
+
+.title__stroke--light {
+  stroke: $font-light;
 }

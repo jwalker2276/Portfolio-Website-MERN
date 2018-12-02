@@ -1,0 +1,20 @@
+@import '_colors.scss';
+.skill__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill__title {
+  color: $font_dark;
+}
+
+.skill__svg {
+  width: 25px;
+  height: 50px;
+}
+
+.skill__path {
+  stroke-width: 5;
+  stroke: $font-dark;
+}

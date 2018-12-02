@@ -446,6 +446,106 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./components/Icons.js":
+/*!*****************************!*\
+  !*** ./components/Icons.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_icons_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/icons.scss */ "./scss/icons.scss");
+/* harmony import */ var _scss_icons_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_icons_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/Icons.js";
+ // Styles
+
+
+
+var Icons = function Icons(props) {
+  // Icons
+  var iconFrontEnd = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "skill__icon__path",
+    d: "M10 20C7.34784 20 4.8043 18.9464 2.92893 17.0711C1.05357 15.1957 0 12.6522 0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0C12.6522 0 15.1957 1.05357 17.0711 2.92893C18.9464 4.8043 20 7.34784 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20ZM17.75 12C18.0883 10.6881 18.0883 9.31188 17.75 8H13.93C14.0227 9.33172 14.0227 10.6683 13.93 12H17.75ZM16.93 14H13.71C13.5425 15.2054 13.2233 16.3847 12.76 17.51C14.5167 16.862 15.9917 15.6204 16.93 14ZM8.08 12H11.92C12.0285 10.6689 12.0285 9.33112 11.92 8H8.08C7.97146 9.33112 7.97146 10.6689 8.08 12ZM8.33 14C8.74 16.4 9.46 18 10 18C10.54 18 11.26 16.4 11.67 14H8.33ZM2.25 12H6.07C5.97733 10.6683 5.97733 9.33172 6.07 8H2.25C1.91173 9.31188 1.91173 10.6881 2.25 12ZM3.07 14C4.00826 15.6204 5.48328 16.862 7.24 17.51C6.82 16.55 6.5 15.35 6.29 14H3.07ZM16.93 6C15.9917 4.3796 14.5167 3.13804 12.76 2.49C13.18 3.45 13.5 4.65 13.71 6H16.93ZM8.33 6H11.67C11.26 3.6 10.54 2 10 2C9.46 2 8.74 3.6 8.33 6ZM3.07 6H6.29C6.49 4.65 6.82 3.45 7.24 2.49C5.48328 3.13804 4.00826 4.3796 3.07 6Z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  });
+  var iconBackEnd = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "skill__icon__path",
+    d: "M0 2C0 0.9 0.9 0 2 0H18C18.5304 0 19.0391 0.210714 19.4142 0.585786C19.7893 0.960859 20 1.46957 20 2V4C20 4.53043 19.7893 5.03914 19.4142 5.41421C19.0391 5.78929 18.5304 6 18 6H2C1.46957 6 0.960859 5.78929 0.585786 5.41421C0.210714 5.03914 0 4.53043 0 4V2ZM0 9C0 7.9 0.9 7 2 7H18C18.5304 7 19.0391 7.21071 19.4142 7.58579C19.7893 7.96086 20 8.46957 20 9V11C20 11.5304 19.7893 12.0391 19.4142 12.4142C19.0391 12.7893 18.5304 13 18 13H2C1.46957 13 0.960859 12.7893 0.585786 12.4142C0.210714 12.0391 0 11.5304 0 11V9ZM0 16C0 14.9 0.9 14 2 14H18C18.5304 14 19.0391 14.2107 19.4142 14.5858C19.7893 14.9609 20 15.4696 20 16V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V16ZM12 2V4H14V2H12ZM16 2V4H18V2H16ZM12 9V11H14V9H12ZM16 9V11H18V9H16ZM12 16V18H14V16H12ZM16 16V18H18V16H16Z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  });
+  var iconTools = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "skill__icon__path",
+    d: "M3.94 6.5L2.22 3.64L3.64 2.22L6.5 3.94C7.02 3.64 7.6 3.4 8.2 3.24L9 0H11L11.8 3.24C12.4 3.4 12.98 3.64 13.5 3.94L16.36 2.22L17.78 3.64L16.06 6.5C16.36 7.02 16.6 7.6 16.76 8.2L20 9V11L16.76 11.8C16.6 12.4 16.36 12.98 16.06 13.5L17.78 16.36L16.36 17.78L13.5 16.06C12.98 16.36 12.4 16.6 11.8 16.76L11 20H9L8.2 16.76C7.6 16.6 7.02 16.36 6.5 16.06L3.64 17.78L2.22 16.36L3.94 13.5C3.64 12.98 3.4 12.4 3.24 11.8L0 11V9L3.24 8.2C3.4 7.6 3.64 7.02 3.94 6.5ZM10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13Z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  });
+  var iconKnowledge = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "skill__icon__path",
+    d: "M3.05288 17.1929C2.09778 16.2704 1.33596 15.167 0.811868 13.9469C0.287778 12.7269 0.0119157 11.4147 0.000377568 10.0869C-0.0111606 8.7591 0.241856 7.44231 0.744665 6.21334C1.24747 4.98438 1.99001 3.86786 2.92893 2.92893C3.86786 1.99001 4.98438 1.24747 6.21334 0.744665C7.44231 0.241856 8.7591 -0.0111606 10.0869 0.000377568C11.4147 0.0119157 12.7269 0.287778 13.9469 0.811868C15.167 1.33596 16.2704 2.09778 17.1929 3.05288C19.0145 4.9389 20.0224 7.46493 19.9996 10.0869C19.9768 12.7089 18.9251 15.217 17.0711 17.0711C15.217 18.9251 12.7089 19.9768 10.0869 19.9996C7.46493 20.0224 4.9389 19.0145 3.05288 17.1929ZM9.12288 11.1229V15.1229H11.1229V9.12288H9.12288V11.1229ZM9.12288 5.12288V7.12288H11.1229V5.12288H9.12288Z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }); // Determine icon to display
+
+  var iconName = props.iconName;
+  var iconToDisplay = iconKnowledge;
+
+  switch (iconName) {
+    case 'Front-end':
+      iconToDisplay = iconFrontEnd;
+      break;
+
+    case 'Back-end':
+      iconToDisplay = iconBackEnd;
+      break;
+
+    case 'Tools':
+      iconToDisplay = iconTools;
+      break;
+
+    case 'Knowledge':
+      iconToDisplay = iconKnowledge;
+      break;
+
+    default:
+      iconToDisplay = iconFrontEnd;
+      break;
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "skill__icon__svg",
+    width: "20",
+    height: "20",
+    viewBox: "0 0 20 20",
+    xmlns: "http://www.w3.org/2000/svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, iconToDisplay);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Icons);
+
+/***/ }),
+
 /***/ "./components/Logo.js":
 /*!****************************!*\
   !*** ./components/Logo.js ***!
@@ -745,6 +845,114 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./components/Skill.js":
+/*!*****************************!*\
+  !*** ./components/Skill.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Icons */ "./components/Icons.js");
+/* harmony import */ var _scss_skill_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/skill.scss */ "./scss/skill.scss");
+/* harmony import */ var _scss_skill_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_skill_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/Skill.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+ // Components
+
+ // Style
+
+
+
+var Skill =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Skill, _React$Component);
+
+  function Skill() {
+    _classCallCheck(this, Skill);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Skill).apply(this, arguments));
+  }
+
+  _createClass(Skill, [{
+    key: "render",
+    value: function render() {
+      // Determine skill type from props
+      var type = this.props.type;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "skill__group",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Icons__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        iconName: type,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "skill__title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+        className: "skill__svg",
+        viewBox: "0 0 100 100",
+        xmlns: "http://www.w3.org/2000/svg",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+        className: "skill__path",
+        x1: "50",
+        y1: "0",
+        x2: "50",
+        y2: "150",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return Skill;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Skill);
+
+/***/ }),
+
 /***/ "./components/Skills.js":
 /*!******************************!*\
   !*** ./components/Skills.js ***!
@@ -757,8 +965,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Title */ "./components/Title.js");
-/* harmony import */ var _scss_skills_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/skills.scss */ "./scss/skills.scss");
-/* harmony import */ var _scss_skills_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_skills_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Skill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Skill */ "./components/Skill.js");
+/* harmony import */ var _scss_skills_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../scss/skills.scss */ "./scss/skills.scss");
+/* harmony import */ var _scss_skills_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_skills_scss__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/Skills.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -780,6 +989,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
  // Components
+
 
  // Styles
 
@@ -803,7 +1013,7 @@ function (_React$Component) {
         className: "skills__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 11
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -812,10 +1022,45 @@ function (_React$Component) {
         color: "dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 12
         },
         __self: this
-      }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "skills",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        type: "Front-end",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        type: "Back-end",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        type: "Tools",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        type: "Knowledge",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      })));
     }
   }]);
 
@@ -972,33 +1217,37 @@ var Title = function Title(props) {
       accent = props.accent,
       color = props.color; // Determine font color class
 
-  var colorClass = 'title__dark';
+  var colorClass = 'title__dark'; // Determine stroke color class
+
+  var strokeClass = 'title__stroke--dark';
 
   if (color === 'dark') {
     colorClass = 'title__font--dark';
+    strokeClass = 'title__stroke--dark';
   } else {
     colorClass = 'title__font--light';
+    strokeClass = 'title__stroke--light';
   }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "title__wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "title__top",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     className: "title__accent--clear",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     },
     __self: this
   }, accent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -1007,39 +1256,39 @@ var Title = function Title(props) {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
-    className: "title__svg__path",
+    className: "title__svg__path ".concat(strokeClass),
     x1: "50",
     y1: "0",
     x2: "50",
     y2: "100",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     className: "title__accent ".concat(colorClass),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: this
   }, accent)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "title__bottom",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "title__main ".concat(colorClass),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 32
     },
     __self: this
   }, title)));
@@ -1362,6 +1611,17 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./scss/icons.scss":
+/*!*************************!*\
+  !*** ./scss/icons.scss ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./scss/logo.scss":
 /*!************************!*\
   !*** ./scss/logo.scss ***!
@@ -1388,6 +1648,17 @@ function (_React$Component) {
 /*!**************************!*\
   !*** ./scss/navbar.scss ***!
   \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./scss/skill.scss":
+/*!*************************!*\
+  !*** ./scss/skill.scss ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

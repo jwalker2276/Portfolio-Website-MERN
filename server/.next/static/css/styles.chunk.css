@@ -86,7 +86,6 @@
   height: 25px; }
 
 .title__svg__path {
-  stroke: black;
   stroke-width: 5; }
 
 .title__accent, .title__accent--clear {
@@ -112,10 +111,60 @@
 .title__font--light {
   color: #eff8ff; }
 
+.title__stroke--dark {
+  stroke: #263745; }
+
+.title__stroke--light {
+  stroke: #eff8ff; }
+
+.skill__icon__path {
+  fill: #263745; }
+
+.skill__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.skill__title {
+  color: #263745; }
+
+.skill__svg {
+  width: 25px;
+  height: 50px; }
+
+.skill__path {
+  stroke-width: 5;
+  stroke: #263745; }
+
 .skills__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 1000px;
   background: #eff8ff;
   margin: auto; }
+
+.skills {
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 .work__wrapper {
   margin: auto;
