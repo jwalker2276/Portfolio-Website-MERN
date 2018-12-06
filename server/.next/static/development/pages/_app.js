@@ -14721,7 +14721,10 @@ var logout = function logout() {
 __webpack_require__.r(__webpack_exports__);
 var actions = {
   GET_ERRORS: 'GET_ERRORS',
-  SET_CURRENT_USER: 'SET_CURRENT_USER'
+  SET_CURRENT_USER: 'SET_CURRENT_USER',
+  GET_PROFILE: 'GET_PROFILE',
+  GET_PROJECTS: 'GET_PROJECTS',
+  DATA_LOADING: 'DATA_LOADING'
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 
@@ -14750,6 +14753,7 @@ var authState = {
   isAuth: false,
   user: {}
 }; // Check for action type
+// Todo : Rename function
 
 var reducer = function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : authState;
@@ -14801,6 +14805,55 @@ var errorState = {}; // Check for action type
 
 /***/ }),
 
+/***/ "./reduxState/reducers/homePageReducer.js":
+/*!************************************************!*\
+  !*** ./reduxState/reducers/homePageReducer.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./reduxState/actions/types.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var pageState = {
+  profileData: null,
+  projectData: null,
+  loading: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : pageState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["default"].DATA_LOADING:
+      return _objectSpread({}, state, {
+        loading: true
+      });
+
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["default"].GET_PROFILE:
+      return _objectSpread({}, state, {
+        profileData: action.payload,
+        loading: false
+      });
+
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["default"].GET_PROJECTS:
+      return _objectSpread({}, state, {
+        projectData: action.payload,
+        loading: false
+      });
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
 /***/ "./reduxState/reducers/index.js":
 /*!**************************************!*\
   !*** ./reduxState/reducers/index.js ***!
@@ -14812,13 +14865,16 @@ var errorState = {}; // Check for action type
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _authReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./authReducer */ "./reduxState/reducers/authReducer.js");
-/* harmony import */ var _errorReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errorReducer */ "./reduxState/reducers/errorReducer.js");
+/* harmony import */ var _homePageReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./homePageReducer */ "./reduxState/reducers/homePageReducer.js");
+/* harmony import */ var _errorReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./errorReducer */ "./reduxState/reducers/errorReducer.js");
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   auth: _authReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  errors: _errorReducer__WEBPACK_IMPORTED_MODULE_2__["default"]
+  errors: _errorReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  homePageData: _homePageReducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 }));
 
 /***/ }),

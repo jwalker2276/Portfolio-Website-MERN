@@ -8,6 +8,7 @@ const authState = {
 };
 
 // Check for action type
+// Todo : Rename function
 const reducer = (state = authState, action) => {
   switch (action.type) {
     case actions.SET_CURRENT_USER:

@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getProfileData, getProjectData } from '../reduxState/actions/homePageActions';
 // Components
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -14,6 +16,12 @@ import Footer from '../components/Footer';
 import '../scss/common.scss';
 
 class Home extends React.Component {
+  componentDidMount() {
+    // Run actions on mount
+    this.props.getProfileData();
+    this.props.getProjectData();
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -35,4 +43,12 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  profile: state.profile,
+  projects: state.projects
+});
+
+export default connect(
+  mapStateToProps,
+  { getProfileData, getProjectData }
+)(Home);

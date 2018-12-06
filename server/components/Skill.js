@@ -1,6 +1,7 @@
 import React from 'react';
 // Components
 import Icon from './Icons';
+import SkillList from './SkillList';
 
 // Style
 import '../scss/skill.scss';
@@ -20,6 +21,7 @@ class Skill extends React.Component {
           <line className="skill__path" x1="50" y1="0" x2="50" y2="150" />
         </svg>
         {/* Data */}
+        <SkillList list={type} />
       </div>
     );
   }
