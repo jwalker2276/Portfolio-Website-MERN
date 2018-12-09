@@ -9,7 +9,7 @@ import '../scss/skill.scss';
 class Skill extends React.Component {
   render() {
     // Determine skill type from props
-    const { type } = this.props;
+    const { type, skills } = this.props;
 
     return (
       <div className="skill__group">
@@ -21,7 +21,7 @@ class Skill extends React.Component {
           <line className="skill__path" x1="50" y1="0" x2="50" y2="150" />
         </svg>
         {/* Data */}
-        <SkillList list={type} />
+        <SkillList list={skills} />
       </div>
     );
   }

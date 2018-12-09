@@ -5,14 +5,19 @@ import '../scss/skill-list.scss';
 
 class SkillList extends React.Component {
   render() {
-    return (
-      <ul>
-        <li>{this.props.list}</li>
-        <li>skill</li>
-        <li>skill</li>
-        <li>skill</li>
-      </ul>
-    );
+    const { list } = this.props;
+
+    if (list === undefined) {
+      return <p>loading....</p>;
+    }
+
+    const listItems = list.map(listItem => (
+      <li key={listItem} className="skill__listitem">
+        {listItem}
+      </li>
+    ));
+
+    return <ul className="skill__list">{listItems}</ul>;
   }
 }
 

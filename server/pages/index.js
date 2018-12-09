@@ -23,6 +23,20 @@ class Home extends React.Component {
   }
 
   render() {
+    const { profileData } = this.props;
+
+    let skillData;
+    let contactData;
+    let bioData;
+
+    // Make sure data has loaded
+    if (profileData !== null) {
+      // Destructure data
+      skillData = profileData.skills;
+      contactData = profileData.contactInfo;
+      bioData = profileData.bio;
+    }
+
     return (
       <React.Fragment>
         <div className="landing__wrapper">
@@ -30,11 +44,11 @@ class Home extends React.Component {
           <Hero />
           <Slice position="top" color="white" />
         </div>
-        <Skills />
+        <Skills skills={skillData} />
         <Slice position="bottom" color="white" />
         <Work />
         <Slice position="top" color="white" />
-        <About />
+        <About contact={contactData} bio={bioData} />
         <Map />
         <Contact />
         <Footer />
@@ -44,8 +58,9 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  profile: state.profile,
-  projects: state.projects
+  loading: state.homePageData.loading,
+  profileData: state.homePageData.profileData,
+  projectsData: state.homePageData.projectData
 });
 
 export default connect(

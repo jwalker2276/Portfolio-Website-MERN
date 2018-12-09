@@ -809,7 +809,9 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       // Determine skill type from props
-      var type = this.props.type;
+      var _this$props = this.props,
+          type = _this$props.type,
+          skills = _this$props.skills;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "skill__group",
         __source: {
@@ -852,7 +854,7 @@ function (_React$Component) {
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillList__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        list: type,
+        list: skills,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 24
@@ -920,37 +922,37 @@ function (_React$Component) {
   _createClass(SkillList, [{
     key: "render",
     value: function render() {
+      var list = this.props.list;
+
+      if (list === undefined) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11
+          },
+          __self: this
+        }, "loading....");
+      }
+
+      var listItems = list.map(function (listItem) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: listItem,
+          className: "skill__listitem",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15
+          },
+          __self: this
+        }, listItem);
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "skill__list",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 20
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        },
-        __self: this
-      }, this.props.list), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, "skill"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }, "skill"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        },
-        __self: this
-      }, "skill"));
+      }, listItems);
     }
   }]);
 
@@ -1017,11 +1019,23 @@ function (_React$Component) {
   _createClass(Skills, [{
     key: "render",
     value: function render() {
+      var frontEndList;
+      var backEndList;
+      var knowledgeList;
+      var toolsList;
+
+      if (this.props.skills !== undefined) {
+        frontEndList = this.props.skills.frontend;
+        backEndList = this.props.skills.backend;
+        knowledgeList = this.props.skills.knowledge;
+        toolsList = this.props.skills.tools;
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "skills__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1030,42 +1044,46 @@ function (_React$Component) {
         color: "dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 24
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "skills",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
         type: "Front-end",
+        skills: frontEndList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 26
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
         type: "Back-end",
+        skills: backEndList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 27
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
         type: "Tools",
+        skills: knowledgeList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 28
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
         type: "Knowledge",
+        skills: toolsList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 29
         },
         __self: this
       })));
@@ -6425,29 +6443,41 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var profileData = this.props.profileData;
+      var skillData;
+      var contactData;
+      var bioData; // Make sure data has loaded
+
+      if (profileData !== null) {
+        // Destructure data
+        skillData = profileData.skills;
+        contactData = profileData.contactInfo;
+        bioData = profileData.bio;
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 41
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "landing__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 42
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 43
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Hero__WEBPACK_IMPORTED_MODULE_4__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 44
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Slice__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -6455,13 +6485,14 @@ function (_React$Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 45
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Skills__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        skills: skillData,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 47
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Slice__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -6469,13 +6500,13 @@ function (_React$Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 48
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Work__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 49
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Slice__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -6483,31 +6514,33 @@ function (_React$Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 50
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_About__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        contact: contactData,
+        bio: bioData,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 51
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Map__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 52
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Contact__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 53
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 54
         },
         __self: this
       }));
@@ -6519,8 +6552,9 @@ function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    profile: state.profile,
-    projects: state.projects
+    loading: state.homePageData.loading,
+    profileData: state.homePageData.profileData,
+    projectsData: state.homePageData.projectData
   };
 };
 

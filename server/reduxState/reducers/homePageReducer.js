@@ -3,7 +3,7 @@ import actions from '../actions/types';
 const pageState = {
   profileData: null,
   projectData: null,
-  loading: false
+  loading: true
 };
 
 export default (state = pageState, action) => {
