@@ -29,28 +29,30 @@ class AboutBanner extends React.Component {
       <div className="about__banner">
         <div className="banner__first">
           <p className="banner__title">Find Me</p>
-          <a className="banner__link" href={github} target="_blank" rel="noopener noreferrer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="banner__icon__svg"
-              width="25"
-              height="25"
-              viewBox="0 0 25 25"
-            >
-              {gitHubIconPath}
-            </svg>
-          </a>
-          <a className="banner__link" href={linkedin} target="_blank" rel="noopener noreferrer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="banner__icon__svg"
-              width="25"
-              height="25"
-              viewBox="0 0 25 25"
-            >
-              {linkedInIconPath}
-            </svg>
-          </a>
+          <div className="banner__icons">
+            <a className="banner__link" href={github} target="_blank" rel="noopener noreferrer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="banner__icon__svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+              >
+                {gitHubIconPath}
+              </svg>
+            </a>
+            <a className="banner__link" href={linkedin} target="_blank" rel="noopener noreferrer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="banner__icon__svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+              >
+                {linkedInIconPath}
+              </svg>
+            </a>
+          </div>
         </div>
         <div className="banner__second">
           <p className="banner__title">Email Me</p>

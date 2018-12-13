@@ -182,10 +182,93 @@
   background-color: #3e5a71;
   height: 2000px; }
 
+.about__banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #eff8ff;
+  background-color: #3e5a71;
+  border-radius: 5px;
+  width: 490px;
+  height: 80px; }
+
+.banner__first {
+  padding-right: 60px; }
+
+.banner__second {
+  padding-right: 20px; }
+
+.banner__title {
+  margin: 0px;
+  padding-top: 12px;
+  padding-bottom: 10px; }
+
+.banner__email {
+  margin: 4px 0; }
+
+.banner__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.banner__icon__path {
+  fill: #eff8ff; }
 
 .about__wrapper {
   height: 1000px;
-  background-color: #eff8ff; }
+  background-color: #eff8ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.about__profileImg {
+  border: 10px solid #3e5a71;
+  border-radius: 50%;
+  position: absolute;
+  left: 0; }
+
+.about__content__top {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 600px;
+  border-radius: 5px;
+  margin-top: 100px; }
+
+.about__content__bottom {
+  margin-top: 100px;
+  width: 600px;
+  height: auto; }
+
+.about__bio {
+  padding: 10px;
+  color: #263745; }
 
 .map__wrapper {
   height: auto;

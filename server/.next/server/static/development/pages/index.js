@@ -104,10 +104,12 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Title */ "./components/Title.js");
-/* harmony import */ var _AboutBanner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AboutBanner */ "./components/AboutBanner.js");
-/* harmony import */ var _scss_about_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../scss/about.scss */ "./scss/about.scss");
-/* harmony import */ var _scss_about_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_about_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! cloudinary-react */ "cloudinary-react");
+/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Title */ "./components/Title.js");
+/* harmony import */ var _AboutBanner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AboutBanner */ "./components/AboutBanner.js");
+/* harmony import */ var _scss_about_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scss/about.scss */ "./scss/about.scss");
+/* harmony import */ var _scss_about_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_about_scss__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/About.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -127,6 +129,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
  // Components
@@ -153,40 +156,66 @@ function (_Component) {
         className: "about__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 12
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_2__["default"], {
         title: "me",
         accent: "about",
         color: "dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "about__image",
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 13
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AboutBanner__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        contactInfo: this.props.contact,
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "about__content__top",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "about__bio",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+        className: "about__profileImg",
+        cloudName: "jwalkercreations-com",
+        publicId: "websiteImages/profileImage.jpg",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
         },
         __self: this
-      }, this.props.bio));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Transformation"], {
+        height: "150",
+        quality: "auto",
+        crop: "limit",
+        fetchFormat: "auto",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AboutBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        contactInfo: this.props.contact,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "about__content__bottom",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "about__bio",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, this.props.bio)));
     }
   }]);
 
@@ -302,14 +331,21 @@ function (_React$Component) {
           lineNumber: 31
         },
         __self: this
-      }, "Find Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "Find Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "banner__icons",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "banner__link",
         href: github,
         target: "_blank",
         rel: "noopener noreferrer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -320,7 +356,7 @@ function (_React$Component) {
         viewBox: "0 0 25 25",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         },
         __self: this
       }, gitHubIconPath)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -330,7 +366,7 @@ function (_React$Component) {
         rel: "noopener noreferrer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 44
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -341,28 +377,28 @@ function (_React$Component) {
         viewBox: "0 0 25 25",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 45
         },
         __self: this
-      }, linkedInIconPath))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, linkedInIconPath)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "banner__second",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 57
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "banner__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 58
         },
         __self: this
       }, "Email Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "banner__email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 59
         },
         __self: this
       }, email)));
@@ -2210,6 +2246,17 @@ module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
+
+/***/ }),
+
+/***/ "cloudinary-react":
+/*!***********************************!*\
+  !*** external "cloudinary-react" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("cloudinary-react");
 
 /***/ }),
 
