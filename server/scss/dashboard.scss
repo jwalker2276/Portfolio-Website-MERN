@@ -1,11 +1,10 @@
 @import '_colors';
 .dashboard-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
   position: relative;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .dashboard-wrapper:after {
@@ -18,4 +17,13 @@
   bottom: 0;
   right: 0;
   z-index: -1;
+}
+
+.dashboard__nav {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
 }

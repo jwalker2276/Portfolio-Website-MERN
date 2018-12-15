@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Router from 'next/router';
-
+import { getProfileData, getProjectData } from '../reduxState/actions/homePageActions';
+// Components
 import LogoutButton from '../components/LogoutButton';
+import DashboardSkills from '../components/DashboardSkills';
+// Styles
 import '../scss/dashboard.scss';
 
 class Dashboard extends React.Component {
@@ -12,6 +15,10 @@ class Dashboard extends React.Component {
       // User should not be here, redirect to login page.
       Router.push('/account');
     }
+
+    // Call actions to get server data
+    this.props.getProfileData();
+    this.props.getProjectData();
   }
 
   // Check if user clicked logout
@@ -26,7 +33,21 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className="dashboard-wrapper">
-        <LogoutButton />
+        <nav className="dashboard__nav">
+          <LogoutButton />
+        </nav>
+        <section className="dashboard__skills">
+          <DashboardSkills />
+        </section>
+        <section className="dashboard__project">
+          <h1>Projects</h1>
+        </section>
+        <section className="dashboard__about">
+          <h1>About Info</h1>
+        </section>
+        <section className="dashboard__contact">
+          <h1>Contact Info</h1>
+        </section>
       </div>
     );
   }
@@ -34,7 +55,12 @@ class Dashboard extends React.Component {
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  profileData: state.homePageData.profileData,
+  projectData: state.homePageData.projectData
 });
 
-export default connect(mapStateToProps)(Dashboard);
+export default connect(
+  mapStateToProps,
+  { getProfileData, getProjectData }
+)(Dashboard);
