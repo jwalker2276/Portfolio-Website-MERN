@@ -1,4 +1,19 @@
 @import '_colors';
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: $bk-dark;
+}
+
+#__next {
+  height: 100%;
+}
+
 .dashboard-wrapper {
   height: 100%;
   width: 100%;
@@ -26,4 +41,25 @@
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
+}
+
+.dashboard__login__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.dashboard__login__wrapper:after {
+  content: '';
+  background-image: url(/static/hexabump.png);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }

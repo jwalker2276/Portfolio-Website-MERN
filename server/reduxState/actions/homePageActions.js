@@ -1,18 +1,8 @@
 import axios from 'axios';
-
 import actions from './types';
-
-// Set loading flag
-export const setDataLoading = () => {
-  return {
-    type: actions.DATA_LOADING
-  };
-};
 
 // Get project data
 export const getProfileData = () => dispatch => {
-  // Call loading toggle function
-  dispatch(setDataLoading());
   // Fetch profile data
   axios
     .get('/profile')
@@ -32,8 +22,6 @@ export const getProfileData = () => dispatch => {
 
 // Get project data
 export const getProjectData = () => dispatch => {
-  // Call loading toggle function
-  // dispatch(setDataLoading());
   // Fetch project data
   axios
     .get('/project/all')

@@ -58,7 +58,6 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loading: state.homePageData.loading,
   profileData: state.homePageData.profileData,
   projectsData: state.homePageData.projectData
 });
