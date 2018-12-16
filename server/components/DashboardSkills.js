@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+// Components
 
-class DashboardSkills extends React.Component {
+// Styles
+import '../scss/dashboard-skills.scss';
+
+class DashboardSkills extends Component {
   render() {
-    return <h1>Skills</h1>;
+    return (
+      <div>
+        <h1>Current Skills</h1>
+      </div>
+    );
   }
 }
 

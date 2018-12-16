@@ -1,4 +1,8 @@
 
+
+
+
+
 .form {
   width: 350px;
   height: 350px;
@@ -92,30 +96,6 @@ body {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
-
-.dashboard-wrapper:after {
-  content: '';
-  background-image: url(/static/hexabump.png);
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1; }
-
-.dashboard__nav {
-  height: 50px;
-  width: 100%;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
 
 .dashboard__login__wrapper {
   display: -webkit-box;
