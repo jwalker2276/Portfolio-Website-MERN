@@ -182,7 +182,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
-/* harmony import */ var _LogoutButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LogoutButton */ "./components/LogoutButton.js");
+/* harmony import */ var _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reduxState/actions/authActions */ "./reduxState/actions/authActions.js");
 /* harmony import */ var _DashboardAbout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DashboardAbout */ "./components/DashboardAbout.js");
 /* harmony import */ var _DashboardSkills__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DashboardSkills */ "./components/DashboardSkills.js");
 /* harmony import */ var _DashboardProjects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DashboardProjects */ "./components/DashboardProjects.js");
@@ -210,8 +210,8 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 
- // Components
 
+ // Components
 
 
 
@@ -251,6 +251,13 @@ function (_Component) {
       this.setState({
         sectionToRender: section
       });
+    } // Logout
+
+  }, {
+    key: "logout",
+    value: function logout() {
+      // Use redux action to logout user.
+      this.props.logout();
     }
   }, {
     key: "render",
@@ -265,7 +272,7 @@ function (_Component) {
           dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DashboardSkills__WEBPACK_IMPORTED_MODULE_5__["default"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 38
+              lineNumber: 46
             },
             __self: this
           });
@@ -275,7 +282,7 @@ function (_Component) {
           dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DashboardAbout__WEBPACK_IMPORTED_MODULE_4__["default"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 41
+              lineNumber: 49
             },
             __self: this
           });
@@ -285,7 +292,7 @@ function (_Component) {
           dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DashboardProjects__WEBPACK_IMPORTED_MODULE_6__["default"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 44
+              lineNumber: 52
             },
             __self: this
           });
@@ -295,7 +302,7 @@ function (_Component) {
           dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DashboardSkills__WEBPACK_IMPORTED_MODULE_5__["default"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 47
+              lineNumber: 55
             },
             __self: this
           });
@@ -304,64 +311,79 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 59
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "dashboard__nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 60
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "nav__buttons",
+        className: "nav__buttons__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 61
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "nav__button",
         type: "button",
         onClick: function onClick() {
           return _this2.handleEvent('skills');
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 62
         },
         __self: this
       }, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "nav__button",
         type: "button",
         onClick: function onClick() {
           return _this2.handleEvent('about');
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 69
         },
         __self: this
       }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "nav__button",
         type: "button",
         onClick: function onClick() {
           return _this2.handleEvent('projects');
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 72
         },
         __self: this
-      }, "Projects")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LogoutButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, "Projects")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav__buttons__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 80
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "nav__button nav__button--right",
+        type: "button",
+        onClick: function onClick() {
+          return _this2.logout();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }, "Logout"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "dashboard__section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 90
         },
         __self: this
       }, dashBoardSection));
@@ -382,7 +404,8 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
   getProfileData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__["getProfileData"],
-  getProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__["getProjectData"]
+  getProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__["getProjectData"],
+  logout: _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_3__["logout"]
 })(DashboardController));
 
 /***/ }),
@@ -515,18 +538,33 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section__wrapper",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 10
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "section__title",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 11
         },
         __self: this
-      }, "Current Skills"));
+      }, "Current Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section__content",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, "cards")));
     }
   }]);
 
@@ -772,92 +810,6 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./components/LogoutButton.js":
-/*!************************************!*\
-  !*** ./components/LogoutButton.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reduxState/actions/authActions */ "./reduxState/actions/authActions.js");
-/* harmony import */ var _scss_buttons_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../scss/buttons.scss */ "./scss/buttons.scss");
-/* harmony import */ var _scss_buttons_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_buttons_scss__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/LogoutButton.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-var LogoutButton =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(LogoutButton, _React$Component);
-
-  function LogoutButton() {
-    _classCallCheck(this, LogoutButton);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(LogoutButton).apply(this, arguments));
-  }
-
-  _createClass(LogoutButton, [{
-    key: "handleClick",
-    value: function handleClick() {
-      // Use redux action
-      this.props.logout();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this = this;
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        onClick: function onClick() {
-          return _this.handleClick();
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      }, "Logout");
-    }
-  }]);
-
-  return LogoutButton;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, {
-  logout: _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_2__["logout"]
-})(LogoutButton));
-
-/***/ }),
-
 /***/ "./helpers/setAuthToken.js":
 /*!*********************************!*\
   !*** ./helpers/setAuthToken.js ***!
@@ -962,7 +914,8 @@ function (_React$Component) {
   _createClass(Dashboard, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // Check if token is in local storage
+      console.log('MOUNTED'); // Check if token is in local storage
+
       if (localStorage.jwtToken) {
         // Set token to header for requests
         Object(_helpers_setAuthToken__WEBPACK_IMPORTED_MODULE_4__["default"])(localStorage.jwtDecode); // Decode the token for user info
@@ -981,7 +934,8 @@ function (_React$Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      // Check for login or logout event
+      console.log('UPDATED'); // Check for login or logout event
+
       if (this.props.auth.isAuth !== prevProps.auth.isAuth) {
         // Change loggedin state
         if (this.props.auth.isAuth) {
@@ -1001,6 +955,7 @@ function (_React$Component) {
 
       if (this.state.isLoggedIn && !this.props.auth.isAuth) {
         if (lodash_isempty__WEBPACK_IMPORTED_MODULE_3___default()(this.props.auth.user)) {
+          // eslint-disable-next-line no-console
           console.log('Nope !!!!');
           this.logInOut();
         }
@@ -1009,6 +964,7 @@ function (_React$Component) {
 
       if (this.state.isLoggedIn && this.props.auth.isAuth) {
         if (lodash_isempty__WEBPACK_IMPORTED_MODULE_3___default()(this.props.auth.user)) {
+          // eslint-disable-next-line no-console
           console.log('Really !!!!');
           this.logInOut();
         }
@@ -1045,13 +1001,13 @@ function (_React$Component) {
           className: "dashboard-wrapper",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 95
+            lineNumber: 99
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DashboardController__WEBPACK_IMPORTED_MODULE_6__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 96
+            lineNumber: 100
           },
           __self: this
         }));
@@ -1061,13 +1017,13 @@ function (_React$Component) {
         className: "dashboard__login__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 105
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 106
         },
         __self: this
       }));
@@ -1227,17 +1183,6 @@ var actions = {
   GET_PROJECTS: 'GET_PROJECTS'
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
-
-/***/ }),
-
-/***/ "./scss/buttons.scss":
-/*!***************************!*\
-  !*** ./scss/buttons.scss ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ }),
 

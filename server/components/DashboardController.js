@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { getProfileData, getProjectData } from '../reduxState/actions/homePageActions';
+import { logout } from '../reduxState/actions/authActions';
 // Components
-import LogoutButton from './LogoutButton';
 import DashboardAbout from './DashboardAbout';
 import DashboardSkills from './DashboardSkills';
 import DashboardProjects from './DashboardProjects';
@@ -26,7 +26,15 @@ class DashboardController extends Component {
 
   // Determine which section to render
   handleEvent(section) {
-    this.setState({ sectionToRender: section });
+    this.setState({
+      sectionToRender: section
+    });
+  }
+
+  // Logout
+  logout() {
+    // Use redux action to logout user.
+    this.props.logout();
   }
 
   render() {
@@ -50,18 +58,34 @@ class DashboardController extends Component {
     return (
       <Fragment>
         <nav className="dashboard__nav">
-          <div className="nav__buttons">
-            <button type="button" onClick={() => this.handleEvent('skills')}>
+          <div className="nav__buttons__left">
+            <button
+              className="nav__button"
+              type="button"
+              onClick={() => this.handleEvent('skills')}
+            >
               Skills
             </button>
-            <button type="button" onClick={() => this.handleEvent('about')}>
+            <button className="nav__button" type="button" onClick={() => this.handleEvent('about')}>
               About
             </button>
-            <button type="button" onClick={() => this.handleEvent('projects')}>
+            <button
+              className="nav__button"
+              type="button"
+              onClick={() => this.handleEvent('projects')}
+            >
               Projects
             </button>
           </div>
-          <LogoutButton />
+          <div className="nav__buttons__right">
+            <button
+              className="nav__button nav__button--right"
+              type="button"
+              onClick={() => this.logout()}
+            >
+              Logout
+            </button>
+          </div>
         </nav>
         <section className="dashboard__section">{dashBoardSection}</section>
       </Fragment>
@@ -78,5 +102,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getProfileData, getProjectData }
+  { getProfileData, getProjectData, logout }
 )(DashboardController);

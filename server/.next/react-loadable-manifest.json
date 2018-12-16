@@ -7,15 +7,17 @@
       "publicPath": "static/chunks/0.js"
     }
   ],
-  "undefined": [
+  "../scss/dashboard-about.scss": [
     {
-      "id": 7,
-      "name": null,
+      "id": "./scss/dashboard-about.scss",
+      "name": "./scss/dashboard-about.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
-    },
+    }
+  ],
+  "undefined": [
     {
-      "id": 9,
+      "id": 4,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -27,50 +29,26 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 8,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
       "id": 6,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 4,
+      "id": 7,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 10,
+      "id": 8,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/buttons.scss": [
+    },
     {
-      "id": "./scss/buttons.scss",
-      "name": "./scss/buttons.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/dashboard-about.scss": [
-    {
-      "id": "./scss/dashboard-about.scss",
-      "name": "./scss/dashboard-about.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/dashboard-controller.scss": [
-    {
-      "id": "./scss/dashboard-controller.scss",
-      "name": "./scss/dashboard-controller.scss",
+      "id": 9,
+      "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -79,6 +57,14 @@
     {
       "id": "./scss/dashboard-projects.scss",
       "name": "./scss/dashboard-projects.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/login.scss": [
+    {
+      "id": "./scss/login.scss",
+      "name": "./scss/login.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -99,10 +85,10 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../scss/login.scss": [
+  "../scss/dashboard-controller.scss": [
     {
-      "id": "./scss/login.scss",
-      "name": "./scss/login.scss",
+      "id": "./scss/dashboard-controller.scss",
+      "name": "./scss/dashboard-controller.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
