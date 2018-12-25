@@ -234,6 +234,161 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
+/***/ "./components/dashboard/BioCard.js":
+/*!*****************************************!*\
+  !*** ./components/dashboard/BioCard.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_dashboard_dashboard_skills_card_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../scss/dashboard/dashboard-skills-card.scss */ "./scss/dashboard/dashboard-skills-card.scss");
+/* harmony import */ var _scss_dashboard_dashboard_skills_card_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_dashboard_skills_card_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/BioCard.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+ // Styles
+
+
+
+var BioCard =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(BioCard, _Component);
+
+  function BioCard(props) {
+    var _this;
+
+    _classCallCheck(this, BioCard);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(BioCard).call(this, props));
+    _this.state = {
+      bio: ''
+    };
+    _this.updateChange = _this.updateChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(BioCard, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      if (this.props.bioData !== this.state.bio) {
+        // Only update if not currently editing input
+        if (!this.props.isEditable) {
+          // Set inital value
+          this.setState({
+            bio: this.props.bioData
+          });
+        }
+      }
+    } // Update state
+
+  }, {
+    key: "updateChange",
+    value: function updateChange(event) {
+      var value = event.currentTarget.value; // Update state to new string value
+
+      this.setState({
+        bio: value
+      });
+    } // Handle submit of form
+
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      event.preventDefault(); // Update profile component state
+
+      this.props.updateProfileState('bio', this.state.bio);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var title = this.props.title;
+      var isEditable = this.props.isEditable;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, title), isEditable ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        rows: "5",
+        cols: "33",
+        className: "editForm__input",
+        type: "text",
+        name: "link",
+        value: this.state.bio,
+        onChange: this.updateChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        value: "Update Changes",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }, this.state.bio)));
+    }
+  }]);
+
+  return BioCard;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (BioCard);
+
+/***/ }),
+
 /***/ "./components/dashboard/Controller.js":
 /*!********************************************!*\
   !*** ./components/dashboard/Controller.js ***!
@@ -652,8 +807,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
 /* harmony import */ var _SkillsCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SkillsCard */ "./components/dashboard/SkillsCard.js");
 /* harmony import */ var _LinksCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LinksCard */ "./components/dashboard/LinksCard.js");
-/* harmony import */ var _scss_dashboard_dashboard_profile_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../scss/dashboard/dashboard-profile.scss */ "./scss/dashboard/dashboard-profile.scss");
-/* harmony import */ var _scss_dashboard_dashboard_profile_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_dashboard_profile_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _BioCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./BioCard */ "./components/dashboard/BioCard.js");
+/* harmony import */ var _scss_dashboard_dashboard_profile_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../scss/dashboard/dashboard-profile.scss */ "./scss/dashboard/dashboard-profile.scss");
+/* harmony import */ var _scss_dashboard_dashboard_profile_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_dashboard_profile_scss__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/Profile.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -679,6 +835,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
  // Components
+
 
 
  // Styles
@@ -781,14 +938,14 @@ function (_Component) {
         className: "section__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 86
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section__skills",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 87
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -799,7 +956,7 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 88
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -810,7 +967,7 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 95
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -821,7 +978,7 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 102
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -832,14 +989,14 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 109
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section__links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 117
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -850,7 +1007,7 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 118
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -861,7 +1018,7 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 125
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -872,7 +1029,24 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 132
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section__bio",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BioCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        bioData: bio,
+        title: "Bio",
+        isEditable: isEditable,
+        updateProfileState: this.updateProfileState,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 141
         },
         __self: this
       })));

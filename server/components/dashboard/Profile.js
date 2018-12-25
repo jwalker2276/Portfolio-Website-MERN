@@ -4,6 +4,7 @@ import { getProfileData } from '../../reduxState/actions/homePageActions';
 // Components
 import SkillsCard from './SkillsCard';
 import LinksCard from './LinksCard';
+import BioCard from './BioCard';
 // Styles
 import '../../scss/dashboard/dashboard-profile.scss';
 
@@ -132,6 +133,14 @@ class Profile extends Component {
             linkData={email}
             linkType="email"
             title="Email"
+            isEditable={isEditable}
+            updateProfileState={this.updateProfileState}
+          />
+        </div>
+        <div className="section__bio">
+          <BioCard
+            bioData={bio}
+            title="Bio"
             isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
