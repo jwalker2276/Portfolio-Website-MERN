@@ -1,34 +1,36 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { getProfileData, getProjectData } from '../reduxState/actions/homePageActions';
-import { logout } from '../reduxState/actions/authActions';
+import { logout } from '../../reduxState/actions/authActions';
 // Components
-import DashboardAbout from './DashboardAbout';
-import DashboardSkills from './DashboardSkills';
-import DashboardProjects from './DashboardProjects';
+import Profile from './Profile';
+import Projects from './Projects';
 // Styles
-import '../scss/dashboard-controller.scss';
+import '../../scss/dashboard/dashboard-controller.scss';
 
-class DashboardController extends Component {
+class Controller extends Component {
   constructor(props) {
     super(props);
-    this.handleEvent = this.handleEvent.bind(this);
+    this.changeSection = this.changeSection.bind(this);
+    this.logout = this.logout.bind(this);
+    this.edit = this.edit.bind(this);
     this.state = {
-      sectionToRender: 'skills'
+      sectionToRender: 'profile',
+      editData: false
     };
   }
 
-  // Fetch data from server
-  componentDidMount() {
-    this.props.getProfileData();
-    this.props.getProjectData();
-  }
-
   // Determine which section to render
-  handleEvent(section) {
+  changeSection(section) {
     this.setState({
       sectionToRender: section
     });
+  }
+
+  // Toggle edit flag
+  edit() {
+    this.setState(prevState => ({
+      editData: !prevState.editData
+    }));
   }
 
   // Logout
@@ -42,17 +44,14 @@ class DashboardController extends Component {
     let dashBoardSection;
 
     switch (sectionToRender) {
-      case 'skills':
-        dashBoardSection = <DashboardSkills />;
-        break;
-      case 'about':
-        dashBoardSection = <DashboardAbout />;
+      case 'profile':
+        dashBoardSection = <Profile isEditable={this.state.editData} />;
         break;
       case 'projects':
-        dashBoardSection = <DashboardProjects />;
+        dashBoardSection = <Projects isEditable={this.state.editData} />;
         break;
       default:
-        dashBoardSection = <DashboardSkills />;
+        dashBoardSection = <Profile isEditable={this.state.editData} />;
     }
 
     return (
@@ -62,19 +61,24 @@ class DashboardController extends Component {
             <button
               className="nav__button"
               type="button"
-              onClick={() => this.handleEvent('skills')}
+              onClick={() => this.changeSection('profile')}
             >
-              Skills
-            </button>
-            <button className="nav__button" type="button" onClick={() => this.handleEvent('about')}>
-              About
+              Profile
             </button>
             <button
               className="nav__button"
               type="button"
-              onClick={() => this.handleEvent('projects')}
+              onClick={() => this.changeSection('projects')}
             >
               Projects
+            </button>
+          </div>
+          <div className="nav__buttons__center">
+            <button className="nav__button" type="button" onClick={() => this.edit()}>
+              Edit
+            </button>
+            <button className="nav__button" type="button" onClick={() => this.edit()}>
+              Save
             </button>
           </div>
           <div className="nav__buttons__right">
@@ -95,12 +99,10 @@ class DashboardController extends Component {
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors,
-  profileData: state.homePageData.profileData,
-  projectData: state.homePageData.projectData
+  errors: state.errors
 });
 
 export default connect(
   mapStateToProps,
-  { getProfileData, getProjectData, logout }
-)(DashboardController);
+  { logout }
+)(Controller);

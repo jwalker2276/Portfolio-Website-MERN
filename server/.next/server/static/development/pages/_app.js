@@ -247,11 +247,14 @@ function (_App) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+// Actions send payloads of data to the store
+// they describe how data will change
 var actions = {
   GET_ERRORS: 'GET_ERRORS',
   SET_CURRENT_USER: 'SET_CURRENT_USER',
   GET_PROFILE: 'GET_PROFILE',
-  GET_PROJECTS: 'GET_PROJECTS'
+  GET_PROJECTS: 'GET_PROJECTS',
+  SET_PROFILE: 'SET_PROFILE'
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 

@@ -5,10 +5,10 @@ import _isEmpty from 'lodash.isempty';
 import setAuthToken from '../helpers/setAuthToken';
 import { setCurrentUser } from '../reduxState/actions/authActions';
 // Components
-import DashboardController from '../components/DashboardController';
+import Controller from '../components/dashboard/Controller';
 import Login from '../components/Login';
 // Styles
-import '../scss/dashboard.scss';
+import '../scss/dashboard/dashboard.scss';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -97,7 +97,7 @@ class Dashboard extends React.Component {
     if (isLoggedIn) {
       return (
         <div className="dashboard-wrapper">
-          <DashboardController />
+          <Controller />
         </div>
       );
     }

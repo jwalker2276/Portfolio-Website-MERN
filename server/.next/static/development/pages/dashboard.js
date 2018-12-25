@@ -1,486 +1,5 @@
 ((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/dashboard.js"],{
 
-/***/ "./components/DashboardAbout.js":
-/*!**************************************!*\
-  !*** ./components/DashboardAbout.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_dashboard_about_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/dashboard-about.scss */ "./scss/dashboard-about.scss");
-/* harmony import */ var _scss_dashboard_about_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_about_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/DashboardAbout.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
- // Components
-// Styles
-
-
-
-var DashboardAbout =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(DashboardAbout, _Component);
-
-  function DashboardAbout() {
-    _classCallCheck(this, DashboardAbout);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(DashboardAbout).apply(this, arguments));
-  }
-
-  _createClass(DashboardAbout, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, "Current about info"));
-    }
-  }]);
-
-  return DashboardAbout;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (DashboardAbout);
-
-/***/ }),
-
-/***/ "./components/DashboardController.js":
-/*!*******************************************!*\
-  !*** ./components/DashboardController.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
-/* harmony import */ var _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reduxState/actions/authActions */ "./reduxState/actions/authActions.js");
-/* harmony import */ var _DashboardAbout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DashboardAbout */ "./components/DashboardAbout.js");
-/* harmony import */ var _DashboardSkills__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DashboardSkills */ "./components/DashboardSkills.js");
-/* harmony import */ var _DashboardProjects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DashboardProjects */ "./components/DashboardProjects.js");
-/* harmony import */ var _scss_dashboard_controller_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../scss/dashboard-controller.scss */ "./scss/dashboard-controller.scss");
-/* harmony import */ var _scss_dashboard_controller_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_controller_scss__WEBPACK_IMPORTED_MODULE_7__);
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/DashboardController.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-
-
-
- // Components
-
-
-
- // Styles
-
-
-
-var DashboardController =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(DashboardController, _Component);
-
-  function DashboardController(props) {
-    var _this;
-
-    _classCallCheck(this, DashboardController);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(DashboardController).call(this, props));
-    _this.handleEvent = _this.handleEvent.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.state = {
-      sectionToRender: 'skills'
-    };
-    return _this;
-  } // Fetch data from server
-
-
-  _createClass(DashboardController, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.getProfileData();
-      this.props.getProjectData();
-    } // Determine which section to render
-
-  }, {
-    key: "handleEvent",
-    value: function handleEvent(section) {
-      this.setState({
-        sectionToRender: section
-      });
-    } // Logout
-
-  }, {
-    key: "logout",
-    value: function logout() {
-      // Use redux action to logout user.
-      this.props.logout();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var sectionToRender = this.state.sectionToRender;
-      var dashBoardSection;
-
-      switch (sectionToRender) {
-        case 'skills':
-          dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DashboardSkills__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 46
-            },
-            __self: this
-          });
-          break;
-
-        case 'about':
-          dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DashboardAbout__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 49
-            },
-            __self: this
-          });
-          break;
-
-        case 'projects':
-          dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DashboardProjects__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 52
-            },
-            __self: this
-          });
-          break;
-
-        default:
-          dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DashboardSkills__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 55
-            },
-            __self: this
-          });
-      }
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-        className: "dashboard__nav",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "nav__buttons__left",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "nav__button",
-        type: "button",
-        onClick: function onClick() {
-          return _this2.handleEvent('skills');
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62
-        },
-        __self: this
-      }, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "nav__button",
-        type: "button",
-        onClick: function onClick() {
-          return _this2.handleEvent('about');
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        },
-        __self: this
-      }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "nav__button",
-        type: "button",
-        onClick: function onClick() {
-          return _this2.handleEvent('projects');
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        },
-        __self: this
-      }, "Projects")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "nav__buttons__right",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 80
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "nav__button nav__button--right",
-        type: "button",
-        onClick: function onClick() {
-          return _this2.logout();
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 81
-        },
-        __self: this
-      }, "Logout"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "dashboard__section",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 90
-        },
-        __self: this
-      }, dashBoardSection));
-    }
-  }]);
-
-  return DashboardController;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    auth: state.auth,
-    errors: state.errors,
-    profileData: state.homePageData.profileData,
-    projectData: state.homePageData.projectData
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
-  getProfileData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__["getProfileData"],
-  getProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__["getProjectData"],
-  logout: _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_3__["logout"]
-})(DashboardController));
-
-/***/ }),
-
-/***/ "./components/DashboardProjects.js":
-/*!*****************************************!*\
-  !*** ./components/DashboardProjects.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/dashboard-projects.scss */ "./scss/dashboard-projects.scss");
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/DashboardProjects.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
- // Components
-// Styles
-
-
-
-var DashboardProjects =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(DashboardProjects, _Component);
-
-  function DashboardProjects() {
-    _classCallCheck(this, DashboardProjects);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(DashboardProjects).apply(this, arguments));
-  }
-
-  _createClass(DashboardProjects, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, "Current Projects"));
-    }
-  }]);
-
-  return DashboardProjects;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (DashboardProjects);
-
-/***/ }),
-
-/***/ "./components/DashboardSkills.js":
-/*!***************************************!*\
-  !*** ./components/DashboardSkills.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_dashboard_skills_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/dashboard-skills.scss */ "./scss/dashboard-skills.scss");
-/* harmony import */ var _scss_dashboard_skills_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_skills_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/DashboardSkills.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
- // Components
-// Styles
-
-
-
-var DashboardSkills =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(DashboardSkills, _Component);
-
-  function DashboardSkills() {
-    _classCallCheck(this, DashboardSkills);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(DashboardSkills).apply(this, arguments));
-  }
-
-  _createClass(DashboardSkills, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "section__wrapper",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "section__title",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, "Current Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "section__content",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        },
-        __self: this
-      }, "cards")));
-    }
-  }]);
-
-  return DashboardSkills;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (DashboardSkills);
-
-/***/ }),
-
 /***/ "./components/Login.js":
 /*!*****************************!*\
   !*** ./components/Login.js ***!
@@ -712,6 +231,699 @@ var mapStateToProps = function mapStateToProps(state) {
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
   login: _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_3__["login"]
 })(Login));
+
+/***/ }),
+
+/***/ "./components/dashboard/Controller.js":
+/*!********************************************!*\
+  !*** ./components/dashboard/Controller.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../reduxState/actions/authActions */ "./reduxState/actions/authActions.js");
+/* harmony import */ var _Profile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Profile */ "./components/dashboard/Profile.js");
+/* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Projects */ "./components/dashboard/Projects.js");
+/* harmony import */ var _scss_dashboard_dashboard_controller_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../scss/dashboard/dashboard-controller.scss */ "./scss/dashboard/dashboard-controller.scss");
+/* harmony import */ var _scss_dashboard_dashboard_controller_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_dashboard_controller_scss__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/Controller.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+ // Components
+
+
+ // Styles
+
+
+
+var Controller =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Controller, _Component);
+
+  function Controller(props) {
+    var _this;
+
+    _classCallCheck(this, Controller);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Controller).call(this, props));
+    _this.changeSection = _this.changeSection.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.logout = _this.logout.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.edit = _this.edit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.state = {
+      sectionToRender: 'profile',
+      editData: false
+    };
+    return _this;
+  } // Determine which section to render
+
+
+  _createClass(Controller, [{
+    key: "changeSection",
+    value: function changeSection(section) {
+      this.setState({
+        sectionToRender: section
+      });
+    } // Toggle edit flag
+
+  }, {
+    key: "edit",
+    value: function edit() {
+      this.setState(function (prevState) {
+        return {
+          editData: !prevState.editData
+        };
+      });
+    } // Logout
+
+  }, {
+    key: "logout",
+    value: function logout() {
+      // Use redux action to logout user.
+      this.props.logout();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var sectionToRender = this.state.sectionToRender;
+      var dashBoardSection;
+
+      switch (sectionToRender) {
+        case 'profile':
+          dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Profile__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            isEditable: this.state.editData,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 48
+            },
+            __self: this
+          });
+          break;
+
+        case 'projects':
+          dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Projects__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            isEditable: this.state.editData,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 51
+            },
+            __self: this
+          });
+          break;
+
+        default:
+          dashBoardSection = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Profile__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            isEditable: this.state.editData,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 54
+            },
+            __self: this
+          });
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "dashboard__nav",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav__buttons__left",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "nav__button",
+        type: "button",
+        onClick: function onClick() {
+          return _this2.changeSection('profile');
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "nav__button",
+        type: "button",
+        onClick: function onClick() {
+          return _this2.changeSection('projects');
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, "Projects")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav__buttons__center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 76
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "nav__button",
+        type: "button",
+        onClick: function onClick() {
+          return _this2.edit();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }, "Edit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "nav__button",
+        type: "button",
+        onClick: function onClick() {
+          return _this2.edit();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
+      }, "Save")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav__buttons__right",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "nav__button nav__button--right",
+        type: "button",
+        onClick: function onClick() {
+          return _this2.logout();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        },
+        __self: this
+      }, "Logout"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "dashboard__section",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94
+        },
+        __self: this
+      }, dashBoardSection));
+    }
+  }]);
+
+  return Controller;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    auth: state.auth,
+    errors: state.errors
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
+  logout: _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_2__["logout"]
+})(Controller));
+
+/***/ }),
+
+/***/ "./components/dashboard/Profile.js":
+/*!*****************************************!*\
+  !*** ./components/dashboard/Profile.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
+/* harmony import */ var _SkillsCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SkillsCard */ "./components/dashboard/SkillsCard.js");
+/* harmony import */ var _scss_dashboard_dashboard_profile_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../scss/dashboard/dashboard-profile.scss */ "./scss/dashboard/dashboard-profile.scss");
+/* harmony import */ var _scss_dashboard_dashboard_profile_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_dashboard_profile_scss__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/Profile.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+ // Components
+
+ // Styles
+
+
+
+var Profile =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Profile, _Component);
+
+  function Profile(props) {
+    var _this;
+
+    _classCallCheck(this, Profile);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Profile).call(this, props));
+    _this.state = {
+      frontend: [],
+      backend: [],
+      tools: [],
+      knowledge: [],
+      github: '',
+      linkedin: '',
+      email: '',
+      bio: '',
+      profileImage: ''
+    };
+    _this.updateProfileState = _this.updateProfileState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.updateServer = _this.updateServer.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(Profile, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // Get data from server
+      this.props.getProfileData();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (this.props.profileData !== prevProps.profileData) {
+        var _this$props$profileDa = this.props.profileData.skills,
+            frontend = _this$props$profileDa.frontend,
+            backend = _this$props$profileDa.backend,
+            tools = _this$props$profileDa.tools,
+            knowledge = _this$props$profileDa.knowledge; // Update skills from redux store
+
+        this.updateProfileState('frontend', frontend);
+        this.updateProfileState('backend', backend);
+        this.updateProfileState('tools', tools);
+        this.updateProfileState('knowledge', knowledge);
+      }
+    } // This method is passed to children to update this component's state
+
+  }, {
+    key: "updateProfileState",
+    value: function updateProfileState(key, value) {
+      this.setState(_defineProperty({}, key, value));
+    } // This method takes the latest copy of state and submits a post request with it.
+
+  }, {
+    key: "updateServer",
+    value: function updateServer() {
+      // Call action to submit a post request.
+      console.log('update server with new profile data');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.props.profileData === null) {
+        return null;
+      } // Skills
+
+
+      var _this$state = this.state,
+          frontend = _this$state.frontend,
+          backend = _this$state.backend,
+          tools = _this$state.tools,
+          knowledge = _this$state.knowledge;
+      var isEditable = this.props.isEditable;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "section__wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section__content",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        skillData: frontend,
+        skillsType: "frontend",
+        title: "Front End Skills",
+        isEditable: isEditable,
+        updateProfileState: this.updateProfileState,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        skillData: backend,
+        skillsType: "backend",
+        title: "Back End Skills",
+        isEditable: isEditable,
+        updateProfileState: this.updateProfileState,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 75
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        skillData: tools,
+        skillsType: "tools",
+        title: "Tools",
+        isEditable: isEditable,
+        updateProfileState: this.updateProfileState,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        skillData: knowledge,
+        skillsType: "knowledge",
+        title: "Knowledge",
+        isEditable: isEditable,
+        updateProfileState: this.updateProfileState,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return Profile;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    profileData: state.homePageData.profileData
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
+  getProfileData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__["getProfileData"]
+})(Profile));
+
+/***/ }),
+
+/***/ "./components/dashboard/Projects.js":
+/*!******************************************!*\
+  !*** ./components/dashboard/Projects.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_dashboard_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../scss/dashboard/dashboard-projects.scss */ "./scss/dashboard/dashboard-projects.scss");
+/* harmony import */ var _scss_dashboard_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/Projects.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+ // Components
+// Styles
+
+
+
+var Projects =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Projects, _Component);
+
+  function Projects() {
+    _classCallCheck(this, Projects);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Projects).apply(this, arguments));
+  }
+
+  _createClass(Projects, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
+      }, "info"));
+    }
+  }]);
+
+  return Projects;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Projects);
+
+/***/ }),
+
+/***/ "./components/dashboard/SkillsCard.js":
+/*!********************************************!*\
+  !*** ./components/dashboard/SkillsCard.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash.isempty */ "./node_modules/lodash.isempty/index.js");
+/* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isempty__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _scss_dashboard_dashboard_skills_card_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../scss/dashboard/dashboard-skills-card.scss */ "./scss/dashboard/dashboard-skills-card.scss");
+/* harmony import */ var _scss_dashboard_dashboard_skills_card_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_dashboard_skills_card_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/SkillsCard.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+ // Styles
+
+
+
+var SkillsCard =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(SkillsCard, _Component);
+
+  function SkillsCard(props) {
+    var _this;
+
+    _classCallCheck(this, SkillsCard);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SkillsCard).call(this, props));
+    _this.state = {
+      skills: ''
+    };
+    _this.updateChange = _this.updateChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(SkillsCard, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps.skillData !== this.props.skillData) {
+        if (!lodash_isempty__WEBPACK_IMPORTED_MODULE_1___default()(this.props.skillData)) {
+          var skillData = this.props.skillData; // Reduce array to string
+
+          var skillString = skillData.reduce(function (accumulator, skill) {
+            return "".concat(accumulator, ",").concat(skill);
+          }); // Set this string to state for input
+
+          this.setState({
+            skills: skillString
+          });
+        }
+      }
+    } // Update state
+
+  }, {
+    key: "updateChange",
+    value: function updateChange(event) {
+      var value = event.currentTarget.value; // Update state to new string value
+
+      this.setState({
+        skills: value
+      });
+    } // Handle submit of form
+
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      event.preventDefault(); // Split skills string into array
+
+      var skillsString = this.state.skills;
+      var skillsArray = skillsString.split(','); // Update profile component state
+
+      this.props.updateProfileState(this.props.skillsType, skillsArray);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          skillData = _this$props.skillData,
+          title = _this$props.title;
+      var isEditable = this.props.isEditable;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, title), isEditable ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "editForm__input",
+        type: "text",
+        name: "skills",
+        value: this.state.skills,
+        onChange: this.updateChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        value: "Update Changes",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }, skillData.map(function (skill) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          key: skill,
+          className: "card__skill",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 64
+          },
+          __self: this
+        }, skill);
+      })));
+    }
+  }]);
+
+  return SkillsCard;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (SkillsCard);
 
 /***/ }),
 
@@ -14625,10 +14837,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_isempty__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _helpers_setAuthToken__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helpers/setAuthToken */ "./helpers/setAuthToken.js");
 /* harmony import */ var _reduxState_actions_authActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reduxState/actions/authActions */ "./reduxState/actions/authActions.js");
-/* harmony import */ var _components_DashboardController__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/DashboardController */ "./components/DashboardController.js");
+/* harmony import */ var _components_dashboard_Controller__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/dashboard/Controller */ "./components/dashboard/Controller.js");
 /* harmony import */ var _components_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Login */ "./components/Login.js");
-/* harmony import */ var _scss_dashboard_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../scss/dashboard.scss */ "./scss/dashboard.scss");
-/* harmony import */ var _scss_dashboard_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _scss_dashboard_dashboard_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../scss/dashboard/dashboard.scss */ "./scss/dashboard/dashboard.scss");
+/* harmony import */ var _scss_dashboard_dashboard_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_dashboard_scss__WEBPACK_IMPORTED_MODULE_8__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/pages/dashboard.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -14772,7 +14984,7 @@ function (_React$Component) {
             lineNumber: 99
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DashboardController__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_dashboard_Controller__WEBPACK_IMPORTED_MODULE_6__["default"], {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 100
@@ -14857,6 +15069,7 @@ __webpack_require__.r(__webpack_exports__);
  // Set the current user data
 
 var setCurrentUser = function setCurrentUser(tokenData) {
+  // Send data to the store
   return {
     type: _types__WEBPACK_IMPORTED_MODULE_2__["default"].SET_CURRENT_USER,
     payload: tokenData
@@ -14876,10 +15089,12 @@ var login = function login(userData) {
 
       dispatch(setCurrentUser(decoded));
     }).catch(function (err) {
-      return dispatch({
-        type: _types__WEBPACK_IMPORTED_MODULE_2__["default"].GET_ERRORS,
-        payload: err.response.data
-      });
+      return (// Send data to the store
+        dispatch({
+          type: _types__WEBPACK_IMPORTED_MODULE_2__["default"].GET_ERRORS,
+          payload: err.response.data
+        })
+      );
     });
   };
 }; // Log out the user
@@ -14963,11 +15178,14 @@ var getProjectData = function getProjectData() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+// Actions send payloads of data to the store
+// they describe how data will change
 var actions = {
   GET_ERRORS: 'GET_ERRORS',
   SET_CURRENT_USER: 'SET_CURRENT_USER',
   GET_PROFILE: 'GET_PROFILE',
-  GET_PROJECTS: 'GET_PROJECTS'
+  GET_PROJECTS: 'GET_PROJECTS',
+  SET_PROFILE: 'SET_PROFILE'
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 

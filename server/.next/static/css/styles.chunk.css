@@ -1,14 +1,13 @@
+.editForm__input {
+  width: 500px; }
 
-.section__title {
-  margin: 25px 0;
-  text-transform: uppercase; }
 
 
 .dashboard__nav {
   background-color: #3e5a71;
   padding: 0 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1fr 1fr 1fr; }
 
 .nav__buttons__left {
   display: -webkit-box;
@@ -17,6 +16,17 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.nav__buttons__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }

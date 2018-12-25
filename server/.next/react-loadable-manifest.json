@@ -7,21 +7,31 @@
       "publicPath": "static/chunks/0.js"
     }
   ],
-  "../scss/dashboard-about.scss": [
+  "../../scss/dashboard/dashboard-controller.scss": [
     {
-      "id": "./scss/dashboard-about.scss",
-      "name": "./scss/dashboard-about.scss",
+      "id": "./scss/dashboard/dashboard-controller.scss",
+      "name": "./scss/dashboard/dashboard-controller.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/dashboard/dashboard-profile.scss": [
+    {
+      "id": "./scss/dashboard/dashboard-profile.scss",
+      "name": "./scss/dashboard/dashboard-profile.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/dashboard/dashboard-projects.scss": [
+    {
+      "id": "./scss/dashboard/dashboard-projects.scss",
+      "name": "./scss/dashboard/dashboard-projects.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
   ],
   "undefined": [
-    {
-      "id": 4,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
     {
       "id": 5,
       "name": null,
@@ -30,6 +40,12 @@
     },
     {
       "id": 6,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 4,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -53,10 +69,18 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../scss/dashboard-projects.scss": [
+  "../../scss/dashboard/dashboard-skills-card.scss": [
     {
-      "id": "./scss/dashboard-projects.scss",
-      "name": "./scss/dashboard-projects.scss",
+      "id": "./scss/dashboard/dashboard-skills-card.scss",
+      "name": "./scss/dashboard/dashboard-skills-card.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/dashboard/dashboard.scss": [
+    {
+      "id": "./scss/dashboard/dashboard.scss",
+      "name": "./scss/dashboard/dashboard.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -65,30 +89,6 @@
     {
       "id": "./scss/login.scss",
       "name": "./scss/login.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/dashboard-skills.scss": [
-    {
-      "id": "./scss/dashboard-skills.scss",
-      "name": "./scss/dashboard-skills.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/dashboard.scss": [
-    {
-      "id": "./scss/dashboard.scss",
-      "name": "./scss/dashboard.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/dashboard-controller.scss": [
-    {
-      "id": "./scss/dashboard-controller.scss",
-      "name": "./scss/dashboard-controller.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }

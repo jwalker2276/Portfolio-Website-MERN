@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "./scss/dashboard-about.scss":
-/*!***********************************!*\
-  !*** ./scss/dashboard-about.scss ***!
-  \***********************************/
+/***/ "./scss/dashboard/dashboard-controller.scss":
+/*!**************************************************!*\
+  !*** ./scss/dashboard/dashboard-controller.scss ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29,7 +29,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1544934704105");
+            injectCss(link, link.href.split("?")[0] + "?unix=1545703710149");
           });
       }
     }
@@ -37,10 +37,10 @@
 
 /***/ }),
 
-/***/ "./scss/dashboard-controller.scss":
-/*!****************************************!*\
-  !*** ./scss/dashboard-controller.scss ***!
-  \****************************************/
+/***/ "./scss/dashboard/dashboard-profile.scss":
+/*!***********************************************!*\
+  !*** ./scss/dashboard/dashboard-profile.scss ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -66,7 +66,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1544934952540");
+            injectCss(link, link.href.split("?")[0] + "?unix=1545703710069");
           });
       }
     }
@@ -74,10 +74,10 @@
 
 /***/ }),
 
-/***/ "./scss/dashboard-projects.scss":
-/*!**************************************!*\
-  !*** ./scss/dashboard-projects.scss ***!
-  \**************************************/
+/***/ "./scss/dashboard/dashboard-projects.scss":
+/*!************************************************!*\
+  !*** ./scss/dashboard/dashboard-projects.scss ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -103,7 +103,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1544934704110");
+            injectCss(link, link.href.split("?")[0] + "?unix=1545703710073");
           });
       }
     }
@@ -111,10 +111,10 @@
 
 /***/ }),
 
-/***/ "./scss/dashboard-skills.scss":
-/*!************************************!*\
-  !*** ./scss/dashboard-skills.scss ***!
-  \************************************/
+/***/ "./scss/dashboard/dashboard-skills-card.scss":
+/*!***************************************************!*\
+  !*** ./scss/dashboard/dashboard-skills-card.scss ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -140,7 +140,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1544935488890");
+            injectCss(link, link.href.split("?")[0] + "?unix=1545703710110");
           });
       }
     }
@@ -148,10 +148,10 @@
 
 /***/ }),
 
-/***/ "./scss/dashboard.scss":
-/*!*****************************!*\
-  !*** ./scss/dashboard.scss ***!
-  \*****************************/
+/***/ "./scss/dashboard/dashboard.scss":
+/*!***************************************!*\
+  !*** ./scss/dashboard/dashboard.scss ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -177,7 +177,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1544934704095");
+            injectCss(link, link.href.split("?")[0] + "?unix=1545703710139");
           });
       }
     }
@@ -214,7 +214,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1544934704099");
+            injectCss(link, link.href.split("?")[0] + "?unix=1545703710064");
           });
       }
     }

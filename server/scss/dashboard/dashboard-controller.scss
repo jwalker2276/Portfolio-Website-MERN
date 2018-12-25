@@ -1,14 +1,20 @@
-@import '_colors.scss';
+@import 'scss/_colors.scss';
 .dashboard__nav {
   background-color: $bk-dark;
   padding: 0 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .nav__buttons__left {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+}
+
+.nav__buttons__center {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
