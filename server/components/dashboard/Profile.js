@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getProfileData } from '../../reduxState/actions/homePageActions';
 // Components
 import SkillsCard from './SkillsCard';
+import LinksCard from './LinksCard';
 // Styles
 import '../../scss/dashboard/dashboard-profile.scss';
 
@@ -32,11 +33,17 @@ class Profile extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.profileData !== prevProps.profileData) {
       const { frontend, backend, tools, knowledge } = this.props.profileData.skills;
+      const { email, github, linkedin } = this.props.profileData.contactInfo;
+      const { bio } = this.props.profileData;
       // Update skills from redux store
       this.updateProfileState('frontend', frontend);
       this.updateProfileState('backend', backend);
       this.updateProfileState('tools', tools);
       this.updateProfileState('knowledge', knowledge);
+      this.updateProfileState('github', github);
+      this.updateProfileState('linkedin', linkedin);
+      this.updateProfileState('email', email);
+      this.updateProfileState('bio', bio);
     }
   }
 
@@ -49,6 +56,8 @@ class Profile extends Component {
 
   // This method takes the latest copy of state and submits a post request with it.
   updateServer() {
+    // Create payload for action
+    const payload = {};
     // Call action to submit a post request.
     console.log('update server with new profile data');
   }
@@ -59,12 +68,22 @@ class Profile extends Component {
     }
 
     // Skills
-    const { frontend, backend, tools, knowledge } = this.state;
+    const {
+      frontend,
+      backend,
+      tools,
+      knowledge,
+      github,
+      linkedin,
+      email,
+      bio,
+      profileImage
+    } = this.state;
     const { isEditable } = this.props;
 
     return (
       <section className="section__wrapper">
-        <div className="section__content">
+        <div className="section__skills">
           <SkillsCard
             skillData={frontend}
             skillsType="frontend"
@@ -90,6 +109,29 @@ class Profile extends Component {
             skillData={knowledge}
             skillsType="knowledge"
             title="Knowledge"
+            isEditable={isEditable}
+            updateProfileState={this.updateProfileState}
+          />
+        </div>
+        <div className="section__links">
+          <LinksCard
+            linkData={linkedin}
+            linkType="linkedin"
+            title="Linkedin"
+            isEditable={isEditable}
+            updateProfileState={this.updateProfileState}
+          />
+          <LinksCard
+            linkData={github}
+            linkType="github"
+            title="Github"
+            isEditable={isEditable}
+            updateProfileState={this.updateProfileState}
+          />
+          <LinksCard
+            linkData={email}
+            linkType="email"
+            title="Email"
             isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
