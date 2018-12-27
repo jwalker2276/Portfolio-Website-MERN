@@ -253,8 +253,7 @@ var actions = {
   GET_ERRORS: 'GET_ERRORS',
   SET_CURRENT_USER: 'SET_CURRENT_USER',
   GET_PROFILE: 'GET_PROFILE',
-  GET_PROJECTS: 'GET_PROJECTS',
-  SET_PROFILE: 'SET_PROFILE'
+  GET_PROJECTS: 'GET_PROJECTS'
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 

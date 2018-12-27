@@ -1,0 +1,13 @@
+@import 'scss/_colors.scss';
+.group__title {
+  font-size: 1em;
+  color: $font-dark;
+  font-weight: 600;
+}
+
+.group__input,
+.group__textarea__input {
+  width: 100%;
+  font-size: 0.75em;
+  color: $font-dark;
+}

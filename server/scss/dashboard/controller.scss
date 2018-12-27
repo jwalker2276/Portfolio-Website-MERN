@@ -3,18 +3,12 @@
   background-color: $bk-dark;
   padding: 0 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .nav__buttons__left {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-}
-
-.nav__buttons__center {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -39,7 +33,11 @@
   margin-right: 0;
 }
 
-.dashboard__section {
+.dashboard__content {
   background-color: $bk-light;
   padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-gap: 10px;
 }

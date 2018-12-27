@@ -11,7 +11,7 @@
     "react/jsx-filename-extension": 0,
     "arrow-parens": 0,
     "consistent-return": 0,
-    "object-curly-newline": 1,
+    "object-curly-newline": 0,
     "global-require": 1,
     "no-underscore-dangle": 0,
     "max-len": 1,

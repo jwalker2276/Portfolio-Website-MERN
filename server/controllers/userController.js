@@ -74,9 +74,7 @@ exports.register = (req, res) => {
   User.findOne({ role: req.body.role }).then(isAdmin => {
     // Check if admin exist
     if (isAdmin) {
-      return res
-        .status(400)
-        .json({ error: 'No more users are allowed at this time.' });
+      return res.status(400).json({ error: 'No more users are allowed at this time.' });
     }
     // Create admin
     const newAdmin = new User({
@@ -97,7 +95,7 @@ exports.register = (req, res) => {
         newAdmin
           .save()
           .then(() => res.json({ message: 'New admin was added successfully' }))
-          .catch(err => console.log(err));
+          .catch(err => res.status(400).json({ registrationError: err }));
       });
     });
   });
@@ -113,7 +111,7 @@ exports.login = (req, res) => {
   User.findOne({ username }).then(user => {
     // Check for a user
     if (!user) {
-      return res.status(400).json({ error: 'User does not exist' });
+      return res.status(400).json({ loginError: 'User does not exist' });
     }
 
     // Check if the user is the admin
@@ -129,23 +127,18 @@ exports.login = (req, res) => {
           };
 
           // Sign token
-          jwt.sign(
-            payload,
-            process.env.SECRETORKEY,
-            { expiresIn: 3600 },
-            (err, token) => {
-              res.json({
-                success: true,
-                token: `Bearer ${token}`
-              });
-            }
-          );
+          jwt.sign(payload, process.env.SECRETORKEY, { expiresIn: 3600 }, (err, token) => {
+            res.json({
+              success: true,
+              token: `Bearer ${token}`
+            });
+          });
         } else {
-          return res.status(400).json({ error: 'Password is incorrect' });
+          return res.status(400).json({ loginError: 'Password is incorrect' });
         }
       });
     } else {
-      return res.status(401).json({ error: 'Access denied' });
+      return res.status(401).json({ loginError: 'Access denied' });
     }
   });
 };

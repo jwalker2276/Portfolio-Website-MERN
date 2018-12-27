@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { getProfileData } from '../../reduxState/actions/homePageActions';
+import { getProfileData, setProfileData } from '../../reduxState/actions/homePageActions';
 // Components
 import SkillsCard from './SkillsCard';
 import LinksCard from './LinksCard';
 import BioCard from './BioCard';
 // Styles
-import '../../scss/dashboard/dashboard-profile.scss';
+import '../../scss/dashboard/profile.scss';
 
 class Profile extends Component {
   constructor(props) {
@@ -20,10 +20,12 @@ class Profile extends Component {
       linkedin: '',
       email: '',
       bio: '',
-      profileImage: ''
+      profileImage: '',
+      isEditable: false
     };
     this.updateProfileState = this.updateProfileState.bind(this);
     this.updateServer = this.updateServer.bind(this);
+    this.editData = this.editData.bind(this);
   }
 
   componentDidMount() {
@@ -55,12 +57,27 @@ class Profile extends Component {
     });
   }
 
+  // Toggle edit flag
+  editData() {
+    this.setState(prevState => ({ isEditable: !prevState.isEditable }));
+  }
+
   // This method takes the latest copy of state and submits a post request with it.
   updateServer() {
     // Create payload for action
-    const payload = {};
-    // Call action to submit a post request.
-    console.log('update server with new profile data');
+    const payload = {
+      frontendskills: this.state.frontend,
+      backendskills: this.state.backend,
+      tools: this.state.tools,
+      knowledge: this.state.knowledge,
+      bio: this.state.bio,
+      github: this.state.github,
+      linkedin: this.state.linkedin,
+      email: this.state.email
+    };
+
+    // Post to server
+    this.props.setProfileData(payload);
   }
 
   render() {
@@ -80,11 +97,19 @@ class Profile extends Component {
       bio,
       profileImage
     } = this.state;
-    const { isEditable } = this.props;
+    const { isEditable } = this.state;
 
     return (
-      <section className="section__wrapper">
-        <div className="section__skills">
+      <Fragment>
+        <section className="section__buttons">
+          <button className="control__button" type="button" onClick={() => this.editData()}>
+            Edit
+          </button>
+          <button className="control__button" type="button" onClick={() => this.updateServer()}>
+            Save
+          </button>
+        </section>
+        <section className="section__skills">
           <SkillsCard
             skillData={frontend}
             skillsType="frontend"
@@ -113,8 +138,8 @@ class Profile extends Component {
             isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
-        </div>
-        <div className="section__links">
+        </section>
+        <section className="section__links">
           <LinksCard
             linkData={linkedin}
             linkType="linkedin"
@@ -136,16 +161,16 @@ class Profile extends Component {
             isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
-        </div>
-        <div className="section__bio">
+        </section>
+        <section className="section__bio">
           <BioCard
             bioData={bio}
             title="Bio"
             isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
-        </div>
-      </section>
+        </section>
+      </Fragment>
     );
   }
 }
@@ -156,5 +181,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getProfileData }
+  { getProfileData, setProfileData }
 )(Profile);

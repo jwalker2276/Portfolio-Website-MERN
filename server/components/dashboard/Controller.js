@@ -5,17 +5,15 @@ import { logout } from '../../reduxState/actions/authActions';
 import Profile from './Profile';
 import Projects from './Projects';
 // Styles
-import '../../scss/dashboard/dashboard-controller.scss';
+import '../../scss/dashboard/controller.scss';
 
 class Controller extends Component {
   constructor(props) {
     super(props);
     this.changeSection = this.changeSection.bind(this);
     this.logout = this.logout.bind(this);
-    this.edit = this.edit.bind(this);
     this.state = {
-      sectionToRender: 'profile',
-      editData: false
+      sectionToRender: 'profile'
     };
   }
 
@@ -24,13 +22,6 @@ class Controller extends Component {
     this.setState({
       sectionToRender: section
     });
-  }
-
-  // Toggle edit flag
-  edit() {
-    this.setState(prevState => ({
-      editData: !prevState.editData
-    }));
   }
 
   // Logout
@@ -45,13 +36,13 @@ class Controller extends Component {
 
     switch (sectionToRender) {
       case 'profile':
-        dashBoardSection = <Profile isEditable={this.state.editData} />;
+        dashBoardSection = <Profile user={this.props.auth.user} />;
         break;
       case 'projects':
-        dashBoardSection = <Projects isEditable={this.state.editData} />;
+        dashBoardSection = <Projects user={this.props.auth.user} />;
         break;
       default:
-        dashBoardSection = <Profile isEditable={this.state.editData} />;
+        dashBoardSection = <Profile user={this.props.auth.user} />;
     }
 
     return (
@@ -73,14 +64,6 @@ class Controller extends Component {
               Projects
             </button>
           </div>
-          <div className="nav__buttons__center">
-            <button className="nav__button" type="button" onClick={() => this.edit()}>
-              Edit
-            </button>
-            <button className="nav__button" type="button" onClick={() => this.edit()}>
-              Save
-            </button>
-          </div>
           <div className="nav__buttons__right">
             <button
               className="nav__button nav__button--right"
@@ -91,7 +74,7 @@ class Controller extends Component {
             </button>
           </div>
         </nav>
-        <section className="dashboard__section">{dashBoardSection}</section>
+        <section className="dashboard__content">{dashBoardSection}</section>
       </Fragment>
     );
   }

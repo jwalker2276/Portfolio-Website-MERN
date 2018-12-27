@@ -15,7 +15,7 @@ export const getProfileData = () => dispatch => {
     .catch(err =>
       dispatch({
         type: actions.GET_ERRORS,
-        payload: { error: err }
+        payload: { getError: err }
       })
     );
 };
@@ -34,7 +34,21 @@ export const getProjectData = () => dispatch => {
     .catch(err =>
       dispatch({
         type: actions.GET_ERRORS,
-        payload: { error: err }
+        payload: { getError: err }
+      })
+    );
+};
+
+// Send profile data to server
+export const setProfileData = profileData => dispatch => {
+  // Post profile data
+  axios
+    .post('/profile', profileData)
+    .then(res => res.status)
+    .catch(err =>
+      dispatch({
+        type: actions.GET_ERRORS,
+        payload: { postError: err }
       })
     );
 };

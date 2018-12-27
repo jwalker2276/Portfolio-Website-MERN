@@ -8,7 +8,7 @@ exports.getProfile = (req, res) => {
   // Get the profile
   Profile.findOne()
     .then(profile => res.json(profile))
-    .catch(() => console.log('Error with profile look up'));
+    .catch(error => res.status(400).json(error));
 };
 
 // Middleware to validate data before updating or setting
@@ -37,7 +37,7 @@ exports.checkProfileData = (req, res, next) => {
 };
 
 // @route POST /profile
-// @desc Set set profile data
+// @desc Set profile data
 // @access Private
 exports.setProfile = (req, res) => {
   const profileFields = {};
@@ -61,10 +61,10 @@ exports.setProfile = (req, res) => {
   profileFields.skills = {};
 
   // Set skills arrays
-  profileFields.skills.frontend = frontendskills.split(',');
-  profileFields.skills.backend = backendskills.split(',');
-  profileFields.skills.tools = tools.split(',');
-  profileFields.skills.knowledge = knowledge.split(',');
+  profileFields.skills.frontend = frontendskills;
+  profileFields.skills.backend = backendskills;
+  profileFields.skills.tools = tools;
+  profileFields.skills.knowledge = knowledge;
 
   // Set bio
   profileFields.bio = bio;
@@ -80,11 +80,7 @@ exports.setProfile = (req, res) => {
   // Search for current profile
   Profile.findOne({ user: req.user.id }).then(profile => {
     if (profile) {
-      Profile.findOneAndUpdate(
-        { user: req.user.id },
-        { $set: profileFields },
-        { new: true }
-      )
+      Profile.findOneAndUpdate({ user: req.user.id }, { $set: profileFields }, { new: true })
         .then(() => res.json(profile))
         .catch(error => res.status(400).json(error));
     } else {
