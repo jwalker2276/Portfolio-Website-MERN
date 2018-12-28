@@ -1,0 +1,216 @@
+.group__title {
+  font-size: 1em;
+  color: #263745;
+  font-weight: 600; }
+
+.group__input,
+.group__textarea__input {
+  width: 100%;
+  font-size: 0.75em;
+  color: #263745; }
+
+.section__buttons {
+  padding-top: 50px;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1; }
+
+.section__skills {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px; }
+
+.section__image {
+  grid-row: 3 / -1;
+  grid-column: 1 / 2; }
+
+.section__links {
+  grid-row: 3 / -1;
+  grid-column: 2 / 4; }
+
+.section__bio {
+  grid-row: 3 / -1;
+  grid-column: 4 / -1; }
+
+.control__button {
+  border: 2px solid #3e5a71;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  color: #263745;
+  background: #eff8ff;
+  font-size: 1em;
+  font-weight: 500;
+  width: 100px;
+  margin-right: 50px; }
+
+
+.dashboard__nav {
+  background-color: #3e5a71;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.nav__buttons__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.nav__buttons__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.nav__button {
+  border: none;
+  padding: 10px 0px 10px 0px;
+  cursor: pointer;
+  color: #eff8ff;
+  background: #3e5a71;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-right: 1em; }
+
+.nav__button--right {
+  margin-right: 0; }
+
+.dashboard__content {
+  background-color: #eff8ff;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-gap: 10px; }
+
+.form {
+  width: 350px;
+  height: 350px;
+  color: #263745;
+  background-color: #eff8ff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1.5; }
+
+.form__heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  margin: 0.5em; }
+
+.form__set {
+  border: none;
+  padding: 0 20px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 2; }
+
+.form__label {
+  width: 100%;
+  font-weight: 400; }
+
+.form__error {
+  margin: 1em;
+  font-weight: 400;
+  font-size: 1em;
+  color: red; }
+
+.form__input {
+  width: 100%;
+  height: 2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1em;
+  border: 1px solid #263745;
+  border-radius: 5px;
+  padding-left: 5px;
+  background-color: white; }
+
+.form__button {
+  width: 50%;
+  height: 2em;
+  font-size: 1em;
+  margin: 1em auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3e5a71;
+  color: #eff8ff;
+  -webkit-box-shadow: 0px 5px 5px 1px rgba(62, 90, 113, 0.25);
+          box-shadow: 0px 5px 5px 1px rgba(62, 90, 113, 0.25); }
+
+html,
+body {
+  height: 100%;
+  margin: 0; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #3e5a71; }
+
+#__next {
+  height: 100%; }
+
+.dashboard-wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 7% 1fr; }
+
+.dashboard__login__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative; }
+
+.dashboard__login__wrapper:after {
+  content: '';
+  background-image: url(/static/hexabump.png);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1; }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

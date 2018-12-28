@@ -26,6 +26,7 @@
     "function-paren-newline": 0,
     "dot-notation": 0,
     "arrow-body-style": 0,
-    "react/no-array-index-key": 1
+    "react/no-array-index-key": 1,
+    "prefer-destructuring": 1
   }
 }

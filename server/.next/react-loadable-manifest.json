@@ -6,5 +6,91 @@
       "file": "static/chunks/0.js",
       "publicPath": "static/chunks/0.js"
     }
+  ],
+  "../../scss/dashboard/cards.scss": [
+    {
+      "id": "./scss/dashboard/cards.scss",
+      "name": "./scss/dashboard/cards.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "undefined": [
+    {
+      "id": 4,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 5,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 6,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 7,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 8,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 9,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/dashboard/dashboard-projects.scss": [
+    {
+      "id": "./scss/dashboard/dashboard-projects.scss",
+      "name": "./scss/dashboard/dashboard-projects.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/login.scss": [
+    {
+      "id": "./scss/login.scss",
+      "name": "./scss/login.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/dashboard/profile.scss": [
+    {
+      "id": "./scss/dashboard/profile.scss",
+      "name": "./scss/dashboard/profile.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/dashboard/dashboard.scss": [
+    {
+      "id": "./scss/dashboard/dashboard.scss",
+      "name": "./scss/dashboard/dashboard.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/dashboard/controller.scss": [
+    {
+      "id": "./scss/dashboard/controller.scss",
+      "name": "./scss/dashboard/controller.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
   ]
 }

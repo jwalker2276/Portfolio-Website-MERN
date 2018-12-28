@@ -5,6 +5,7 @@ import { getProfileData, setProfileData } from '../../reduxState/actions/homePag
 import SkillsCard from './SkillsCard';
 import LinksCard from './LinksCard';
 import BioCard from './BioCard';
+import ImageCard from './ImageCard';
 // Styles
 import '../../scss/dashboard/profile.scss';
 
@@ -20,7 +21,7 @@ class Profile extends Component {
       linkedin: '',
       email: '',
       bio: '',
-      profileImage: '',
+      profileImageId: '',
       isEditable: false
     };
     this.updateProfileState = this.updateProfileState.bind(this);
@@ -95,7 +96,7 @@ class Profile extends Component {
       linkedin,
       email,
       bio,
-      profileImage
+      profileImageId
     } = this.state;
     const { isEditable } = this.state;
 
@@ -135,6 +136,13 @@ class Profile extends Component {
             skillData={knowledge}
             skillsType="knowledge"
             title="Knowledge"
+            isEditable={isEditable}
+            updateProfileState={this.updateProfileState}
+          />
+        </section>
+        <section className="section__image">
+          <ImageCard
+            imageId={profileImageId}
             isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
