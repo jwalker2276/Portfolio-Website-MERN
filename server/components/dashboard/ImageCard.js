@@ -18,6 +18,9 @@ export default class ImageCard extends Component {
     // Append websiteImages preset
     data.append('upload_preset', 'websiteImages');
 
+    // Delete Auth header to prevent cors error
+    delete axios.defaults.headers.common['Authorization'];
+
     // Send the post request
     const file = await axios({
       method: 'POST',
@@ -27,6 +30,7 @@ export default class ImageCard extends Component {
 
     // Grab the image id for react components
     const imageId = file.data.public_id;
+
     // Update profile's state with new id
     this.props.updateProfileState('profileImageId', imageId);
   }

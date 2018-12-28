@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import axios from 'axios';
 import { connect } from 'react-redux';
 import { getProfileData, setProfileData } from '../../reduxState/actions/homePageActions';
 // Components
@@ -38,7 +39,7 @@ class Profile extends Component {
     if (this.props.profileData !== prevProps.profileData) {
       const { frontend, backend, tools, knowledge } = this.props.profileData.skills;
       const { email, github, linkedin } = this.props.profileData.contactInfo;
-      const { bio } = this.props.profileData;
+      const { bio, profileImageId } = this.props.profileData;
       // Update skills from redux store
       this.updateProfileState('frontend', frontend);
       this.updateProfileState('backend', backend);
@@ -48,6 +49,7 @@ class Profile extends Component {
       this.updateProfileState('linkedin', linkedin);
       this.updateProfileState('email', email);
       this.updateProfileState('bio', bio);
+      this.updateProfileState('profileImageId', profileImageId);
     }
   }
 
@@ -74,8 +76,17 @@ class Profile extends Component {
       bio: this.state.bio,
       github: this.state.github,
       linkedin: this.state.linkedin,
-      email: this.state.email
+      email: this.state.email,
+      profileImageId: this.state.profileImageId
     };
+
+    // Attach auth header
+    // Image uploads and page redirect remove this header
+    const token = localStorage.getItem('jwtToken');
+
+    if (token) {
+      axios.defaults.headers.common['Authorization'] = token;
+    }
 
     // Post to server
     this.props.setProfileData(payload);

@@ -15,7 +15,7 @@ class About extends Component {
           <Image
             className="about__profileImg"
             cloudName="jwalkercreations-com"
-            publicId="websiteImages/profileImage.jpg"
+            publicId={this.props.imageId}
           >
             <Transformation height="150" quality="auto" crop="limit" fetchFormat="auto" />
           </Image>

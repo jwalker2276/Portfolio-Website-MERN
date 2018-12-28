@@ -51,7 +51,8 @@ exports.setProfile = (req, res) => {
     bio,
     github,
     linkedin,
-    email
+    email,
+    profileImageId
   } = req.body;
 
   // Set user id
@@ -76,6 +77,9 @@ exports.setProfile = (req, res) => {
   profileFields.contactInfo.github = github;
   profileFields.contactInfo.linkedin = linkedin;
   profileFields.contactInfo.email = email;
+
+  // Set image id
+  profileFields.profileImageId = profileImageId;
 
   // Search for current profile
   Profile.findOne({ user: req.user.id }).then(profile => {

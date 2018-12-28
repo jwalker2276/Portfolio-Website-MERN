@@ -41,6 +41,10 @@ const profileSchema = new Schema({
       type: String,
       required: true
     }
+  },
+  profileImageId: {
+    type: String,
+    required: true
   }
 });
 

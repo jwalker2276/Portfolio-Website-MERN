@@ -28,6 +28,7 @@ class Home extends React.Component {
     let skillData;
     let contactData;
     let bioData;
+    let imageId;
 
     // Make sure data has loaded
     if (profileData !== null) {
@@ -35,6 +36,7 @@ class Home extends React.Component {
       skillData = profileData.skills;
       contactData = profileData.contactInfo;
       bioData = profileData.bio;
+      imageId = profileData.profileImageId;
     }
 
     return (
@@ -48,7 +50,7 @@ class Home extends React.Component {
         <Slice position="bottom" color="white" />
         <Work />
         <Slice position="top" color="white" />
-        <About contact={contactData} bio={bioData} />
+        <About contact={contactData} bio={bioData} imageId={imageId} />
         <Map />
         <Contact />
         <Footer />
