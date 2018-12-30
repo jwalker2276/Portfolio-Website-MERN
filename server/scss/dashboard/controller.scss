@@ -35,9 +35,9 @@
 
 .dashboard__content {
   background-color: $bk-light;
-  padding: 0 50px;
+  padding: 50px 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: 8% 1fr 1fr;
   grid-gap: 10px;
 }

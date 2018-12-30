@@ -9,6 +9,7 @@ import BioCard from './BioCard';
 import ImageCard from './ImageCard';
 // Styles
 import '../../scss/dashboard/profile.scss';
+import '../../scss/dashboard/common.scss';
 
 class Profile extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Profile extends Component {
       email: '',
       bio: '',
       profileImageId: '',
-      isEditable: false
+      isEditable: true
     };
     this.updateProfileState = this.updateProfileState.bind(this);
     this.updateServer = this.updateServer.bind(this);
@@ -113,15 +114,18 @@ class Profile extends Component {
 
     return (
       <Fragment>
-        <section className="section__buttons">
-          <button className="control__button" type="button" onClick={() => this.editData()}>
-            Edit
-          </button>
-          <button className="control__button" type="button" onClick={() => this.updateServer()}>
-            Save
-          </button>
-        </section>
-        <section className="section__skills">
+        <nav className="profile__nav">
+          <div className="profile__nav__right">
+            <button className="primary__button" type="button" onClick={() => this.editData()}>
+              Save
+            </button>
+            <button className="primary__button" type="button" onClick={() => this.updateServer()}>
+              Update Server
+            </button>
+          </div>
+        </nav>
+        <section className="skills__edit-card">
+          <h3 className="group__title skills__title">Skills</h3>
           <SkillsCard
             skillData={frontend}
             skillsType="frontend"
@@ -151,14 +155,16 @@ class Profile extends Component {
             updateProfileState={this.updateProfileState}
           />
         </section>
-        <section className="section__image">
+        <section className="image__edit-card">
+          <h3 className="group__title">Profile Image</h3>
           <ImageCard
             imageId={profileImageId}
             isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
         </section>
-        <section className="section__links">
+        <section className="links__edit-card">
+          <h3 className="group__title">Links</h3>
           <LinksCard
             linkData={linkedin}
             linkType="linkedin"
@@ -181,7 +187,8 @@ class Profile extends Component {
             updateProfileState={this.updateProfileState}
           />
         </section>
-        <section className="section__bio">
+        <section className="bio__edit-card">
+          <h3 className="group__title">Bio</h3>
           <BioCard
             bioData={bio}
             title="Bio"

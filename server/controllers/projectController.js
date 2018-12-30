@@ -121,33 +121,29 @@ exports.setProject = (req, res) => {
   }
 
   // Set project image links
-  projectFields.imageURLs = [];
+  projectFields.imageIds = [];
 
   // Set image url if data was provided
   if (image1 !== undefined && image1 !== '') {
-    projectFields.imageURLs.push(image1);
+    projectFields.imageIds.push(image1);
   }
   if (image2 !== undefined && image2 !== '') {
-    projectFields.imageURLs.push(image2);
+    projectFields.imageIds.push(image2);
   }
   if (image3 !== undefined && image3 !== '') {
-    projectFields.imageURLs.push(image3);
+    projectFields.imageIds.push(image3);
   }
   if (image4 !== undefined && image4 !== '') {
-    projectFields.imageURLs.push(image4);
+    projectFields.imageIds.push(image4);
   }
   if (image5 !== undefined && image5 !== '') {
-    projectFields.imageURLs.push(image5);
+    projectFields.imageIds.push(image5);
   }
 
   // Search for existing project
   Project.findOne({ id: req.body.projectId }).then(project => {
     if (project) {
-      Project.findOneAndUpdate(
-        { id: req.body.projectId },
-        { $set: projectFields },
-        { new: true }
-      )
+      Project.findOneAndUpdate({ id: req.body.projectId }, { $set: projectFields }, { new: true })
         .then(() => res.json({ message: 'Update successful' }))
         .catch(error => res.status(400).json(error));
     } else {

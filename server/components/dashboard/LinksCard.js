@@ -39,16 +39,18 @@ class LinksCard extends Component {
 
     return (
       <div className="link__group">
-        <h5 className="group__title">{title}</h5>
         {isEditable ? (
           <form className="group__form" onSubmit={this.handleSubmit}>
-            <input
-              className="group__input"
-              type="text"
-              name="link"
-              value={this.state.link}
-              onChange={this.updateChange}
-            />
+            <label htmlFor={title} className="group__form__label">
+              {title}
+              <input
+                className="group__form__input"
+                type="text"
+                name="link"
+                value={this.state.link}
+                onChange={this.updateChange}
+              />
+            </label>
             <input className="group__submit" type="submit" value="Update Changes" />
           </form>
         ) : (

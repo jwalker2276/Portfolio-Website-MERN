@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _isEmpty from 'lodash.isempty';
 // Styles
 import '../../scss/dashboard/cards.scss';
+import '../../scss/dashboard/common.scss';
 
 class SkillsCard extends Component {
   constructor(props) {
@@ -46,16 +47,20 @@ class SkillsCard extends Component {
 
     return (
       <div className={`skill__group group__${skillsType}`}>
-        <h5 className="group__title">{title}</h5>
         {isEditable ? (
           <form className="group__form" onSubmit={this.handleSubmit}>
-            <input
-              className="group__input"
-              type="text"
-              name="skills"
-              value={this.state.skills}
-              onChange={this.updateChange}
-            />
+            <label htmlFor={title} className="group__form__label">
+              {title}
+              <textarea
+                className="group__form__textarea"
+                rows="5"
+                cols="33"
+                type="text"
+                name="skills"
+                value={this.state.skills}
+                onChange={this.updateChange}
+              />
+            </label>
             <input className="group__submit" type="submit" value="Update Changes" />
           </form>
         ) : (

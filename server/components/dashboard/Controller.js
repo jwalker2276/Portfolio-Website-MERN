@@ -39,7 +39,7 @@ class Controller extends Component {
         dashBoardSection = <Profile user={this.props.auth.user} />;
         break;
       case 'projects':
-        dashBoardSection = <Projects user={this.props.auth.user} />;
+        dashBoardSection = <Projects />;
         break;
       default:
         dashBoardSection = <Profile user={this.props.auth.user} />;

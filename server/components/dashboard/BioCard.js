@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from 'react'; // Styles
+import React, { Component, Fragment } from 'react';
+// Styles
 import '../../scss/dashboard/cards.scss';
 
 class BioCard extends Component {
@@ -39,18 +40,20 @@ class BioCard extends Component {
 
     return (
       <div className="bio__group">
-        <h5 className="group__title">{title}</h5>
         {isEditable ? (
           <form className="group__form" onSubmit={this.handleSubmit}>
-            <textarea
-              rows="5"
-              cols="33"
-              className="group__textarea__input"
-              type="text"
-              name="link"
-              value={this.state.bio}
-              onChange={this.updateChange}
-            />
+            <label htmlFor={title} className="group__form__label">
+              {title}
+              <textarea
+                rows="5"
+                cols="33"
+                className="group__form__textarea"
+                type="text"
+                name="link"
+                value={this.state.bio}
+                onChange={this.updateChange}
+              />
+            </label>
             <input className="group__submit" type="submit" value="Update Changes" />
           </form>
         ) : (

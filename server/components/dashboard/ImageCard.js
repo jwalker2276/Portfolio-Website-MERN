@@ -39,12 +39,18 @@ export default class ImageCard extends Component {
     const { isEditable, imageId } = this.props;
 
     const imageUploader = (
-      <div className="image__upload__form">
+      <div className="image__upload">
         <Image cloudName="jwalkercreations-com" publicId={imageId}>
           <Transformation height="150" quality="auto" crop="limit" fetchFormat="auto" />
         </Image>
-        <form>
-          <input type="file" name="file" required onChange={this.uploadImage} />
+        <form className="image__upload__form">
+          <input
+            className="group__from__input"
+            type="file"
+            name="file"
+            required
+            onChange={this.uploadImage}
+          />
         </form>
       </div>
     );

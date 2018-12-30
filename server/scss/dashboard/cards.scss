@@ -3,11 +3,39 @@
   font-size: 1em;
   color: $font-dark;
   font-weight: 600;
+  text-align: center;
 }
 
-.group__input,
-.group__textarea__input {
+.group__form {
+  padding: 10px;
+}
+
+.group__form__input,
+.group__form__textarea {
   width: 100%;
-  font-size: 0.75em;
+  font-size: 1em;
+  box-sizing: border-box;
   color: $font-dark;
+  border-radius: 5px;
+  background-color: lighten($bk-light, 25%);
+  padding: 7px;
+  margin: 10px 0;
+  border: none;
+}
+
+.group__form__label {
+  font-size: 1em;
+  color: $font-dark;
+  margin-bottom: 0.5em;
+}
+
+.image__upload {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.image__upload__form {
+  margin: 10px 0;
+  background-color: $bk-light;
 }

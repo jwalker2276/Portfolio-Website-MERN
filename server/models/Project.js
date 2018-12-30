@@ -36,7 +36,7 @@ const projectSchema = new Schema({
       required: false
     }
   },
-  imageURLs: {
+  imageIds: {
     type: [String],
     required: false
   }

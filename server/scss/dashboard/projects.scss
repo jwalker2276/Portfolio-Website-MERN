@@ -1,5 +1,5 @@
 @import 'scss/_colors.scss';
-.profile__nav {
+.project__nav {
   grid-row: 1 / 2;
   grid-column: 1 / -1;
   display: grid;
@@ -8,7 +8,15 @@
   background-color: $bk-medium;
 }
 
-.profile__nav__right {
+.project__nav__left {
+  padding: 10px;
+  justify-items: start;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project__nav__right {
   padding: 10px;
   justify-items: end;
   align-items: center;
@@ -17,43 +25,32 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.skills__edit-card {
-  grid-row: 2 / 3;
+.project__edit-card {
+  grid-row: 2 / -1;
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 40% 60%;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
+}
+
+.project__images {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
   background-color: $bk-medium;
   padding: 10px;
 }
 
-.skills__title {
-  grid-column: 1 / -1;
-}
-
-.image__edit-card {
-  grid-row: 3 / -1;
+.project__main {
+  grid-row: 2 / -1;
   grid-column: 1 / 2;
   background-color: $bk-medium;
   padding: 10px;
 }
 
-.links__edit-card {
-  grid-row: 3 / -1;
-  grid-column: 2 / 4;
-  background-color: $bk-medium;
-  padding: 10px;
-}
-
-.bio__edit-card {
-  grid-row: 3 / -1;
-  grid-column: 4 / -1;
-  background-color: $bk-medium;
-  padding: 10px;
-}
-
-.skill__group {
+.project__tech {
   grid-row: 2 / -1;
-  background-color: $bk-light;
+  grid-column: 2 / -1;
+  background-color: $bk-medium;
+  padding: 10px;
 }

@@ -4,6 +4,7 @@ $font-dark: #263745;
 $font-error: red;
 // Backgrounds
 $bk-light: $font-light;
+$bk-medium: adjust-color($font-light, $lightness: -2%);
 $bk-dark: #3e5a71;
 $bk-darker: #06131c;
 $bk-darkest: #05111a;
