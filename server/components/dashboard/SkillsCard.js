@@ -7,7 +7,9 @@ import '../../scss/dashboard/common.scss';
 class SkillsCard extends Component {
   constructor(props) {
     super(props);
-    this.state = { skills: '' };
+    this.state = {
+      skills: ''
+    };
     this.updateChange = this.updateChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -42,36 +44,24 @@ class SkillsCard extends Component {
   }
 
   render() {
-    const { skillData, title, skillsType } = this.props;
-    const { isEditable } = this.props;
-
+    const { title, skillsType } = this.props;
     return (
       <div className={`skill__group group__${skillsType}`}>
-        {isEditable ? (
-          <form className="group__form" onSubmit={this.handleSubmit}>
-            <label htmlFor={title} className="group__form__label">
-              {title}
-              <textarea
-                className="group__form__textarea"
-                rows="5"
-                cols="33"
-                type="text"
-                name="skills"
-                value={this.state.skills}
-                onChange={this.updateChange}
-              />
-            </label>
-            <input className="group__submit" type="submit" value="Update Changes" />
-          </form>
-        ) : (
-          <ul className="skill__group__list">
-            {skillData.map(skill => (
-              <li key={skill} className="skill__group__item">
-                {skill}
-              </li>
-            ))}
-          </ul>
-        )}
+        <form className="group__form" onSubmit={this.handleSubmit}>
+          <label htmlFor={title} className="group__form__label">
+            {title}
+            <textarea
+              className="group__form__textarea"
+              rows="5"
+              cols="33"
+              type="text"
+              name="skills"
+              value={this.state.skills}
+              onChange={this.updateChange}
+            />
+          </label>
+          <input className="group__submit" type="submit" value="Update Changes" />
+        </form>
       </div>
     );
   }

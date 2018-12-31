@@ -23,6 +23,18 @@
   font-weight: 500;
 }
 
+.secondary__button--active {
+  width: 140px;
+  border: 2px solid $bk-dark;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  color: $bk-light;
+  background: $bk-dark;
+  font-size: 1em;
+  font-weight: 500;
+}
+
 .section__buttons__wrapper {
   grid-row: 1 / 2;
   grid-column: 4 / -1;

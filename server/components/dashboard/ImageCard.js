@@ -12,7 +12,7 @@ export default class ImageCard extends Component {
 
   // Upload image to cloudinary
   async uploadImage(e) {
-    const files = e.target.files;
+    const { files } = e.target;
     const data = new FormData();
     data.append('file', files[0]);
     // Append websiteImages preset
@@ -36,7 +36,7 @@ export default class ImageCard extends Component {
   }
 
   render() {
-    const { isEditable, imageId } = this.props;
+    const { imageId } = this.props;
 
     const imageUploader = (
       <div className="image__upload">
@@ -55,12 +55,6 @@ export default class ImageCard extends Component {
       </div>
     );
 
-    const imageDisplayer = (
-      <Image cloudName="jwalkercreations-com" publicId={imageId}>
-        <Transformation height="150" quality="auto" crop="limit" fetchFormat="auto" />
-      </Image>
-    );
-
-    return <Fragment>{isEditable ? imageUploader : imageDisplayer}</Fragment>;
+    return <Fragment>{imageUploader}</Fragment>;
   }
 }

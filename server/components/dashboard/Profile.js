@@ -23,12 +23,10 @@ class Profile extends Component {
       linkedin: '',
       email: '',
       bio: '',
-      profileImageId: '',
-      isEditable: true
+      profileImageId: ''
     };
     this.updateProfileState = this.updateProfileState.bind(this);
     this.updateServer = this.updateServer.bind(this);
-    this.editData = this.editData.bind(this);
   }
 
   componentDidMount() {
@@ -59,11 +57,6 @@ class Profile extends Component {
     this.setState({
       [key]: value
     });
-  }
-
-  // Toggle edit flag
-  editData() {
-    this.setState(prevState => ({ isEditable: !prevState.isEditable }));
   }
 
   // This method takes the latest copy of state and submits a post request with it.
@@ -110,15 +103,11 @@ class Profile extends Component {
       bio,
       profileImageId
     } = this.state;
-    const { isEditable } = this.state;
 
     return (
       <Fragment>
         <nav className="profile__nav">
           <div className="profile__nav__right">
-            <button className="primary__button" type="button" onClick={() => this.editData()}>
-              Save
-            </button>
             <button className="primary__button" type="button" onClick={() => this.updateServer()}>
               Update Server
             </button>
@@ -130,38 +119,30 @@ class Profile extends Component {
             skillData={frontend}
             skillsType="frontend"
             title="Front End Skills"
-            isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
           <SkillsCard
             skillData={backend}
             skillsType="backend"
             title="Back End Skills"
-            isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
           <SkillsCard
             skillData={tools}
             skillsType="tools"
             title="Tools"
-            isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
           <SkillsCard
             skillData={knowledge}
             skillsType="knowledge"
             title="Knowledge"
-            isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
         </section>
         <section className="image__edit-card">
           <h3 className="group__title">Profile Image</h3>
-          <ImageCard
-            imageId={profileImageId}
-            isEditable={isEditable}
-            updateProfileState={this.updateProfileState}
-          />
+          <ImageCard imageId={profileImageId} updateProfileState={this.updateProfileState} />
         </section>
         <section className="links__edit-card">
           <h3 className="group__title">Links</h3>
@@ -169,32 +150,24 @@ class Profile extends Component {
             linkData={linkedin}
             linkType="linkedin"
             title="Linkedin"
-            isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
           <LinksCard
             linkData={github}
             linkType="github"
             title="Github"
-            isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
           <LinksCard
             linkData={email}
             linkType="email"
             title="Email"
-            isEditable={isEditable}
             updateProfileState={this.updateProfileState}
           />
         </section>
         <section className="bio__edit-card">
           <h3 className="group__title">Bio</h3>
-          <BioCard
-            bioData={bio}
-            title="Bio"
-            isEditable={isEditable}
-            updateProfileState={this.updateProfileState}
-          />
+          <BioCard bioData={bio} title="Bio" updateProfileState={this.updateProfileState} />
         </section>
       </Fragment>
     );

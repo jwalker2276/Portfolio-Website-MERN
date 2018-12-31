@@ -325,20 +325,19 @@ function (_Component) {
     key: "render",
     value: function render() {
       var title = this.props.title;
-      var isEditable = this.props.isEditable;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bio__group",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 40
         },
         __self: this
-      }, isEditable ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "group__form",
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 41
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -346,7 +345,7 @@ function (_Component) {
         className: "group__form__label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 42
         },
         __self: this
       }, title, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
@@ -359,7 +358,7 @@ function (_Component) {
         onChange: this.updateChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 44
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -368,22 +367,10 @@ function (_Component) {
         value: "Update Changes",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 54
         },
         __self: this
-      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        },
-        __self: this
-      }, this.state.bio)));
+      })));
     }
   }]);
 
@@ -454,7 +441,7 @@ function (_Component) {
     _this.changeSection = _this.changeSection.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.logout = _this.logout.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.state = {
-      sectionToRender: 'profile'
+      sectionToRender: 'projects'
     };
     return _this;
   } // Determine which section to render
@@ -717,9 +704,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          isEditable = _this$props.isEditable,
-          imageId = _this$props.imageId;
+      var imageId = this.props.imageId;
       var imageUploader = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "image__upload",
         __source: {
@@ -764,32 +749,13 @@ function (_Component) {
         },
         __self: this
       })));
-      var imageDisplayer = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
-        cloudName: "jwalkercreations-com",
-        publicId: imageId,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
-        height: "150",
-        quality: "auto",
-        crop: "limit",
-        fetchFormat: "auto",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }));
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 58
         },
         __self: this
-      }, isEditable ? imageUploader : imageDisplayer);
+      }, imageUploader);
     }
   }]);
 
@@ -891,20 +857,19 @@ function (_Component) {
     key: "render",
     value: function render() {
       var title = this.props.title;
-      var isEditable = this.props.isEditable;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "link__group",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 40
         },
         __self: this
-      }, isEditable ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "group__form",
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 41
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -912,7 +877,7 @@ function (_Component) {
         className: "group__form__label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 42
         },
         __self: this
       }, title, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -923,7 +888,7 @@ function (_Component) {
         onChange: this.updateChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 44
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -932,22 +897,10 @@ function (_Component) {
         value: "Update Changes",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 52
         },
         __self: this
-      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        },
-        __self: this
-      }, this.state.link)));
+      })));
     }
   }]);
 
@@ -1036,12 +989,10 @@ function (_Component) {
       linkedin: '',
       email: '',
       bio: '',
-      profileImageId: '',
-      isEditable: true
+      profileImageId: ''
     };
     _this.updateProfileState = _this.updateProfileState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.updateServer = _this.updateServer.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.editData = _this.editData.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
@@ -1084,16 +1035,6 @@ function (_Component) {
     key: "updateProfileState",
     value: function updateProfileState(key, value) {
       this.setState(_defineProperty({}, key, value));
-    } // Toggle edit flag
-
-  }, {
-    key: "editData",
-    value: function editData() {
-      this.setState(function (prevState) {
-        return {
-          isEditable: !prevState.isEditable
-        };
-      });
     } // This method takes the latest copy of state and submits a post request with it.
 
   }, {
@@ -1142,39 +1083,27 @@ function (_Component) {
           email = _this$state.email,
           bio = _this$state.bio,
           profileImageId = _this$state.profileImageId;
-      var isEditable = this.state.isEditable;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 108
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "profile__nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 109
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile__nav__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 110
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "primary__button",
-        type: "button",
-        onClick: function onClick() {
-          return _this2.editData();
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 119
-        },
-        __self: this
-      }, "Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "primary__button",
         type: "button",
         onClick: function onClick() {
@@ -1182,159 +1111,150 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 111
         },
         __self: this
       }, "Update Server"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "skills__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 116
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "group__title skills__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 117
         },
         __self: this
       }, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
         skillData: frontend,
         skillsType: "frontend",
         title: "Front End Skills",
-        isEditable: isEditable,
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 118
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
         skillData: backend,
         skillsType: "backend",
         title: "Back End Skills",
-        isEditable: isEditable,
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 124
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
         skillData: tools,
         skillsType: "tools",
         title: "Tools",
-        isEditable: isEditable,
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 130
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SkillsCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
         skillData: knowledge,
         skillsType: "knowledge",
         title: "Knowledge",
-        isEditable: isEditable,
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 136
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "image__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 143
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 144
         },
         __self: this
       }, "Profile Image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageCard__WEBPACK_IMPORTED_MODULE_7__["default"], {
         imageId: profileImageId,
-        isEditable: isEditable,
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 145
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "links__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 166
+          lineNumber: 147
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 167
+          lineNumber: 148
         },
         __self: this
       }, "Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
         linkData: linkedin,
         linkType: "linkedin",
         title: "Linkedin",
-        isEditable: isEditable,
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 168
+          lineNumber: 149
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
         linkData: github,
         linkType: "github",
         title: "Github",
-        isEditable: isEditable,
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175
+          lineNumber: 155
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
         linkData: email,
         linkType: "email",
         title: "Email",
-        isEditable: isEditable,
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 161
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "bio__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 168
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 169
         },
         __self: this
       }, "Bio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BioCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
         bioData: bio,
         title: "Bio",
-        isEditable: isEditable,
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 170
         },
         __self: this
       })));
@@ -1827,6 +1747,7 @@ function (_Component) {
     _this.updateProjectState = _this.updateProjectState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.updateProjectState = _this.updateProjectState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.updateServer = _this.updateServer.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.determineButton = _this.determineButton.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
@@ -1897,11 +1818,40 @@ function (_Component) {
 
 
       console.log('updating project : ' + this.state.projectToUpdate);
+    } // This method returns a button for each project
+
+  }, {
+    key: "determineButton",
+    value: function determineButton(projectNum) {
+      var _this2 = this;
+
+      var projectToUpdate = this.state.projectToUpdate; // Determine which class to apply
+
+      var buttonClass = 'secondary__button';
+
+      if (projectToUpdate === projectNum) {
+        buttonClass = 'secondary__button--active';
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: buttonClass,
+        type: "button",
+        value: projectNum,
+        key: projectNum,
+        onClick: function onClick(e) {
+          return _this2.updateProjectToEdit(e);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }, "Project\xA0", projectNum);
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       // Make sure redux state is loaded
       if (this.props.projectData === null) {
@@ -1923,43 +1873,30 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 128
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "project__nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 129
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__nav__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 130
         },
         __self: this
       }, projectNames.map(function (projectNum) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "secondary__button",
-          type: "button",
-          value: projectNum,
-          key: projectNum,
-          onClick: function onClick(e) {
-            return _this2.updateProjectToEdit(e);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 107
-          },
-          __self: this
-        }, "Project\xA0", projectNum);
+        return _this3.determineButton(projectNum);
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__nav__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 133
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1968,23 +1905,14 @@ function (_Component) {
         onClick: this.updateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
-        },
-        __self: this
-      }, "Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "primary__button",
-        type: "button",
-        onClick: this.updateServer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 134
         },
         __self: this
       }, "Update Server"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 139
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1992,7 +1920,7 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 140
         },
         __self: this
       })));
@@ -2118,10 +2046,8 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          skillData = _this$props.skillData,
           title = _this$props.title,
           skillsType = _this$props.skillsType;
-      var isEditable = this.props.isEditable;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "skill__group group__".concat(skillsType),
         __source: {
@@ -2129,12 +2055,12 @@ function (_Component) {
           lineNumber: 49
         },
         __self: this
-      }, isEditable ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "group__form",
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 50
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -2142,7 +2068,7 @@ function (_Component) {
         className: "group__form__label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 51
         },
         __self: this
       }, title, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
@@ -2155,7 +2081,7 @@ function (_Component) {
         onChange: this.updateChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 53
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -2164,26 +2090,9 @@ function (_Component) {
         value: "Update Changes",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 63
         },
         __self: this
-      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "skill__group__list",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      }, skillData.map(function (skill) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: skill,
-          className: "skill__group__item",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 69
-          },
-          __self: this
-        }, skill);
       })));
     }
   }]);

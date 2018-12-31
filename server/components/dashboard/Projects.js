@@ -19,6 +19,7 @@ class Projects extends Component {
     this.updateProjectState = this.updateProjectState.bind(this);
     this.updateProjectState = this.updateProjectState.bind(this);
     this.updateServer = this.updateServer.bind(this);
+    this.determineButton = this.determineButton.bind(this);
   }
 
   componentDidMount() {
@@ -83,6 +84,30 @@ class Projects extends Component {
     console.log('updating project : ' + this.state.projectToUpdate);
   }
 
+  // This method returns a button for each project
+  determineButton(projectNum) {
+    const { projectToUpdate } = this.state;
+
+    // Determine which class to apply
+    let buttonClass = 'secondary__button';
+    if (projectToUpdate === projectNum) {
+      buttonClass = 'secondary__button--active';
+    }
+
+    return (
+      <button
+        className={buttonClass}
+        type="button"
+        value={projectNum}
+        key={projectNum}
+        onClick={e => this.updateProjectToEdit(e)}
+      >
+        Project&nbsp;
+        {projectNum}
+      </button>
+    );
+  }
+
   render() {
     // Make sure redux state is loaded
     if (this.props.projectData === null) {
@@ -103,23 +128,9 @@ class Projects extends Component {
       <Fragment>
         <nav className="project__nav">
           <div className="project__nav__left">
-            {projectNames.map(projectNum => (
-              <button
-                className="secondary__button"
-                type="button"
-                value={projectNum}
-                key={projectNum}
-                onClick={e => this.updateProjectToEdit(e)}
-              >
-                Project&nbsp;
-                {projectNum}
-              </button>
-            ))}
+            {projectNames.map(projectNum => this.determineButton(projectNum))}
           </div>
           <div className="project__nav__right">
-            <button className="primary__button" type="button" onClick={this.updateServer}>
-              Save
-            </button>
             <button className="primary__button" type="button" onClick={this.updateServer}>
               Update Server
             </button>

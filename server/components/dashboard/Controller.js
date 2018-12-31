@@ -13,7 +13,7 @@ class Controller extends Component {
     this.changeSection = this.changeSection.bind(this);
     this.logout = this.logout.bind(this);
     this.state = {
-      sectionToRender: 'profile'
+      sectionToRender: 'projects'
     };
   }
 

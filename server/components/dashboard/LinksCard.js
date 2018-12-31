@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'; // Styles
+import React, { Component } from 'react'; // Styles
 import '../../scss/dashboard/cards.scss';
 
 class LinksCard extends Component {
@@ -35,29 +35,22 @@ class LinksCard extends Component {
 
   render() {
     const { title } = this.props;
-    const { isEditable } = this.props;
 
     return (
       <div className="link__group">
-        {isEditable ? (
-          <form className="group__form" onSubmit={this.handleSubmit}>
-            <label htmlFor={title} className="group__form__label">
-              {title}
-              <input
-                className="group__form__input"
-                type="text"
-                name="link"
-                value={this.state.link}
-                onChange={this.updateChange}
-              />
-            </label>
-            <input className="group__submit" type="submit" value="Update Changes" />
-          </form>
-        ) : (
-          <Fragment>
-            <p>{this.state.link}</p>
-          </Fragment>
-        )}
+        <form className="group__form" onSubmit={this.handleSubmit}>
+          <label htmlFor={title} className="group__form__label">
+            {title}
+            <input
+              className="group__form__input"
+              type="text"
+              name="link"
+              value={this.state.link}
+              onChange={this.updateChange}
+            />
+          </label>
+          <input className="group__submit" type="submit" value="Update Changes" />
+        </form>
       </div>
     );
   }
