@@ -23,7 +23,8 @@
 .group__form__label {
   font-size: 1em;
   color: #263745;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  text-align: center; }
 
 .image__upload {
   display: grid;
@@ -35,6 +36,10 @@
 .image__upload__form {
   margin: 10px 0;
   background-color: #eff8ff; }
+
+.project__images__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
 
 .primary__button {
   border: 2px solid #3e5a71;
@@ -163,7 +168,7 @@
   grid-row: 2 / -1;
   grid-column: 1 / -1;
   display: grid;
-  grid-template-rows: 40% 60%;
+  grid-template-rows: 35% 65%;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px; }
 

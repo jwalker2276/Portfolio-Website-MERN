@@ -4,7 +4,7 @@ import _isEmpty from 'lodash.isempty';
 import { connect } from 'react-redux';
 import { getProjectData } from '../../reduxState/actions/homePageActions';
 // Components
-import ProjectCard from './ProjectCard';
+import Project from './Project';
 // Styles
 import '../../scss/dashboard/projects.scss';
 import '../../scss/dashboard/common.scss';
@@ -16,7 +16,6 @@ class Projects extends Component {
       projects: {},
       projectToUpdate: ''
     };
-    this.updateProjectState = this.updateProjectState.bind(this);
     this.updateProjectState = this.updateProjectState.bind(this);
     this.updateServer = this.updateServer.bind(this);
     this.determineButton = this.determineButton.bind(this);
@@ -137,10 +136,7 @@ class Projects extends Component {
           </div>
         </nav>
         <section className="project__edit-card">
-          <ProjectCard
-            projectData={currentProjectData}
-            updateProjectState={this.updateProjectState}
-          />
+          <Project projectData={currentProjectData} updateProjectState={this.updateProjectState} />
         </section>
       </Fragment>
     );

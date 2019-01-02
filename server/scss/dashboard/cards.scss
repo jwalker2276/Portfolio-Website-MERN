@@ -27,6 +27,7 @@
   font-size: 1em;
   color: $font-dark;
   margin-bottom: 0.5em;
+  text-align: center;
 }
 
 .image__upload {
@@ -38,4 +39,9 @@
 .image__upload__form {
   margin: 10px 0;
   background-color: $bk-light;
+}
+
+.project__images__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }

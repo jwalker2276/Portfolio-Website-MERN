@@ -1277,26 +1277,29 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./components/dashboard/ProjectCard.js":
-/*!*********************************************!*\
-  !*** ./components/dashboard/ProjectCard.js ***!
-  \*********************************************/
+/***/ "./components/dashboard/Project.js":
+/*!*****************************************!*\
+  !*** ./components/dashboard/Project.js ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProjectCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Project; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../scss/dashboard/cards.scss */ "./scss/dashboard/cards.scss");
-/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../scss/dashboard/projects.scss */ "./scss/dashboard/projects.scss");
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _ProjectImages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProjectImages */ "./components/dashboard/ProjectImages.js");
+/* harmony import */ var _ProjectMain__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProjectMain */ "./components/dashboard/ProjectMain.js");
+/* harmony import */ var _ProjectTech__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProjectTech */ "./components/dashboard/ProjectTech.js");
+/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../scss/dashboard/cards.scss */ "./scss/dashboard/cards.scss");
+/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../scss/dashboard/projects.scss */ "./scss/dashboard/projects.scss");
+/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__);
 
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/ProjectCard.js";
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/Project.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1322,26 +1325,30 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+ // Components
+
+
+
  // Styles
 
 
 
 
-var ProjectCard =
+var Project =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(ProjectCard, _Component);
+  _inherits(Project, _Component);
 
-  function ProjectCard(props) {
+  function Project(props) {
     var _this;
 
-    _classCallCheck(this, ProjectCard);
+    _classCallCheck(this, Project);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProjectCard).call(this, props));
-    _this.updateCurrentState = _this.updateCurrentState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Project).call(this, props));
+    _this.updateInitalState = _this.updateInitalState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.convertArrayToString = _this.convertArrayToString.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.convertStringToArray = _this.convertStringToArray.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.updateProjectState = _this.updateProjectState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.state = {
       title: '',
       type: '',
@@ -1356,22 +1363,22 @@ function (_Component) {
     return _this;
   }
 
-  _createClass(ProjectCard, [{
+  _createClass(Project, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.updateCurrentState(this.props.projectData);
+      this.updateInitalState(this.props.projectData);
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
       if (prevProps.projectData !== this.props.projectData) {
-        this.updateCurrentState(this.props.projectData);
+        this.updateInitalState(this.props.projectData);
       }
     }
   }, {
-    key: "updateCurrentState",
+    key: "updateInitalState",
     value: function () {
-      var _updateCurrentState = _asyncToGenerator(
+      var _updateInitalState = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(projectData) {
         var title, type, link, description, imageIds, tech, id, frontendString, backendString, toolsString;
@@ -1432,8 +1439,8 @@ function (_Component) {
         }, _callee, this);
       }));
 
-      return function updateCurrentState(_x) {
-        return _updateCurrentState.apply(this, arguments);
+      return function updateInitalState(_x) {
+        return _updateInitalState.apply(this, arguments);
       };
     }()
   }, {
@@ -1455,13 +1462,10 @@ function (_Component) {
       // Update state if array
     }
   }, {
-    key: "handleChange",
-    value: function handleChange(event) {
-      var _event$currentTarget = event.currentTarget,
-          name = _event$currentTarget.name,
-          value = _event$currentTarget.value; // Update state to new string value
-
-      this.setState(_defineProperty({}, name, value));
+    key: "updateProjectState",
+    value: function updateProjectState(key, value) {
+      // Update state to new string value
+      this.setState(_defineProperty({}, key, value));
     }
   }, {
     key: "render",
@@ -1479,52 +1483,618 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 86
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__images",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 87
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 85
-        },
-        __self: this
-      }, "Images"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 86
-        },
-        __self: this
-      }, "no images currently")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "project__main",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 88
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-        className: "group__title",
+      }, "Images"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectImages__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        imageIds: imageIds,
+        updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 89
         },
         __self: this
-      }, "Main Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "project__main",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+        className: "group__title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92
+        },
+        __self: this
+      }, "Main Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectMain__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        title: title,
+        type: type,
+        link: link,
+        description: description,
+        updateProjectState: this.updateProjectState,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "project__tech",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+        className: "group__title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102
+        },
+        __self: this
+      }, "Tech Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectTech__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        frontend: frontend,
+        backend: backend,
+        tools: tools,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return Project;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./components/dashboard/ProjectImageCard.js":
+/*!**************************************************!*\
+  !*** ./components/dashboard/ProjectImageCard.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProjectImageCard; });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cloudinary-react */ "./node_modules/cloudinary-react/lib/index.js");
+/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../scss/dashboard/cards.scss */ "./scss/dashboard/cards.scss");
+/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_4__);
+
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/ProjectImageCard.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+ // Styles
+
+
+
+var ProjectImageCard =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ProjectImageCard, _Component);
+
+  function ProjectImageCard(props) {
+    var _this;
+
+    _classCallCheck(this, ProjectImageCard);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProjectImageCard).call(this, props));
+    _this.uploadImage = _this.uploadImage.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  } // Upload image to cloudinary
+
+
+  _createClass(ProjectImageCard, [{
+    key: "uploadImage",
+    value: function () {
+      var _uploadImage = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+        var files, data, file, imageId;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                files = e.target.files;
+                data = new FormData();
+                data.append('file', files[0]); // Append websiteImages preset
+
+                data.append('upload_preset', 'websiteImages'); // Delete Auth header to prevent cors error
+
+                delete axios__WEBPACK_IMPORTED_MODULE_3___default.a.defaults.headers.common['Authorization']; // Send and wait for the post request
+
+                _context.next = 7;
+                return axios__WEBPACK_IMPORTED_MODULE_3___default()({
+                  method: 'POST',
+                  url: 'https://api.cloudinary.com/v1_1/jwalkercreations-com/image/upload',
+                  data: data
+                });
+
+              case 7:
+                file = _context.sent;
+                // Grab the image id for react components
+                imageId = file.data.public_id; // Update profile's state with new id
+
+                this.props.updateImageId(this.props.imageIndex, imageId);
+
+              case 10:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      return function uploadImage(_x) {
+        return _uploadImage.apply(this, arguments);
+      };
+    }()
+  }, {
+    key: "render",
+    value: function render() {
+      var image = this.props.image;
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "image__upload",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
+        cloudName: "jwalkercreations-com",
+        publicId: image,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
+        height: "100",
+        quality: "auto",
+        crop: "limit",
+        fetchFormat: "auto",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+        htmlFor: "image",
+        className: "group__form__label",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      }, "Add/Change Image", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        type: "file",
+        name: "file",
+        required: true,
+        className: "group__from__input",
+        onChange: this.uploadImage,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return ProjectImageCard;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./components/dashboard/ProjectImages.js":
+/*!***********************************************!*\
+  !*** ./components/dashboard/ProjectImages.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProjectImages; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectImageCard */ "./components/dashboard/ProjectImageCard.js");
+/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../scss/dashboard/cards.scss */ "./scss/dashboard/cards.scss");
+/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/ProjectImages.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+ // Styles
+
+
+
+var ProjectImages =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ProjectImages, _Component);
+
+  function ProjectImages(props) {
+    var _this;
+
+    _classCallCheck(this, ProjectImages);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProjectImages).call(this, props));
+    _this.state = {
+      image0: '',
+      image1: '',
+      image2: '',
+      image3: '',
+      image4: ''
+    };
+    _this.updateImageId = _this.updateImageId.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(ProjectImages, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (this.props.imageIds !== prevProps.imageIds) {
+        // Check if imageIds has new data
+        if (this.props.imageIds[0] !== '') {
+          this.setState({
+            image0: this.props.imageIds[0]
+          });
+        }
+
+        if (this.props.imageIds[1] !== '') {
+          this.setState({
+            image1: this.props.imageIds[1]
+          });
+        }
+
+        if (this.props.imageIds[2] !== '') {
+          this.setState({
+            image2: this.props.imageIds[2]
+          });
+        }
+
+        if (this.props.imageIds[3] !== '') {
+          this.setState({
+            image3: this.props.imageIds[3]
+          });
+        }
+
+        if (this.props.imageIds[4] !== '') {
+          this.setState({
+            image4: this.props.imageIds[4]
+          });
+        }
+      }
+    } // This method is passed to each child to update this.state
+
+  }, {
+    key: "updateImageId",
+    value: function updateImageId(index, id) {
+      this.setState(_defineProperty({}, "image".concat(index), id));
+    } // This method updates parents state
+
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      var _this$state = this.state,
+          image0 = _this$state.image0,
+          image1 = _this$state.image1,
+          image2 = _this$state.image2,
+          image3 = _this$state.image3,
+          image4 = _this$state.image4;
+      var images = [image0, image1, image2, image3, image4];
+      this.props.updateProjectState('imageIds', images);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "project__images__wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        image: this.state.image0,
+        imageIndex: 0,
+        updateImageId: this.updateImageId,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        image: this.state.image1,
+        imageIndex: 1,
+        updateImageId: this.updateImageId,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        image: this.state.image2,
+        imageIndex: 2,
+        updateImageId: this.updateImageId,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        image: this.state.image3,
+        imageIndex: 3,
+        updateImageId: this.updateImageId,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        image: this.state.image4,
+        imageIndex: 4,
+        updateImageId: this.updateImageId,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "group__submit",
+        type: "submit",
+        value: "Update Changes",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        },
+        __self: this
+      }));
+    }
+  }]);
+
+  return ProjectImages;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./components/dashboard/ProjectMain.js":
+/*!*********************************************!*\
+  !*** ./components/dashboard/ProjectMain.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProjectMain; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/ProjectMain.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+var ProjectMain =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ProjectMain, _Component);
+
+  function ProjectMain(props) {
+    var _this;
+
+    _classCallCheck(this, ProjectMain);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProjectMain).call(this, props));
+    _this.state = {
+      title: '',
+      type: '',
+      link: '',
+      description: ''
+    };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.setInitialState = _this.setInitialState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(ProjectMain, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      // Check for loading of props
+      if (this.props !== prevProps) {
+        // Check if state needs to update
+        if (this.props.title !== this.state.title) {
+          this.setInitialState();
+        }
+
+        if (this.props.type !== this.state.type) {
+          this.setInitialState();
+        }
+
+        if (this.props.link !== this.state.link) {
+          this.setInitialState();
+        }
+
+        if (this.props.description !== this.state.description) {
+          this.setInitialState();
+        }
+      }
+    } // This method loads props into this.state
+
+  }, {
+    key: "setInitialState",
+    value: function setInitialState() {
+      var _this$props = this.props,
+          title = _this$props.title,
+          type = _this$props.type,
+          link = _this$props.link,
+          description = _this$props.description;
+      this.setState({
+        title: title
+      });
+      this.setState({
+        type: type
+      });
+      this.setState({
+        link: link
+      });
+      this.setState({
+        description: description
+      });
+    } // This method updates this.state from input
+
+  }, {
+    key: "handleChange",
+    value: function handleChange(e) {
+      var _e$currentTarget = e.currentTarget,
+          name = _e$currentTarget.name,
+          value = _e$currentTarget.value; // Update state
+
+      this.setState(_defineProperty({}, name, value));
+    } // This method updates parent state from this.state
+
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      event.preventDefault();
+      var _this$state = this.state,
+          title = _this$state.title,
+          type = _this$state.type,
+          link = _this$state.link,
+          description = _this$state.description; // Update project state
+
+      this.props.updateProjectState('title', title);
+      this.props.updateProjectState('type', type);
+      this.props.updateProjectState('link', link);
+      this.props.updateProjectState('description', description);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state2 = this.state,
+          title = _this$state2.title,
+          type = _this$state2.type,
+          link = _this$state2.link,
+          description = _this$state2.description;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 68
         },
         __self: this
-      }, "Title", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, "Title", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "group__form__input",
         type: "text",
         name: "title",
@@ -1532,18 +2102,18 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 70
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "type",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 78
         },
         __self: this
-      }, "Type", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, "Type", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "group__form__input",
         type: "text",
         name: "type",
@@ -1551,18 +2121,18 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 80
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 88
         },
         __self: this
-      }, "Link", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, "Link", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "group__form__input",
         type: "text",
         name: "link",
@@ -1570,18 +2140,18 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 90
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "description",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 98
         },
         __self: this
-      }, "Description", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
+      }, "Description", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         className: "group__form__textarea",
         rows: "5",
         cols: "33",
@@ -1591,32 +2161,171 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 100
         },
         __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "project__tech",
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "group__submit",
+        type: "submit",
+        value: "Update Changes",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 110
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-        className: "group__title",
+      }));
+    }
+  }]);
+
+  return ProjectMain;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./components/dashboard/ProjectTech.js":
+/*!*********************************************!*\
+  !*** ./components/dashboard/ProjectTech.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProjectTech; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/ProjectTech.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+var ProjectTech =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ProjectTech, _Component);
+
+  function ProjectTech(props) {
+    var _this;
+
+    _classCallCheck(this, ProjectTech);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProjectTech).call(this, props));
+    _this.state = {
+      frontend: '',
+      backend: '',
+      tools: ''
+    };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.setInitialState = _this.setInitialState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(ProjectTech, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      // Check for loading of props
+      if (this.props !== prevProps) {
+        // Check if state needs to update
+        if (this.props.frontend !== this.state.frontend) {
+          this.setInitialState();
+        }
+
+        if (this.props.backend !== this.state.backend) {
+          this.setInitialState();
+        }
+
+        if (this.props.tools !== this.state.tools) {
+          this.setInitialState();
+        }
+      }
+    } // This method loads props into state
+
+  }, {
+    key: "setInitialState",
+    value: function setInitialState() {
+      var _this$props = this.props,
+          frontend = _this$props.frontend,
+          backend = _this$props.backend,
+          tools = _this$props.tools;
+      this.setState({
+        frontend: frontend
+      });
+      this.setState({
+        backend: backend
+      });
+      this.setState({
+        tools: tools
+      });
+    } // This method update this.state from input
+
+  }, {
+    key: "handleChange",
+    value: function handleChange(e) {
+      var _e$currentTarget = e.currentTarget,
+          name = _e$currentTarget.name,
+          value = _e$currentTarget.value; // Update state
+
+      this.setState(_defineProperty({}, name, value));
+    } // This method updates the parents state
+
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      event.preventDefault();
+      var _this$state = this.state,
+          frontend = _this$state.frontend,
+          backend = _this$state.backend,
+          tools = _this$state.tools; // Update project state
+
+      this.props.updateProjectState('frontend', frontend);
+      this.props.updateProjectState('backend', backend);
+      this.props.updateProjectState('tools', tools);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state2 = this.state,
+          frontend = _this$state2.frontend,
+          backend = _this$state2.backend,
+          tools = _this$state2.tools;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 134
+          lineNumber: 61
         },
         __self: this
-      }, "Tech Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "Frontend Tech",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 62
         },
         __self: this
-      }, "Front End Tech", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, "Front End Tech", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "group__form__input",
         type: "text",
         name: "frontend",
@@ -1624,18 +2333,18 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 64
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "Backend Tech",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 72
         },
         __self: this
-      }, "Backend Tech", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, "Backend Tech", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "group__form__input",
         type: "text",
         name: "backend",
@@ -1643,18 +2352,18 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 74
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "Tools",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 155
+          lineNumber: 82
         },
         __self: this
-      }, "Tools", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, "Tools", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "group__form__input",
         type: "text",
         name: "tools",
@@ -1662,15 +2371,24 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157
+          lineNumber: 84
         },
         __self: this
-      }))));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "group__submit",
+        type: "submit",
+        value: "Update Changes",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92
+        },
+        __self: this
+      }));
     }
   }]);
 
-  return ProjectCard;
-}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+  return ProjectTech;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 
 
@@ -1693,7 +2411,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_isempty__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
-/* harmony import */ var _ProjectCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ProjectCard */ "./components/dashboard/ProjectCard.js");
+/* harmony import */ var _Project__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Project */ "./components/dashboard/Project.js");
 /* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../scss/dashboard/projects.scss */ "./scss/dashboard/projects.scss");
 /* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../scss/dashboard/common.scss */ "./scss/dashboard/common.scss");
@@ -1744,7 +2462,6 @@ function (_Component) {
       projects: {},
       projectToUpdate: ''
     };
-    _this.updateProjectState = _this.updateProjectState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.updateProjectState = _this.updateProjectState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.updateServer = _this.updateServer.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.determineButton = _this.determineButton.bind(_assertThisInitialized(_assertThisInitialized(_this)));
@@ -1843,7 +2560,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 97
         },
         __self: this
       }, "Project\xA0", projectNum);
@@ -1873,21 +2590,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 127
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "project__nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 128
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__nav__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 129
         },
         __self: this
       }, projectNames.map(function (projectNum) {
@@ -1896,7 +2613,7 @@ function (_Component) {
         className: "project__nav__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 132
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1905,22 +2622,22 @@ function (_Component) {
         onClick: this.updateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 134
+          lineNumber: 133
         },
         __self: this
       }, "Update Server"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 138
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_5__["default"], {
         projectData: currentProjectData,
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 139
         },
         __self: this
       })));
@@ -30059,8 +30776,7 @@ function (_React$Component) {
   _createClass(Dashboard, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log('MOUNTED'); // Check if token is in local storage
-
+      // Check if token is in local storage
       if (localStorage.jwtToken) {
         // Set token to header for requests
         Object(_helpers_setAuthToken__WEBPACK_IMPORTED_MODULE_4__["default"])(localStorage.jwtDecode); // Decode the token for user info
@@ -30079,8 +30795,7 @@ function (_React$Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      console.log('UPDATED'); // Check for login or logout event
-
+      // Check for login or logout event
       if (this.props.auth.isAuth !== prevProps.auth.isAuth) {
         // Change loggedin state
         if (this.props.auth.isAuth) {
@@ -30146,13 +30861,13 @@ function (_React$Component) {
           className: "dashboard-wrapper",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99
+            lineNumber: 97
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_dashboard_Controller__WEBPACK_IMPORTED_MODULE_6__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100
+            lineNumber: 98
           },
           __self: this
         }));
@@ -30162,13 +30877,13 @@ function (_React$Component) {
         className: "dashboard__login__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 104
         },
         __self: this
       }));

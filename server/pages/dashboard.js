@@ -20,7 +20,6 @@ class Dashboard extends React.Component {
 
   // Check if user is authenticated client side
   componentDidMount() {
-    console.log('MOUNTED');
     // Check if token is in local storage
     if (localStorage.jwtToken) {
       // Set token to header for requests
@@ -37,7 +36,6 @@ class Dashboard extends React.Component {
 
   // Check if user clicked logout
   componentDidUpdate(prevProps) {
-    console.log('UPDATED');
     // Check for login or logout event
     if (this.props.auth.isAuth !== prevProps.auth.isAuth) {
       // Change loggedin state
