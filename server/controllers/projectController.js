@@ -84,11 +84,7 @@ exports.setProject = (req, res) => {
     frontendTech,
     backendTech,
     toolsTech,
-    image1,
-    image2,
-    image3,
-    image4,
-    image5
+    imageIds
   } = req.body;
 
   // Set project search id
@@ -109,36 +105,15 @@ exports.setProject = (req, res) => {
   // Set project tech
   projectFields.tech = {};
 
-  // Set values if data was provided
-  if (frontendTech !== undefined && frontendTech !== '') {
-    projectFields.tech.frontend = frontendTech.split(',');
-  }
-  if (frontendTech !== undefined && backendTech !== '') {
-    projectFields.tech.backend = backendTech.split(',');
-  }
-  if (frontendTech !== undefined && toolsTech !== '') {
-    projectFields.tech.tools = toolsTech.split(',');
-  }
+  // Set tech arrays
+  projectFields.tech.frontend = frontendTech;
+  projectFields.tech.backend = backendTech;
+  projectFields.tech.tools = toolsTech;
 
-  // Set project image links
-  projectFields.imageIds = [];
+  // Set project image ids array
+  projectFields.imageIds = imageIds;
 
-  // Set image url if data was provided
-  if (image1 !== undefined && image1 !== '') {
-    projectFields.imageIds.push(image1);
-  }
-  if (image2 !== undefined && image2 !== '') {
-    projectFields.imageIds.push(image2);
-  }
-  if (image3 !== undefined && image3 !== '') {
-    projectFields.imageIds.push(image3);
-  }
-  if (image4 !== undefined && image4 !== '') {
-    projectFields.imageIds.push(image4);
-  }
-  if (image5 !== undefined && image5 !== '') {
-    projectFields.imageIds.push(image5);
-  }
+  console.log(projectFields);
 
   // Search for existing project
   Project.findOne({ id: req.body.projectId }).then(project => {

@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import axios from 'axios';
 import _isEmpty from 'lodash.isempty';
 import { connect } from 'react-redux';
 import { getProjectData } from '../../reduxState/actions/homePageActions';
@@ -14,11 +13,12 @@ class Projects extends Component {
     super(props);
     this.state = {
       projects: {},
-      projectToUpdate: ''
+      projectToUpdate: '',
+      updateServer: false
     };
-    this.updateProjectState = this.updateProjectState.bind(this);
-    this.updateServer = this.updateServer.bind(this);
+    this.updateProjectToEdit = this.updateProjectToEdit.bind(this);
     this.determineButton = this.determineButton.bind(this);
+    this.toggleUpdateServer = this.toggleUpdateServer.bind(this);
   }
 
   componentDidMount() {
@@ -51,38 +51,6 @@ class Projects extends Component {
     this.setState({ projectToUpdate: projectNum });
   }
 
-  // This method is passed to each child for updating this state
-  updateProjectState(project) {
-    console.log(`Updating ${this.state.projectToUpdate} to ${project}`);
-
-    // Copy projects
-    // const projects = { ...this.state.projects };
-    // console.log('current projects');
-    // console.log(projects);
-    // // Add new or changes to projects
-    // projects[projectName] = project;
-    // console.log('new change');
-    // console.log(projects);
-    // // Update state
-    // this.setState({ projects });
-    // console.log('After setState');
-    // console.log(this.state.projects);
-  }
-
-  // This method take current project and updates server
-  updateServer() {
-    // Attach auth header
-    // Image uploads and page redirect remove this header
-    const token = localStorage.getItem('jwtToken');
-
-    if (token) {
-      axios.defaults.headers.common['Authorization'] = token;
-    }
-
-    // Pass single project object to action
-    console.log('updating project : ' + this.state.projectToUpdate);
-  }
-
   // This method returns a button for each project
   determineButton(projectNum) {
     const { projectToUpdate } = this.state;
@@ -105,6 +73,13 @@ class Projects extends Component {
         {projectNum}
       </button>
     );
+  }
+
+  // This method toggle the updateServer flag
+  toggleUpdateServer() {
+    this.setState(prevState => ({
+      updateServer: !prevState.updateServer
+    }));
   }
 
   render() {
@@ -130,13 +105,17 @@ class Projects extends Component {
             {projectNames.map(projectNum => this.determineButton(projectNum))}
           </div>
           <div className="project__nav__right">
-            <button className="primary__button" type="button" onClick={this.updateServer}>
+            <button className="primary__button" type="button" onClick={this.toggleUpdateServer}>
               Update Server
             </button>
           </div>
         </nav>
         <section className="project__edit-card">
-          <Project projectData={currentProjectData} updateProjectState={this.updateProjectState} />
+          <Project
+            projectData={currentProjectData}
+            toggleUpdateServer={this.toggleUpdateServer}
+            updateServer={this.state.updateServer}
+          />
         </section>
       </Fragment>
     );

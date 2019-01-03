@@ -1286,18 +1286,21 @@ var mapStateToProps = function mapStateToProps(state) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Project; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _ProjectImages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProjectImages */ "./components/dashboard/ProjectImages.js");
-/* harmony import */ var _ProjectMain__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProjectMain */ "./components/dashboard/ProjectMain.js");
-/* harmony import */ var _ProjectTech__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProjectTech */ "./components/dashboard/ProjectTech.js");
-/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../scss/dashboard/cards.scss */ "./scss/dashboard/cards.scss");
-/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../scss/dashboard/projects.scss */ "./scss/dashboard/projects.scss");
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
+/* harmony import */ var _ProjectImages__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ProjectImages */ "./components/dashboard/ProjectImages.js");
+/* harmony import */ var _ProjectMain__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ProjectMain */ "./components/dashboard/ProjectMain.js");
+/* harmony import */ var _ProjectTech__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ProjectTech */ "./components/dashboard/ProjectTech.js");
+/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../scss/dashboard/cards.scss */ "./scss/dashboard/cards.scss");
+/* harmony import */ var _scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_cards_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../scss/dashboard/projects.scss */ "./scss/dashboard/projects.scss");
+/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_9__);
 
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/Project.js";
 
@@ -1325,6 +1328,9 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+
+
+
  // Components
 
 
@@ -1346,6 +1352,7 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Project).call(this, props));
     _this.updateInitalState = _this.updateInitalState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.updateServer = _this.updateServer.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.convertArrayToString = _this.convertArrayToString.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.convertStringToArray = _this.convertStringToArray.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.updateProjectState = _this.updateProjectState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
@@ -1373,6 +1380,15 @@ function (_Component) {
     value: function componentDidUpdate(prevProps) {
       if (prevProps.projectData !== this.props.projectData) {
         this.updateInitalState(this.props.projectData);
+      }
+
+      if (prevProps.updateServer !== this.props.updateServer) {
+        if (this.props.updateServer) {
+          // Run this.updateServer method
+          this.updateServer(); // Toggle the flag on the parent back to false
+
+          this.props.toggleUpdateServer();
+        }
       }
     }
   }, {
@@ -1457,72 +1473,180 @@ function (_Component) {
     }
   }, {
     key: "convertStringToArray",
-    value: function convertStringToArray(data) {// Check for empty strin
-      // Convert string to array
-      // Update state if array
-    }
+    value: function () {
+      var _convertStringToArray = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(dataString) {
+        var dataArray;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                dataArray = []; // Check for empty string
+
+                if (!(dataString === '')) {
+                  _context2.next = 3;
+                  break;
+                }
+
+                return _context2.abrupt("return", dataArray);
+
+              case 3:
+                _context2.next = 5;
+                return dataString.split(',');
+
+              case 5:
+                dataArray = _context2.sent;
+                return _context2.abrupt("return", dataArray);
+
+              case 7:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this);
+      }));
+
+      return function convertStringToArray(_x2) {
+        return _convertStringToArray.apply(this, arguments);
+      };
+    }() // This method is passed to project.js
+
   }, {
     key: "updateProjectState",
     value: function updateProjectState(key, value) {
       // Update state to new string value
       this.setState(_defineProperty({}, key, value));
-    }
+    } // This method takes the current project data and updates the server
+
+  }, {
+    key: "updateServer",
+    value: function () {
+      var _updateServer = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+        var token, _this$state, title, type, link, description, imageIds, frontend, backend, tools, id, frontendTechArr, backendTechArr, toolsTechArr, cleanedImageIds, payload;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                // Attach auth header
+                // Image uploads and page redirect remove this header
+                token = localStorage.getItem('jwtToken');
+
+                if (token) {
+                  axios__WEBPACK_IMPORTED_MODULE_2___default.a.defaults.headers.common['Authorization'] = token;
+                }
+
+                _this$state = this.state, title = _this$state.title, type = _this$state.type, link = _this$state.link, description = _this$state.description, imageIds = _this$state.imageIds, frontend = _this$state.frontend, backend = _this$state.backend, tools = _this$state.tools, id = _this$state.id; // Convert strings to arrays for payload
+
+                _context3.next = 5;
+                return this.convertStringToArray(frontend);
+
+              case 5:
+                frontendTechArr = _context3.sent;
+                _context3.next = 8;
+                return this.convertStringToArray(backend);
+
+              case 8:
+                backendTechArr = _context3.sent;
+                _context3.next = 11;
+                return this.convertStringToArray(tools);
+
+              case 11:
+                toolsTechArr = _context3.sent;
+                _context3.next = 14;
+                return imageIds.filter(function (imageId) {
+                  return imageId !== undefined;
+                });
+
+              case 14:
+                cleanedImageIds = _context3.sent;
+                // Build payload for action
+                payload = {
+                  projectId: id,
+                  title: title,
+                  type: type,
+                  link: link,
+                  description: description,
+                  frontendTech: frontendTechArr,
+                  backendTech: backendTechArr,
+                  toolsTech: toolsTechArr,
+                  imageIds: cleanedImageIds
+                }; // Call action
+
+                console.log('called action');
+                this.props.setProjectData(payload);
+
+              case 18:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, this);
+      }));
+
+      return function updateServer() {
+        return _updateServer.apply(this, arguments);
+      };
+    }()
   }, {
     key: "render",
     value: function render() {
-      var _this$state = this.state,
-          title = _this$state.title,
-          type = _this$state.type,
-          link = _this$state.link,
-          description = _this$state.description,
-          imageIds = _this$state.imageIds,
-          frontend = _this$state.frontend,
-          backend = _this$state.backend,
-          tools = _this$state.tools;
+      var _this$state2 = this.state,
+          title = _this$state2.title,
+          type = _this$state2.type,
+          link = _this$state2.link,
+          description = _this$state2.description,
+          imageIds = _this$state2.imageIds,
+          frontend = _this$state2.frontend,
+          backend = _this$state2.backend,
+          tools = _this$state2.tools;
       if (frontend === undefined) return null;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 144
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__images",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 145
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 146
         },
         __self: this
-      }, "Images"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectImages__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, "Images"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectImages__WEBPACK_IMPORTED_MODULE_5__["default"], {
         imageIds: imageIds,
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 147
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__main",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 149
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 150
         },
         __self: this
-      }, "Main Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectMain__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, "Main Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectMain__WEBPACK_IMPORTED_MODULE_6__["default"], {
         title: title,
         type: type,
         link: link,
@@ -1530,30 +1654,31 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 151
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__tech",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 159
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 160
         },
         __self: this
-      }, "Tech Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectTech__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      }, "Tech Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectTech__WEBPACK_IMPORTED_MODULE_7__["default"], {
         frontend: frontend,
         backend: backend,
         tools: tools,
+        updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 161
         },
         __self: this
       })));
@@ -1563,7 +1688,9 @@ function (_Component) {
   return Project;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
-
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(null, {
+  setProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_4__["setProjectData"]
+})(Project));
 
 /***/ }),
 
@@ -1719,7 +1846,6 @@ function (_Component) {
       }, "Add/Change Image", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         type: "file",
         name: "file",
-        required: true,
         className: "group__from__input",
         onChange: this.uploadImage,
         __source: {
@@ -2405,17 +2531,15 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash.isempty */ "./node_modules/lodash.isempty/index.js");
-/* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_isempty__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
-/* harmony import */ var _Project__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Project */ "./components/dashboard/Project.js");
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../scss/dashboard/projects.scss */ "./scss/dashboard/projects.scss");
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../scss/dashboard/common.scss */ "./scss/dashboard/common.scss");
-/* harmony import */ var _scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash.isempty */ "./node_modules/lodash.isempty/index.js");
+/* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isempty__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
+/* harmony import */ var _Project__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Project */ "./components/dashboard/Project.js");
+/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../scss/dashboard/projects.scss */ "./scss/dashboard/projects.scss");
+/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../scss/dashboard/common.scss */ "./scss/dashboard/common.scss");
+/* harmony import */ var _scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/Projects.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2435,7 +2559,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 
 
 
@@ -2460,11 +2583,12 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Projects).call(this, props));
     _this.state = {
       projects: {},
-      projectToUpdate: ''
+      projectToUpdate: '',
+      updateServer: false
     };
-    _this.updateProjectState = _this.updateProjectState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.updateServer = _this.updateServer.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.updateProjectToEdit = _this.updateProjectToEdit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.determineButton = _this.determineButton.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.toggleUpdateServer = _this.toggleUpdateServer.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
@@ -2503,38 +2627,6 @@ function (_Component) {
       this.setState({
         projectToUpdate: projectNum
       });
-    } // This method is passed to each child for updating this state
-
-  }, {
-    key: "updateProjectState",
-    value: function updateProjectState(project) {
-      console.log("Updating ".concat(this.state.projectToUpdate, " to ").concat(project)); // Copy projects
-      // const projects = { ...this.state.projects };
-      // console.log('current projects');
-      // console.log(projects);
-      // // Add new or changes to projects
-      // projects[projectName] = project;
-      // console.log('new change');
-      // console.log(projects);
-      // // Update state
-      // this.setState({ projects });
-      // console.log('After setState');
-      // console.log(this.state.projects);
-    } // This method take current project and updates server
-
-  }, {
-    key: "updateServer",
-    value: function updateServer() {
-      // Attach auth header
-      // Image uploads and page redirect remove this header
-      var token = localStorage.getItem('jwtToken');
-
-      if (token) {
-        axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['Authorization'] = token;
-      } // Pass single project object to action
-
-
-      console.log('updating project : ' + this.state.projectToUpdate);
     } // This method returns a button for each project
 
   }, {
@@ -2560,10 +2652,20 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 65
         },
         __self: this
       }, "Project\xA0", projectNum);
+    } // This method toggle the updateServer flag
+
+  }, {
+    key: "toggleUpdateServer",
+    value: function toggleUpdateServer() {
+      this.setState(function (prevState) {
+        return {
+          updateServer: !prevState.updateServer
+        };
+      });
     }
   }, {
     key: "render",
@@ -2576,7 +2678,7 @@ function (_Component) {
       } // Make sure current state is filled
 
 
-      if (lodash_isempty__WEBPACK_IMPORTED_MODULE_2___default()(this.state.projects)) {
+      if (lodash_isempty__WEBPACK_IMPORTED_MODULE_1___default()(this.state.projects)) {
         return null;
       } // Grab the keys name for the sidebar
 
@@ -2590,21 +2692,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 102
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "project__nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__nav__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 104
         },
         __self: this
       }, projectNames.map(function (projectNum) {
@@ -2613,31 +2715,32 @@ function (_Component) {
         className: "project__nav__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 107
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "primary__button",
         type: "button",
-        onClick: this.updateServer,
+        onClick: this.toggleUpdateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 108
         },
         __self: this
       }, "Update Server"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 113
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_4__["default"], {
         projectData: currentProjectData,
-        updateProjectState: this.updateProjectState,
+        toggleUpdateServer: this.toggleUpdateServer,
+        updateServer: this.state.updateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 114
         },
         __self: this
       })));
@@ -2653,8 +2756,8 @@ var mapStateToProps = function mapStateToProps(state) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, {
-  getProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_4__["getProjectData"]
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, {
+  getProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_3__["getProjectData"]
 })(Projects));
 
 /***/ }),
@@ -30996,7 +31099,7 @@ var logout = function logout() {
 /*!***********************************************!*\
   !*** ./reduxState/actions/homePageActions.js ***!
   \***********************************************/
-/*! exports provided: getProfileData, getProjectData, setProfileData */
+/*! exports provided: getProfileData, getProjectData, setProfileData, setProjectData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31004,6 +31107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProfileData", function() { return getProfileData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProjectData", function() { return getProjectData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setProfileData", function() { return setProfileData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setProjectData", function() { return setProjectData; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./reduxState/actions/types.js");
@@ -31052,6 +31156,22 @@ var setProfileData = function setProfileData(profileData) {
   return function (dispatch) {
     // Post profile data
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/profile', profileData).then(function (res) {
+      return res.status;
+    }).catch(function (err) {
+      return dispatch({
+        type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_ERRORS,
+        payload: {
+          postError: err
+        }
+      });
+    });
+  };
+}; // Send project data to server
+
+var setProjectData = function setProjectData(projectData) {
+  return function (dispatch) {
+    // Post project data
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/project', projectData).then(function (res) {
       return res.status;
     }).catch(function (err) {
       return dispatch({

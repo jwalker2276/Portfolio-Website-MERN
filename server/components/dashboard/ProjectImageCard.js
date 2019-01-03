@@ -49,7 +49,6 @@ export default class ProjectImageCard extends Component {
           <input
             type="file"
             name="file"
-            required
             className="group__from__input"
             onChange={this.uploadImage}
           />

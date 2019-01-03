@@ -1,4 +1,7 @@
 import React, { Component, Fragment } from 'react';
+import axios from 'axios';
+import { connect } from 'react-redux';
+import { setProjectData } from '../../reduxState/actions/homePageActions';
 // Components
 import ProjectImages from './ProjectImages';
 import ProjectMain from './ProjectMain';
@@ -7,10 +10,11 @@ import ProjectTech from './ProjectTech';
 import '../../scss/dashboard/cards.scss';
 import '../../scss/dashboard/projects.scss';
 
-export default class Project extends Component {
+class Project extends Component {
   constructor(props) {
     super(props);
     this.updateInitalState = this.updateInitalState.bind(this);
+    this.updateServer = this.updateServer.bind(this);
     this.convertArrayToString = this.convertArrayToString.bind(this);
     this.convertStringToArray = this.convertStringToArray.bind(this);
     this.updateProjectState = this.updateProjectState.bind(this);
@@ -34,6 +38,15 @@ export default class Project extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.projectData !== this.props.projectData) {
       this.updateInitalState(this.props.projectData);
+    }
+
+    if (prevProps.updateServer !== this.props.updateServer) {
+      if (this.props.updateServer) {
+        // Run this.updateServer method
+        this.updateServer();
+        // Toggle the flag on the parent back to false
+        this.props.toggleUpdateServer();
+      }
     }
   }
 
@@ -66,15 +79,60 @@ export default class Project extends Component {
     return dataString;
   }
 
-  convertStringToArray(data) {
-    // Check for empty strin
+  async convertStringToArray(dataString) {
+    let dataArray = [];
+
+    // Check for empty string
+    if (dataString === '') {
+      return dataArray;
+    }
     // Convert string to array
-    // Update state if array
+    dataArray = await dataString.split(',');
+
+    return dataArray;
   }
 
+  // This method is passed to project.js
   updateProjectState(key, value) {
     // Update state to new string value
     this.setState({ [key]: value });
+  }
+
+  // This method takes the current project data and updates the server
+  async updateServer() {
+    // Attach auth header
+    // Image uploads and page redirect remove this header
+    const token = localStorage.getItem('jwtToken');
+
+    if (token) {
+      axios.defaults.headers.common['Authorization'] = token;
+    }
+
+    const { title, type, link, description, imageIds, frontend, backend, tools, id } = this.state;
+
+    // Convert strings to arrays for payload
+    const frontendTechArr = await this.convertStringToArray(frontend);
+    const backendTechArr = await this.convertStringToArray(backend);
+    const toolsTechArr = await this.convertStringToArray(tools);
+
+    // Remove undefined values if they exist
+    const cleanedImageIds = await imageIds.filter(imageId => imageId !== undefined);
+    // Build payload for action
+    const payload = {
+      projectId: id,
+      title,
+      type,
+      link,
+      description,
+      frontendTech: frontendTechArr,
+      backendTech: backendTechArr,
+      toolsTech: toolsTechArr,
+      imageIds: cleanedImageIds
+    };
+
+    // Call action
+    console.log('called action');
+    this.props.setProjectData(payload);
   }
 
   render() {
@@ -100,9 +158,19 @@ export default class Project extends Component {
         </div>
         <div className="project__tech">
           <h3 className="group__title">Tech Details</h3>
-          <ProjectTech frontend={frontend} backend={backend} tools={tools} />
+          <ProjectTech
+            frontend={frontend}
+            backend={backend}
+            tools={tools}
+            updateProjectState={this.updateProjectState}
+          />
         </div>
       </Fragment>
     );
   }
 }
+
+export default connect(
+  null,
+  { setProjectData }
+)(Project);

@@ -52,3 +52,17 @@ export const setProfileData = profileData => dispatch => {
       })
     );
 };
+
+// Send project data to server
+export const setProjectData = projectData => dispatch => {
+  // Post project data
+  axios
+    .post('/project', projectData)
+    .then(res => res.status)
+    .catch(err =>
+      dispatch({
+        type: actions.GET_ERRORS,
+        payload: { postError: err }
+      })
+    );
+};
