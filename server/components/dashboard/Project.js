@@ -115,8 +115,11 @@ class Project extends Component {
     const backendTechArr = await this.convertStringToArray(backend);
     const toolsTechArr = await this.convertStringToArray(tools);
 
-    // Remove undefined values if they exist
-    const cleanedImageIds = await imageIds.filter(imageId => imageId !== '');
+    // Remove undefined and null values if they exist
+    const cleanedImageIds = await imageIds
+      .filter(imageId => imageId !== '')
+      .filter(imageId => imageId !== null);
+
     // Build payload for action
     const payload = {
       projectId: id,
@@ -130,9 +133,8 @@ class Project extends Component {
       imageIds: cleanedImageIds
     };
 
-    // Call action
-    console.log('called action');
-    this.props.setProjectData(payload);
+    // Call post action
+    await this.props.setProjectData(payload);
   }
 
   render() {

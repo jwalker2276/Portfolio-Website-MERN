@@ -9,6 +9,9 @@ export default (state = errorState, action) => {
     case actions.GET_ERRORS:
       // Return errors
       return action.payload;
+    case actions.CLEAR_ERROS:
+      // Clear the errors object
+      return {};
     default:
       return state;
   }

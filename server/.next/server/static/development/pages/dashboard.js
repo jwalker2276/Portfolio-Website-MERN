@@ -1656,6 +1656,8 @@ function (_Component) {
                 _context3.next = 14;
                 return imageIds.filter(function (imageId) {
                   return imageId !== '';
+                }).filter(function (imageId) {
+                  return imageId !== null;
                 });
 
               case 14:
@@ -1671,10 +1673,10 @@ function (_Component) {
                   backendTech: backendTechArr,
                   toolsTech: toolsTechArr,
                   imageIds: cleanedImageIds
-                }; // Call action
+                }; // Call post action
 
-                console.log('called action');
-                this.props.setProjectData(payload);
+                _context3.next = 18;
+                return this.props.setProjectData(payload);
 
               case 18:
               case "end":
@@ -1704,21 +1706,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 146
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__images",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 147
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 148
         },
         __self: this
       }, "Images"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectImages__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1726,21 +1728,21 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 149
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__main",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 151
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 152
         },
         __self: this
       }, "Main Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectMain__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -1751,21 +1753,21 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 153
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__tech",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 161
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 162
         },
         __self: this
       }, "Tech Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectTech__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -1775,7 +1777,7 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 163
         },
         __self: this
       })));
@@ -2749,7 +2751,15 @@ function (_Component) {
             });
           }
         }
-      }
+      } // // Check if update is different
+      // if (this.props.errors.update !== prevProps.errors.update) {
+      //   // Check update
+      //   if (this.props.errors.update === 'Update successful') {
+      //     // Pull new data from server
+      //     this.props.getProjectData();
+      //   }
+      // }
+
     } // Side bar buttons use this method to change active project
 
   }, {
@@ -2784,11 +2794,11 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 74
         },
         __self: this
       }, "Project\xA0", projectNum);
-    } // This method toggle the updateServer flag
+    } // This method toggles the updateServer flag
 
   }, {
     key: "toggleUpdateServer",
@@ -2824,21 +2834,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 111
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "project__nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 112
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__nav__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 113
         },
         __self: this
       }, projectNames.map(function (projectNum) {
@@ -2847,7 +2857,7 @@ function (_Component) {
         className: "project__nav__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 116
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2856,14 +2866,14 @@ function (_Component) {
         onClick: this.toggleUpdateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 117
         },
         __self: this
       }, "Update Server"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 122
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -2872,7 +2882,7 @@ function (_Component) {
         updateServer: this.state.updateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 123
         },
         __self: this
       })));
@@ -2884,7 +2894,8 @@ function (_Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    projectData: state.homePageData.projectData
+    projectData: state.homePageData.projectData,
+    errors: state.errors
   };
 };
 
@@ -3361,11 +3372,12 @@ var logout = function logout() {
 /*!***********************************************!*\
   !*** ./reduxState/actions/homePageActions.js ***!
   \***********************************************/
-/*! exports provided: getProfileData, getProjectData, setProfileData, setProjectData */
+/*! exports provided: clearErrors, getProfileData, getProjectData, setProfileData, setProjectData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearErrors", function() { return clearErrors; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProfileData", function() { return getProfileData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProjectData", function() { return getProjectData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setProfileData", function() { return setProfileData; });
@@ -3374,7 +3386,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./reduxState/actions/types.js");
 
- // Get project data
+ // Clear errors
+
+var clearErrors = function clearErrors() {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].CLEAR_ERRORS
+  };
+}; // Get project data
 
 var getProfileData = function getProfileData() {
   return function (dispatch) {
@@ -3397,7 +3415,8 @@ var getProfileData = function getProfileData() {
 
 var getProjectData = function getProjectData() {
   return function (dispatch) {
-    // Fetch project data
+    dispatch(clearErrors()); // Fetch project data
+
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/project/all').then(function (res) {
       return dispatch({
         type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_PROJECTS,
@@ -3418,7 +3437,12 @@ var setProfileData = function setProfileData(profileData) {
   return function (dispatch) {
     // Post profile data
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/profile', profileData).then(function (res) {
-      return res.status;
+      return dispatch({
+        type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_ERRORS,
+        payload: {
+          update: res.status
+        }
+      });
     }).catch(function (err) {
       return dispatch({
         type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_ERRORS,
@@ -3434,7 +3458,12 @@ var setProjectData = function setProjectData(projectData) {
   return function (dispatch) {
     // Post project data
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/project', projectData).then(function (res) {
-      return res.status;
+      return dispatch({
+        type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_ERRORS,
+        payload: {
+          update: res.data.message
+        }
+      });
     }).catch(function (err) {
       return dispatch({
         type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_ERRORS,
@@ -3461,6 +3490,7 @@ __webpack_require__.r(__webpack_exports__);
 // they describe how data will change
 var actions = {
   GET_ERRORS: 'GET_ERRORS',
+  CLEAR_ERRORS: 'CLEAR_ERRORS',
   SET_CURRENT_USER: 'SET_CURRENT_USER',
   GET_PROFILE: 'GET_PROFILE',
   GET_PROJECTS: 'GET_PROJECTS'

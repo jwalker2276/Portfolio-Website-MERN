@@ -12585,6 +12585,7 @@ __webpack_require__.r(__webpack_exports__);
 // they describe how data will change
 var actions = {
   GET_ERRORS: 'GET_ERRORS',
+  CLEAR_ERRORS: 'CLEAR_ERRORS',
   SET_CURRENT_USER: 'SET_CURRENT_USER',
   GET_PROFILE: 'GET_PROFILE',
   GET_PROJECTS: 'GET_PROJECTS'
@@ -12660,6 +12661,10 @@ var errorState = {}; // Check for action type
     case _actions_types__WEBPACK_IMPORTED_MODULE_0__["default"].GET_ERRORS:
       // Return errors
       return action.payload;
+
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["default"].CLEAR_ERROS:
+      // Clear the errors object
+      return {};
 
     default:
       return state;

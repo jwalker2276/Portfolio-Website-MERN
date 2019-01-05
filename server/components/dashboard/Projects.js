@@ -43,6 +43,15 @@ class Projects extends Component {
         }
       }
     }
+
+    // // Check if update is different
+    // if (this.props.errors.update !== prevProps.errors.update) {
+    //   // Check update
+    //   if (this.props.errors.update === 'Update successful') {
+    //     // Pull new data from server
+    //     this.props.getProjectData();
+    //   }
+    // }
   }
 
   // Side bar buttons use this method to change active project
@@ -75,7 +84,7 @@ class Projects extends Component {
     );
   }
 
-  // This method toggle the updateServer flag
+  // This method toggles the updateServer flag
   toggleUpdateServer() {
     this.setState(prevState => ({
       updateServer: !prevState.updateServer
@@ -123,7 +132,8 @@ class Projects extends Component {
 }
 
 const mapStateToProps = state => ({
-  projectData: state.homePageData.projectData
+  projectData: state.homePageData.projectData,
+  errors: state.errors
 });
 
 export default connect(

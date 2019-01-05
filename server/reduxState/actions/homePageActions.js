@@ -1,6 +1,13 @@
 import axios from 'axios';
 import actions from './types';
 
+// Clear errors
+export const clearErrors = () => {
+  return {
+    type: actions.CLEAR_ERRORS
+  };
+};
+
 // Get project data
 export const getProfileData = () => dispatch => {
   // Fetch profile data
@@ -22,6 +29,7 @@ export const getProfileData = () => dispatch => {
 
 // Get project data
 export const getProjectData = () => dispatch => {
+  dispatch(clearErrors());
   // Fetch project data
   axios
     .get('/project/all')
@@ -44,7 +52,12 @@ export const setProfileData = profileData => dispatch => {
   // Post profile data
   axios
     .post('/profile', profileData)
-    .then(res => res.status)
+    .then(res =>
+      dispatch({
+        type: actions.GET_ERRORS,
+        payload: { update: res.status }
+      })
+    )
     .catch(err =>
       dispatch({
         type: actions.GET_ERRORS,
@@ -58,7 +71,12 @@ export const setProjectData = projectData => dispatch => {
   // Post project data
   axios
     .post('/project', projectData)
-    .then(res => res.status)
+    .then(res =>
+      dispatch({
+        type: actions.GET_ERRORS,
+        payload: { update: res.data.message }
+      })
+    )
     .catch(err =>
       dispatch({
         type: actions.GET_ERRORS,
