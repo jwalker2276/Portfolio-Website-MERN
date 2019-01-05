@@ -118,10 +118,11 @@ class Project extends Component {
     // Remove undefined and null values if they exist
     const cleanedImageIds = await imageIds
       .filter(imageId => imageId !== '')
-      .filter(imageId => imageId !== null);
+      .filter(imageId => imageId !== null)
+      .filter(imageId => imageId !== undefined);
 
     // Build payload for action
-    const payload = {
+    const payload = await {
       projectId: id,
       title,
       type,

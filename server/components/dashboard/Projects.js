@@ -19,6 +19,8 @@ class Projects extends Component {
     this.updateProjectToEdit = this.updateProjectToEdit.bind(this);
     this.determineButton = this.determineButton.bind(this);
     this.toggleUpdateServer = this.toggleUpdateServer.bind(this);
+    this.addProject = this.addProject.bind(this);
+    this.buildProjectData = this.buildProjectData.bind(this);
   }
 
   componentDidMount() {
@@ -91,6 +93,39 @@ class Projects extends Component {
     }));
   }
 
+  // This methods sets up a new project
+  addProject() {
+    // Get current number of projects
+    const currentProjectsNum = Object.keys(this.state.projects).length;
+    const nextProjectsNum = currentProjectsNum + 1;
+    // Add one to the number of projects
+    this.setState({ projectToUpdate: nextProjectsNum });
+  }
+
+  // This method sets up project data
+  buildProjectData(projectNames) {
+    const { projectToUpdate, projects } = this.state;
+    // Check if new project was selected
+    if (projectToUpdate > projectNames.length) {
+      // Return new project object
+      return {
+        title: '',
+        type: '',
+        link: '',
+        description: '',
+        imageIds: [],
+        tech: {
+          frontend: [],
+          backend: [],
+          tools: []
+        },
+        id: ''
+      };
+    }
+    // Grab the current projectData object for props
+    return projects[parseInt(projectToUpdate, 10)];
+  }
+
   render() {
     // Make sure redux state is loaded
     if (this.props.projectData === null) {
@@ -103,9 +138,8 @@ class Projects extends Component {
 
     // Grab the keys name for the sidebar
     const projectNames = Object.keys(this.state.projects);
-    const { projects, projectToUpdate } = this.state;
-    // Grab the current projectData object
-    const currentProjectData = projects[parseInt(projectToUpdate, 10)];
+    // Get project data
+    const currentProjectData = this.buildProjectData(projectNames);
 
     return (
       <Fragment>
@@ -114,6 +148,12 @@ class Projects extends Component {
             {projectNames.map(projectNum => this.determineButton(projectNum))}
           </div>
           <div className="project__nav__right">
+            <button className="secondary__button" type="button" onClick={this.addProject}>
+              Add Project
+            </button>
+            <button className="tertiary__button" type="button">
+              Delete Current Project
+            </button>
             <button className="primary__button" type="button" onClick={this.toggleUpdateServer}>
               Update Server
             </button>

@@ -23,6 +23,18 @@
   font-weight: 500;
 }
 
+.tertiary__button {
+  width: 200px;
+  border: 2px solid $bk-dark;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  color: $bk-dark;
+  background: $bk-light;
+  font-size: 1em;
+  font-weight: 400;
+}
+
 .secondary__button--active {
   width: 140px;
   border: 2px solid $bk-dark;

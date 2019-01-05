@@ -22,19 +22,22 @@ export default class ProjectImages extends Component {
 
     // Check if imageIds has new data
     if (imageIds !== prevProps.imageIds) {
+      this.setState({ image0: undefined });
+      this.setState({ image1: undefined });
+      this.setState({ image2: undefined });
+      this.setState({ image3: undefined });
+      this.setState({ image4: undefined });
+
+      console.log('image props are different');
       // Make sure there are new values
       if (imageIds.length > 0) {
+        console.log(imageIds.length);
         imageIds.forEach((id, idx) => {
           if (id !== undefined) {
+            console.log('setting id to ', id);
             this.setState({ [`image${idx}`]: id });
           }
         });
-      } else {
-        this.setState({ image0: undefined });
-        this.setState({ image1: undefined });
-        this.setState({ image2: undefined });
-        this.setState({ image3: undefined });
-        this.setState({ image4: undefined });
       }
     }
   }

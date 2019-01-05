@@ -1561,12 +1561,14 @@ function (_Component) {
                   return imageId !== '';
                 }).filter(function (imageId) {
                   return imageId !== null;
+                }).filter(function (imageId) {
+                  return imageId !== undefined;
                 });
 
               case 14:
                 cleanedImageIds = _context3.sent;
-                // Build payload for action
-                payload = {
+                _context3.next = 17;
+                return {
                   projectId: id,
                   title: title,
                   type: type,
@@ -1576,12 +1578,14 @@ function (_Component) {
                   backendTech: backendTechArr,
                   toolsTech: toolsTechArr,
                   imageIds: cleanedImageIds
-                }; // Call post action
+                };
 
-                _context3.next = 18;
+              case 17:
+                payload = _context3.sent;
+                _context3.next = 20;
                 return this.props.setProjectData(payload);
 
-              case 18:
+              case 20:
               case "end":
                 return _context3.stop();
             }
@@ -1609,21 +1613,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 147
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__images",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 148
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 149
         },
         __self: this
       }, "Images"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectImages__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1631,21 +1635,21 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 150
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__main",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 152
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 153
         },
         __self: this
       }, "Main Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectMain__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -1656,21 +1660,21 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 154
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__tech",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 162
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 163
         },
         __self: this
       }, "Tech Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectTech__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -1680,7 +1684,7 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 164
         },
         __self: this
       })));
@@ -1969,28 +1973,31 @@ function (_Component) {
       var imageIds = this.props.imageIds; // Check if imageIds has new data
 
       if (imageIds !== prevProps.imageIds) {
-        // Make sure there are new values
+        this.setState({
+          image0: undefined
+        });
+        this.setState({
+          image1: undefined
+        });
+        this.setState({
+          image2: undefined
+        });
+        this.setState({
+          image3: undefined
+        });
+        this.setState({
+          image4: undefined
+        });
+        console.log('image props are different'); // Make sure there are new values
+
         if (imageIds.length > 0) {
+          console.log(imageIds.length);
           imageIds.forEach(function (id, idx) {
             if (id !== undefined) {
+              console.log('setting id to ', id);
+
               _this2.setState(_defineProperty({}, "image".concat(idx), id));
             }
-          });
-        } else {
-          this.setState({
-            image0: undefined
-          });
-          this.setState({
-            image1: undefined
-          });
-          this.setState({
-            image2: undefined
-          });
-          this.setState({
-            image3: undefined
-          });
-          this.setState({
-            image4: undefined
           });
         }
       }
@@ -2028,14 +2035,14 @@ function (_Component) {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 61
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__images__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 62
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2044,7 +2051,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 63
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2053,7 +2060,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 64
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2062,7 +2069,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 65
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2071,7 +2078,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 66
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2080,7 +2087,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 67
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -2089,7 +2096,7 @@ function (_Component) {
         value: "Update Changes",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 69
         },
         __self: this
       }));
@@ -2113,11 +2120,18 @@ function (_Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProjectMain; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/ProjectMain.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -2154,7 +2168,8 @@ function (_Component) {
       title: '',
       type: '',
       link: '',
-      description: ''
+      description: '',
+      id: ''
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.setInitialState = _this.setInitialState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
@@ -2183,6 +2198,10 @@ function (_Component) {
         if (this.props.description !== this.state.description) {
           this.setInitialState();
         }
+
+        if (this.props.id !== this.state.id) {
+          this.setInitialState();
+        }
       }
     } // This method loads props into this.state
 
@@ -2193,7 +2212,8 @@ function (_Component) {
           title = _this$props.title,
           type = _this$props.type,
           link = _this$props.link,
-          description = _this$props.description;
+          description = _this$props.description,
+          id = _this$props.id;
       this.setState({
         title: title
       });
@@ -2205,6 +2225,9 @@ function (_Component) {
       });
       this.setState({
         description: description
+      });
+      this.setState({
+        id: id
       });
     } // This method updates this.state from input
 
@@ -2220,19 +2243,43 @@ function (_Component) {
 
   }, {
     key: "handleSubmit",
-    value: function handleSubmit(event) {
-      event.preventDefault();
-      var _this$state = this.state,
-          title = _this$state.title,
-          type = _this$state.type,
-          link = _this$state.link,
-          description = _this$state.description; // Update project state
+    value: function () {
+      var _handleSubmit = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(event) {
+        var _this$state, title, type, link, description, projectId;
 
-      this.props.updateProjectState('title', title);
-      this.props.updateProjectState('type', type);
-      this.props.updateProjectState('link', link);
-      this.props.updateProjectState('description', description);
-    }
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                event.preventDefault();
+                _this$state = this.state, title = _this$state.title, type = _this$state.type, link = _this$state.link, description = _this$state.description; // Update project state
+
+                this.props.updateProjectState('title', title);
+                this.props.updateProjectState('type', type);
+                this.props.updateProjectState('link', link);
+                this.props.updateProjectState('description', description); // Generator id for project
+
+                _context.next = 8;
+                return title.split(' ').join('').trim().toLowerCase();
+
+              case 8:
+                projectId = _context.sent;
+                this.props.updateProjectState('id', projectId);
+
+              case 10:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      return function handleSubmit(_x) {
+        return _handleSubmit.apply(this, arguments);
+      };
+    }()
   }, {
     key: "render",
     value: function render() {
@@ -2241,22 +2288,22 @@ function (_Component) {
           type = _this$state2.type,
           link = _this$state2.link,
           description = _this$state2.description;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 81
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 82
         },
         __self: this
-      }, "Title", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Title", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         className: "group__form__input",
         type: "text",
         name: "title",
@@ -2264,18 +2311,18 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 84
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "type",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 92
         },
         __self: this
-      }, "Type", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Type", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         className: "group__form__input",
         type: "text",
         name: "type",
@@ -2283,18 +2330,18 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 94
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 102
         },
         __self: this
-      }, "Link", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Link", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         className: "group__form__input",
         type: "text",
         name: "link",
@@ -2302,18 +2349,18 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 104
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
         className: "group__form__label",
         htmlFor: "description",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 112
         },
         __self: this
-      }, "Description", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }, "Description", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
         className: "group__form__textarea",
         rows: "5",
         cols: "33",
@@ -2323,16 +2370,16 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 114
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         className: "group__submit",
         type: "submit",
         value: "Update Changes",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 124
         },
         __self: this
       }));
@@ -2340,7 +2387,7 @@ function (_Component) {
   }]);
 
   return ProjectMain;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 
 
@@ -2625,6 +2672,8 @@ function (_Component) {
     _this.updateProjectToEdit = _this.updateProjectToEdit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.determineButton = _this.determineButton.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.toggleUpdateServer = _this.toggleUpdateServer.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.addProject = _this.addProject.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.buildProjectData = _this.buildProjectData.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
@@ -2696,7 +2745,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 76
         },
         __self: this
       }, "Project\xA0", projectNum);
@@ -2710,6 +2759,46 @@ function (_Component) {
           updateServer: !prevState.updateServer
         };
       });
+    } // This methods sets up a new project
+
+  }, {
+    key: "addProject",
+    value: function addProject() {
+      // Get current number of projects
+      var currentProjectsNum = Object.keys(this.state.projects).length;
+      var nextProjectsNum = currentProjectsNum + 1; // Add one to the number of projects
+
+      this.setState({
+        projectToUpdate: nextProjectsNum
+      });
+    } // This method sets up project data
+
+  }, {
+    key: "buildProjectData",
+    value: function buildProjectData(projectNames) {
+      var _this$state = this.state,
+          projectToUpdate = _this$state.projectToUpdate,
+          projects = _this$state.projects; // Check if new project was selected
+
+      if (projectToUpdate > projectNames.length) {
+        // Return new project object
+        return {
+          title: '',
+          type: '',
+          link: '',
+          description: '',
+          imageIds: [],
+          tech: {
+            frontend: [],
+            backend: [],
+            tools: []
+          },
+          id: ''
+        };
+      } // Grab the current projectData object for props
+
+
+      return projects[parseInt(projectToUpdate, 10)];
     }
   }, {
     key: "render",
@@ -2727,30 +2816,27 @@ function (_Component) {
       } // Grab the keys name for the sidebar
 
 
-      var projectNames = Object.keys(this.state.projects);
-      var _this$state = this.state,
-          projects = _this$state.projects,
-          projectToUpdate = _this$state.projectToUpdate; // Grab the current projectData object
+      var projectNames = Object.keys(this.state.projects); // Get project data
 
-      var currentProjectData = projects[parseInt(projectToUpdate, 10)];
+      var currentProjectData = this.buildProjectData(projectNames);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 145
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "project__nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 146
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__nav__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 147
         },
         __self: this
       }, projectNames.map(function (projectNum) {
@@ -2759,23 +2845,40 @@ function (_Component) {
         className: "project__nav__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 150
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "secondary__button",
+        type: "button",
+        onClick: this.addProject,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 151
+        },
+        __self: this
+      }, "Add Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "tertiary__button",
+        type: "button",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 154
+        },
+        __self: this
+      }, "Delete Current Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "primary__button",
         type: "button",
         onClick: this.toggleUpdateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 157
         },
         __self: this
       }, "Update Server"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 162
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -2784,7 +2887,7 @@ function (_Component) {
         updateServer: this.state.updateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 163
         },
         __self: this
       })));

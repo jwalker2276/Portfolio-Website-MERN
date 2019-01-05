@@ -63,6 +63,17 @@
   font-size: 1em;
   font-weight: 500; }
 
+.tertiary__button {
+  width: 200px;
+  border: 2px solid #3e5a71;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  color: #3e5a71;
+  background: #eff8ff;
+  font-size: 1em;
+  font-weight: 400; }
+
 .secondary__button--active {
   width: 140px;
   border: 2px solid #3e5a71;
@@ -162,7 +173,7 @@
           align-items: center;
   grid-column: 4 / -1;
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr 1fr 1fr; }
 
 .project__edit-card {
   grid-row: 2 / -1;

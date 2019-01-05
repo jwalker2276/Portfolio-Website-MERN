@@ -7,7 +7,8 @@ export default class ProjectMain extends Component {
       title: '',
       type: '',
       link: '',
-      description: ''
+      description: '',
+      id: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.setInitialState = this.setInitialState.bind(this);
@@ -30,17 +31,21 @@ export default class ProjectMain extends Component {
       if (this.props.description !== this.state.description) {
         this.setInitialState();
       }
+      if (this.props.id !== this.state.id) {
+        this.setInitialState();
+      }
     }
   }
 
   // This method loads props into this.state
   setInitialState() {
-    const { title, type, link, description } = this.props;
+    const { title, type, link, description, id } = this.props;
 
     this.setState({ title });
     this.setState({ type });
     this.setState({ link });
     this.setState({ description });
+    this.setState({ id });
   }
 
   // This method updates this.state from input
@@ -51,7 +56,7 @@ export default class ProjectMain extends Component {
   }
 
   // This method updates parent state from this.state
-  handleSubmit(event) {
+  async handleSubmit(event) {
     event.preventDefault();
     const { title, type, link, description } = this.state;
     // Update project state
@@ -59,6 +64,15 @@ export default class ProjectMain extends Component {
     this.props.updateProjectState('type', type);
     this.props.updateProjectState('link', link);
     this.props.updateProjectState('description', description);
+
+    // Generator id for project
+    const projectId = await title
+      .split(' ')
+      .join('')
+      .trim()
+      .toLowerCase();
+
+    this.props.updateProjectState('id', projectId);
   }
 
   render() {
