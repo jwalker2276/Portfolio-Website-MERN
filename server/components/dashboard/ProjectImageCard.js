@@ -39,13 +39,29 @@ export default class ProjectImageCard extends Component {
   render() {
     const { image } = this.props;
 
+    if (image === undefined) {
+      return (
+        <div className="image__upload">
+          <label htmlFor="image" className="group__form__label">
+            Add Image
+            <input
+              type="file"
+              name="file"
+              className="group__from__input"
+              onChange={this.uploadImage}
+            />
+          </label>
+        </div>
+      );
+    }
+
     return (
       <div className="image__upload">
         <Image cloudName="jwalkercreations-com" publicId={image}>
           <Transformation height="100" quality="auto" crop="limit" fetchFormat="auto" />
         </Image>
         <label htmlFor="image" className="group__form__label">
-          Add/Change Image
+          Change Image
           <input
             type="file"
             name="file"

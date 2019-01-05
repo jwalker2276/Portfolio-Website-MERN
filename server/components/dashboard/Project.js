@@ -116,7 +116,7 @@ class Project extends Component {
     const toolsTechArr = await this.convertStringToArray(tools);
 
     // Remove undefined values if they exist
-    const cleanedImageIds = await imageIds.filter(imageId => imageId !== undefined);
+    const cleanedImageIds = await imageIds.filter(imageId => imageId !== '');
     // Build payload for action
     const payload = {
       projectId: id,

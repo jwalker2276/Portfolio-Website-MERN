@@ -1655,7 +1655,7 @@ function (_Component) {
                 toolsTechArr = _context3.sent;
                 _context3.next = 14;
                 return imageIds.filter(function (imageId) {
-                  return imageId !== undefined;
+                  return imageId !== '';
                 });
 
               case 14:
@@ -1907,11 +1907,41 @@ function (_Component) {
     key: "render",
     value: function render() {
       var image = this.props.image;
+
+      if (image === undefined) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "image__upload",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+          htmlFor: "image",
+          className: "group__form__label",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45
+          },
+          __self: this
+        }, "Add Image", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+          type: "file",
+          name: "file",
+          className: "group__from__input",
+          onChange: this.uploadImage,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          },
+          __self: this
+        })));
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "image__upload",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 59
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
@@ -1919,7 +1949,7 @@ function (_Component) {
         publicId: image,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 60
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
@@ -1929,7 +1959,7 @@ function (_Component) {
         fetchFormat: "auto",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 61
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
@@ -1937,17 +1967,17 @@ function (_Component) {
         className: "group__form__label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 63
         },
         __self: this
-      }, "Add/Change Image", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, "Change Image", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         type: "file",
         name: "file",
         className: "group__from__input",
         onChange: this.uploadImage,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 65
         },
         __self: this
       })));
@@ -2029,35 +2059,33 @@ function (_Component) {
   _createClass(ProjectImages, [{
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      if (this.props.imageIds !== prevProps.imageIds) {
-        // Check if imageIds has new data
-        if (this.props.imageIds[0] !== '') {
-          this.setState({
-            image0: this.props.imageIds[0]
-          });
-        }
+      var _this2 = this;
 
-        if (this.props.imageIds[1] !== '') {
-          this.setState({
-            image1: this.props.imageIds[1]
-          });
-        }
+      var imageIds = this.props.imageIds; // Check if imageIds has new data
 
-        if (this.props.imageIds[2] !== '') {
-          this.setState({
-            image2: this.props.imageIds[2]
+      if (imageIds !== prevProps.imageIds) {
+        // Make sure there are new values
+        if (imageIds.length > 0) {
+          imageIds.forEach(function (id, idx) {
+            if (id !== undefined) {
+              _this2.setState(_defineProperty({}, "image".concat(idx), id));
+            }
           });
-        }
-
-        if (this.props.imageIds[3] !== '') {
+        } else {
           this.setState({
-            image3: this.props.imageIds[3]
+            image0: undefined
           });
-        }
-
-        if (this.props.imageIds[4] !== '') {
           this.setState({
-            image4: this.props.imageIds[4]
+            image1: undefined
+          });
+          this.setState({
+            image2: undefined
+          });
+          this.setState({
+            image3: undefined
+          });
+          this.setState({
+            image4: undefined
           });
         }
       }
@@ -2085,32 +2113,56 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this$state2 = this.state,
+          image0 = _this$state2.image0,
+          image1 = _this$state2.image1,
+          image2 = _this$state2.image2,
+          image3 = _this$state2.image3,
+          image4 = _this$state2.image4;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 58
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__images__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 59
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        image: this.state.image0,
+        image: image0,
         imageIndex: 0,
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 60
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        image: this.state.image1,
+        image: image1,
         imageIndex: 1,
+        updateImageId: this.updateImageId,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        image: image2,
+        imageIndex: 2,
+        updateImageId: this.updateImageId,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        image: image3,
+        imageIndex: 3,
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
@@ -2118,30 +2170,12 @@ function (_Component) {
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        image: this.state.image2,
-        imageIndex: 2,
-        updateImageId: this.updateImageId,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 68
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        image: this.state.image3,
-        imageIndex: 3,
-        updateImageId: this.updateImageId,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        image: this.state.image4,
+        image: image4,
         imageIndex: 4,
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 64
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -2150,7 +2184,7 @@ function (_Component) {
         value: "Update Changes",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 66
         },
         __self: this
       }));

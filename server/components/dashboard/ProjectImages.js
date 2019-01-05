@@ -18,22 +18,23 @@ export default class ProjectImages extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.imageIds !== prevProps.imageIds) {
-      // Check if imageIds has new data
-      if (this.props.imageIds[0] !== '') {
-        this.setState({ image0: this.props.imageIds[0] });
-      }
-      if (this.props.imageIds[1] !== '') {
-        this.setState({ image1: this.props.imageIds[1] });
-      }
-      if (this.props.imageIds[2] !== '') {
-        this.setState({ image2: this.props.imageIds[2] });
-      }
-      if (this.props.imageIds[3] !== '') {
-        this.setState({ image3: this.props.imageIds[3] });
-      }
-      if (this.props.imageIds[4] !== '') {
-        this.setState({ image4: this.props.imageIds[4] });
+    const { imageIds } = this.props;
+
+    // Check if imageIds has new data
+    if (imageIds !== prevProps.imageIds) {
+      // Make sure there are new values
+      if (imageIds.length > 0) {
+        imageIds.forEach((id, idx) => {
+          if (id !== undefined) {
+            this.setState({ [`image${idx}`]: id });
+          }
+        });
+      } else {
+        this.setState({ image0: undefined });
+        this.setState({ image1: undefined });
+        this.setState({ image2: undefined });
+        this.setState({ image3: undefined });
+        this.setState({ image4: undefined });
       }
     }
   }
@@ -52,34 +53,15 @@ export default class ProjectImages extends Component {
   }
 
   render() {
+    const { image0, image1, image2, image3, image4 } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="project__images__wrapper">
-          <ProjectImageCard
-            image={this.state.image0}
-            imageIndex={0}
-            updateImageId={this.updateImageId}
-          />
-          <ProjectImageCard
-            image={this.state.image1}
-            imageIndex={1}
-            updateImageId={this.updateImageId}
-          />
-          <ProjectImageCard
-            image={this.state.image2}
-            imageIndex={2}
-            updateImageId={this.updateImageId}
-          />
-          <ProjectImageCard
-            image={this.state.image3}
-            imageIndex={3}
-            updateImageId={this.updateImageId}
-          />
-          <ProjectImageCard
-            image={this.state.image4}
-            imageIndex={4}
-            updateImageId={this.updateImageId}
-          />
+          <ProjectImageCard image={image0} imageIndex={0} updateImageId={this.updateImageId} />
+          <ProjectImageCard image={image1} imageIndex={1} updateImageId={this.updateImageId} />
+          <ProjectImageCard image={image2} imageIndex={2} updateImageId={this.updateImageId} />
+          <ProjectImageCard image={image3} imageIndex={3} updateImageId={this.updateImageId} />
+          <ProjectImageCard image={image4} imageIndex={4} updateImageId={this.updateImageId} />
         </div>
         <input className="group__submit" type="submit" value="Update Changes" />
       </form>
