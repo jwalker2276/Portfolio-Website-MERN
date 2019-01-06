@@ -84,3 +84,28 @@ export const setProjectData = projectData => dispatch => {
       })
     );
 };
+
+// Delete project from the server
+export const deleteProjectData = projectId => dispatch => {
+  // Send delete request
+  const config = {
+    data: {
+      id: projectId
+    }
+  };
+
+  axios
+    .delete('/project', config)
+    .then(res =>
+      dispatch({
+        type: actions.GET_ERRORS,
+        payload: { update: res.data.message }
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: actions.GET_ERRORS,
+        payload: { deleteError: err }
+      })
+    );
+};

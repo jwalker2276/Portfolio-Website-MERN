@@ -73,7 +73,6 @@ exports.checkProjectData = (req, res, next) => {
 // Add project to database
 exports.setProject = (req, res) => {
   const projectFields = {};
-
   // Destructure req.body
   const {
     projectId,
@@ -113,8 +112,6 @@ exports.setProject = (req, res) => {
   // Set project image ids array
   projectFields.imageIds = imageIds;
 
-  console.log(projectFields);
-
   // Search for existing project
   Project.findOne({ id: req.body.projectId }).then(project => {
     if (project) {
@@ -129,4 +126,19 @@ exports.setProject = (req, res) => {
         .catch(error => res.status(400).json(error));
     }
   });
+};
+
+// Delete project from collection
+exports.deleteProject = (req, res) => {
+  // Search for existing project
+  Project.findOneAndRemove({ id: req.body.id })
+    .then(project => {
+      // Check if project was found
+      if (project) {
+        res.json({ message: 'project was deleted' });
+      } else {
+        res.json({ message: 'no project found' });
+      }
+    })
+    .catch(err => res.status(400).json(err));
 };

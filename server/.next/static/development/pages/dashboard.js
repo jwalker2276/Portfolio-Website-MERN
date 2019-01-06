@@ -1987,15 +1987,11 @@ function (_Component) {
         });
         this.setState({
           image4: undefined
-        });
-        console.log('image props are different'); // Make sure there are new values
+        }); // Make sure there are new values
 
         if (imageIds.length > 0) {
-          console.log(imageIds.length);
           imageIds.forEach(function (id, idx) {
             if (id !== undefined) {
-              console.log('setting id to ', id);
-
               _this2.setState(_defineProperty({}, "image".concat(idx), id));
             }
           });
@@ -2035,14 +2031,14 @@ function (_Component) {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 58
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__images__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 59
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2051,7 +2047,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 60
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2060,7 +2056,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 61
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2069,7 +2065,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 62
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2078,7 +2074,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 63
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectImageCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2087,7 +2083,7 @@ function (_Component) {
         updateImageId: this.updateImageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 64
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -2096,7 +2092,7 @@ function (_Component) {
         value: "Update Changes",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 66
         },
         __self: this
       }));
@@ -2617,12 +2613,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash.isempty */ "./node_modules/lodash.isempty/index.js");
 /* harmony import */ var lodash_isempty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isempty__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
-/* harmony import */ var _Project__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Project */ "./components/dashboard/Project.js");
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../scss/dashboard/projects.scss */ "./scss/dashboard/projects.scss");
-/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../scss/dashboard/common.scss */ "./scss/dashboard/common.scss");
-/* harmony import */ var _scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
+/* harmony import */ var _Project__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Project */ "./components/dashboard/Project.js");
+/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../scss/dashboard/projects.scss */ "./scss/dashboard/projects.scss");
+/* harmony import */ var _scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_projects_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../scss/dashboard/common.scss */ "./scss/dashboard/common.scss");
+/* harmony import */ var _scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_scss_dashboard_common_scss__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/dashboard/Projects.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2642,6 +2640,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -2674,6 +2673,7 @@ function (_Component) {
     _this.toggleUpdateServer = _this.toggleUpdateServer.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.addProject = _this.addProject.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.buildProjectData = _this.buildProjectData.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.deleteProject = _this.deleteProject.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
@@ -2745,7 +2745,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 78
         },
         __self: this
       }, "Project\xA0", projectNum);
@@ -2771,14 +2771,34 @@ function (_Component) {
       this.setState({
         projectToUpdate: nextProjectsNum
       });
+    } // This method calls an action to delete a project
+
+  }, {
+    key: "deleteProject",
+    value: function deleteProject() {
+      var _this$state = this.state,
+          projectToUpdate = _this$state.projectToUpdate,
+          projects = _this$state.projects; // Get the current project id
+
+      var projectId = projects[projectToUpdate].id; // Set auth headers
+      // Image uploads and page redirect remove this header
+
+      var token = localStorage.getItem('jwtToken');
+
+      if (token) {
+        axios__WEBPACK_IMPORTED_MODULE_3___default.a.defaults.headers.common['Authorization'] = token;
+      } // Call the action to delete
+
+
+      this.props.deleteProjectData(projectId);
     } // This method sets up project data
 
   }, {
     key: "buildProjectData",
     value: function buildProjectData(projectNames) {
-      var _this$state = this.state,
-          projectToUpdate = _this$state.projectToUpdate,
-          projects = _this$state.projects; // Check if new project was selected
+      var _this$state2 = this.state,
+          projectToUpdate = _this$state2.projectToUpdate,
+          projects = _this$state2.projects; // Check if new project was selected
 
       if (projectToUpdate > projectNames.length) {
         // Return new project object
@@ -2822,21 +2842,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 163
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "project__nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 164
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__nav__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 165
         },
         __self: this
       }, projectNames.map(function (projectNum) {
@@ -2845,7 +2865,7 @@ function (_Component) {
         className: "project__nav__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 168
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2854,15 +2874,16 @@ function (_Component) {
         onClick: this.addProject,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 169
         },
         __self: this
       }, "Add Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "tertiary__button",
         type: "button",
+        onClick: this.deleteProject,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154
+          lineNumber: 172
         },
         __self: this
       }, "Delete Current Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2871,23 +2892,23 @@ function (_Component) {
         onClick: this.toggleUpdateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157
+          lineNumber: 175
         },
         __self: this
       }, "Update Server"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 180
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_5__["default"], {
         projectData: currentProjectData,
         toggleUpdateServer: this.toggleUpdateServer,
         updateServer: this.state.updateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 181
         },
         __self: this
       })));
@@ -2905,7 +2926,8 @@ var mapStateToProps = function mapStateToProps(state) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, {
-  getProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_3__["getProjectData"]
+  getProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_4__["getProjectData"],
+  deleteProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_4__["deleteProjectData"]
 })(Projects));
 
 /***/ }),
@@ -31247,7 +31269,7 @@ var logout = function logout() {
 /*!***********************************************!*\
   !*** ./reduxState/actions/homePageActions.js ***!
   \***********************************************/
-/*! exports provided: clearErrors, getProfileData, getProjectData, setProfileData, setProjectData */
+/*! exports provided: clearErrors, getProfileData, getProjectData, setProfileData, setProjectData, deleteProjectData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31257,6 +31279,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProjectData", function() { return getProjectData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setProfileData", function() { return setProfileData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setProjectData", function() { return setProjectData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteProjectData", function() { return deleteProjectData; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./reduxState/actions/types.js");
@@ -31344,6 +31367,32 @@ var setProjectData = function setProjectData(projectData) {
         type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_ERRORS,
         payload: {
           postError: err
+        }
+      });
+    });
+  };
+}; // Delete project from the server
+
+var deleteProjectData = function deleteProjectData(projectId) {
+  return function (dispatch) {
+    // Send delete request
+    var config = {
+      data: {
+        id: projectId
+      }
+    };
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete('/project', config).then(function (res) {
+      return dispatch({
+        type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_ERRORS,
+        payload: {
+          update: res.data.message
+        }
+      });
+    }).catch(function (err) {
+      return dispatch({
+        type: _types__WEBPACK_IMPORTED_MODULE_1__["default"].GET_ERRORS,
+        payload: {
+          deleteError: err
         }
       });
     });

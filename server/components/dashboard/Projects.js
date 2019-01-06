@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import _isEmpty from 'lodash.isempty';
 import { connect } from 'react-redux';
-import { getProjectData } from '../../reduxState/actions/homePageActions';
+import axios from 'axios';
+import { getProjectData, deleteProjectData } from '../../reduxState/actions/homePageActions';
 // Components
 import Project from './Project';
 // Styles
@@ -21,6 +22,7 @@ class Projects extends Component {
     this.toggleUpdateServer = this.toggleUpdateServer.bind(this);
     this.addProject = this.addProject.bind(this);
     this.buildProjectData = this.buildProjectData.bind(this);
+    this.deleteProject = this.deleteProject.bind(this);
   }
 
   componentDidMount() {
@@ -102,6 +104,22 @@ class Projects extends Component {
     this.setState({ projectToUpdate: nextProjectsNum });
   }
 
+  // This method calls an action to delete a project
+  deleteProject() {
+    const { projectToUpdate, projects } = this.state;
+    // Get the current project id
+    const projectId = projects[projectToUpdate].id;
+    // Set auth headers
+    // Image uploads and page redirect remove this header
+    const token = localStorage.getItem('jwtToken');
+
+    if (token) {
+      axios.defaults.headers.common['Authorization'] = token;
+    }
+    // Call the action to delete
+    this.props.deleteProjectData(projectId);
+  }
+
   // This method sets up project data
   buildProjectData(projectNames) {
     const { projectToUpdate, projects } = this.state;
@@ -151,7 +169,7 @@ class Projects extends Component {
             <button className="secondary__button" type="button" onClick={this.addProject}>
               Add Project
             </button>
-            <button className="tertiary__button" type="button">
+            <button className="tertiary__button" type="button" onClick={this.deleteProject}>
               Delete Current Project
             </button>
             <button className="primary__button" type="button" onClick={this.toggleUpdateServer}>
@@ -178,5 +196,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getProjectData }
+  { getProjectData, deleteProjectData }
 )(Projects);

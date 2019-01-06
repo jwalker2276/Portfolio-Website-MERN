@@ -44,4 +44,11 @@ router.post(
   projectController.setProject
 );
 
+// Delete a project
+router.delete(
+  '/project',
+  passport.authenticate('jwt', { session: false }),
+  projectController.deleteProject
+);
+
 module.exports = router;
