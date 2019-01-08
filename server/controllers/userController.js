@@ -121,9 +121,9 @@ exports.login = (req, res) => {
         if (isPassword) {
           // Create payload
           const payload = {
-            id: user.id,
-            username: user.username,
-            role: user.role
+            id: user.id
+            // username: user.username,
+            // role: user.role
           };
 
           // Sign token

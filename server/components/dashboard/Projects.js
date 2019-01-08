@@ -47,15 +47,6 @@ class Projects extends Component {
         }
       }
     }
-
-    // // Check if update is different
-    // if (this.props.errors.update !== prevProps.errors.update) {
-    //   // Check update
-    //   if (this.props.errors.update === 'Update successful') {
-    //     // Pull new data from server
-    //     this.props.getProjectData();
-    //   }
-    // }
   }
 
   // Side bar buttons use this method to change active project

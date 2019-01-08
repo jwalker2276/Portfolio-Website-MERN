@@ -51,23 +51,26 @@ class Project extends Component {
   }
 
   async updateInitalState(projectData) {
-    const { title, type, link, description, imageIds, tech, id } = projectData;
+    // Check if any project data is available
+    if (projectData !== undefined) {
+      const { title, type, link, description, imageIds, tech, id } = projectData;
 
-    this.setState({ title });
-    this.setState({ type });
-    this.setState({ link });
-    this.setState({ description });
-    this.setState({ id });
-    this.setState({ imageIds });
+      this.setState({ title });
+      this.setState({ type });
+      this.setState({ link });
+      this.setState({ description });
+      this.setState({ id });
+      this.setState({ imageIds });
 
-    // Convert tech arrays to strings for editing
-    const frontendString = await this.convertArrayToString(tech.frontend);
-    const backendString = await this.convertArrayToString(tech.backend);
-    const toolsString = await this.convertArrayToString(tech.tools);
+      // Convert tech arrays to strings for editing
+      const frontendString = await this.convertArrayToString(tech.frontend);
+      const backendString = await this.convertArrayToString(tech.backend);
+      const toolsString = await this.convertArrayToString(tech.tools);
 
-    this.setState({ frontend: frontendString });
-    this.setState({ backend: backendString });
-    this.setState({ tools: toolsString });
+      this.setState({ frontend: frontendString });
+      this.setState({ backend: backendString });
+      this.setState({ tools: toolsString });
+    }
   }
 
   convertArrayToString(data) {

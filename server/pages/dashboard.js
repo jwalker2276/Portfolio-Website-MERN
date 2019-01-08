@@ -47,8 +47,6 @@ class Dashboard extends React.Component {
 
       // Check for devtool hack
       if (_isEmpty(this.props.auth.user)) {
-        // eslint-disable-next-line no-console
-        console.log('Dont do that!!!!');
         this.logInOut();
       }
     }
@@ -56,8 +54,6 @@ class Dashboard extends React.Component {
     // Check for devtool hack
     if (this.state.isLoggedIn && !this.props.auth.isAuth) {
       if (_isEmpty(this.props.auth.user)) {
-        // eslint-disable-next-line no-console
-        console.log('Nope !!!!');
         this.logInOut();
       }
     }
@@ -65,8 +61,6 @@ class Dashboard extends React.Component {
     // Check for devtool hack
     if (this.state.isLoggedIn && this.props.auth.isAuth) {
       if (_isEmpty(this.props.auth.user)) {
-        // eslint-disable-next-line no-console
-        console.log('Really !!!!');
         this.logInOut();
       }
     }

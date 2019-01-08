@@ -1499,6 +1499,11 @@ function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                if (!(projectData !== undefined)) {
+                  _context.next = 20;
+                  break;
+                }
+
                 title = projectData.title, type = projectData.type, link = projectData.link, description = projectData.description, imageIds = projectData.imageIds, tech = projectData.tech, id = projectData.id;
                 this.setState({
                   title: title
@@ -1519,20 +1524,20 @@ function (_Component) {
                   imageIds: imageIds
                 }); // Convert tech arrays to strings for editing
 
-                _context.next = 9;
+                _context.next = 10;
                 return this.convertArrayToString(tech.frontend);
 
-              case 9:
+              case 10:
                 frontendString = _context.sent;
-                _context.next = 12;
+                _context.next = 13;
                 return this.convertArrayToString(tech.backend);
 
-              case 12:
+              case 13:
                 backendString = _context.sent;
-                _context.next = 15;
+                _context.next = 16;
                 return this.convertArrayToString(tech.tools);
 
-              case 15:
+              case 16:
                 toolsString = _context.sent;
                 this.setState({
                   frontend: frontendString
@@ -1544,7 +1549,7 @@ function (_Component) {
                   tools: toolsString
                 });
 
-              case 19:
+              case 20:
               case "end":
                 return _context.stop();
             }
@@ -1710,21 +1715,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 150
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__images",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 151
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 152
         },
         __self: this
       }, "Images"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectImages__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1732,21 +1737,21 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 153
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__main",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 155
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 156
         },
         __self: this
       }, "Main Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectMain__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -1757,21 +1762,21 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154
+          lineNumber: 157
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "project__tech",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 165
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 166
         },
         __self: this
       }, "Tech Details"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectTech__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -1781,7 +1786,7 @@ function (_Component) {
         updateProjectState: this.updateProjectState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 167
         },
         __self: this
       })));
@@ -2800,15 +2805,7 @@ function (_Component) {
             });
           }
         }
-      } // // Check if update is different
-      // if (this.props.errors.update !== prevProps.errors.update) {
-      //   // Check update
-      //   if (this.props.errors.update === 'Update successful') {
-      //     // Pull new data from server
-      //     this.props.getProjectData();
-      //   }
-      // }
-
+      }
     } // Side bar buttons use this method to change active project
 
   }, {
@@ -2843,7 +2840,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 69
         },
         __self: this
       }, "Project\xA0", projectNum);
@@ -2940,21 +2937,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 154
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "project__nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 155
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__nav__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 156
         },
         __self: this
       }, projectNames.map(function (projectNum) {
@@ -2963,7 +2960,7 @@ function (_Component) {
         className: "project__nav__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 168
+          lineNumber: 159
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2972,7 +2969,7 @@ function (_Component) {
         onClick: this.addProject,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 169
+          lineNumber: 160
         },
         __self: this
       }, "Add Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2981,7 +2978,7 @@ function (_Component) {
         onClick: this.deleteProject,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 172
+          lineNumber: 163
         },
         __self: this
       }, "Delete Current Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2990,14 +2987,14 @@ function (_Component) {
         onClick: this.toggleUpdateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175
+          lineNumber: 166
         },
         __self: this
       }, "Update Server"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180
+          lineNumber: 171
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -3006,7 +3003,7 @@ function (_Component) {
         updateServer: this.state.updateServer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 172
         },
         __self: this
       })));
@@ -3326,8 +3323,6 @@ function (_React$Component) {
 
 
         if (lodash_isempty__WEBPACK_IMPORTED_MODULE_3___default()(this.props.auth.user)) {
-          // eslint-disable-next-line no-console
-          console.log('Dont do that!!!!');
           this.logInOut();
         }
       } // Check for devtool hack
@@ -3335,8 +3330,6 @@ function (_React$Component) {
 
       if (this.state.isLoggedIn && !this.props.auth.isAuth) {
         if (lodash_isempty__WEBPACK_IMPORTED_MODULE_3___default()(this.props.auth.user)) {
-          // eslint-disable-next-line no-console
-          console.log('Nope !!!!');
           this.logInOut();
         }
       } // Check for devtool hack
@@ -3344,8 +3337,6 @@ function (_React$Component) {
 
       if (this.state.isLoggedIn && this.props.auth.isAuth) {
         if (lodash_isempty__WEBPACK_IMPORTED_MODULE_3___default()(this.props.auth.user)) {
-          // eslint-disable-next-line no-console
-          console.log('Really !!!!');
           this.logInOut();
         }
       } // Check token times
@@ -3381,13 +3372,13 @@ function (_React$Component) {
           className: "dashboard-wrapper",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97
+            lineNumber: 91
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_dashboard_Controller__WEBPACK_IMPORTED_MODULE_6__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 98
+            lineNumber: 92
           },
           __self: this
         }));
@@ -3397,13 +3388,13 @@ function (_React$Component) {
         className: "dashboard__login__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 97
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 98
         },
         __self: this
       }));
