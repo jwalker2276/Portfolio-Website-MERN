@@ -1,0 +1,20 @@
+@import 'scss/_colors.scss';
+.slice__wrapper {
+  display: flex;
+}
+
+.slice__svg {
+  margin: auto;
+}
+
+.slice__path--white {
+  fill: $bk-light;
+}
+
+.slice__path--blue {
+  fill: $bk-dark;
+}
+
+.slice__path--darkblue {
+  fill: $bk-darker;
+}

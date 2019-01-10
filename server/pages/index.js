@@ -2,15 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getProfileData, getProjectData } from '../reduxState/actions/homePageActions';
 // Components
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Slice from '../components/Slice';
-import Skills from '../components/Skills';
-import Work from '../components/Work';
-import About from '../components/About';
-import Map from '../components/Map';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+import Navbar from '../components/home/Navbar';
+import Hero from '../components/home/Hero';
+import Slice from '../components/home/Slice';
+import Skills from '../components/home/Skills';
+import Work from '../components/home/Work';
+import About from '../components/home/About';
+import Map from '../components/home/Map';
+import Contact from '../components/home/Contact';
+import Footer from '../components/home/Footer';
 
 // Styles
 import '../scss/common.scss';
@@ -23,7 +23,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const { profileData } = this.props;
+    const { profileData, projectsData } = this.props;
 
     let skillData;
     let contactData;
@@ -48,7 +48,7 @@ class Home extends React.Component {
         </div>
         <Skills skills={skillData} />
         <Slice position="bottom" color="white" />
-        <Work />
+        <Work projects={projectsData} />
         <Slice position="top" color="white" />
         <About contact={contactData} bio={bioData} imageId={imageId} />
         <Map />

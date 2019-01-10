@@ -1,0 +1,24 @@
+@import 'scss/_colors.scss';
+@import 'scss/_sizes.scss';
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  max-width: $desktop-max-width;
+  padding-top: 20px;
+  width: $desktop-max-width;
+}
+
+.nav__items {
+  display: flex;
+}
+
+.nav__item {
+  list-style: none;
+  padding-right: 1em;
+}
+
+.nav__link {
+  color: $font-light;
+  text-decoration: none;
+}

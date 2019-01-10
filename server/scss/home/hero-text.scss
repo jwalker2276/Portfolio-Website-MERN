@@ -1,0 +1,12 @@
+@import 'scss/_colors.scss';
+@import 'scss/_sizes.scss';
+.hero__text__wrapper {
+  margin: auto;
+  max-width: $desktop-max-width;
+}
+
+.hero__text {
+  color: $font-light;
+  font-size: 5em;
+  max-width: 600px;
+}

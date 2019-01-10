@@ -1,0 +1,11 @@
+@import 'scss/_colors.scss';
+.skill__list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.skill__listitem {
+  line-height: 2em;
+  color: $font-dark;
+}

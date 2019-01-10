@@ -6,7 +6,7 @@ import setAuthToken from '../helpers/setAuthToken';
 import { setCurrentUser } from '../reduxState/actions/authActions';
 // Components
 import Controller from '../components/dashboard/Controller';
-import Login from '../components/Login';
+import Login from '../components/dashboard/Login';
 // Styles
 import '../scss/dashboard/dashboard.scss';
 
