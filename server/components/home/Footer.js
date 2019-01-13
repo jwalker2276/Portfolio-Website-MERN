@@ -7,9 +7,11 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer__wrapper">
+        <span className="footer__span">designed and developed by </span>
         <Link href="/dashboard">
-          <a>jwalkercreations</a>
+          <a className="footer__link">Jordan</a>
         </Link>
+        <span className="footer__span"> Walker</span>
       </div>
     );
   }

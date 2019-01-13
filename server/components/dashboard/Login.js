@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Router from 'next/router';
 import { login } from '../../reduxState/actions/authActions';
 
-import '../../scss/login.scss';
+import '../../scss/dashboard/login.scss';
 
 class Login extends React.Component {
   constructor(props) {
