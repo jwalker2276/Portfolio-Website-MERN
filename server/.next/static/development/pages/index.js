@@ -333,8 +333,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Slice */ "./components/home/Slice.js");
-/* harmony import */ var _scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../scss/home/contact.scss */ "./scss/home/contact.scss");
-/* harmony import */ var _scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Title__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Title */ "./components/home/Title.js");
+/* harmony import */ var _scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../scss/home/contact.scss */ "./scss/home/contact.scss");
+/* harmony import */ var _scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/Contact.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -356,6 +357,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -425,7 +427,7 @@ function (_Component) {
         className: "contact__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 53
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slice__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -433,32 +435,28 @@ function (_Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slice__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        position: "top-left",
-        color: "darkblue",
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 54
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "contact__form",
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        title: "Contact",
+        accent: "",
+        color: "light",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 55
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSend,
+        className: "contact__form",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 56
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "contact__label",
         htmlFor: "name",
         __source: {
           fileName: _jsxFileName,
@@ -466,6 +464,7 @@ function (_Component) {
         },
         __self: this
       }, "Name", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "contact__input",
         required: true,
         type: "text",
         name: "name",
@@ -477,13 +476,15 @@ function (_Component) {
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "contact__label",
         htmlFor: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 68
         },
         __self: this
       }, "Email", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "contact__input",
         required: true,
         type: "email",
         name: "email",
@@ -491,17 +492,19 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 70
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "contact__label",
         htmlFor: "message",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 79
         },
         __self: this
       }, "Message", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        className: "contact__input",
         required: true,
         cols: "33",
         rows: "15",
@@ -511,18 +514,33 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 81
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "contact__form__button",
         type: "submit",
         value: "Send",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 92
         },
         __self: this
-      }))));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "contact__or",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94
+        },
+        __self: this
+      }, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "contact__email",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }, "jwalkercreations@gmail.com"));
     }
   }]);
 

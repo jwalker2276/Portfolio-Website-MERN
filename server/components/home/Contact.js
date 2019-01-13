@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Slice from './Slice';
+import Title from './Title';
 // Styles
 import '../../scss/home/contact.scss';
 
@@ -51,44 +52,47 @@ class Contact extends Component {
     return (
       <div className="contact__wrapper">
         <Slice postion="bottom" color="white" />
-        <Slice position="top-left" color="darkblue" />
-        <div className="contact__form">
-          <form onSubmit={this.handleSend}>
-            <label htmlFor="name">
-              Name
-              <input
-                required
-                type="text"
-                name="name"
-                value={this.state.name}
-                onChange={this.handleInput}
-              />
-            </label>
-            <label htmlFor="email">
-              Email
-              <input
-                required
-                type="email"
-                name="email"
-                value={this.state.email}
-                onChange={this.handleInput}
-              />
-            </label>
-            <label htmlFor="message">
-              Message
-              <textarea
-                required
-                cols="33"
-                rows="15"
-                type="text"
-                name="message"
-                value={this.state.message}
-                onChange={this.handleInput}
-              />
-            </label>
-            <input type="submit" value="Send" />
-          </form>
-        </div>
+        <Title title="Contact" accent="" color="light" />
+        <form onSubmit={this.handleSend} className="contact__form">
+          <label className="contact__label" htmlFor="name">
+            Name
+            <input
+              className="contact__input"
+              required
+              type="text"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleInput}
+            />
+          </label>
+          <label className="contact__label" htmlFor="email">
+            Email
+            <input
+              className="contact__input"
+              required
+              type="email"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleInput}
+            />
+          </label>
+          <label className="contact__label" htmlFor="message">
+            Message
+            <textarea
+              className="contact__input"
+              required
+              cols="33"
+              rows="15"
+              type="text"
+              name="message"
+              value={this.state.message}
+              onChange={this.handleInput}
+            />
+          </label>
+          <input className="contact__form__button" type="submit" value="Send" />
+        </form>
+        <p className="contact__or">or</p>
+        <p className="contact__email">jwalkercreations@gmail.com</p>
       </div>
     );
   }

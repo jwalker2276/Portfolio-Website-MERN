@@ -2,4 +2,36 @@
 .contact__wrapper {
   height: 1000px;
   background-color: $bk-darker;
+  color: $font-light;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.contact__label {
+  line-height: 1.5;
+  padding-bottom: 20px;
+}
+
+.contact__input {
+  width: 100%;
+}
+
+.contact__form__button {
+  align-self: center;
+  width: 50%;
+}
+
+.contact__or {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contact__email {
+  text-align: center;
 }

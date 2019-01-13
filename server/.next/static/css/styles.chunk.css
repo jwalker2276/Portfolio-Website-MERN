@@ -289,7 +289,39 @@
 
 .contact__wrapper {
   height: 1000px;
-  background-color: #06131c; }
+  background-color: #06131c;
+  color: #eff8ff; }
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 500px;
+  margin: auto;
+  margin-top: 200px; }
+
+.contact__label {
+  line-height: 1.5;
+  padding-bottom: 20px; }
+
+.contact__input {
+  width: 100%; }
+
+.contact__form__button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 50%; }
+
+.contact__or {
+  text-transform: uppercase;
+  text-align: center; }
+
+.contact__email {
+  text-align: center; }
 
 .footer__wrapper {
   height: 100px;
