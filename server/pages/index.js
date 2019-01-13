@@ -51,7 +51,7 @@ class Home extends React.Component {
         <Work projects={projectsData} />
         <Slice position="top" color="white" />
         <About contact={contactData} bio={bioData} imageId={imageId} />
-        <Map />
+        {/* <Map /> */}
         <Contact />
         <Footer />
       </React.Fragment>

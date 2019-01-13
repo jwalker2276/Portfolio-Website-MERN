@@ -6,6 +6,7 @@ const passport = require('passport');
 const profileController = require('../controllers/profileController');
 const userController = require('../controllers/userController');
 const projectController = require('../controllers/projectController');
+const contactController = require('../controllers/contactController');
 
 //* Profile routes
 
@@ -50,5 +51,8 @@ router.delete(
   passport.authenticate('jwt', { session: false }),
   projectController.deleteProject
 );
+
+//* Contact route
+router.post('/contact', contactController.contact);
 
 module.exports = router;

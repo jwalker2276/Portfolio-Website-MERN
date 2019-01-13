@@ -423,11 +423,16 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../scss/home/contact.scss */ "./scss/home/contact.scss");
-/* harmony import */ var _scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Slice */ "./components/home/Slice.js");
+/* harmony import */ var _scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../scss/home/contact.scss */ "./scss/home/contact.scss");
+/* harmony import */ var _scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_home_contact_scss__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/Contact.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -437,13 +442,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
 
  // Styles
 
@@ -454,23 +461,161 @@ var Contact =
 function (_Component) {
   _inherits(Contact, _Component);
 
-  function Contact() {
+  function Contact(props) {
+    var _this;
+
     _classCallCheck(this, Contact);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Contact).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Contact).call(this, props));
+    _this.state = {
+      email: '',
+      name: '',
+      message: '',
+      emailSuccessful: false
+    };
+    _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.handleSend = _this.handleSend.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
   }
 
   _createClass(Contact, [{
+    key: "handleInput",
+    value: function handleInput(event) {
+      var name = event.currentTarget.name;
+      var value = event.currentTarget.value;
+      this.setState(_defineProperty({}, name, value));
+    }
+  }, {
+    key: "handleSend",
+    value: function handleSend(event) {
+      var _this2 = this;
+
+      event.preventDefault();
+      var _this$state = this.state,
+          email = _this$state.email,
+          name = _this$state.name,
+          message = _this$state.message;
+      var payload = {
+        email: email,
+        name: name,
+        message: message
+      }; // Send contact request and check response
+
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/contact', payload).then(function (res) {
+        if (res.status === 200) {
+          _this2.setState({
+            emailSuccessful: true
+          });
+        }
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "contact__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 52
         },
         __self: this
-      });
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slice__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        postion: "bottom",
+        color: "white",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slice__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        position: "top-left",
+        color: "darkblue",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "contact__form",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSend,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "name",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, "Name", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        required: true,
+        type: "text",
+        name: "name",
+        value: this.state.name,
+        onChange: this.handleInput,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "email",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, "Email", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        required: true,
+        type: "email",
+        name: "email",
+        value: this.state.email,
+        onChange: this.handleInput,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "message",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }, "Message", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        required: true,
+        cols: "33",
+        rows: "15",
+        type: "text",
+        name: "message",
+        value: this.state.message,
+        onChange: this.handleInput,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        value: "Send",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
+        },
+        __self: this
+      }))));
     }
   }]);
 
@@ -897,9 +1042,11 @@ var Logo = function Logo() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Slice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Slice */ "./components/home/Slice.js");
-/* harmony import */ var _scss_home_map_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../scss/home/map.scss */ "./scss/home/map.scss");
-/* harmony import */ var _scss_home_map_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_home_map_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/config */ "next/config");
+/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_config__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Slice */ "./components/home/Slice.js");
+/* harmony import */ var _scss_home_map_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../scss/home/map.scss */ "./scss/home/map.scss");
+/* harmony import */ var _scss_home_map_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_home_map_scss__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/Map.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -912,13 +1059,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
  // Components
 
@@ -931,43 +1079,112 @@ var Map =
 function (_Component) {
   _inherits(Map, _Component);
 
-  function Map() {
+  function Map(props) {
+    var _this;
+
     _classCallCheck(this, Map);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Map).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Map).call(this, props));
+    _this.state = {
+      mapURL: '',
+      width: 0,
+      height: 0
+    };
+    _this.getMapSize = _this.getMapSize.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.buildMapURL = _this.buildMapURL.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.mapRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    return _this;
   }
 
   _createClass(Map, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.getMapSize();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevState.width !== this.state.width) {
+        console.log('rebuilding map');
+        this.getMapSize();
+      }
+
+      if (prevState.height !== this.state.height) {
+        console.log('rebuilding map');
+        this.getMapSize();
+      }
+    }
+  }, {
+    key: "getMapSize",
+    value: function getMapSize() {
+      var h = this.mapRef.current.clientHeight;
+      var w = this.mapRef.current.clientWidth;
+      this.setState({
+        height: h
+      });
+      this.setState({
+        width: w
+      });
+      this.buildMapURL();
+    }
+  }, {
+    key: "buildMapURL",
+    value: function buildMapURL() {
+      if (this.state.width !== 0 && this.state.height !== 0) {
+        var _getConfig = next_config__WEBPACK_IMPORTED_MODULE_1___default()(),
+            publicRuntimeConfig = _getConfig.publicRuntimeConfig; // Parameters
+
+
+        var p = {
+          center: 'Austin,TX',
+          scale: '2',
+          zoom: 10,
+          size: "".concat(this.state.width, "x").concat(this.state.height),
+          key: publicRuntimeConfig.gmKey
+        }; // URL
+
+        var mapUrl = "https://maps.googleapis.com/maps/api/staticmap?center=".concat(p.center, ",").concat(p.scale, "&zoom=").concat(p.zoom, "&size=").concat(p.size, "&key=").concat(p.key); // Set state
+
+        this.setState({
+          mapURL: mapUrl
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "map__wrapper",
+        ref: this.mapRef,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 69
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slice__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slice__WEBPACK_IMPORTED_MODULE_2__["default"], {
         position: "bottom",
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 70
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "map",
+        src: this.state.mapURL,
+        width: this.state.width,
+        height: this.state.height,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 71
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slice__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slice__WEBPACK_IMPORTED_MODULE_2__["default"], {
         position: "top-left",
         color: "darkblue",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 77
         },
         __self: this
       }));
@@ -2204,12 +2421,6 @@ function (_React$Component) {
           lineNumber: 53
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Map__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Contact__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
@@ -2619,6 +2830,17 @@ module.exports = require("axios");
 /***/ (function(module, exports) {
 
 module.exports = require("cloudinary-react");
+
+/***/ }),
+
+/***/ "next/config":
+/*!******************************!*\
+  !*** external "next/config" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/config");
 
 /***/ }),
 
