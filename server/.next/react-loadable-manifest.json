@@ -9,7 +9,19 @@
   ],
   "undefined": [
     {
-      "id": 12,
+      "id": 4,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 6,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 7,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -27,19 +39,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 6,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
       "id": 10,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 18,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -57,13 +57,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 4,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 17,
+      "id": 12,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -75,19 +69,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 16,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
       "id": 14,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 7,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -99,78 +81,26 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 19,
+      "id": 16,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 20,
+      "id": 17,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/common.scss": [
+    },
     {
-      "id": "./scss/common.scss",
-      "name": "./scss/common.scss",
+      "id": 18,
+      "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../../scss/home/about-banner.scss": [
+    },
     {
-      "id": "./scss/home/about-banner.scss",
-      "name": "./scss/home/about-banner.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../../scss/home/about.scss": [
-    {
-      "id": "./scss/home/about.scss",
-      "name": "./scss/home/about.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../../scss/home/contact.scss": [
-    {
-      "id": "./scss/home/contact.scss",
-      "name": "./scss/home/contact.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../../scss/home/footer.scss": [
-    {
-      "id": "./scss/home/footer.scss",
-      "name": "./scss/home/footer.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../../scss/home/hero-text.scss": [
-    {
-      "id": "./scss/home/hero-text.scss",
-      "name": "./scss/home/hero-text.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../../scss/home/hero.scss": [
-    {
-      "id": "./scss/home/hero.scss",
-      "name": "./scss/home/hero.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../../scss/home/icons.scss": [
-    {
-      "id": "./scss/home/icons.scss",
-      "name": "./scss/home/icons.scss",
+      "id": 19,
+      "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -183,10 +113,42 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../../scss/home/map.scss": [
+  "../../scss/home/title.scss": [
     {
-      "id": "./scss/home/map.scss",
-      "name": "./scss/home/map.scss",
+      "id": "./scss/home/title.scss",
+      "name": "./scss/home/title.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/home/hero.scss": [
+    {
+      "id": "./scss/home/hero.scss",
+      "name": "./scss/home/hero.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/home/work.scss": [
+    {
+      "id": "./scss/home/work.scss",
+      "name": "./scss/home/work.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/home/icons.scss": [
+    {
+      "id": "./scss/home/icons.scss",
+      "name": "./scss/home/icons.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/home/about-banner.scss": [
+    {
+      "id": "./scss/home/about-banner.scss",
+      "name": "./scss/home/about-banner.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -199,6 +161,14 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
+  "../../scss/home/about.scss": [
+    {
+      "id": "./scss/home/about.scss",
+      "name": "./scss/home/about.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
   "../../scss/home/skill-list.scss": [
     {
       "id": "./scss/home/skill-list.scss",
@@ -207,18 +177,10 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../../scss/home/skill.scss": [
+  "../../scss/home/map.scss": [
     {
-      "id": "./scss/home/skill.scss",
-      "name": "./scss/home/skill.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../../scss/home/skills.scss": [
-    {
-      "id": "./scss/home/skills.scss",
-      "name": "./scss/home/skills.scss",
+      "id": "./scss/home/map.scss",
+      "name": "./scss/home/map.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -231,18 +193,42 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../../scss/home/title.scss": [
+  "../../scss/home/contact.scss": [
     {
-      "id": "./scss/home/title.scss",
-      "name": "./scss/home/title.scss",
+      "id": "./scss/home/contact.scss",
+      "name": "./scss/home/contact.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../../scss/home/work.scss": [
+  "../../scss/home/skill.scss": [
     {
-      "id": "./scss/home/work.scss",
-      "name": "./scss/home/work.scss",
+      "id": "./scss/home/skill.scss",
+      "name": "./scss/home/skill.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/home/footer.scss": [
+    {
+      "id": "./scss/home/footer.scss",
+      "name": "./scss/home/footer.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/common.scss": [
+    {
+      "id": "./scss/common.scss",
+      "name": "./scss/common.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../../scss/home/skills.scss": [
+    {
+      "id": "./scss/home/skills.scss",
+      "name": "./scss/home/skills.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }

@@ -1,4 +1,5 @@
 @import 'scss/_colors.scss';
+@import 'scss/_sizes.scss';
 .hero__div {
   background-color: $bk-darkest;
   width: 100%;
@@ -6,4 +7,15 @@
   position: relative;
   top: 0;
   z-index: -50;
+}
+
+.hero__text__wrapper {
+  margin: auto;
+  max-width: $desktop-max-width;
+}
+
+.hero__text {
+  color: $font-light;
+  font-size: 5em;
+  max-width: 600px;
 }

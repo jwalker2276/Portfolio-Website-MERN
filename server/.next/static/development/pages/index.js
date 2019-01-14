@@ -722,9 +722,8 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _HeroText__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HeroText */ "./components/home/HeroText.js");
-/* harmony import */ var _scss_home_hero_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../scss/home/hero.scss */ "./scss/home/hero.scss");
-/* harmony import */ var _scss_home_hero_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_home_hero_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _scss_home_hero_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../scss/home/hero.scss */ "./scss/home/hero.scss");
+/* harmony import */ var _scss_home_hero_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_home_hero_scss__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/Hero.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -737,15 +736,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+ // Styles
 
 
 
@@ -754,22 +753,81 @@ var Hero =
 function (_React$Component) {
   _inherits(Hero, _React$Component);
 
-  function Hero() {
+  function Hero(props) {
+    var _this;
+
     _classCallCheck(this, Hero);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Hero).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Hero).call(this, props));
+    _this.state = {
+      verb: 'building',
+      index: 0
+    };
+    _this.changeWord = _this.changeWord.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
   }
 
   _createClass(Hero, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // Change ever 3 seconds
+      setInterval(this.changeWord, 3000);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      // Stop the timer
+      clearInterval();
+    }
+  }, {
+    key: "changeWord",
+    value: function changeWord() {
+      // List of words to cycle through
+      var verbs = [' building ', ' learning ', ' designing ']; // This current index in state
+
+      var index = this.state.index; // The next word to use based on index
+
+      var nextVerb = verbs[index]; // Update state with next word to use
+
+      this.setState({
+        verb: nextVerb
+      }); // Get max index
+
+      var maxIndex = verbs.length - 1; // Next index to use
+
+      var nextIndex = 0; // Check if counter is at the end of the words array
+
+      if (index < maxIndex) {
+        // Not at end, add one to index
+        nextIndex = index + 1;
+      } else {
+        // At the end, start over
+        nextIndex = 0;
+      } // Update index for next time
+
+
+      this.setState({
+        index: nextIndex
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HeroText__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hero__text__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 6
+          lineNumber: 54
         },
         __self: this
-      });
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "hero__text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, "I'm Jordan, a Web Developer who loves ".concat(this.state.verb, " things.")));
     }
   }]);
 
@@ -777,82 +835,6 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Hero);
-
-/***/ }),
-
-/***/ "./components/home/HeroText.js":
-/*!*************************************!*\
-  !*** ./components/home/HeroText.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return HeroText; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_home_hero_text_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../scss/home/hero-text.scss */ "./scss/home/hero-text.scss");
-/* harmony import */ var _scss_home_hero_text_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_home_hero_text_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/HeroText.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var HeroText =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(HeroText, _React$Component);
-
-  function HeroText() {
-    _classCallCheck(this, HeroText);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(HeroText).apply(this, arguments));
-  }
-
-  _createClass(HeroText, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "hero__text__wrapper",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 7
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "hero__text",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
-        },
-        __self: this
-      }, "I'm Jordan, a Web Developer who loves building things."));
-    }
-  }]);
-
-  return HeroText;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-
 
 /***/ }),
 
