@@ -32,7 +32,7 @@ export default class Work extends React.Component {
     });
 
     return (
-      <div className="work__wrapper">
+      <section className="work__wrapper" id="work">
         <Title title="work" accent="my" color="light" />
         <div className="work__projects">
           {onlyProjects.map(projectInfo => (
@@ -44,7 +44,7 @@ export default class Work extends React.Component {
             <a href="">Learn here {siteDataId}</a>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

@@ -9,28 +9,23 @@ export default class Navbar extends React.Component {
         <Logo />
         <ul className="nav__items">
           <li className="nav__item">
-            <a href="" className="nav__link">
-              Hire Me
-            </a>
-          </li>
-          <li className="nav__item">
-            <a href="" className="nav__link">
+            <a href="#skills" className="nav__link">
               Skills
             </a>
           </li>
           <li className="nav__item">
-            <a href="" className="nav__link">
+            <a href="#work" className="nav__link">
               Work
             </a>
           </li>
           <li className="nav__item">
-            <a href="" className="nav__link">
+            <a href="#about" className="nav__link">
               Me
             </a>
           </li>
           <li className="nav__item">
-            <a href="" className="nav__link">
-              Contract
+            <a href="#contact" className="nav__link">
+              Contact
             </a>
           </li>
         </ul>

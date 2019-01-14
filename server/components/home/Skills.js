@@ -20,7 +20,7 @@ class Skills extends React.Component {
     }
 
     return (
-      <div className="skills__wrapper">
+      <section className="skills__wrapper" id="skills">
         <Title title="skills" accent="my" color="dark" />
         <div className="skills">
           <Skill type="Front-end" skills={frontEndList} />
@@ -28,7 +28,7 @@ class Skills extends React.Component {
           <Skill type="Tools" skills={knowledgeList} />
           <Skill type="Knowledge" skills={toolsList} />
         </div>
-      </div>
+      </section>
     );
   }
 }

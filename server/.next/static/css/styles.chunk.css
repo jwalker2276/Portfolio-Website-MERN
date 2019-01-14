@@ -343,6 +343,9 @@
   cursor: pointer;
   text-decoration: none; }
 
+html {
+  scroll-behavior: smooth; }
+
 html,
 body {
   margin: 0; }

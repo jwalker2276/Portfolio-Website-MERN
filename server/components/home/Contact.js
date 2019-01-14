@@ -50,7 +50,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="contact__wrapper">
+      <section className="contact__wrapper" id="contact">
         <Slice postion="bottom" color="white" />
         <Title title="Contact" accent="" color="light" />
         <form onSubmit={this.handleSend} className="contact__form">
@@ -93,7 +93,7 @@ class Contact extends Component {
         </form>
         <p className="contact__or">or</p>
         <p className="contact__email">jwalkercreations@gmail.com</p>
-      </div>
+      </section>
     );
   }
 }

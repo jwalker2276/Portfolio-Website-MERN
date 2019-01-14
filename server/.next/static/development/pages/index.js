@@ -119,8 +119,9 @@ function (_Component) {
   _createClass(About, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "about__wrapper",
+        id: "about",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
@@ -483,8 +484,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "contact__wrapper",
+        id: "contact",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 53
@@ -1261,14 +1263,14 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
+        href: "#skills",
         className: "nav__link",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
         },
         __self: this
-      }, "Hire Me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      }, "Skills")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav__item",
         __source: {
           fileName: _jsxFileName,
@@ -1276,14 +1278,14 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
+        href: "#work",
         className: "nav__link",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 17
         },
         __self: this
-      }, "Skills")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      }, "Work")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav__item",
         __source: {
           fileName: _jsxFileName,
@@ -1291,14 +1293,14 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
+        href: "#about",
         className: "nav__link",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 22
         },
         __self: this
-      }, "Work")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      }, "Me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav__item",
         __source: {
           fileName: _jsxFileName,
@@ -1306,29 +1308,14 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
+        href: "#contact",
         className: "nav__link",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27
         },
         __self: this
-      }, "Me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav__item",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
-        className: "nav__link",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: this
-      }, "Contract"))));
+      }, "Contact"))));
     }
   }]);
 
@@ -1775,8 +1762,9 @@ function (_React$Component) {
         toolsList = this.props.skills.tools;
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "skills__wrapper",
+        id: "skills",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
@@ -2169,8 +2157,9 @@ function (_React$Component) {
           return project;
         }
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "work__wrapper",
+        id: "work",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 35

@@ -9,7 +9,7 @@ import '../../scss/home/about.scss';
 class About extends Component {
   render() {
     return (
-      <div className="about__wrapper">
+      <section className="about__wrapper" id="about">
         <Title title="me" accent="about" color="dark" />
         <div className="about__content__top">
           <Image
@@ -24,7 +24,7 @@ class About extends Component {
         <div className="about__content__bottom">
           <p className="about__bio">{this.props.bio}</p>
         </div>
-      </div>
+      </section>
     );
   }
 }
