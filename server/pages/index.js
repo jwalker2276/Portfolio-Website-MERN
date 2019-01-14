@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getProfileData, getProjectData } from '../reduxState/actions/homePageActions';
 // Components
+import Meta from '../components/common/Meta';
 import Navbar from '../components/home/Navbar';
 import Hero from '../components/home/Hero';
 import Slice from '../components/home/Slice';
@@ -41,6 +42,7 @@ class Home extends React.Component {
 
     return (
       <React.Fragment>
+        <Meta />
         <div className="landing__wrapper">
           <Navbar />
           <Hero />

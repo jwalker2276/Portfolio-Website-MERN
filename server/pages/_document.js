@@ -10,13 +10,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html lang="en-US">
-        <Head>
-          <title>JWalker Creations</title>
-          <link
-            href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800"
-            rel="stylesheet"
-          />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

@@ -88,10 +88,70 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/common/Meta.js":
+/*!***********************************!*\
+  !*** ./components/common/Meta.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/common/Meta.js";
+
+
+
+var Meta = function Meta() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+    name: "viewport",
+    content: "width=device-width, initial-scale=1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+    charSet: "utf-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "JWalker Creations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+    href: "https://fonts.googleapis.com/css?family=Raleway:300,400,700,800",
+    rel: "stylesheet",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Meta);
+
+/***/ }),
 
 /***/ "./components/home/About.js":
 /*!**********************************!*\
@@ -2298,17 +2358,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
-/* harmony import */ var _components_home_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/home/Navbar */ "./components/home/Navbar.js");
-/* harmony import */ var _components_home_Hero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/home/Hero */ "./components/home/Hero.js");
-/* harmony import */ var _components_home_Slice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/home/Slice */ "./components/home/Slice.js");
-/* harmony import */ var _components_home_Skills__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/home/Skills */ "./components/home/Skills.js");
-/* harmony import */ var _components_home_Work__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/home/Work */ "./components/home/Work.js");
-/* harmony import */ var _components_home_About__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/home/About */ "./components/home/About.js");
-/* harmony import */ var _components_home_Map__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/home/Map */ "./components/home/Map.js");
-/* harmony import */ var _components_home_Contact__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/home/Contact */ "./components/home/Contact.js");
-/* harmony import */ var _components_home_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/home/Footer */ "./components/home/Footer.js");
-/* harmony import */ var _scss_common_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../scss/common.scss */ "./scss/common.scss");
-/* harmony import */ var _scss_common_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_scss_common_scss__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_common_Meta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/common/Meta */ "./components/common/Meta.js");
+/* harmony import */ var _components_home_Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/home/Navbar */ "./components/home/Navbar.js");
+/* harmony import */ var _components_home_Hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/home/Hero */ "./components/home/Hero.js");
+/* harmony import */ var _components_home_Slice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/home/Slice */ "./components/home/Slice.js");
+/* harmony import */ var _components_home_Skills__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/home/Skills */ "./components/home/Skills.js");
+/* harmony import */ var _components_home_Work__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/home/Work */ "./components/home/Work.js");
+/* harmony import */ var _components_home_About__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/home/About */ "./components/home/About.js");
+/* harmony import */ var _components_home_Map__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/home/Map */ "./components/home/Map.js");
+/* harmony import */ var _components_home_Contact__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/home/Contact */ "./components/home/Contact.js");
+/* harmony import */ var _components_home_Footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/home/Footer */ "./components/home/Footer.js");
+/* harmony import */ var _scss_common_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../scss/common.scss */ "./scss/common.scss");
+/* harmony import */ var _scss_common_scss__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_scss_common_scss__WEBPACK_IMPORTED_MODULE_13__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/pages/index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2332,6 +2393,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
  // Components
+
 
 
 
@@ -2385,85 +2447,91 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "landing__wrapper",
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 44
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 45
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Hero__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "landing__wrapper",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 46
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Slice__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        position: "top",
-        color: "white",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Skills__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        skills: skillData,
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Hero__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Slice__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        position: "top",
+        color: "white",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 49
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Slice__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        position: "bottom",
-        color: "white",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Work__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        projects: projectsData,
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Skills__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        skills: skillData,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 51
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Slice__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        position: "top",
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Slice__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        position: "bottom",
         color: "white",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 52
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_About__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        contact: contactData,
-        bio: bioData,
-        imageId: imageId,
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Work__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        projects: projectsData,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 53
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Contact__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Slice__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        position: "top",
+        color: "white",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_About__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        contact: contactData,
+        bio: bioData,
+        imageId: imageId,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 55
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Contact__WEBPACK_IMPORTED_MODULE_11__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 57
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
         },
         __self: this
       }));
@@ -2832,7 +2900,7 @@ var actions = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -2874,6 +2942,17 @@ module.exports = require("cloudinary-react");
 /***/ (function(module, exports) {
 
 module.exports = require("next/config");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 

@@ -168,36 +168,22 @@ function (_Document) {
           lineNumber: 13
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("title", {
+      }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("body", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
         },
         __self: this
-      }, "JWalker Creations"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("link", {
-        href: "https://fonts.googleapis.com/css?family=Raleway:300,400,700,800",
-        rel: "stylesheet",
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("body", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        },
-        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 16
         },
         __self: this
       })));
