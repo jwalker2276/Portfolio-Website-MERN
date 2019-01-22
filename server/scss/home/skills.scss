@@ -1,5 +1,3 @@
-@import 'scss/_colors.scss';
-@import 'scss/_sizes.scss';
 .skills__wrapper {
   display: flex;
   flex-direction: column;
@@ -13,4 +11,36 @@
   padding-top: 100px;
   display: flex;
   justify-content: space-around;
+}
+
+.skill__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill__title {
+  color: $font_dark;
+}
+
+.skill__svg {
+  width: 25px;
+  height: 50px;
+}
+
+.skill__path {
+  stroke-width: 5;
+  stroke: $font-dark;
+  opacity: 0.75;
+}
+
+.skill__list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.skill__listitem {
+  line-height: 2em;
+  color: $font-dark;
 }

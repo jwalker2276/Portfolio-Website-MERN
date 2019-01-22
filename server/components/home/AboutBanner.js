@@ -1,8 +1,5 @@
 import React from 'react';
 
-// Style
-import '../../scss/home/about-banner.scss';
-
 class AboutBanner extends React.Component {
   render() {
     if (this.props.contactInfo === undefined) {

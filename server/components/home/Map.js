@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import getConfig from 'next/config';
 // Components
 import Slice from './Slice';
-// Sytles
-import '../../scss/home/map.scss';
 
 class Map extends Component {
   constructor(props) {

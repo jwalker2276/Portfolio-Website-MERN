@@ -2,8 +2,6 @@ import React from 'react';
 // Components
 import Title from './Title';
 import Skill from './Skill';
-// Styles
-import '../../scss/home/skills.scss';
 
 class Skills extends React.Component {
   render() {

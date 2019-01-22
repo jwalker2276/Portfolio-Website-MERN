@@ -1,6 +1,4 @@
 import React from 'react';
-// Styles
-import '../../scss/home/hero.scss';
 
 class Hero extends React.Component {
   constructor(props) {

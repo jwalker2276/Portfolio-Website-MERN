@@ -1,6 +1,4 @@
 import React from 'react';
-// Style
-import '../../scss/home/title.scss';
 
 const Title = props => {
   // Define the title word, accent word and font color

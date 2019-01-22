@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Slice from './Slice';
 import Title from './Title';
-// Styles
-import '../../scss/home/contact.scss';
 
 class Contact extends Component {
   constructor(props) {

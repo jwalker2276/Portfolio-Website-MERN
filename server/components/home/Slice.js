@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../scss/home/slice.scss';
 
 class Slice extends React.Component {
   render() {

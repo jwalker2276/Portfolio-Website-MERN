@@ -3,9 +3,6 @@ import React from 'react';
 import Icon from './Icons';
 import SkillList from './SkillList';
 
-// Style
-import '../../scss/home/skill.scss';
-
 class Skill extends React.Component {
   render() {
     // Determine skill type from props

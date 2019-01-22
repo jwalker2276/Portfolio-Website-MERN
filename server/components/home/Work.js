@@ -2,8 +2,7 @@ import React from 'react';
 // Components
 import Title from './Title';
 import Project from './Project';
-// Styles
-import '../../scss/home/work.scss';
+
 export default class Work extends React.Component {
   render() {
     const { projects } = this.props;

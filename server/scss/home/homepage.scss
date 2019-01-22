@@ -1,0 +1,36 @@
+@import 'scss/_colors.scss';
+@import 'scss/_sizes.scss';
+// Import other sheets
+@import 'slice.scss';
+@import 'icons.scss';
+@import 'logo.scss';
+@import 'title.scss';
+@import 'navbar.scss';
+@import 'hero.scss';
+@import 'skills.scss';
+@import 'work.scss';
+@import 'about.scss';
+@import 'contact.scss';
+@import 'footer.scss';
+// Home page styles
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: $bk-dark;
+}
+
+.landing__wrapper {
+  background-image: url('/static/website_hero.jpg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

@@ -9,12 +9,11 @@ import Slice from '../components/home/Slice';
 import Skills from '../components/home/Skills';
 import Work from '../components/home/Work';
 import About from '../components/home/About';
-import Map from '../components/home/Map';
 import Contact from '../components/home/Contact';
 import Footer from '../components/home/Footer';
 
 // Styles
-import '../scss/common.scss';
+import '../scss/home/homepage.scss';
 
 class Home extends React.Component {
   componentDidMount() {

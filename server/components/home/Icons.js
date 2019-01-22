@@ -1,6 +1,4 @@
 import React from 'react';
-// Styles
-import '../../scss/home/icons.scss';
 
 const Icons = props => {
   // Icons

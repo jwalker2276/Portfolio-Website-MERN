@@ -3,8 +3,6 @@ import { Image, Transformation } from 'cloudinary-react';
 import Title from './Title';
 // Components
 import AboutBanner from './AboutBanner';
-// Styles
-import '../../scss/home/about.scss';
 
 class About extends Component {
   render() {

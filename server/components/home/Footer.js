@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-// Styles
-import '../../scss/home/footer.scss';
 
 class Footer extends Component {
   render() {

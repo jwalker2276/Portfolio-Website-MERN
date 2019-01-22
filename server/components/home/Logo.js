@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../scss/home/logo.scss';
 
 const Logo = () => (
   <svg

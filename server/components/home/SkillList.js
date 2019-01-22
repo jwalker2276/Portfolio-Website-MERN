@@ -1,8 +1,5 @@
 import React from 'react';
 
-// Style
-import '../../scss/home/skill-list.scss';
-
 class SkillList extends React.Component {
   render() {
     const { list } = this.props;
