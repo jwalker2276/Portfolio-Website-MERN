@@ -4,8 +4,6 @@ import { logout } from '../../reduxState/actions/authActions';
 // Components
 import Profile from './Profile';
 import Projects from './Projects';
-// Styles
-import '../../scss/dashboard/controller.scss';
 
 class Controller extends Component {
   constructor(props) {

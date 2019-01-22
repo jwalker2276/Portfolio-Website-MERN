@@ -5,9 +5,6 @@ import axios from 'axios';
 import { getProjectData, deleteProjectData } from '../../reduxState/actions/homePageActions';
 // Components
 import Project from './Project';
-// Styles
-import '../../scss/dashboard/projects.scss';
-import '../../scss/dashboard/common.scss';
 
 class Projects extends Component {
   constructor(props) {

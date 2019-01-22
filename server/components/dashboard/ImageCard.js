@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Image, Transformation } from 'cloudinary-react';
 import axios from 'axios';
-// Styles
-import '../../scss/dashboard/cards.scss';
 
 export default class ImageCard extends Component {
   constructor(props) {

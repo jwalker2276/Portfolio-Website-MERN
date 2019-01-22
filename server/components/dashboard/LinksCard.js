@@ -1,5 +1,4 @@
-import React, { Component } from 'react'; // Styles
-import '../../scss/dashboard/cards.scss';
+import React, { Component } from 'react';
 
 class LinksCard extends Component {
   constructor(props) {

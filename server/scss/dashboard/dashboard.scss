@@ -1,4 +1,12 @@
 @import 'scss/_colors.scss';
+// Import other sheets
+@import 'common.scss';
+@import 'cards.scss';
+@import 'controller.scss';
+@import 'login.scss';
+@import 'profile.scss';
+@import 'projects.scss';
+// Styles for dashboard component
 html,
 body {
   height: 100%;

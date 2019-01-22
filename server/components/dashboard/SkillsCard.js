@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import _isEmpty from 'lodash.isempty';
-// Styles
-import '../../scss/dashboard/cards.scss';
-import '../../scss/dashboard/common.scss';
 
 class SkillsCard extends Component {
   constructor(props) {

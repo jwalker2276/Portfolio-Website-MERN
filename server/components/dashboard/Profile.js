@@ -7,9 +7,6 @@ import SkillsCard from './SkillsCard';
 import LinksCard from './LinksCard';
 import BioCard from './BioCard';
 import ImageCard from './ImageCard';
-// Styles
-import '../../scss/dashboard/profile.scss';
-import '../../scss/dashboard/common.scss';
 
 class Profile extends Component {
   constructor(props) {

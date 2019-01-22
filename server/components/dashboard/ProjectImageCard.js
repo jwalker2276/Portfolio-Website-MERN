@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { Image, Transformation } from 'cloudinary-react';
 import axios from 'axios';
 
-// Styles
-import '../../scss/dashboard/cards.scss';
-
 export default class ProjectImageCard extends Component {
   constructor(props) {
     super(props);

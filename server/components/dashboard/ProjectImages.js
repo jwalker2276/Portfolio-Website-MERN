@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import ProjectImageCard from './ProjectImageCard';
-// Styles
-import '../../scss/dashboard/cards.scss';
 
 export default class ProjectImages extends Component {
   constructor(props) {

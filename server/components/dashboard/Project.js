@@ -6,9 +6,6 @@ import { setProjectData } from '../../reduxState/actions/homePageActions';
 import ProjectImages from './ProjectImages';
 import ProjectMain from './ProjectMain';
 import ProjectTech from './ProjectTech';
-// Styles
-import '../../scss/dashboard/cards.scss';
-import '../../scss/dashboard/projects.scss';
 
 class Project extends Component {
   constructor(props) {

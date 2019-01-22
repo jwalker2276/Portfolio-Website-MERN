@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// Styles
-import '../../scss/dashboard/cards.scss';
 
 class BioCard extends Component {
   constructor(props) {
