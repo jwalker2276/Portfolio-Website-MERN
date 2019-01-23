@@ -1,14 +1,79 @@
-// Fonts
-$font-light: #eff8ff;
-$font-dark: #263745;
-$font-error: red;
-// Backgrounds
-$bk-light: $font-light;
-$bk-medium: adjust-color($font-light, $lightness: -2%);
-$bk-dark: #3e5a71;
-$bk-darker: #06131c;
-$bk-darkest: #05111a;
+// * Navbar
+// Color for the nav logo
+$Logo-Color: #0f609b;
+// Nav link colors
+$Nav-Color-Main: #dceefb;
+$Nav-Color-Highlight: #bef8fd;
+//
+// * Hero Section
+// Hero Text Color
+$Hero-Text-Color: #dceefb;
+$Hero-Text-Outline-Color: #102a43;
+//
+// * Section Titles
+// Dark Style
+$Dark-Title-Color: #072f4c;
+$Dark-Accent-Color: #55789a;
+// Light Style
+$Light-Title-Color: #dceefb;
+$Light-Accent-Color: #b1c8df;
+//
+// * Skill Section
 // Icons
-$icon-dark: $bk-dark;
-// Box shadows
-$box-shad-dark: rgba($bk-dark, 0.25);
+$S-Icon-Primary-Color: #529ace;
+$S-Icon-Secondary-Color: #09385a;
+// Skills List
+$S-List-Title-Color: #203f5c;
+$S-List-Accent-Color: #b1c8df;
+$S-List-Text-Color: #203f5c;
+//
+// * Project Section
+$P-Title-Color: #f0f4fb;
+$P-Title-Outline-Color: #072f4c;
+$P-Type-Color: #b1c8df;
+//
+// * About Section
+$A-Banner-Bk-Color: #36516a;
+$A-Link-Title-Color: #d1dcef;
+$A-Icon-Color: #f0f4fb;
+$A-Email-Color: #bef8fd;
+$A-Text-Color: #426585;
+//
+// * Contact Section
+$C-Form-Label-Color: #8baac8;
+$C-Form-Input-BK-Color: #102a43;
+$C-Form-Text-Color: #f0f4fb;
+$C-Form-Button-BK-Color: #102a43;
+$C-OR-Color: #426585;
+$C-Email-Color: #bef8fd;
+//
+// * Footer Section
+$F-Text-Color: #55789a;
+//
+// * Project Details Page
+$PD-Image-BK-Color: #55789a;
+$PD-Image-Stroke-Color: #8baac8;
+$PD-Border-Color: #36516a;
+$PD-Image-Button-Primary-Color: #b1d5ef;
+$PD-Image-Button-Secondary-Color: #072f4c;
+$PD-Details-BK-Color: #f0f4fb;
+$PD-Details-Title-Color: #426585;
+$PD-Details-Type-Color: #55789a;
+$PD-Details-Text-Color: #203f5c;
+$PD-Icon-Primary-Color: #529ace;
+$PD-Icon-Secondary-Color: #09385a;
+$PD-Tech-Title-Color: #203f5c;
+$PD-Tech-Text-Color: #203f5c;
+//
+// * Home Page Backgrounds
+$HP-BK-Light-Color: #eff8ff;
+$HP-BK-Mid-Color: #36516a;
+$HP-BK-Dark-Color: #203f5c;
+$HP-BK-Darkest-Color: #102a43;
+//
+// * Buttons
+// Primary
+$Pri-Button-BK-Color: #072f4c;
+$Pri-Button-Text-Color: #dceefb;
+// Seondary
+$Sec-Button-Color: #dceefb;

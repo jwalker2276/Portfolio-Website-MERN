@@ -1,10 +1,10 @@
 .primary__button {
-  border: 2px solid $bk-dark;
+  border: 2px solid $HP-BK-Mid-Color;
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   cursor: pointer;
-  color: $font-dark;
-  background: $bk-light;
+  color: $HP-BK-Mid-Color;
+  background: $HP-BK-Light-Color;
   font-size: 1em;
   font-weight: 500;
   width: 140px;
@@ -12,36 +12,36 @@
 
 .secondary__button {
   width: 140px;
-  border: 2px solid $bk-dark;
+  border: 2px solid $HP-BK-Mid-Color;
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   cursor: pointer;
-  color: $bk-dark;
-  background: $bk-light;
+  color: $HP-BK-Mid-Color;
+  background: $HP-BK-Light-Color;
   font-size: 1em;
   font-weight: 500;
 }
 
 .tertiary__button {
   width: 200px;
-  border: 2px solid $bk-dark;
+  border: 2px solid $HP-BK-Mid-Color;
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   cursor: pointer;
-  color: $bk-dark;
-  background: $bk-light;
+  color: $HP-BK-Mid-Color;
+  background: $HP-BK-Light-Color;
   font-size: 1em;
   font-weight: 400;
 }
 
 .secondary__button--active {
   width: 140px;
-  border: 2px solid $bk-dark;
+  border: 2px solid $HP-BK-Mid-Color;
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   cursor: pointer;
-  color: $bk-light;
-  background: $bk-dark;
+  color: $HP-BK-Light-Color;
+  background: $HP-BK-Mid-Color;
   font-size: 1em;
   font-weight: 500;
 }

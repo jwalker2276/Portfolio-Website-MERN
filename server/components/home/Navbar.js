@@ -24,7 +24,7 @@ export default class Navbar extends React.Component {
           </li>
           <li className="nav__item">
             <a href="#contact" className="nav__link">
-              Contact
+              <span className="nav__item--primary">Contact</span>
             </a>
           </li>
         </ul>

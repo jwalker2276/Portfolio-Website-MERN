@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   height: 1000px;
-  background: $bk-light;
+  background: $HP-BK-Light-Color;
   margin: auto;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .skill__title {
-  color: $font_dark;
+  color: $S-List-Title-Color;
 }
 
 .skill__svg {
@@ -29,9 +29,9 @@
 }
 
 .skill__path {
-  stroke-width: 5;
-  stroke: $font-dark;
-  opacity: 0.75;
+  stroke-width: 10;
+  stroke: $S-List-Accent-Color;
+  opacity: 1;
 }
 
 .skill__list {
@@ -41,6 +41,6 @@
 }
 
 .skill__listitem {
-  line-height: 2em;
-  color: $font-dark;
+  line-height: 1.5;
+  color: $S-List-Text-Color;
 }

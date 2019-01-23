@@ -1,15 +1,15 @@
 .footer__wrapper {
   height: 100px;
-  background-color: $bk_darkest;
+  background-color: $HP-BK-Darkest-Color;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $font-light;
+  color: $F-Text-Color;
 }
 
 .footer__link {
   padding: 0 3px;
-  color: $font-light;
+  color: $F-Text-Color;
   cursor: pointer;
   text-decoration: none;
 }

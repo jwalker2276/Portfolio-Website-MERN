@@ -29,12 +29,11 @@ export default class Project extends Component {
         <div className="project__details">
           <h1 className="project__title">{title}</h1>
           <h3 className="project__type">{type}</h3>
-          <a href={`http://localhost:5000/project/${id}`} className="project__link__info">
-            Learn More
-          </a>
-          <a href={link} className="project__link__site">
+          <a href={link} className="work__primary__link">
             Live Site
-            {link}
+          </a>
+          <a href={`http://localhost:5000/project/${id}`} className="work__secondary__link">
+            Learn More
           </a>
         </div>
       </div>

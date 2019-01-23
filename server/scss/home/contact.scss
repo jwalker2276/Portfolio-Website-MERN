@@ -1,7 +1,6 @@
 .contact__wrapper {
   height: 1000px;
-  background-color: $bk-darker;
-  color: $font-light;
+  background-color: $HP-BK-Dark-Color;
 }
 
 .contact__form {
@@ -15,22 +14,31 @@
 .contact__label {
   line-height: 1.5;
   padding-bottom: 20px;
+  color: $C-Form-Label-Color;
 }
 
 .contact__input {
   width: 100%;
+  background-color: $C-Form-Input-BK-Color;
+  color: $C-Form-Text-Color;
+  border: none;
 }
 
 .contact__form__button {
   align-self: center;
   width: 50%;
+  background-color: $C-Form-Button-BK-Color;
+  color: $C-Form-Text-Color;
+  border: none;
 }
 
 .contact__or {
   text-transform: uppercase;
   text-align: center;
+  color: $C-OR-Color;
 }
 
 .contact__email {
   text-align: center;
+  color: $C-Email-Color;
 }

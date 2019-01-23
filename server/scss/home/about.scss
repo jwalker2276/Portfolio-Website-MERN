@@ -1,6 +1,6 @@
 .about__wrapper {
   height: 1000px;
-  background-color: $bk-light;
+  background-color: $HP-BK-Light-Color;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
 }
 
 .about__profileImg {
-  border: 10px solid $bk-dark;
+  border: 10px solid $A-Banner-Bk-Color;
   border-radius: 50%;
   position: absolute;
   left: 0;
@@ -32,14 +32,14 @@
 
 .about__bio {
   padding: 10px;
-  color: $font-dark;
+  color: $A-Text-Color;
 }
 
 .about__banner {
   display: flex;
   justify-content: flex-end;
-  color: $font-light;
-  background-color: $bk-dark;
+  color: $A-Text-Color;
+  background-color: $A-Banner-Bk-Color;
   border-radius: 5px;
   width: 490px;
   height: 80px;
@@ -57,10 +57,12 @@
   margin: 0px;
   padding-top: 12px;
   padding-bottom: 10px;
+  color: $A-Link-Title-Color;
 }
 
 .banner__email {
   margin: 4px 0;
+  color: $A-Email-Color;
 }
 
 .banner__icons {
@@ -70,5 +72,5 @@
 }
 
 .banner__icon__path {
-  fill: $font-light;
+  fill: $A-Icon-Color;
 }

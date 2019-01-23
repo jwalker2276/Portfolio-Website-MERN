@@ -836,69 +836,101 @@ var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/
 
 var Icons = function Icons(props) {
   // Icons
-  var iconFrontEnd = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    className: "skill__icon__path",
-    d: "M10 20C7.34784 20 4.8043 18.9464 2.92893 17.0711C1.05357 15.1957 0 12.6522 0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0C12.6522 0 15.1957 1.05357 17.0711 2.92893C18.9464 4.8043 20 7.34784 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20ZM17.75 12C18.0883 10.6881 18.0883 9.31188 17.75 8H13.93C14.0227 9.33172 14.0227 10.6683 13.93 12H17.75ZM16.93 14H13.71C13.5425 15.2054 13.2233 16.3847 12.76 17.51C14.5167 16.862 15.9917 15.6204 16.93 14ZM8.08 12H11.92C12.0285 10.6689 12.0285 9.33112 11.92 8H8.08C7.97146 9.33112 7.97146 10.6689 8.08 12ZM8.33 14C8.74 16.4 9.46 18 10 18C10.54 18 11.26 16.4 11.67 14H8.33ZM2.25 12H6.07C5.97733 10.6683 5.97733 9.33172 6.07 8H2.25C1.91173 9.31188 1.91173 10.6881 2.25 12ZM3.07 14C4.00826 15.6204 5.48328 16.862 7.24 17.51C6.82 16.55 6.5 15.35 6.29 14H3.07ZM16.93 6C15.9917 4.3796 14.5167 3.13804 12.76 2.49C13.18 3.45 13.5 4.65 13.71 6H16.93ZM8.33 6H11.67C11.26 3.6 10.54 2 10 2C9.46 2 8.74 3.6 8.33 6ZM3.07 6H6.29C6.49 4.65 6.82 3.45 7.24 2.49C5.48328 3.13804 4.00826 4.3796 3.07 6Z",
+  var iconFrontEnd = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  });
-  var iconBackEnd = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    className: "skill__icon__path",
-    d: "M0 2C0 0.9 0.9 0 2 0H18C18.5304 0 19.0391 0.210714 19.4142 0.585786C19.7893 0.960859 20 1.46957 20 2V4C20 4.53043 19.7893 5.03914 19.4142 5.41421C19.0391 5.78929 18.5304 6 18 6H2C1.46957 6 0.960859 5.78929 0.585786 5.41421C0.210714 5.03914 0 4.53043 0 4V2ZM0 9C0 7.9 0.9 7 2 7H18C18.5304 7 19.0391 7.21071 19.4142 7.58579C19.7893 7.96086 20 8.46957 20 9V11C20 11.5304 19.7893 12.0391 19.4142 12.4142C19.0391 12.7893 18.5304 13 18 13H2C1.46957 13 0.960859 12.7893 0.585786 12.4142C0.210714 12.0391 0 11.5304 0 11V9ZM0 16C0 14.9 0.9 14 2 14H18C18.5304 14 19.0391 14.2107 19.4142 14.5858C19.7893 14.9609 20 15.4696 20 16V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V16ZM12 2V4H14V2H12ZM16 2V4H18V2H16ZM12 9V11H14V9H12ZM16 9V11H18V9H16ZM12 16V18H14V16H12ZM16 16V18H18V16H16Z",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    width: "18",
+    height: "18",
+    x: "3",
+    y: "3",
+    className: "skill__icon__primary",
+    rx: "2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "skill__icon__seondary",
+    d: "M8.7 13.3a1 1 0 0 1-1.4 1.4l-2-2a1 1 0 0 1 0-1.4l2-2a1 1 0 1 1 1.4 1.4L7.42 12l1.3 1.3zm6.6 0l1.29-1.3-1.3-1.3a1 1 0 1 1 1.42-1.4l2 2a1 1 0 0 1 0 1.4l-2 2a1 1 0 0 1-1.42-1.4zm-3.32 3.9a1 1 0 0 1-1.96-.4l2-10a1 1 0 0 1 1.96.4l-2 10z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }));
+  var iconBackEnd = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  });
-  var iconTools = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    className: "skill__icon__path",
-    d: "M3.94 6.5L2.22 3.64L3.64 2.22L6.5 3.94C7.02 3.64 7.6 3.4 8.2 3.24L9 0H11L11.8 3.24C12.4 3.4 12.98 3.64 13.5 3.94L16.36 2.22L17.78 3.64L16.06 6.5C16.36 7.02 16.6 7.6 16.76 8.2L20 9V11L16.76 11.8C16.6 12.4 16.36 12.98 16.06 13.5L17.78 16.36L16.36 17.78L13.5 16.06C12.98 16.36 12.4 16.6 11.8 16.76L11 20H9L8.2 16.76C7.6 16.6 7.02 16.36 6.5 16.06L3.64 17.78L2.22 16.36L3.94 13.5C3.64 12.98 3.4 12.4 3.24 11.8L0 11V9L3.24 8.2C3.4 7.6 3.64 7.02 3.94 6.5ZM10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13Z",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "skill__icon__primary",
+    d: "M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2zm8.12 7.47A5 5 0 1 0 17 14V9a1 1 0 0 0-1.7-.7l-1.18 1.17z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "skill__icon__secondary",
+    d: "M12 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6-11a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM6 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm12 16a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM6 21a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM8 6h4a1 1 0 0 1 0 2H8a1 1 0 1 1 0-2z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }));
+  var iconTools = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  });
-  var iconKnowledge = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    className: "skill__icon__path",
-    d: "M3.05288 17.1929C2.09778 16.2704 1.33596 15.167 0.811868 13.9469C0.287778 12.7269 0.0119157 11.4147 0.000377568 10.0869C-0.0111606 8.7591 0.241856 7.44231 0.744665 6.21334C1.24747 4.98438 1.99001 3.86786 2.92893 2.92893C3.86786 1.99001 4.98438 1.24747 6.21334 0.744665C7.44231 0.241856 8.7591 -0.0111606 10.0869 0.000377568C11.4147 0.0119157 12.7269 0.287778 13.9469 0.811868C15.167 1.33596 16.2704 2.09778 17.1929 3.05288C19.0145 4.9389 20.0224 7.46493 19.9996 10.0869C19.9768 12.7089 18.9251 15.217 17.0711 17.0711C15.217 18.9251 12.7089 19.9768 10.0869 19.9996C7.46493 20.0224 4.9389 19.0145 3.05288 17.1929ZM9.12288 11.1229V15.1229H11.1229V9.12288H9.12288V11.1229ZM9.12288 5.12288V7.12288H11.1229V5.12288H9.12288Z",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "skill__icon__primary",
+    d: "M6.8 3.45c.87-.52 1.82-.92 2.83-1.17a2.5 2.5 0 0 0 4.74 0c1.01.25 1.96.65 2.82 1.17a2.5 2.5 0 0 0 3.36 3.36c.52.86.92 1.8 1.17 2.82a2.5 2.5 0 0 0 0 4.74c-.25 1.01-.65 1.96-1.17 2.82a2.5 2.5 0 0 0-3.36 3.36c-.86.52-1.8.92-2.82 1.17a2.5 2.5 0 0 0-4.74 0c-1.01-.25-1.96-.65-2.82-1.17a2.5 2.5 0 0 0-3.36-3.36 9.94 9.94 0 0 1-1.17-2.82 2.5 2.5 0 0 0 0-4.74c.25-1.01.65-1.96 1.17-2.82a2.5 2.5 0 0 0 3.36-3.36zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
+    className: "skill__icon__secondary",
+    cx: "12",
+    cy: "12",
+    r: "2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }));
+  var iconKnowledge = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  });
-  var editIcon = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24",
-    className: "icon-cog",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    className: "primary",
-    d: "M6.8 3.45c.87-.52 1.82-.92 2.83-1.17a2.5 2.5 0 0 0 4.74 0c1.01.25 1.96.65 2.82 1.17a2.5 2.5 0 0 0 3.36 3.36c.52.86.92 1.8 1.17 2.82a2.5 2.5 0 0 0 0 4.74c-.25 1.01-.65 1.96-1.17 2.82a2.5 2.5 0 0 0-3.36 3.36c-.86.52-1.8.92-2.82 1.17a2.5 2.5 0 0 0-4.74 0c-1.01-.25-1.96-.65-2.82-1.17a2.5 2.5 0 0 0-3.36-3.36 9.94 9.94 0 0 1-1.17-2.82 2.5 2.5 0 0 0 0-4.74c.25-1.01.65-1.96 1.17-2.82a2.5 2.5 0 0 0 3.36-3.36zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",
+    className: "skill__icon__primary",
+    d: "M5 8a7 7 0 1 1 10.62 6l-.64 3.2a1 1 0 0 1-.98.8h-4a1 1 0 0 1-.98-.8L8.38 14A7 7 0 0 1 5 8zm12 0a5 5 0 0 0-5-5 1 1 0 0 0 0 2 3 3 0 0 1 3 3 1 1 0 0 0 2 0z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 29
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
-    cx: "12",
-    cy: "12",
-    r: "2",
-    className: "secondary",
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "skill__icon__secondary",
+    d: "M15 21a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2 1 1 0 0 1 0-2h6a1 1 0 0 1 0 2z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 30
     },
     __self: this
   })); // Determine icon to display
@@ -930,13 +962,11 @@ var Icons = function Icons(props) {
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     className: "skill__icon__svg",
-    width: "20",
-    height: "20",
-    viewBox: "0 0 20 20",
+    viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 58
     },
     __self: this
   }, iconToDisplay);
@@ -1118,7 +1148,14 @@ function (_React$Component) {
           lineNumber: 26
         },
         __self: this
-      }, "Contact"))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "nav__item--primary",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, "Contact")))));
     }
   }]);
 
@@ -1260,22 +1297,22 @@ function (_Component) {
         },
         __self: this
       }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "http://localhost:5000/project/".concat(id),
-        className: "project__link__info",
+        href: link,
+        className: "work__primary__link",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 32
         },
         __self: this
-      }, "Learn More"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: link,
-        className: "project__link__site",
+      }, "Live Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://localhost:5000/project/".concat(id),
+        className: "work__secondary__link",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 35
         },
         __self: this
-      }, "Live Site", link)));
+      }, "Learn More")));
     }
   }]);
 
@@ -1761,14 +1798,14 @@ var Title = function Title(props) {
 
   var colorClass = 'title__dark'; // Determine stroke color class
 
-  var strokeClass = 'title__stroke--dark';
+  var strokeClass = 'title__accent--dark';
 
   if (color === 'dark') {
     colorClass = 'title__font--dark';
-    strokeClass = 'title__stroke--dark';
+    strokeClass = 'title__accent--dark';
   } else {
     colorClass = 'title__font--light';
-    strokeClass = 'title__stroke--light';
+    strokeClass = 'title__accent--light';
   }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1813,7 +1850,7 @@ var Title = function Title(props) {
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-    className: "title__accent ".concat(colorClass),
+    className: "title__accent ".concat(strokeClass),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
@@ -1979,19 +2016,21 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "work__website__question",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 42
         },
         __self: this
       }, "Interested in how I built this website?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
+        href: siteDataId,
+        className: "work__primary__link",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 43
         },
         __self: this
-      }, "Learn here ", siteDataId))));
+      }, "Learn More"))));
     }
   }]);
 

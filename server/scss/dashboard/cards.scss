@@ -1,6 +1,6 @@
 .group__title {
   font-size: 1em;
-  color: $font-dark;
+  color: black;
   font-weight: 600;
   text-align: center;
 }
@@ -14,9 +14,9 @@
   width: 100%;
   font-size: 1em;
   box-sizing: border-box;
-  color: $font-dark;
+  color: black;
   border-radius: 5px;
-  background-color: lighten($bk-light, 25%);
+  background-color: white;
   padding: 7px;
   margin: 10px 0;
   border: none;
@@ -24,7 +24,7 @@
 
 .group__form__label {
   font-size: 1em;
-  color: $font-dark;
+  color: black;
   margin-bottom: 0.5em;
   text-align: center;
 }
@@ -37,7 +37,7 @@
 
 .image__upload__form {
   margin: 10px 0;
-  background-color: $bk-light;
+  background-color: white;
 }
 
 .project__images__wrapper {

@@ -7,14 +7,14 @@ const Title = props => {
   // Determine font color class
   let colorClass = 'title__dark';
   // Determine stroke color class
-  let strokeClass = 'title__stroke--dark';
+  let strokeClass = 'title__accent--dark';
 
   if (color === 'dark') {
     colorClass = 'title__font--dark';
-    strokeClass = 'title__stroke--dark';
+    strokeClass = 'title__accent--dark';
   } else {
     colorClass = 'title__font--light';
-    strokeClass = 'title__stroke--light';
+    strokeClass = 'title__accent--light';
   }
 
   return (
@@ -24,7 +24,7 @@ const Title = props => {
         <svg className="title__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <line className={`title__svg__path ${strokeClass}`} x1="50" y1="0" x2="50" y2="100" />
         </svg>
-        <h6 className={`title__accent ${colorClass}`}>{accent}</h6>
+        <h6 className={`title__accent ${strokeClass}`}>{accent}</h6>
       </div>
       <div className="title__bottom">
         <h1 className={`title__main ${colorClass}`}>{title}</h1>

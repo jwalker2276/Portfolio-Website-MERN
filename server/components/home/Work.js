@@ -39,8 +39,10 @@ export default class Work extends React.Component {
           ))}
           {/* map projects out here */}
           <div className="work__site">
-            <h3>Interested in how I built this website?</h3>
-            <a href="">Learn here {siteDataId}</a>
+            <h3 className="work__website__question">Interested in how I built this website?</h3>
+            <a href={siteDataId} className="work__primary__link">
+              Learn More
+            </a>
           </div>
         </div>
       </section>

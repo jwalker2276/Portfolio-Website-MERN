@@ -19,10 +19,9 @@
 
 .title__accent {
   margin: 0;
-  padding-top: 0.75em;
-  font-size: 0.75em;
+  padding-top: 12px;
+  font-size: 14px;
   font-weight: 300;
-  color: $font-dark;
 }
 
 .title__accent--clear {
@@ -32,24 +31,25 @@
 
 .title__main {
   font-weight: 700;
-  font-size: 5em;
+  font-size: 72px;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .title__font--dark {
-  color: $font-dark;
+  color: $Dark-Title-Color;
 }
 
 .title__font--light {
-  color: $font-light;
+  color: $Light-Title-Color;
 }
 
-.title__stroke--dark {
-  stroke: $font-dark;
+.title__accent--dark {
+  stroke: $Dark-Accent-Color;
+  color: $Dark-Accent-Color;
 }
 
-.title__stroke--light {
-  stroke: $font-light;
+.title__accent--light {
+  stroke: $Light-Accent-Color;
+  color: $Light-Accent-Color;
 }

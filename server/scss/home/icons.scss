@@ -1,4 +1,11 @@
-.skill__icon__path {
-  fill: $font_dark;
-  opacity: 0.75;
+.skill__icon__svg {
+  width: 36px;
+}
+
+.skill__icon__primary {
+  fill: $S-Icon-Primary-Color;
+}
+
+.skill__icon__secondary {
+  fill: $S-Icon-Secondary-Color;
 }

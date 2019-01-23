@@ -1,5 +1,5 @@
 .dashboard__nav {
-  background-color: $bk-dark;
+  background-color: $HP-BK-Dark-Color;
   padding: 0 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -21,8 +21,8 @@
   border: none;
   padding: 10px 0px 10px 0px;
   cursor: pointer;
-  color: $font-light;
-  background: $bk-dark;
+  color: $HP-BK-Light-Color;
+  background: $HP-BK-Dark-Color;
   font-size: 1.1em;
   font-weight: 500;
   margin-right: 1em;
@@ -33,7 +33,7 @@
 }
 
 .dashboard__content {
-  background-color: $bk-light;
+  background-color: $HP-BK-Dark-Color;
   padding: 50px 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

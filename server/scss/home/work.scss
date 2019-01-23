@@ -1,5 +1,36 @@
 .work__wrapper {
   margin: auto;
-  background-color: $bk-dark;
+  background-color: $HP-BK-Mid-Color;
   height: 2000px;
+}
+
+.project__title {
+  color: $P-Title-Color;
+  text-shadow: 0 0 10px $P-Title-Outline-Color;
+}
+
+.project__type {
+  color: $P-Type-Color;
+}
+
+.work__primary__link {
+  color: $Pri-Button-Text-Color;
+  background-color: $Pri-Button-BK-Color;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.work__secondary__link {
+  color: $Sec-Button-Color;
+  border: 2px solid $Sec-Button-Color;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  border-radius: 5px;
+  text-decoration: none;
 }

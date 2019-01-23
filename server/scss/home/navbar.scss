@@ -13,10 +13,14 @@
 
 .nav__item {
   list-style: none;
-  padding-right: 1em;
+  padding-right: 16px;
 }
 
 .nav__link {
-  color: $font-light;
+  color: $Nav-Color-Main;
   text-decoration: none;
+}
+
+.nav__item--primary {
+  color: $Nav-Color-Highlight;
 }
