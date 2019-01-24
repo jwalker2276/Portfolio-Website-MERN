@@ -197,28 +197,61 @@
   background-color: #36516a;
   height: 3000px; }
 
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  width: 1100px; }
+
+.project__image {
+  grid-column: 1 / -1;
+  justify-self: center; }
+
+.project__details {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  justify-items: end;
+  position: absolute;
+  grid-column: 1 / -1;
+  top: 25%;
+  right: 0; }
+
 .project__title {
   color: #f0f4fb;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 72px;
-  text-shadow: 0 0 10px #072f4c; }
+  margin: 0;
+  text-shadow: 0 0 10px #072f4c;
+  grid-row: 1 / 2; }
 
 .project__type {
   color: #b1c8df;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  font-size: 18px; }
+  font-size: 18px;
+  grid-row: 2 / 3; }
 
 .work__website__question {
   color: #f0f4fb;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 36px; }
+  font-size: 36px;
+  text-align: center; }
+
+.website__info__button {
+  margin: auto; }
+
+.project__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: end; }
 
 .work__primary__link {
   color: #dceefb;
   background-color: #072f4c;
+  border: 1px solid #36516a;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,7 +259,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  height: 30px;
   border-radius: 5px;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
@@ -235,19 +272,24 @@
 
 .work__secondary__link {
   color: #dceefb;
-  border: 2px solid #dceefb;
+  border: 1px solid #dceefb;
   padding: 10px;
+  margin-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  height: 30px;
   border-radius: 5px;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 20px; }
 
 .about__wrapper {

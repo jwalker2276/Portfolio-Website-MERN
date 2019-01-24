@@ -1256,9 +1256,9 @@ function (_Component) {
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Transformation"], {
-          height: "500",
+          width: "700",
+          height: "400",
           quality: "auto",
-          crop: "limit",
           fetchFormat: "auto",
           __source: {
             fileName: _jsxFileName,
@@ -1296,12 +1296,19 @@ function (_Component) {
           lineNumber: 31
         },
         __self: this
-      }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "project__buttons",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: link,
         className: "work__primary__link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 33
         },
         __self: this
       }, "Live Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1309,10 +1316,10 @@ function (_Component) {
         className: "work__secondary__link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 36
         },
         __self: this
-      }, "Learn More")));
+      }, "Learn More"))));
     }
   }]);
 
@@ -2024,7 +2031,7 @@ function (_React$Component) {
         __self: this
       }, "Interested in how I built this website?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: siteDataId,
-        className: "work__primary__link",
+        className: "work__primary__link  website__info__button",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 43

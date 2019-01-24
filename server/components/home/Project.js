@@ -17,7 +17,7 @@ export default class Project extends Component {
       image = (
         <div className="project__image">
           <Image cloudName="jwalkercreations-com" publicId={mainImageid}>
-            <Transformation height="500" quality="auto" crop="limit" fetchFormat="auto" />
+            <Transformation width="700" height="400" quality="auto" fetchFormat="auto" />
           </Image>
         </div>
       );
@@ -29,12 +29,14 @@ export default class Project extends Component {
         <div className="project__details">
           <h1 className="project__title">{title}</h1>
           <h3 className="project__type">{type}</h3>
-          <a href={link} className="work__primary__link">
-            Live Site
-          </a>
-          <a href={`http://localhost:5000/project/${id}`} className="work__secondary__link">
-            Learn More
-          </a>
+          <div className="project__buttons">
+            <a href={link} className="work__primary__link">
+              Live Site
+            </a>
+            <a href={`http://localhost:5000/project/${id}`} className="work__secondary__link">
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     );
