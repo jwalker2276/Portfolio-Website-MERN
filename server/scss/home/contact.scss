@@ -1,5 +1,5 @@
 .contact__wrapper {
-  height: 1000px;
+  height: 1100px;
   background-color: $HP-BK-Dark-Color;
 }
 
@@ -7,14 +7,16 @@
   display: flex;
   flex-direction: column;
   width: 500px;
-  margin: auto;
-  margin-top: 200px;
+  margin: 100px auto;
 }
 
 .contact__label {
   line-height: 1.5;
   padding-bottom: 20px;
   color: $C-Form-Label-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .contact__input {
@@ -22,6 +24,9 @@
   background-color: $C-Form-Input-BK-Color;
   color: $C-Form-Text-Color;
   border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .contact__form__button {
@@ -30,15 +35,24 @@
   background-color: $C-Form-Button-BK-Color;
   color: $C-Form-Text-Color;
   border: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .contact__or {
   text-transform: uppercase;
   text-align: center;
   color: $C-OR-Color;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .contact__email {
   text-align: center;
   color: $C-Email-Color;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
 }

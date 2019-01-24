@@ -1,16 +1,29 @@
 .work__wrapper {
   margin: auto;
   background-color: $HP-BK-Mid-Color;
-  height: 2000px;
+  height: 3000px;
 }
 
 .project__title {
   color: $P-Title-Color;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
   text-shadow: 0 0 10px $P-Title-Outline-Color;
 }
 
 .project__type {
   color: $P-Type-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.work__website__question {
+  color: $P-Title-Color;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
 }
 
 .work__primary__link {
@@ -22,6 +35,9 @@
   width: 100px;
   border-radius: 5px;
   text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .work__secondary__link {
@@ -33,4 +49,7 @@
   width: 100px;
   border-radius: 5px;
   text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
 }

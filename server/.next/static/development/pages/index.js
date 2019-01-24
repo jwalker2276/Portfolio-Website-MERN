@@ -46,7 +46,7 @@ var Meta = function Meta() {
     },
     __self: this
   }, "JWalker Creations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-    href: "https://fonts.googleapis.com/css?family=Raleway:300,400,700,800",
+    href: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700",
     rel: "stylesheet",
     __source: {
       fileName: _jsxFileName,

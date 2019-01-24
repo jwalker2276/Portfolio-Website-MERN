@@ -33,6 +33,9 @@
 .about__bio {
   padding: 10px;
   color: $A-Text-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .about__banner {
@@ -58,11 +61,17 @@
   padding-top: 12px;
   padding-bottom: 10px;
   color: $A-Link-Title-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .banner__email {
   margin: 4px 0;
   color: $A-Email-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .banner__icons {
