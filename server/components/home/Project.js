@@ -15,8 +15,8 @@ export default class Project extends Component {
     if (imageIds.length > 0) {
       const mainImageid = imageIds[0];
       image = (
-        <div className="project__image">
-          <Image cloudName="jwalkercreations-com" publicId={mainImageid}>
+        <div className="project__image__container">
+          <Image cloudName="jwalkercreations-com" publicId={mainImageid} className="project__image">
             <Transformation width="700" height="400" quality="auto" fetchFormat="auto" />
           </Image>
         </div>

@@ -1334,7 +1334,7 @@ function (_Component) {
       if (imageIds.length > 0) {
         var mainImageid = imageIds[0];
         image = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "project__image",
+          className: "project__image__container",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 18
@@ -1343,6 +1343,7 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Image"], {
           cloudName: "jwalkercreations-com",
           publicId: mainImageid,
+          className: "project__image",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 19
