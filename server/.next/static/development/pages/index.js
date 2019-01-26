@@ -1410,7 +1410,7 @@ function (_React$Component) {
         __self: this
       }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
         className: "skill__svg",
-        viewBox: "0 0 100 100",
+        viewBox: "0 0 100 150",
         xmlns: "http://www.w3.org/2000/svg",
         __source: {
           fileName: _jsxFileName,

@@ -3,15 +3,15 @@ import React, { Component } from 'react';
 class BioCard extends Component {
   constructor(props) {
     super(props);
-    this.state = { bio: '' };
+    this.state = { bio: 'no data' };
     this.updateChange = this.updateChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidUpdate() {
     if (this.props.bioData !== this.state.bio) {
-      // Only update if not currently editing input
-      if (!this.props.isEditable) {
+      // Only update if bio is an empty string
+      if (this.state.bio === 'no data') {
         // Set inital value
         this.setState({ bio: this.props.bioData });
       }

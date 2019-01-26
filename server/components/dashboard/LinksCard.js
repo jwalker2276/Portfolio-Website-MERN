@@ -3,16 +3,15 @@ import React, { Component } from 'react';
 class LinksCard extends Component {
   constructor(props) {
     super(props);
-    this.state = { link: '' };
+    this.state = { link: 'no data' };
     this.updateChange = this.updateChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidUpdate() {
     if (this.props.linkData !== this.state.link) {
-      // Only update if not currently editing input
-      if (!this.props.isEditable) {
-        // Set inital value
+      // Check if state is an empty string
+      if (this.state.link === 'no data') {
         this.setState({ link: this.props.linkData });
       }
     }

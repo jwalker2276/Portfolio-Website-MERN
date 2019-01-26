@@ -1,9 +1,8 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  margin: 0px auto;
+  margin: 16px auto;
   max-width: $desktop-max-width;
-  padding-top: 20px;
   width: 100%;
 }
 
@@ -13,7 +12,7 @@
 
 .nav__item {
   list-style: none;
-  padding-right: 16px;
+  padding-right: 24px;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 16px;

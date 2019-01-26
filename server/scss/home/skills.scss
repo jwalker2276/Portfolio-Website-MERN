@@ -2,15 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 1000px;
   background: $HP-BK-Light-Color;
   margin: auto;
 }
 
 .skills {
-  padding-top: 100px;
   display: flex;
   justify-content: space-around;
+  padding: 96px 0 64px 0;
 }
 
 .skill__group {
@@ -24,10 +23,10 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
+  margin: 24px auto;
 }
 
 .skill__svg {
-  width: 25px;
   height: 50px;
 }
 
@@ -40,6 +39,7 @@
 .skill__list {
   list-style-type: none;
   padding: 0;
+  margin: 24px auto;
   text-align: center;
 }
 
