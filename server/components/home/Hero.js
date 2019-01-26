@@ -51,7 +51,9 @@ class Hero extends React.Component {
     return (
       <div className="hero__text__wrapper">
         <h1 className="hero__text">
-          {`I'm Jordan, a Web Developer who loves ${this.state.verb} things.`}
+          I&apos;m <span className="hero__text__name">Jordan</span> , a{' '}
+          <span className="hero__text__title">Web Developer</span> who loves{' '}
+          <span className="hero__text__verb">{`${this.state.verb}`}</span> things.
         </h1>
       </div>
     );

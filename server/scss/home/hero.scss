@@ -1,3 +1,10 @@
+.hero__section {
+  background-color: hsla(0, 0, 0, 0.35);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .hero__text__wrapper {
   margin: auto;
   max-width: $desktop-max-width;
@@ -9,5 +16,18 @@
   font-weight: 600;
   font-size: 72px;
   max-width: 600px;
-  text-shadow: 0px 0px 5px $Hero-Text-Outline-Color;
+  text-shadow: 0px 0px 20px $Hero-Text-Outline-Color;
+}
+
+.hero__text__name {
+  color: $Hero-Text-Special-Color;
+}
+
+.hero__text__title {
+  color: $Hero-Text-Special-Color;
+  text-decoration: underline;
+}
+
+.hero__text__verb {
+  color: $Hero-Text-Special-Color;
 }

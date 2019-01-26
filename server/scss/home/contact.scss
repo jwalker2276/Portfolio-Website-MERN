@@ -30,6 +30,8 @@
   font-weight: 700;
   border-radius: 5px;
   font-size: 16px;
+  box-shadow: inset 0px 1px 2px 0px $C-Form-Input-Shadow-Color,
+    inset 0px -1px 0px 0px $C-Form-Input-Highlight-Color;
 }
 
 .contact__form__button {
@@ -45,6 +47,7 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: 18px;
+  box-shadow: 0px 1px 2px $Button-Shadow-Color-Close, 0px 4px 14px 3px $Button-Shadow-Color-Far;
 }
 
 .contact__or {

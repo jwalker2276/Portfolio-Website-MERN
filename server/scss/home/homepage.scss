@@ -24,14 +24,12 @@ body {
 
 body {
   background-color: $HP-BK-Mid-Color;
-  font-family: "Raleway", sans-serif;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .landing__wrapper {
   background-image: url('/static/website_hero.jpg');
   background-size: cover;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
 }

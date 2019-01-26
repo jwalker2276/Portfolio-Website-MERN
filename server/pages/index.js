@@ -43,9 +43,11 @@ class Home extends React.Component {
       <React.Fragment>
         <Meta />
         <div className="landing__wrapper">
-          <Navbar />
-          <Hero />
-          <Slice position="top" color="white" />
+          <section className="hero__section">
+            <Navbar />
+            <Hero />
+            <Slice position="top" color="white" />
+          </section>
         </div>
         <Skills skills={skillData} />
         <Slice position="bottom" color="white" />

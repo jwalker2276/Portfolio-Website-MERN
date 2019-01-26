@@ -29,6 +29,7 @@
     "react/no-array-index-key": 1,
     "prefer-destructuring": 1,
     "class-methods-use-this": 0,
-    "array-callback-return": 1
+    "array-callback-return": 1,
+    "react/jsx-one-expression-per-line": 0
   }
 }

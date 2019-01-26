@@ -1,14 +1,16 @@
 // * Navbar
 // Color for the nav logo
-$Logo-Color: #0f609b;
+// $Logo-Color: #0f609b;
+$Logo-Color: #54d1db;
 // Nav link colors
 $Nav-Color-Main: #dceefb;
-$Nav-Color-Highlight: #bef8fd;
+$Nav-Color-Highlight: #54d1db;
 //
 // * Hero Section
 // Hero Text Color
 $Hero-Text-Color: #dceefb;
 $Hero-Text-Outline-Color: #102a43;
+$Hero-Text-Special-Color: #54d1db;
 //
 // * Section Titles
 // Dark Style
@@ -42,6 +44,8 @@ $A-Text-Color: #426585;
 // * Contact Section
 $C-Form-Label-Color: #8baac8;
 $C-Form-Input-BK-Color: #102a43;
+$C-Form-Input-Shadow-Color: rgba(7, 18, 29, 1);
+$C-Form-Input-Highlight-Color: rgba(46, 91, 132, 0.8);
 $C-Form-Text-Color: #f0f4fb;
 $C-Form-Button-BK-Color: #102a43;
 $C-OR-Color: #426585;
@@ -78,3 +82,6 @@ $Pri-Button-Text-Color: #dceefb;
 $Pri-Button-Border: #36516a;
 // Seondary
 $Sec-Button-Color: #dceefb;
+// Shadows
+$Button-Shadow-Color-Close: rgba(16, 42, 67, 0.75);
+$Button-Shadow-Color-Far: rgba(16, 42, 67, 0.4);
