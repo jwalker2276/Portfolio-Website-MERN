@@ -1,18 +1,18 @@
 .contact__wrapper {
-  height: 1100px;
   background-color: $HP-BK-Dark-Color;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact__form {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  margin: 100px auto;
+  width: 640px;
+  margin: 72px auto;
 }
 
 .contact__label {
   line-height: 1.5;
-  padding-bottom: 20px;
   color: $C-Form-Label-Color;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -20,18 +20,25 @@
 }
 
 .contact__input {
+  padding: 10px;
   width: 100%;
+  margin: 8px 0 32px 0;
   background-color: $C-Form-Input-BK-Color;
   color: $C-Form-Text-Color;
   border: none;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
+  border-radius: 5px;
   font-size: 16px;
 }
 
 .contact__form__button {
   align-self: center;
-  width: 50%;
+  width: 192px;
+  height: 42px;
+  border-radius: 5px;
+  margin-top: 16px;
+  text-transform: uppercase;
   background-color: $C-Form-Button-BK-Color;
   color: $C-Form-Text-Color;
   border: none;
@@ -55,4 +62,5 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 18px;
+  margin: 72px 0 128px 0;
 }
