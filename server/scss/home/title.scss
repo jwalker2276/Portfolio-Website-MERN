@@ -39,6 +39,12 @@
   font-size: 72px;
   margin: 0;
   text-transform: uppercase;
+  @media screen and (max-width: $tablet-max-width) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: $phone-max-width) {
+    font-size: 48px;
+  }
 }
 
 .title__font--dark {

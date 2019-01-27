@@ -3,12 +3,17 @@
   flex-direction: column;
   justify-content: center;
   background: $HP-BK-Light-Color;
+}
+
+.skills__content {
   margin: auto;
+  width: 100%;
+  max-width: $desktop-max-width;
 }
 
 .skills {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 96px 0 64px 0;
 }
 

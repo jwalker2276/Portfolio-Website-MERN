@@ -1,5 +1,6 @@
 .contact__wrapper {
   background-color: $HP-BK-Dark-Color;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -30,11 +31,11 @@
   font-weight: 700;
   border-radius: 5px;
   font-size: 16px;
-  box-shadow: inset 0px 1px 2px 0px $C-Form-Input-Shadow-Color,
-    inset 0px -1px 0px 0px $C-Form-Input-Highlight-Color;
+  box-shadow: inset 0px 1px 2px 0px $C-Form-Input-Shadow-Color, inset 0px -1px 0px 0px $C-Form-Input-Highlight-Color;
 }
 
 .contact__form__button {
+  cursor: pointer;
   align-self: center;
   width: 192px;
   height: 42px;

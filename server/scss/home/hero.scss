@@ -1,5 +1,5 @@
 .hero__section {
-  background-color: hsla(0, 0, 0, 0.35);
+  background-color: hsla(0, 0, 0, 0.4);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,8 +15,17 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 72px;
+  padding-left: 0.75em;
   max-width: 600px;
   text-shadow: 0px 0px 20px $Hero-Text-Outline-Color;
+  @media screen and (max-width: $labtop-max-width) {
+    font-size: 60px;
+    max-width: 512px;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 36px;
+    max-width: 300px;
+  }
 }
 
 .hero__text__name {

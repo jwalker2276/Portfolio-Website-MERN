@@ -19,12 +19,14 @@ class Skills extends React.Component {
 
     return (
       <section className="skills__wrapper" id="skills">
-        <Title title="skills" accent="my" color="dark" />
-        <div className="skills">
-          <Skill type="Front-end" skills={frontEndList} />
-          <Skill type="Back-end" skills={backEndList} />
-          <Skill type="Tools" skills={knowledgeList} />
-          <Skill type="Knowledge" skills={toolsList} />
+        <div className="skills__content">
+          <Title title="skills" accent="my" color="dark" />
+          <div className="skills">
+            <Skill type="Front-end" skills={frontEndList} />
+            <Skill type="Back-end" skills={backEndList} />
+            <Skill type="Tools" skills={knowledgeList} />
+            <Skill type="Knowledge" skills={toolsList} />
+          </div>
         </div>
       </section>
     );
