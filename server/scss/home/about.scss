@@ -9,8 +9,13 @@
 .about__profileImg {
   border: 10px solid $A-Banner-Bk-Color;
   border-radius: 50%;
+  box-shadow: 0px 1px 3px #102a43;
   position: absolute;
   left: 0;
+  @media screen and (max-width: $phone-max-width) {
+    position: relative;
+    left: auto;
+  }
 }
 
 .about__content__top {
@@ -21,6 +26,11 @@
   width: 600px;
   border-radius: 5px;
   margin-top: 100px;
+  @media screen and (max-width: $phone-max-width) {
+    margin-top: 64px;
+    width: 300px;
+    flex-direction: column;
+  }
 }
 
 .about__content__bottom {
@@ -28,6 +38,9 @@
   width: 600px;
   height: auto;
   line-height: 1.5;
+  @media screen and (max-width: $phone-max-width) {
+    width: 328px;
+  }
 }
 
 .about__bio {
@@ -36,6 +49,9 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  @media screen and (max-width: $phone-max-width) {
+    padding: 0px;
+  }
 }
 
 .about__banner {
@@ -46,14 +62,31 @@
   border-radius: 5px;
   width: 490px;
   height: 80px;
+  @media screen and (max-width: $phone-max-width) {
+    margin-top: -50px;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    align-items: center;
+    background-color: $HP-BK-Light-Color;
+  }
 }
 
 .banner__first {
   padding-right: 60px;
+  @media screen and (max-width: $phone-max-width) {
+    padding: 0;
+    width: 100px;
+    border-radius: 5px;
+    background-color: $A-Banner-Bk-Color;
+  }
 }
 
 .banner__second {
   padding-right: 20px;
+  @media screen and (max-width: $phone-max-width) {
+    padding: 0;
+  }
 }
 
 .banner__title {
@@ -64,6 +97,18 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  @media screen and (max-width: $phone-max-width) {
+    margin-top: -50px;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 32px;
+  }
+}
+
+.banner__second .banner__title {
+  @media screen and (max-width: $phone-max-width) {
+    color: $A-Email-Title-Mobile-Color;
+  }
 }
 
 .banner__email {
@@ -72,12 +117,25 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 16px;
+  @media screen and (max-width: $phone-max-width) {
+    color: $A-Email-Mobile-Color;
+  }
 }
 
 .banner__icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: $phone-max-width) {
+    flex-direction: column;
+    height: 164px;
+    margin-bottom: 64px;
+  }
+}
+
+.banner__icon__svg {
+  width: 60px;
+  height: 60px;
 }
 
 .banner__icon__path {

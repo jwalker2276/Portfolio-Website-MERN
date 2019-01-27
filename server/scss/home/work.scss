@@ -11,6 +11,10 @@
   @media screen and (max-width: $tablet-max-width) {
     width: 700px;
   }
+  @media screen and (max-width: $phone-max-width) {
+    width: 300px;
+    padding: 55px 0;
+  }
 }
 
 .project {
@@ -18,6 +22,11 @@
   grid-template-columns: 1fr 1fr;
   position: relative;
   margin-bottom: 512px;
+  @media screen and (max-width: $phone-max-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    margin-bottom: 128px;
+  }
 }
 
 .project:nth-of-type(3) {
@@ -26,12 +35,18 @@
 
 .project__image__container {
   grid-column: 1 / -1;
+  @media screen and (max-width: $phone-max-width) {
+    grid-row: 1 / 2;
+  }
 }
 
 .project__image {
   max-width: 700px;
   @media screen and (max-width: $tablet-max-width) {
     max-width: 500px;
+  }
+  @media screen and (max-width: $phone-max-width) {
+    max-width: 300px;
   }
 }
 
@@ -44,6 +59,14 @@
   grid-column: 1 / -1;
   justify-self: end;
   align-self: center;
+  @media screen and (max-width: $phone-max-width) {
+    width: 100%;
+    grid-row: 2 / -1;
+    position: relative;
+    justify-items: center;
+    justify-self: center;
+    margin: 16px auto;
+  }
 }
 
 .project__title {
@@ -57,6 +80,9 @@
   @media screen and (max-width: $tablet-max-width) {
     font-size: 60px;
   }
+  @media screen and (max-width: $phone-max-width) {
+    font-size: 24px;
+  }
 }
 
 .project__type {
@@ -66,6 +92,9 @@
   font-size: 18px;
   grid-row: 2 / 3;
   margin: 16px 0 32px 0;
+  @media screen and (max-width: $phone-max-width) {
+    font-size: 16px;
+  }
 }
 
 .work__website__question {
@@ -78,6 +107,9 @@
   @media screen and (max-width: $tablet-max-width) {
     font-size: 24px;
   }
+  @media screen and (max-width: $phone-max-width) {
+    font-size: 20px;
+  }
 }
 
 .website__info__button {
@@ -86,12 +118,19 @@
 
 .work__site {
   margin-top: 256px;
+  @media screen and (max-width: $phone-max-width) {
+    margin-top: 96px;
+  }
 }
 
 .project__buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: end;
+  @media screen and (max-width: $phone-max-width) {
+    justify-items: center;
+    width: 100%;
+  }
 }
 
 .work__primary__link {
@@ -112,6 +151,11 @@
   box-shadow: 0px 1px 2px $Button-Shadow-Color-Close, 0px 4px 14px 3px $Button-Shadow-Color-Far;
   @media screen and (max-width: $tablet-max-width) {
     font-size: 20px;
+  }
+  @media screen and (max-width: $phone-max-width) {
+    font-size: 16px;
+    height: 24px;
+    width: 100px;
   }
 }
 
@@ -134,5 +178,11 @@
   box-shadow: 0px 1px 2px rgba(16, 42, 67, 0.75), 0px 4px 5px 1px rgba(16, 42, 67, 0.25);
   @media screen and (max-width: $tablet-max-width) {
     font-size: 20px;
+  }
+  @media screen and (max-width: $phone-max-width) {
+    font-size: 16px;
+    height: 24px;
+    width: 100px;
+    margin-left: 0px;
   }
 }
