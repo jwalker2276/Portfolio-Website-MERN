@@ -16,10 +16,34 @@ import Footer from '../components/home/Footer';
 import '../scss/home/homepage.scss';
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      windowSize: 0
+    };
+    this.updateWindowSize = this.updateWindowSize.bind(this);
+  }
+
   componentDidMount() {
     // Run actions on mount
     this.props.getProfileData();
     this.props.getProjectData();
+
+    // Get the window size and update state
+    window.addEventListener('resize', this.updateWindowSize);
+
+    // Get inital size
+    this.updateWindowSize();
+  }
+
+  componentWillUnmount() {
+    // Remove event listener
+    window.removeEventListener('resize', this.updateWindowSize);
+  }
+
+  updateWindowSize() {
+    const width = window.innerWidth;
+    this.setState({ windowSize: width });
   }
 
   render() {
@@ -44,7 +68,7 @@ class Home extends React.Component {
         <Meta />
         <div className="landing__wrapper">
           <section className="hero__section">
-            <Navbar />
+            <Navbar browserWidth={this.state.windowSize} />
             <Hero />
             <Slice position="top" color="white" />
           </section>

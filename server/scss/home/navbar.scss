@@ -8,6 +8,11 @@
 
 .nav__items {
   display: flex;
+  @media screen and (max-width: $phone-max-width) {
+    flex-direction: column;
+    padding: 0;
+    margin: 0px auto;
+  }
 }
 
 .nav__item {
@@ -16,13 +21,89 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 16px;
+  @media screen and (max-width: $phone-max-width) {
+    padding-right: 0;
+    padding: 24px;
+    border-bottom: 1px solid $HP-BK-Darkest-Color;
+    border-right: 4px solid $Nav-Color-Highlight;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: $HP-BK-Dark-Color;
+    box-shadow: 2px 7px 5px 0px $Nav-Color-Shadow;
+  }
+}
+
+.nav__item--one {
+  @media screen and (max-width: $phone-max-width) {
+    width: 75%;
+  }
+}
+
+.nav__item--two {
+  @media screen and (max-width: $phone-max-width) {
+    width: 50%;
+  }
+}
+
+.nav__item--three {
+  @media screen and (max-width: $phone-max-width) {
+    width: 30%;
+  }
+}
+
+.nav__item--four {
+  @media screen and (max-width: $phone-max-width) {
+    width: 60%;
+  }
 }
 
 .nav__link {
   color: $Nav-Color-Main;
   text-decoration: none;
+  @media screen and (max-width: $phone-max-width) {
+    font-size: 24px;
+  }
 }
 
 .nav__item--primary {
   color: $Nav-Color-Highlight;
+} // For mobile
+.nav__sidebar--opened {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 100vh;
+}
+
+.nav__sidebar--closed {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.nav__menu__icon {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.nav__menu__line {
+  width: 35px;
+  height: 5px;
+  margin-right: 16px;
+  background-color: $Nav-Color-Highlight;
+}
+
+.nav__menu__line__top {
+  margin-bottom: 10px;
+}
+
+.nav__menu__line__top--rotated {
+  transform: rotate(45deg) translate(4px, 0px);
+}
+
+.nav__menu__line__bottom--rotated {
+  transform: rotate(-45deg) translate(3px, 0px);
 }

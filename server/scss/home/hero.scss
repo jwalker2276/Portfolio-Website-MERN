@@ -3,11 +3,15 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .hero__text__wrapper {
   margin: auto;
   max-width: $desktop-max-width;
+  @media screen and (max-width: $phone-max-width) {
+    margin: 80px auto auto auto;
+  }
 }
 
 .hero__text {
