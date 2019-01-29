@@ -4,6 +4,7 @@ const Project = require('../models/Project');
 // Return all projects
 exports.getProjects = (req, res) => {
   Project.find()
+    .sort({ order: 1 })
     .then(projects => {
       if (projects.length !== 0) {
         res.json(projects);
