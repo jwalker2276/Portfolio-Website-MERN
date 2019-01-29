@@ -2253,7 +2253,7 @@ function (_React$Component) {
         },
         __self: this
       }, "Interested in how I built this website?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: siteDataId,
+        href: "http://localhost:5000/project/".concat(siteDataId),
         className: "work__primary__link  website__info__button",
         __source: {
           fileName: _jsxFileName,

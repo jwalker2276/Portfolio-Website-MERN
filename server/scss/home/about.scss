@@ -134,8 +134,10 @@
 }
 
 .banner__icon__svg {
-  width: 60px;
-  height: 60px;
+  @media screen and (max-width: $phone-max-width) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .banner__icon__path {

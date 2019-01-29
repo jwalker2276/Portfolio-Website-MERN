@@ -680,9 +680,10 @@
       height: 164px;
       margin-bottom: 64px; } }
 
-.banner__icon__svg {
-  width: 60px;
-  height: 60px; }
+@media screen and (max-width: 375px) {
+  .banner__icon__svg {
+    width: 60px;
+    height: 60px; } }
 
 .banner__icon__path {
   fill: #f0f4fb; }
