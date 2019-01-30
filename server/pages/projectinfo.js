@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { getProjectData } from '../reduxState/actions/homePageActions';
 // Components
@@ -32,10 +32,25 @@ class projectinfo extends Component {
   }
 
   render() {
+    const techIcon = (
+      <Fragment>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="tech__icon">
+          <path
+            className="icon__primary"
+            d="M2.6 6.09l9-4a1 1 0 0 1 .8 0l9 4a1 1 0 0 1 0 1.82l-9 4a1 1 0 0 1-.8 0l-9-4a1 1 0 0 1 0-1.82z"
+          />
+          <path
+            className="icon__secondary"
+            d="M3.91 10.5l7.68 3.41a1 1 0 0 0 .82 0l7.68-3.41 1.32.59a1 1 0 0 1 0 1.82l-9 4a1 1 0 0 1-.82 0l-9-4a1 1 0 0 1 0-1.82l1.32-.59zm0 5l7.68 3.41a1 1 0 0 0 .82 0l7.68-3.41 1.32.59a1 1 0 0 1 0 1.82l-9 4a1 1 0 0 1-.82 0l-9-4a1 1 0 0 1 0-1.82l1.32-.59z"
+          />
+        </svg>
+      </Fragment>
+    );
+
     const { projectData } = this.props;
     const { selectedProject } = this.state;
 
-    if (projectData === null) return <p>Loading .... </p>;
+    if (projectData === null) return <p className="project-page__loading">Loading .... </p>;
 
     const { title, type, description, tech, link, imageIds } = projectData[selectedProject];
     const { frontend, backend, tools } = tech;
@@ -47,7 +62,7 @@ class projectinfo extends Component {
           <h4 className="details__type">{type}</h4>
           <p className="details__description">{description}</p>
           <div className="details__tech">
-            <i>icon</i>
+            {techIcon}
             <h4 className="tech__title">Tech</h4>
             <ul className="tech__list">
               {frontend.map(techName => (
@@ -66,10 +81,10 @@ class projectinfo extends Component {
                 </li>
               ))}
             </ul>
-            <button className="details__button">
-              <a href={link} className="details__link" />
-            </button>
           </div>
+          <a href={link} className="details__link">
+            Live Site
+          </a>
         </section>
       </div>
     );

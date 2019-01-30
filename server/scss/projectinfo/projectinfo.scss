@@ -1,2 +1,127 @@
 @import '../colors';
 @import '../sizes';
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: $PD-Border-Color;
+}
+
+#__next {
+  height: 100%;
+  width: 100%;
+}
+
+.project-page__wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: $desktop-max-width;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  margin: auto;
+}
+
+.project-page__slider {
+  grid-column: 1 / 2;
+  background-color: $PD-Image-BK-Color;
+  border-right: 5px solid $PD-Border-Color;
+}
+
+.project-page__details {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  background-color: $PD-Details-BK-Color;
+}
+
+.details__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 64px;
+  color: $PD-Details-Title-Color;
+  margin: 192px auto 0px auto;
+}
+
+.details__type {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $PD-Details-Type-Color;
+  margin: 8px auto 36px auto;
+}
+
+.details__description {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $PD-Details-Text-Color;
+  text-align: center;
+  margin: 0;
+  max-width: 28em;
+  line-height: 1.25;
+}
+
+.details__tech {
+  margin: 36px auto 96px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech__icon {
+  margin: 36px auto 24px auto;
+  width: 30px;
+  height: 30px;
+}
+
+.icon__primary {
+  fill: $PD-Icon-Primary-Color;
+}
+
+.icon__secondary {
+  fill: $PD-Icon-Secondary-Color;
+}
+
+.tech__title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: $PD-Details-Title-Color;
+  text-align: center;
+  margin: 0px auto 24px auto;
+}
+
+.tech__list {
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  line-height: 1.5;
+}
+
+.tech__list__item {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $PD-Tech-Text-Color;
+}
+
+.details__link {
+  color: $Pri-Button-Text-Color;
+  background-color: $Pri-Button-BK-Color;
+  border: 1px solid $Pri-Button-Border;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  box-shadow: 0px 1px 2px $Button-Shadow-Color-Close, 0px 4px 14px 3px $Button-Shadow-Color-Far;
+}

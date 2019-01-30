@@ -2,6 +2,6 @@ import React, { Component } from 'react';
 
 export default class ImageSlider extends Component {
   render() {
-    return <div>Image Slider Here</div>;
+    return <section className="project-page__slider">Image Slider Here</section>;
   }
 }

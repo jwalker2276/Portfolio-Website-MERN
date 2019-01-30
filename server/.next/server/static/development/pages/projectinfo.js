@@ -141,7 +141,8 @@ function (_Component) {
   _createClass(ImageSlider, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "project-page__slider",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 5
@@ -244,12 +245,45 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var projectData = this.props.projectData;
-      var selectedProject = this.state.selectedProject;
-      if (projectData === null) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      var techIcon = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        className: "tech__icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+        className: "icon__primary",
+        d: "M2.6 6.09l9-4a1 1 0 0 1 .8 0l9 4a1 1 0 0 1 0 1.82l-9 4a1 1 0 0 1-.8 0l-9-4a1 1 0 0 1 0-1.82z",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+        className: "icon__secondary",
+        d: "M3.91 10.5l7.68 3.41a1 1 0 0 0 .82 0l7.68-3.41 1.32.59a1 1 0 0 1 0 1.82l-9 4a1 1 0 0 1-.82 0l-9-4a1 1 0 0 1 0-1.82l1.32-.59zm0 5l7.68 3.41a1 1 0 0 0 .82 0l7.68-3.41 1.32.59a1 1 0 0 1 0 1.82l-9 4a1 1 0 0 1-.82 0l-9-4a1 1 0 0 1 0-1.82l1.32-.59z",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      })));
+      var projectData = this.props.projectData;
+      var selectedProject = this.state.selectedProject;
+      if (projectData === null) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "project-page__loading",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
         },
         __self: this
       }, "Loading .... ");
@@ -267,69 +301,63 @@ function (_Component) {
         className: "project-page__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 58
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_projectDetails_ImageSlider__WEBPACK_IMPORTED_MODULE_3__["default"], {
         imageIds: imageIds,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 59
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project-page__details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 60
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "details__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 61
         },
         __self: this
       }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "details__type",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 62
         },
         __self: this
       }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "details__description",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 63
         },
         __self: this
       }, description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "details__tech",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 64
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }, "icon"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      }, techIcon, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "tech__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 66
         },
         __self: this
       }, "Tech"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "tech__list",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 67
         },
         __self: this
       }, frontend.map(function (techName) {
@@ -338,7 +366,7 @@ function (_Component) {
           className: "tech__list__item",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 54
+            lineNumber: 69
           },
           __self: this
         }, techName);
@@ -348,7 +376,7 @@ function (_Component) {
           className: "tech__list__item",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 59
+            lineNumber: 74
           },
           __self: this
         }, techName);
@@ -358,26 +386,19 @@ function (_Component) {
           className: "tech__list__item",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 64
+            lineNumber: 79
           },
           __self: this
         }, techName);
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "details__button",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: link,
         className: "details__link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 85
         },
         __self: this
-      })))));
+      }, "Live Site")));
     }
   }]);
 
