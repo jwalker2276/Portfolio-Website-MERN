@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 // Components
 import Title from './Title';
 import Project from './Project';
@@ -19,13 +20,12 @@ export default class Work extends React.Component {
       );
     }
 
-    // Separate site data from projects.
-    const siteDataIndex = projects.length - 1;
-    const siteDataId = projects[siteDataIndex].id;
+    // Grab the index for the projectInfo Page.
+    const projectIndex = projects.length - 1;
 
     // Copy projectData without siteData
     const onlyProjects = projects.filter((project, idx) => {
-      if (idx !== siteDataIndex) {
+      if (idx !== projectIndex) {
         return project;
       }
     });
@@ -34,18 +34,21 @@ export default class Work extends React.Component {
       <section className="work__wrapper" id="work">
         <Title title="work" accent="my" color="light" />
         <div className="work__projects">
-          {onlyProjects.map(projectInfo => (
-            <Project data={projectInfo} key={projectInfo.title} />
+          {onlyProjects.map((projectInfo, index) => (
+            <Project data={projectInfo} key={projectInfo.title} index={index} />
           ))}
           {/* map projects out here */}
           <div className="work__site">
             <h3 className="work__website__question">Interested in how I built this website?</h3>
-            <a
-              href={`http://localhost:5000/project/${siteDataId}`}
-              className="work__primary__link  website__info__button"
-            >
-              Learn More
-            </a>
+            <Link href={{ pathname: '/projectinfo', query: { index: projectIndex } }}>
+              <a
+                className="work__primary__link website__info__button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn More
+              </a>
+            </Link>
           </div>
         </div>
       </section>

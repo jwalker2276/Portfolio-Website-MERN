@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "./scss/home/homepage.scss":
-/*!*********************************!*\
-  !*** ./scss/home/homepage.scss ***!
-  \*********************************/
+/***/ "./scss/projectinfo/projectinfo.scss":
+/*!*******************************************!*\
+  !*** ./scss/projectinfo/projectinfo.scss ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29,7 +29,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1548726812317");
+            injectCss(link, link.href.split("?")[0] + "?unix=1548810981588");
           });
       }
     }

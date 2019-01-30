@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Image, Transformation } from 'cloudinary-react';
+import Link from 'next/link';
 
 export default class Project extends Component {
   render() {
     const { imageIds, title, type, id, link } = this.props.data;
+    const projectIndex = this.props.index;
 
     let image = (
       <div className="image__project">
@@ -30,12 +32,19 @@ export default class Project extends Component {
           <h1 className="project__title">{title}</h1>
           <h3 className="project__type">{type}</h3>
           <div className="project__buttons">
-            <a href={link} className="work__primary__link">
+            <a
+              href={link}
+              className="work__primary__link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Live Site
             </a>
-            <a href={`http://localhost:5000/project/${id}`} className="work__secondary__link">
-              Learn More
-            </a>
+            <Link href={{ pathname: '/projectinfo', query: { index: projectIndex } }}>
+              <a className="work__secondary__link" target="_blank" rel="noopener noreferrer">
+                Learn More
+              </a>
+            </Link>
           </div>
         </div>
       </div>
