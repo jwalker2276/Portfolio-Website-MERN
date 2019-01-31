@@ -1,5 +1,7 @@
 @import '../colors';
 @import '../sizes';
+// Import other sheets
+@import 'imageSlider.scss';
 body {
   width: 100%;
   height: 100vh;
@@ -21,12 +23,7 @@ body {
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr;
   margin: auto;
-}
-
-.project-page__slider {
-  grid-column: 1 / 2;
-  background-color: $PD-Image-BK-Color;
-  border-right: 5px solid $PD-Border-Color;
+  overflow-x: hidden;
 }
 
 .project-page__details {
