@@ -1,19 +1,23 @@
 .project-page__slider {
   grid-column: 1 / 2;
-  border-right: 5px solid $PD-Border-Color;
-  position: relative;
-  overflow-x: hidden;
+  background-color: $PD-Image_BK-Color;
+}
+
+.slider__wrapper {
+  height: 100%;
+  width: 587px;
+  margin: auto;
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .slider__image__controls {
   position: absolute;
-  top: 10%;
-  left: 14%;
+  margin-left: -75px;
+  width: 737px;
+  z-index: 15;
   display: flex;
   justify-content: space-between;
-  width: 700px;
 }
 
 .slider__image__control {
@@ -44,12 +48,12 @@
 
 .slider__images {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: transform 500ms ease;
 }
 
 .slider__image {
   max-width: 567px;
+  max-height: 425px;
   border: 10px solid $PD-Image-Stroke-Color;
-  margin: 0px 50px;
+  margin-right: 100px;
 }

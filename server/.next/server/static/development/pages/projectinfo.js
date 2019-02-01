@@ -103,20 +103,13 @@ module.exports =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ImageSlider; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cloudinary-react */ "cloudinary-react");
-/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! cloudinary-react */ "cloudinary-react");
+/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/projectDetails/ImageSlider.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -149,12 +142,10 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ImageSlider).call(this, props));
     _this.state = {
-      mainImageId: '',
       mainImageIndex: 0,
       allIds: ''
     };
     _this.setAllImageIds = _this.setAllImageIds.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.updateMainImageId = _this.updateMainImageId.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.moveBack = _this.moveBack.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.moveForward = _this.moveForward.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
@@ -162,193 +153,198 @@ function (_Component) {
 
   _createClass(ImageSlider, [{
     key: "componentDidMount",
-    value: function () {
-      var _componentDidMount = _asyncToGenerator(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var imageIds, id, displayIds;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                imageIds = this.props.imageIds;
+    value: function componentDidMount() {
+      var imageIds = this.props.imageIds; // TODO: handle this case
 
-                if (imageIds.length === 0) {
-                  console.log('No images');
-                }
+      if (imageIds.length === 0) {
+        console.log('No images');
+      } // If one than one image
 
-                if (imageIds.length === 1) {
-                  id = imageIds[0];
-                  this.updateMainImageId(id);
-                }
 
-                if (!(imageIds.length > 1)) {
-                  _context.next = 9;
-                  break;
-                }
+      if (imageIds.length > 1) {
+        // Remove the mockup image for the homepage
+        var displayIds = imageIds.slice(1); // Set ids in state
 
-                displayIds = imageIds.slice(1); // Set ids in state
+        this.setAllImageIds(displayIds);
+      }
+    } // Add images (cloudinary ids) to state
 
-                _context.next = 7;
-                return this.setAllImageIds(displayIds);
-
-              case 7:
-                _context.next = 9;
-                return this.updateMainImageId(0);
-
-              case 9:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      return function componentDidMount() {
-        return _componentDidMount.apply(this, arguments);
-      };
-    }()
   }, {
     key: "setAllImageIds",
     value: function setAllImageIds(idArray) {
       this.setState({
         allIds: idArray
       });
-    }
-  }, {
-    key: "updateMainImageId",
-    value: function updateMainImageId(index) {
-      // Get id from array
-      var id = this.state.allIds[index]; // Set id and index
+    } // Button method for left arrow
 
-      this.setState({
-        mainImageId: id
-      });
-      this.setState({
-        mainImageIndex: index
-      });
-    }
   }, {
     key: "moveBack",
     value: function moveBack() {
-      console.log('back clicked');
-    }
+      var _this$state = this.state,
+          mainImageIndex = _this$state.mainImageIndex,
+          allIds = _this$state.allIds; // If not at the start
+
+      if (mainImageIndex !== 0) {
+        // Subtract one
+        var nextIndex = mainImageIndex - 1;
+        this.setState({
+          mainImageIndex: nextIndex
+        });
+      } else {
+        // Set to end of the array
+        var length = allIds.length - 1;
+        this.setState({
+          mainImageIndex: length
+        });
+      }
+    } // Button method for right arrow
+
   }, {
     key: "moveForward",
     value: function moveForward() {
-      console.log('forward clicked');
+      var _this$state2 = this.state,
+          mainImageIndex = _this$state2.mainImageIndex,
+          allIds = _this$state2.allIds; // If not at the end
+
+      if (mainImageIndex !== allIds.length - 1) {
+        // Add one
+        var nextIndex = mainImageIndex + 1;
+        this.setState({
+          mainImageIndex: nextIndex
+        });
+      } else {
+        // Set back to start
+        this.setState({
+          mainImageIndex: 0
+        });
+      }
     }
   }, {
     key: "render",
     value: function render() {
-      var mainImageId = this.state.mainImageId;
-      var moveIcon = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+      var _this$state3 = this.state,
+          allIds = _this$state3.allIds,
+          mainImageIndex = _this$state3.mainImageIndex;
+      var moveIcon = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 72
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 24 24",
         className: "slider__image__icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 73
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("circle", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
         cx: "12",
         cy: "12",
         r: "10",
         className: "slider__image__icon__primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 74
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
         className: "slider__image__icon__secondary",
         d: "M10.3 8.7a1 1 0 0 1 1.4-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.29-3.3-3.3-3.3z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 75
         },
         __self: this
       })));
-      if (mainImageId === '') return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+      if (allIds === '') return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 83
         },
         __self: this
       }, "Loading ...");
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project-page__slider",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 86
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "slider__wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider__image__controls",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 88
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         value: "back",
         onClick: this.moveBack,
         className: "slider__image__control slider__image__control__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 89
         },
         __self: this
-      }, moveIcon), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+      }, moveIcon), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         value: "next",
         onClick: this.moveForward,
         className: "slider__image__control slider__image__control__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
-        },
-        __self: this
-      }, moveIcon)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "slider__images",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 96
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
-        className: "slider__image",
-        cloudName: "jwalkercreations-com",
-        publicId: mainImageId,
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 97
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
-        height: "740",
-        weight: "975",
-        crop: "limit",
-        fetchFormat: "auto",
+      }, moveIcon)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "slider__images",
+        style: {
+          transform: "translateX(-".concat(mainImageIndex * (100 / allIds.length), "%)")
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 106
         },
         __self: this
+      }, allIds.map(function (imageId) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+          key: imageId,
+          className: "slider__image",
+          cloudName: "jwalkercreations-com",
+          publicId: imageId,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 111
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Transformation"], {
+          height: "740",
+          weight: "975",
+          crop: "limit",
+          fetchFormat: "auto",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 117
+          },
+          __self: this
+        }));
       }))));
     }
   }]);
 
   return ImageSlider;
-}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 
 
@@ -790,17 +786,6 @@ var actions = {
 
 module.exports = __webpack_require__(/*! ./pages/projectinfo.js */"./pages/projectinfo.js");
 
-
-/***/ }),
-
-/***/ "@babel/runtime/regenerator":
-/*!*********************************************!*\
-  !*** external "@babel/runtime/regenerator" ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/regenerator");
 
 /***/ }),
 

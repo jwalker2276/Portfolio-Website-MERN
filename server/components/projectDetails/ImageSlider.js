@@ -5,60 +5,69 @@ export default class ImageSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mainImageId: '',
       mainImageIndex: 0,
       allIds: ''
     };
     this.setAllImageIds = this.setAllImageIds.bind(this);
-    this.updateMainImageId = this.updateMainImageId.bind(this);
     this.moveBack = this.moveBack.bind(this);
     this.moveForward = this.moveForward.bind(this);
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     const { imageIds } = this.props;
 
+    // TODO: handle this case
     if (imageIds.length === 0) {
       console.log('No images');
     }
 
-    if (imageIds.length === 1) {
-      const id = imageIds[0];
-      this.updateMainImageId(id);
-    }
-
+    // If one than one image
     if (imageIds.length > 1) {
+      // Remove the mockup image for the homepage
       const displayIds = imageIds.slice(1);
       // Set ids in state
-      await this.setAllImageIds(displayIds);
-      // Call method to set main image
-      await this.updateMainImageId(0);
+      this.setAllImageIds(displayIds);
     }
   }
 
+  // Add images (cloudinary ids) to state
   setAllImageIds(idArray) {
     this.setState({ allIds: idArray });
   }
 
-  updateMainImageId(index) {
-    // Get id from array
-    const id = this.state.allIds[index];
-    // Set id and index
-    this.setState({ mainImageId: id });
-    this.setState({ mainImageIndex: index });
-  }
-
+  // Button method for left arrow
   moveBack() {
-    console.log('back clicked');
+    const { mainImageIndex, allIds } = this.state;
+
+    // If not at the start
+    if (mainImageIndex !== 0) {
+      // Subtract one
+      const nextIndex = mainImageIndex - 1;
+      this.setState({ mainImageIndex: nextIndex });
+    } else {
+      // Set to end of the array
+      const length = allIds.length - 1;
+      this.setState({ mainImageIndex: length });
+    }
   }
 
+  // Button method for right arrow
   moveForward() {
-    console.log('forward clicked');
+    const { mainImageIndex, allIds } = this.state;
+
+    // If not at the end
+    if (mainImageIndex !== allIds.length - 1) {
+      // Add one
+      const nextIndex = mainImageIndex + 1;
+      this.setState({ mainImageIndex: nextIndex });
+    } else {
+      // Set back to start
+      this.setState({ mainImageIndex: 0 });
+    }
   }
 
   render() {
-    const { mainImageId } = this.state;
-
+    const { allIds, mainImageIndex } = this.state;
     const moveIcon = (
       <Fragment>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="slider__image__icon">
@@ -71,32 +80,44 @@ export default class ImageSlider extends Component {
       </Fragment>
     );
 
-    if (mainImageId === '') return <p>Loading ...</p>;
+    if (allIds === '') return <p>Loading ...</p>;
 
     return (
       <section className="project-page__slider">
-        <div className="slider__image__controls">
-          <button
-            type="button"
-            value="back"
-            onClick={this.moveBack}
-            className="slider__image__control slider__image__control__left"
+        <div className="slider__wrapper">
+          <div className="slider__image__controls">
+            <button
+              type="button"
+              value="back"
+              onClick={this.moveBack}
+              className="slider__image__control slider__image__control__left"
+            >
+              {moveIcon}
+            </button>
+            <button
+              type="button"
+              value="next"
+              onClick={this.moveForward}
+              className="slider__image__control slider__image__control__right"
+            >
+              {moveIcon}
+            </button>
+          </div>
+          <div
+            className="slider__images"
+            style={{ transform: `translateX(-${mainImageIndex * (100 / allIds.length)}%)` }}
           >
-            {moveIcon}
-          </button>
-          <button
-            type="button"
-            value="next"
-            onClick={this.moveForward}
-            className="slider__image__control slider__image__control__right"
-          >
-            {moveIcon}
-          </button>
-        </div>
-        <div className="slider__images">
-          <Image className="slider__image" cloudName="jwalkercreations-com" publicId={mainImageId}>
-            <Transformation height="740" weight="975" crop="limit" fetchFormat="auto" />
-          </Image>
+            {allIds.map(imageId => (
+              <Image
+                key={imageId}
+                className="slider__image"
+                cloudName="jwalkercreations-com"
+                publicId={imageId}
+              >
+                <Transformation height="740" weight="975" crop="limit" fetchFormat="auto" />
+              </Image>
+            ))}
+          </div>
         </div>
       </section>
     );
