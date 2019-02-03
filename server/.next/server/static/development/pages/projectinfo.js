@@ -93,21 +93,21 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/projectDetails/ImageSlider.js":
-/*!**************************************************!*\
-  !*** ./components/projectDetails/ImageSlider.js ***!
-  \**************************************************/
+/***/ "./components/projectDetails/ImageModal.js":
+/*!*************************************************!*\
+  !*** ./components/projectDetails/ImageModal.js ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ImageSlider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ImageModal; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! cloudinary-react */ "cloudinary-react");
 /* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/projectDetails/ImageSlider.js";
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/projectDetails/ImageModal.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -130,6 +130,155 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 
+var ImageModal =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ImageModal, _Component);
+
+  function ImageModal(props) {
+    var _this;
+
+    _classCallCheck(this, ImageModal);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ImageModal).call(this, props));
+    _this.state = {
+      modalClass: 'modal'
+    };
+    _this.determineClass = _this.determineClass.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(ImageModal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.determineClass();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      var showModal = this.props.showModal;
+
+      if (showModal !== prevProps.showModal) {
+        this.determineClass();
+      }
+    }
+  }, {
+    key: "determineClass",
+    value: function determineClass() {
+      var showModal = this.props.showModal; // Check showModal state
+
+      if (showModal) {
+        // Set modal div class to show
+        this.setState({
+          modalClass: 'modal modal--show'
+        });
+      } else {
+        // Set modal div class to hide
+        this.setState({
+          modalClass: 'modal'
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          imageId = _this$props.imageId,
+          toggleModal = _this$props.toggleModal;
+      var modalClass = this.state.modalClass;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "".concat(modalClass),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal__background__blur",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "modal__close",
+        onClick: toggleModal,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+        className: "modal__image",
+        cloudName: "jwalkercreations-com",
+        publicId: imageId,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Transformation"], {
+        height: "740",
+        width: "975",
+        crop: "limit",
+        fetchFormat: "auto",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return ImageModal;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./components/projectDetails/ImageSlider.js":
+/*!**************************************************!*\
+  !*** ./components/projectDetails/ImageSlider.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ImageSlider; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! cloudinary-react */ "cloudinary-react");
+/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ImageModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ImageModal */ "./components/projectDetails/ImageModal.js");
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/projectDetails/ImageSlider.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+ // Components
+
+
+
 var ImageSlider =
 /*#__PURE__*/
 function (_Component) {
@@ -143,9 +292,11 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ImageSlider).call(this, props));
     _this.state = {
       mainImageIndex: 0,
-      allIds: ''
+      allIds: '',
+      showModal: false
     };
     _this.setAllImageIds = _this.setAllImageIds.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.toggleModal = _this.toggleModal.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.moveBack = _this.moveBack.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.moveForward = _this.moveForward.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
@@ -174,6 +325,16 @@ function (_Component) {
     value: function setAllImageIds(idArray) {
       this.setState({
         allIds: idArray
+      });
+    } // Click event for modal
+
+  }, {
+    key: "toggleModal",
+    value: function toggleModal() {
+      this.setState(function (state) {
+        return {
+          showModal: !state.showModal
+        };
       });
     } // Button method for left arrow
 
@@ -222,13 +383,16 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var _this$state3 = this.state,
           allIds = _this$state3.allIds,
-          mainImageIndex = _this$state3.mainImageIndex;
+          mainImageIndex = _this$state3.mainImageIndex,
+          showModal = _this$state3.showModal;
       var moveIcon = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 83
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -237,7 +401,7 @@ function (_Component) {
         className: "slider__image__icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 84
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
@@ -247,7 +411,7 @@ function (_Component) {
         className: "slider__image__icon__primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 85
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -255,14 +419,14 @@ function (_Component) {
         d: "M10.3 8.7a1 1 0 0 1 1.4-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.29-3.3-3.3-3.3z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 86
         },
         __self: this
       })));
       if (allIds === '') return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 94
         },
         __self: this
       }, "Loading ...");
@@ -270,21 +434,30 @@ function (_Component) {
         className: "project-page__slider",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 97
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        imageId: allIds[mainImageIndex],
+        showModal: showModal,
+        toggleModal: this.toggleModal,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider__image__controls",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 104
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -294,7 +467,7 @@ function (_Component) {
         className: "slider__image__control slider__image__control__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 105
         },
         __self: this
       }, moveIcon), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -304,7 +477,7 @@ function (_Component) {
         className: "slider__image__control slider__image__control__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 113
         },
         __self: this
       }, moveIcon)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -314,7 +487,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 122
         },
         __self: this
       }, allIds.map(function (imageId) {
@@ -323,19 +496,20 @@ function (_Component) {
           className: "slider__image",
           cloudName: "jwalkercreations-com",
           publicId: imageId,
+          onClick: _this2.toggleModal,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 111
+            lineNumber: 127
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Transformation"], {
           height: "740",
-          weight: "975",
+          width: "975",
           crop: "limit",
           fetchFormat: "auto",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117
+            lineNumber: 134
           },
           __self: this
         }));

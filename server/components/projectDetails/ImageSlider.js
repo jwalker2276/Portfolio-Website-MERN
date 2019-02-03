@@ -1,14 +1,18 @@
 import React, { Component, Fragment } from 'react';
 import { Image, Transformation } from 'cloudinary-react';
+// Components
+import ImageModal from './ImageModal';
 
 export default class ImageSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
       mainImageIndex: 0,
-      allIds: ''
+      allIds: '',
+      showModal: false
     };
     this.setAllImageIds = this.setAllImageIds.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
     this.moveBack = this.moveBack.bind(this);
     this.moveForward = this.moveForward.bind(this);
   }
@@ -33,6 +37,13 @@ export default class ImageSlider extends Component {
   // Add images (cloudinary ids) to state
   setAllImageIds(idArray) {
     this.setState({ allIds: idArray });
+  }
+
+  // Click event for modal
+  toggleModal() {
+    this.setState(state => ({
+      showModal: !state.showModal
+    }));
   }
 
   // Button method for left arrow
@@ -67,7 +78,7 @@ export default class ImageSlider extends Component {
   }
 
   render() {
-    const { allIds, mainImageIndex } = this.state;
+    const { allIds, mainImageIndex, showModal } = this.state;
     const moveIcon = (
       <Fragment>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="slider__image__icon">
@@ -84,6 +95,11 @@ export default class ImageSlider extends Component {
 
     return (
       <section className="project-page__slider">
+        <ImageModal
+          imageId={allIds[mainImageIndex]}
+          showModal={showModal}
+          toggleModal={this.toggleModal}
+        />
         <div className="slider__wrapper">
           <div className="slider__image__controls">
             <button
@@ -113,8 +129,9 @@ export default class ImageSlider extends Component {
                 className="slider__image"
                 cloudName="jwalkercreations-com"
                 publicId={imageId}
+                onClick={this.toggleModal}
               >
-                <Transformation height="740" weight="975" crop="limit" fetchFormat="auto" />
+                <Transformation height="740" width="975" crop="limit" fetchFormat="auto" />
               </Image>
             ))}
           </div>
