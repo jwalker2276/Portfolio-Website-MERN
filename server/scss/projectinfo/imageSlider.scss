@@ -1,6 +1,13 @@
 .project-page__slider {
   grid-column: 1 / 2;
   background-color: $PD-Image_BK-Color;
+  @media screen and (max-width: 1260px) {
+    grid-row: 2 / -1;
+    padding: 10px;
+  }
+  @media screen and (max-width: $phone-max-width) {
+    padding-top: 10px;
+  }
 }
 
 .slider__wrapper {
@@ -9,6 +16,13 @@
   margin: auto;
   display: flex;
   align-items: center;
+  position: relative;
+  @media screen and (max-width: $phone-max-width) {
+    //width: 300px;
+    width: 100%;
+    flex-direction: column;
+    align-items: unset;
+  }
 }
 
 .slider__image__controls {
@@ -18,6 +32,11 @@
   z-index: 15;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: $phone-max-width) {
+    position: relative; //width: 300px;
+    margin: 24px auto 24px auto;
+    width: 100%;
+  }
 }
 
 .slider__image__control {
@@ -50,6 +69,10 @@
 .slider__images {
   display: flex;
   transition: transform 500ms ease;
+  @media screen and (max-width: $phone-max-width) {
+    //padding-left: calc(100vw - 250px / 2);
+    position: absolute;
+  }
 }
 
 .slider__image {
@@ -58,4 +81,9 @@
   border: 10px solid $PD-Image-Stroke-Color;
   margin-right: 100px;
   cursor: pointer;
+  @media screen and (max-width: $phone-max-width) {
+    max-width: 250px;
+    max-height: 188px;
+    margin: 0;
+  }
 }

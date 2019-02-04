@@ -93,6 +93,66 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/common/Meta.js":
+/*!***********************************!*\
+  !*** ./components/common/Meta.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/common/Meta.js";
+
+
+
+var Meta = function Meta() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+    name: "viewport",
+    content: "width=device-width, initial-scale=1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+    charSet: "utf-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "JWalker Creations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+    href: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700",
+    rel: "stylesheet",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Meta);
+
+/***/ }),
+
 /***/ "./components/projectDetails/ImageModal.js":
 /*!*************************************************!*\
   !*** ./components/projectDetails/ImageModal.js ***!
@@ -535,12 +595,13 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
-/* harmony import */ var _components_projectDetails_ImageSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/projectDetails/ImageSlider */ "./components/projectDetails/ImageSlider.js");
-/* harmony import */ var _scss_projectinfo_projectinfo_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scss/projectinfo/projectinfo.scss */ "./scss/projectinfo/projectinfo.scss");
-/* harmony import */ var _scss_projectinfo_projectinfo_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_projectinfo_projectinfo_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_common_Meta__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/common/Meta */ "./components/common/Meta.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reduxState/actions/homePageActions */ "./reduxState/actions/homePageActions.js");
+/* harmony import */ var _components_projectDetails_ImageSlider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/projectDetails/ImageSlider */ "./components/projectDetails/ImageSlider.js");
+/* harmony import */ var _scss_projectinfo_projectinfo_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../scss/projectinfo/projectinfo.scss */ "./scss/projectinfo/projectinfo.scss");
+/* harmony import */ var _scss_projectinfo_projectinfo_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_projectinfo_projectinfo_scss__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/pages/projectinfo.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -560,6 +621,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -613,7 +675,7 @@ function (_Component) {
       var techIcon = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 37
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -622,7 +684,7 @@ function (_Component) {
         className: "tech__icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -630,7 +692,7 @@ function (_Component) {
         d: "M2.6 6.09l9-4a1 1 0 0 1 .8 0l9 4a1 1 0 0 1 0 1.82l-9 4a1 1 0 0 1-.8 0l-9-4a1 1 0 0 1 0-1.82z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 39
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -638,7 +700,7 @@ function (_Component) {
         d: "M3.91 10.5l7.68 3.41a1 1 0 0 0 .82 0l7.68-3.41 1.32.59a1 1 0 0 1 0 1.82l-9 4a1 1 0 0 1-.82 0l-9-4a1 1 0 0 1 0-1.82l1.32-.59zm0 5l7.68 3.41a1 1 0 0 0 .82 0l7.68-3.41 1.32.59a1 1 0 0 1 0 1.82l-9 4a1 1 0 0 1-.82 0l-9-4a1 1 0 0 1 0-1.82l1.32-.59z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 43
         },
         __self: this
       })));
@@ -648,7 +710,7 @@ function (_Component) {
         className: "project-page__loading",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         },
         __self: this
       }, "Loading .... ");
@@ -662,67 +724,79 @@ function (_Component) {
       var frontend = tech.frontend,
           backend = tech.backend,
           tools = tech.tools;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "project-page__wrapper",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_projectDetails_ImageSlider__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        imageIds: imageIds,
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 59
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_Meta__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "project-page__wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_projectDetails_ImageSlider__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        imageIds: imageIds,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "project-page__details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 63
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "details__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 64
         },
         __self: this
       }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "details__type",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 65
         },
         __self: this
       }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "details__description",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 66
         },
         __self: this
       }, description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "details__tech",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 67
         },
         __self: this
       }, techIcon, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "tech__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 69
         },
         __self: this
       }, "Tech"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "tech__list",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 70
         },
         __self: this
       }, frontend.map(function (techName) {
@@ -731,7 +805,7 @@ function (_Component) {
           className: "tech__list__item",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 72
           },
           __self: this
         }, techName);
@@ -741,7 +815,7 @@ function (_Component) {
           className: "tech__list__item",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74
+            lineNumber: 77
           },
           __self: this
         }, techName);
@@ -751,7 +825,7 @@ function (_Component) {
           className: "tech__list__item",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 79
+            lineNumber: 82
           },
           __self: this
         }, techName);
@@ -760,10 +834,10 @@ function (_Component) {
         className: "details__link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 88
         },
         __self: this
-      }, "Live Site")));
+      }, "Live Site"))));
     }
   }]);
 
@@ -776,8 +850,8 @@ var mapStateToProps = function mapStateToProps(state) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
-  getProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_2__["getProjectData"]
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, {
+  getProjectData: _reduxState_actions_homePageActions__WEBPACK_IMPORTED_MODULE_3__["getProjectData"]
 })(projectinfo));
 
 /***/ }),
@@ -982,6 +1056,17 @@ module.exports = require("axios");
 /***/ (function(module, exports) {
 
 module.exports = require("cloudinary-react");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Meta from '../components/common/Meta';
 import { connect } from 'react-redux';
 import { getProjectData } from '../reduxState/actions/homePageActions';
 // Components
@@ -55,38 +56,41 @@ class projectinfo extends Component {
     const { title, type, description, tech, link, imageIds } = projectData[selectedProject];
     const { frontend, backend, tools } = tech;
     return (
-      <div className="project-page__wrapper">
-        <ImageSlider imageIds={imageIds} />
-        <section className="project-page__details">
-          <h1 className="details__title">{title}</h1>
-          <h4 className="details__type">{type}</h4>
-          <p className="details__description">{description}</p>
-          <div className="details__tech">
-            {techIcon}
-            <h4 className="tech__title">Tech</h4>
-            <ul className="tech__list">
-              {frontend.map(techName => (
-                <li key={techName} className="tech__list__item">
-                  {techName}
-                </li>
-              ))}
-              {backend.map(techName => (
-                <li key={techName} className="tech__list__item">
-                  {techName}
-                </li>
-              ))}
-              {tools.map(techName => (
-                <li key={techName} className="tech__list__item">
-                  {techName}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <a href={link} className="details__link">
-            Live Site
-          </a>
-        </section>
-      </div>
+      <Fragment>
+        <Meta />
+        <div className="project-page__wrapper">
+          <ImageSlider imageIds={imageIds} />
+          <section className="project-page__details">
+            <h1 className="details__title">{title}</h1>
+            <h4 className="details__type">{type}</h4>
+            <p className="details__description">{description}</p>
+            <div className="details__tech">
+              {techIcon}
+              <h4 className="tech__title">Tech</h4>
+              <ul className="tech__list">
+                {frontend.map(techName => (
+                  <li key={techName} className="tech__list__item">
+                    {techName}
+                  </li>
+                ))}
+                {backend.map(techName => (
+                  <li key={techName} className="tech__list__item">
+                    {techName}
+                  </li>
+                ))}
+                {tools.map(techName => (
+                  <li key={techName} className="tech__list__item">
+                    {techName}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <a href={link} className="details__link">
+              Live Site
+            </a>
+          </section>
+        </div>
+      </Fragment>
     );
   }
 }
