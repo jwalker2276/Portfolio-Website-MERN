@@ -286,8 +286,7 @@ function (_Component) {
         var displayIds = imageIds.slice(1); // Set ids in state
 
         this.setAllImageIds(displayIds);
-      } // this.getImageWidth();
-
+      }
     } // Add images (cloudinary ids) to state
 
   }, {
@@ -296,7 +295,8 @@ function (_Component) {
       this.setState({
         allIds: idArray
       });
-    }
+    } // Get the slider image's width
+
   }, {
     key: "getImageWidth",
     value: function getImageWidth() {
@@ -306,21 +306,39 @@ function (_Component) {
   }, {
     key: "moveBack",
     value: function moveBack() {
+      var _this2 = this;
+
       var _this$state = this.state,
           mainImageIndex = _this$state.mainImageIndex,
           allIds = _this$state.allIds; // If not at the start
 
       if (mainImageIndex !== 0) {
-        // Subtract one
+        // Subtract one and set mainImageIndex
         var nextIndex = mainImageIndex - 1;
         this.setState({
           mainImageIndex: nextIndex
+        }); // Take the current translate value and add one image's width to it.
+        // This causes a larger translate value moving the images container right,
+        // but appears left.
+
+        this.setState(function (prevState) {
+          return {
+            translateValue: prevState.translateValue + _this2.getImageWidth()
+          };
         });
       } else {
-        // Set to end of the array
-        var length = allIds.length - 1;
+        // Ok now we're at the beginning of the array.
+        // Get the length
+        var length = allIds.length - 1; // Update state with this value
+
         this.setState({
           mainImageIndex: length
+        }); // Determine the max translation value
+
+        var maxTranslateValue = this.getImageWidth() * length; // Take the max translate value, negate it and set it to state.
+
+        this.setState({
+          translateValue: -maxTranslateValue
         });
       }
     } // Button method for right arrow
@@ -328,26 +346,29 @@ function (_Component) {
   }, {
     key: "moveForward",
     value: function moveForward() {
-      var _this2 = this;
+      var _this3 = this;
 
       var _this$state2 = this.state,
           mainImageIndex = _this$state2.mainImageIndex,
           allIds = _this$state2.allIds; // If not at the end
 
       if (mainImageIndex !== allIds.length - 1) {
-        // Add one
+        // Add one and set mainImage Index
         var nextIndex = mainImageIndex + 1;
         this.setState({
           mainImageIndex: nextIndex
-        }); // Add up the width of the images
+        }); // Take the current translate value and subtract one image's width from it.
+        // This causes a smaller translate value moving the images container left,
+        // but appears right.
 
         this.setState(function (prevState) {
           return {
-            translateValue: prevState.translateValue + -_this2.getImageWidth()
+            translateValue: prevState.translateValue - _this3.getImageWidth()
           };
         });
       } else {
-        // Set back to start
+        // Ok now we're at the end of the array.
+        // Set values back to default values.
         this.setState({
           mainImageIndex: 0
         });
@@ -369,7 +390,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       var _this$state3 = this.state,
           allIds = _this$state3.allIds,
@@ -378,7 +399,7 @@ function (_Component) {
       var moveIcon = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 105
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -387,7 +408,7 @@ function (_Component) {
         className: "slider__image__icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 106
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
@@ -397,7 +418,7 @@ function (_Component) {
         className: "slider__image__icon__primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 107
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -405,14 +426,28 @@ function (_Component) {
         d: "M10.3 8.7a1 1 0 0 1 1.4-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.29-3.3-3.3-3.3z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 108
         },
         __self: this
-      })));
+      }))); // Handle loading case
+
+      if (allIds.length === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "project-page__message",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 119
+          },
+          __self: this
+        }, "No images are currently stored, check again later.");
+      } // Handle no images case
+
+
       if (allIds === '') return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "project-page__message",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 124
         },
         __self: this
       }, "Loading ...");
@@ -420,7 +455,7 @@ function (_Component) {
         className: "project-page__slider",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 127
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -429,21 +464,21 @@ function (_Component) {
         toggleModal: this.toggleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 128
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider__container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 133
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider__image__controls",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 134
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -453,7 +488,7 @@ function (_Component) {
         className: "slider__image__control slider__image__control__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 135
         },
         __self: this
       }, moveIcon), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -463,7 +498,7 @@ function (_Component) {
         className: "slider__image__control slider__image__control__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 143
         },
         __self: this
       }, moveIcon)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -473,7 +508,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 152
         },
         __self: this
       }, allIds.map(function (imageId) {
@@ -482,10 +517,10 @@ function (_Component) {
           className: "slider__image",
           cloudName: "jwalkercreations-com",
           publicId: imageId,
-          onClick: _this3.toggleModal,
+          onClick: _this4.toggleModal,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 133
+            lineNumber: 157
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Transformation"], {
@@ -495,7 +530,7 @@ function (_Component) {
           fetchFormat: "auto",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 140
+            lineNumber: 164
           },
           __self: this
         }));

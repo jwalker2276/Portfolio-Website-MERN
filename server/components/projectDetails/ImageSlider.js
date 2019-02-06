@@ -29,8 +29,6 @@ export default class ImageSlider extends Component {
       // Set ids in state
       this.setAllImageIds(displayIds);
     }
-
-    // this.getImageWidth();
   }
 
   // Add images (cloudinary ids) to state
@@ -38,6 +36,7 @@ export default class ImageSlider extends Component {
     this.setState({ allIds: idArray });
   }
 
+  // Get the slider image's width
   getImageWidth() {
     return document.querySelector('.slider__image').clientWidth;
   }
@@ -48,13 +47,25 @@ export default class ImageSlider extends Component {
 
     // If not at the start
     if (mainImageIndex !== 0) {
-      // Subtract one
+      // Subtract one and set mainImageIndex
       const nextIndex = mainImageIndex - 1;
       this.setState({ mainImageIndex: nextIndex });
+      // Take the current translate value and add one image's width to it.
+      // This causes a larger translate value moving the images container right,
+      // but appears left.
+      this.setState(prevState => ({
+        translateValue: prevState.translateValue + this.getImageWidth()
+      }));
     } else {
-      // Set to end of the array
+      // Ok now we're at the beginning of the array.
+      // Get the length
       const length = allIds.length - 1;
+      // Update state with this value
       this.setState({ mainImageIndex: length });
+      // Determine the max translation value
+      const maxTranslateValue = this.getImageWidth() * length;
+      // Take the max translate value, negate it and set it to state.
+      this.setState({ translateValue: -maxTranslateValue });
     }
   }
 
@@ -64,15 +75,20 @@ export default class ImageSlider extends Component {
 
     // If not at the end
     if (mainImageIndex !== allIds.length - 1) {
-      // Add one
+      // Add one and set mainImage Index
       const nextIndex = mainImageIndex + 1;
-      this.setState({ mainImageIndex: nextIndex });
-      // Add up the width of the images
+      this.setState({
+        mainImageIndex: nextIndex
+      });
+      // Take the current translate value and subtract one image's width from it.
+      // This causes a smaller translate value moving the images container left,
+      // but appears right.
       this.setState(prevState => ({
-        translateValue: prevState.translateValue + -this.getImageWidth()
+        translateValue: prevState.translateValue - this.getImageWidth()
       }));
     } else {
-      // Set back to start
+      // Ok now we're at the end of the array.
+      // Set values back to default values.
       this.setState({ mainImageIndex: 0 });
       this.setState({ translateValue: 0 });
     }
@@ -97,7 +113,15 @@ export default class ImageSlider extends Component {
       </Fragment>
     );
 
-    if (allIds === '') return <p>Loading ...</p>;
+    // Handle loading case
+    if (allIds.length === 0) {
+      return (
+        <p className="project-page__message">No images are currently stored, check again later.</p>
+      );
+    }
+
+    // Handle no images case
+    if (allIds === '') return <p className="project-page__message">Loading ...</p>;
 
     return (
       <section className="project-page__slider">

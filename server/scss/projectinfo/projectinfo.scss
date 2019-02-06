@@ -154,3 +154,11 @@ body {
   box-shadow: 0px 1px 2px $Button-Shadow-Color-Close, 0px 4px 14px 3px $Button-Shadow-Color-Far;
   margin: 0px auto 24px auto;
 }
+
+.project-page__message {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: $PD-Details-Title-Color;
+}
