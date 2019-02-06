@@ -353,12 +353,14 @@ function (_Component) {
     _this.state = {
       mainImageIndex: 0,
       allIds: '',
-      showModal: false
+      showModal: false,
+      translateValue: 0
     };
     _this.setAllImageIds = _this.setAllImageIds.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.toggleModal = _this.toggleModal.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.moveBack = _this.moveBack.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.moveForward = _this.moveForward.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.getImageWidth = _this.getImageWidth.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
@@ -377,7 +379,8 @@ function (_Component) {
         var displayIds = imageIds.slice(1); // Set ids in state
 
         this.setAllImageIds(displayIds);
-      }
+      } // this.getImageWidth();
+
     } // Add images (cloudinary ids) to state
 
   }, {
@@ -386,16 +389,11 @@ function (_Component) {
       this.setState({
         allIds: idArray
       });
-    } // Click event for modal
-
+    }
   }, {
-    key: "toggleModal",
-    value: function toggleModal() {
-      this.setState(function (state) {
-        return {
-          showModal: !state.showModal
-        };
-      });
+    key: "getImageWidth",
+    value: function getImageWidth() {
+      return document.querySelector('.slider__image').clientWidth;
     } // Button method for left arrow
 
   }, {
@@ -423,6 +421,8 @@ function (_Component) {
   }, {
     key: "moveForward",
     value: function moveForward() {
+      var _this2 = this;
+
       var _this$state2 = this.state,
           mainImageIndex = _this$state2.mainImageIndex,
           allIds = _this$state2.allIds; // If not at the end
@@ -432,18 +432,37 @@ function (_Component) {
         var nextIndex = mainImageIndex + 1;
         this.setState({
           mainImageIndex: nextIndex
+        }); // Add up the width of the images
+
+        this.setState(function (prevState) {
+          return {
+            translateValue: prevState.translateValue + -_this2.getImageWidth()
+          };
         });
       } else {
         // Set back to start
         this.setState({
           mainImageIndex: 0
         });
+        this.setState({
+          translateValue: 0
+        });
       }
+    } // Click event for modal
+
+  }, {
+    key: "toggleModal",
+    value: function toggleModal() {
+      this.setState(function (state) {
+        return {
+          showModal: !state.showModal
+        };
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var _this$state3 = this.state,
           allIds = _this$state3.allIds,
@@ -452,7 +471,7 @@ function (_Component) {
       var moveIcon = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 89
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -461,7 +480,7 @@ function (_Component) {
         className: "slider__image__icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 90
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
@@ -471,7 +490,7 @@ function (_Component) {
         className: "slider__image__icon__primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 91
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -479,14 +498,14 @@ function (_Component) {
         d: "M10.3 8.7a1 1 0 0 1 1.4-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.29-3.3-3.3-3.3z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 92
         },
         __self: this
       })));
       if (allIds === '') return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 100
         },
         __self: this
       }, "Loading ...");
@@ -494,7 +513,7 @@ function (_Component) {
         className: "project-page__slider",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -503,21 +522,21 @@ function (_Component) {
         toggleModal: this.toggleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 104
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "slider__wrapper",
+        className: "slider__container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 109
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider__image__controls",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 110
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -527,7 +546,7 @@ function (_Component) {
         className: "slider__image__control slider__image__control__left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 111
         },
         __self: this
       }, moveIcon), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -537,17 +556,17 @@ function (_Component) {
         className: "slider__image__control slider__image__control__right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 119
         },
         __self: this
       }, moveIcon)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider__images",
         style: {
-          transform: "translateX(-".concat(mainImageIndex * (100 / allIds.length), "%)")
+          transform: "translateX(".concat(this.state.translateValue, "px)")
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 128
         },
         __self: this
       }, allIds.map(function (imageId) {
@@ -556,10 +575,10 @@ function (_Component) {
           className: "slider__image",
           cloudName: "jwalkercreations-com",
           publicId: imageId,
-          onClick: _this2.toggleModal,
+          onClick: _this3.toggleModal,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 127
+            lineNumber: 133
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Transformation"], {
@@ -569,7 +588,7 @@ function (_Component) {
           fetchFormat: "auto",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 134
+            lineNumber: 140
           },
           __self: this
         }));

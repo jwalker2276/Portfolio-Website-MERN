@@ -42,9 +42,9 @@
   display: block;
   box-shadow: 0px 5px 10px 5px $Button-Shadow-Color-Far;
   @media screen and (max-width: 1260px) {
-    max-width: 850px;
+    max-width: 975px;
   }
   @media screen and (max-width: $tablet-max-width) {
-    max-width: 750px;
+    max-width: 80%;
   }
 }

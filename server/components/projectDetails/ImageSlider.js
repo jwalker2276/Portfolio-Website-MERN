@@ -6,15 +6,12 @@ import ImageModal from './ImageModal';
 export default class ImageSlider extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      mainImageIndex: 0,
-      allIds: '',
-      showModal: false
-    };
+    this.state = { mainImageIndex: 0, allIds: '', showModal: false, translateValue: 0 };
     this.setAllImageIds = this.setAllImageIds.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.moveBack = this.moveBack.bind(this);
     this.moveForward = this.moveForward.bind(this);
+    this.getImageWidth = this.getImageWidth.bind(this);
   }
 
   componentDidMount() {
@@ -32,6 +29,8 @@ export default class ImageSlider extends Component {
       // Set ids in state
       this.setAllImageIds(displayIds);
     }
+
+    // this.getImageWidth();
   }
 
   // Add images (cloudinary ids) to state
@@ -39,11 +38,8 @@ export default class ImageSlider extends Component {
     this.setState({ allIds: idArray });
   }
 
-  // Click event for modal
-  toggleModal() {
-    this.setState(state => ({
-      showModal: !state.showModal
-    }));
+  getImageWidth() {
+    return document.querySelector('.slider__image').clientWidth;
   }
 
   // Button method for left arrow
@@ -71,10 +67,20 @@ export default class ImageSlider extends Component {
       // Add one
       const nextIndex = mainImageIndex + 1;
       this.setState({ mainImageIndex: nextIndex });
+      // Add up the width of the images
+      this.setState(prevState => ({
+        translateValue: prevState.translateValue + -this.getImageWidth()
+      }));
     } else {
       // Set back to start
       this.setState({ mainImageIndex: 0 });
+      this.setState({ translateValue: 0 });
     }
+  }
+
+  // Click event for modal
+  toggleModal() {
+    this.setState(state => ({ showModal: !state.showModal }));
   }
 
   render() {
@@ -100,7 +106,7 @@ export default class ImageSlider extends Component {
           showModal={showModal}
           toggleModal={this.toggleModal}
         />
-        <div className="slider__wrapper">
+        <div className="slider__container">
           <div className="slider__image__controls">
             <button
               type="button"
@@ -121,7 +127,7 @@ export default class ImageSlider extends Component {
           </div>
           <div
             className="slider__images"
-            style={{ transform: `translateX(-${mainImageIndex * (100 / allIds.length)}%)` }}
+            style={{ transform: `translateX(${this.state.translateValue}px)` }}
           >
             {allIds.map(imageId => (
               <Image
