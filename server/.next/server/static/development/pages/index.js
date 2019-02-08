@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -801,6 +801,7 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _SpecialButtons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SpecialButtons */ "./components/home/SpecialButtons.js");
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/Hero.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -820,6 +821,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+ // Components
 
 
 
@@ -892,38 +895,59 @@ function (_React$Component) {
         className: "hero__text__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 54
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "hero__text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 55
         },
         __self: this
       }, "I'm ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hero__text__name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 56
         },
         __self: this
       }, "Jordan"), " , a", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hero__text__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 57
         },
         __self: this
       }, "Web Developer"), " who loves", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hero__text__verb",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 58
         },
         __self: this
-      }, "".concat(this.state.verb)), " things."));
+      }, "".concat(this.state.verb)), " things."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hero__cta__buttons",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        buttonType: "primary",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        buttonType: "secondary",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      })));
     }
   }]);
 
@@ -2118,6 +2142,181 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./components/home/SpecialButtons.js":
+/*!*******************************************!*\
+  !*** ./components/home/SpecialButtons.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SpecialButtons; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/SpecialButtons.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+var SpecialButtons =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(SpecialButtons, _Component);
+
+  function SpecialButtons(props) {
+    var _this;
+
+    _classCallCheck(this, SpecialButtons);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SpecialButtons).call(this, props));
+    _this.state = {
+      primaryWords: ['Hire me!', 'Lets do this', 'Ahhh...'],
+      seondaryWords: ['I need a website', 'Tell me more', 'Ahhh...'],
+      btnState: 'default',
+      btnText: 'Hire me'
+    };
+    _this.onMouseEnter = _this.onMouseEnter.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.onMouseLeave = _this.onMouseLeave.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.determineState = _this.determineState.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(SpecialButtons, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.determineState();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevState.btnState !== this.state.btnState) {
+        this.determineState();
+      }
+    } // Event for hovering over the button
+
+  }, {
+    key: "onMouseEnter",
+    value: function onMouseEnter() {
+      this.setState({
+        btnState: 'hover'
+      });
+    } // Event for exiting after hovering over the button
+
+  }, {
+    key: "onMouseLeave",
+    value: function onMouseLeave() {
+      var _this2 = this;
+
+      var time = 2000; // 2 seconds
+      // Start the timer
+
+      setTimeout(function () {
+        return _this2.setState({
+          btnState: 'default'
+        });
+      }, time); // Set this state until timer runs out
+
+      this.setState({
+        btnState: 'exit'
+      });
+    } // The method determines what words to display within the button
+
+  }, {
+    key: "determineState",
+    value: function determineState() {
+      var _this$state = this.state,
+          primaryWords = _this$state.primaryWords,
+          seondaryWords = _this$state.seondaryWords,
+          btnState = _this$state.btnState;
+      var buttonType = this.props.buttonType; // Default words
+
+      var wordsArr = primaryWords; // Check if not default words
+
+      if (buttonType === 'secondary') {
+        wordsArr = seondaryWords;
+      } // Determine word to use
+
+
+      if (btnState === 'hover') {
+        // Set to the second word in the array
+        this.setState({
+          btnText: wordsArr[1]
+        });
+      } else if (btnState === 'exit') {
+        // Set to the second word in the array
+        this.setState({
+          btnText: wordsArr[2]
+        });
+      } else {
+        // Default state
+        // Set to the first word in the array
+        this.setState({
+          btnText: wordsArr[0]
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var buttonType = this.props.buttonType;
+      var _this$state2 = this.state,
+          btnText = _this$state2.btnText,
+          btnState = _this$state2.btnState; // Default css class
+
+      var btnClass = "hero__cta__button--".concat(buttonType); // Determine if exit needs to be added
+      // exit is needed after hover for a few seconds
+
+      if (btnState === 'exit') {
+        btnClass = "hero__cta__button--".concat(buttonType, "--exit");
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: btnClass,
+        type: "button",
+        onMouseEnter: this.onMouseEnter,
+        onMouseLeave: this.onMouseLeave,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#contact",
+        className: "hero__btn__link",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        },
+        __self: this
+      }, btnText));
+    }
+  }]);
+
+  return SpecialButtons;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
 /***/ "./components/home/Title.js":
 /*!**********************************!*\
   !*** ./components/home/Title.js ***!
@@ -2810,7 +3009,7 @@ var actions = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

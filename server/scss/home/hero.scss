@@ -18,8 +18,8 @@
   color: $Hero-Text-Color;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  font-size: 72px;
-  padding-left: 0.75em;
+  font-size: 72px; // padding-left: 0.75em;
+  margin: 0;
   max-width: 600px;
   text-shadow: 0px 0px 20px $Hero-Text-Outline-Color;
   @media screen and (max-width: $labtop-max-width) {
@@ -43,4 +43,8 @@
 
 .hero__text__verb {
   color: $Hero-Text-Special-Color;
+}
+
+.hero__cta__buttons {
+  margin-top: 24px;
 }

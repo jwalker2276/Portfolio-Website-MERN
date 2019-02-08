@@ -1,4 +1,6 @@
 import React from 'react';
+// Components
+import SpecialButtons from './SpecialButtons';
 
 class Hero extends React.Component {
   constructor(props) {
@@ -55,6 +57,10 @@ class Hero extends React.Component {
           <span className="hero__text__title">Web Developer</span> who loves{' '}
           <span className="hero__text__verb">{`${this.state.verb}`}</span> things.
         </h1>
+        <div className="hero__cta__buttons">
+          <SpecialButtons buttonType="primary" />
+          <SpecialButtons buttonType="secondary" />
+        </div>
       </div>
     );
   }

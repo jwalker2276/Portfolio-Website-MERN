@@ -1,0 +1,55 @@
+@mixin hero__cta__button {
+  cursor: pointer;
+  box-sizing: content-box;
+  border-radius: 5px;
+  padding: 5px;
+  width: 170px;
+  height: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  box-shadow: 0px 1px 2px $Hero-Btn-Shadow-Color-Close, 0px 4px 5px 1px $Hero-Btn-Shadow-Color-Far;
+}
+
+.hero__cta__button--primary {
+  @include hero__cta__button;
+  margin-right: 36px;
+  font-weight: 500;
+  color: $Pri-Button-Text-Color;
+  border-color: $Pri-Button-BK-Color;
+  background-color: $Pri-Button-BK-Color;
+  transition: border-color 0.5s ease-in, transform 0.25s ease-in, box-shadow 0.25s ease-in;
+  &:hover {
+    border-color: $Nav-Color-Highlight;
+    transform: translate(0, -3px);
+    box-shadow: 1px 5px 3px $Hero-Btn-Shadow-Color-Close, 0px 8px 5px 1px $Hero-Btn-Shadow-Color-Far;
+  }
+}
+
+.hero__cta__button--secondary {
+  @include hero__cta__button;
+  color: $Sec-Button-Color;
+  border-color: $Sec-Button-Color;
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 0px 20px $Hero-Btn-Shadow-Color-Close;
+  box-shadow: inset 0px 1px 10px 20px $Hero-Btn-Shadow-Color-Close;
+  transition: border-color 0.5s ease-in, transform 0.25s ease-in;
+  &:hover {
+    border-color: $Nav-Color-Highlight;
+    transform: translate(0, -3px);
+  }
+}
+
+.hero__cta__button--primary--exit {
+  @extend .hero__cta__button--primary;
+  margin-right: 36px;
+}
+
+.hero__cta__button--secondary--exit {
+  @extend .hero__cta__button--secondary;
+}
+
+.hero__btn__link {
+  color: inherit;
+  text-decoration: none;
+}
