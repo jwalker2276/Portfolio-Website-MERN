@@ -801,7 +801,9 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _SpecialButtons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SpecialButtons */ "./components/home/SpecialButtons.js");
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-transition-group */ "react-transition-group");
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _SpecialButtons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SpecialButtons */ "./components/home/SpecialButtons.js");
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/Hero.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -821,6 +823,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
  // Components
 
@@ -891,60 +894,81 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var verb = this.state.verb;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hero__text__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 56
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "hero__text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 57
         },
         __self: this
       }, "I'm ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hero__text__name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 58
         },
         __self: this
       }, "Jordan"), " , a", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hero__text__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 59
         },
         __self: this
-      }, "Web Developer"), " who loves", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      }, "Web Developer"), " who loves", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_1__["TransitionGroup"], {
+        component: "span",
         className: "hero__text__verb",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        },
-        __self: this
-      }, "".concat(this.state.verb)), " things."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "hero__cta__buttons",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 60
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        buttonType: "primary",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_1__["CSSTransition"], {
+        classNames: "hero__text__verb",
+        key: verb,
+        timeout: {
+          enter: 3000,
+          exit: 3000
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 61
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "hero__text__verb",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }, verb))), ' ', "things."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hero__cta__buttons",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        buttonType: "primary",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_2__["default"], {
         buttonType: "secondary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 73
         },
         __self: this
       })));
@@ -3084,6 +3108,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-redux");
+
+/***/ }),
+
+/***/ "react-transition-group":
+/*!*****************************************!*\
+  !*** external "react-transition-group" ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-transition-group");
 
 /***/ })
 

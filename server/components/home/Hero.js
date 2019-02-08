@@ -1,4 +1,5 @@
 import React from 'react';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 // Components
 import SpecialButtons from './SpecialButtons';
 
@@ -50,12 +51,22 @@ class Hero extends React.Component {
   }
 
   render() {
+    const { verb } = this.state;
     return (
       <div className="hero__text__wrapper">
         <h1 className="hero__text">
           I&apos;m <span className="hero__text__name">Jordan</span> , a{' '}
           <span className="hero__text__title">Web Developer</span> who loves{' '}
-          <span className="hero__text__verb">{`${this.state.verb}`}</span> things.
+          <TransitionGroup component="span" className="hero__text__verb">
+            <CSSTransition
+              classNames="hero__text__verb"
+              key={verb}
+              timeout={{ enter: 3000, exit: 3000 }}
+            >
+              <span className="hero__text__verb">{verb}</span>
+            </CSSTransition>
+          </TransitionGroup>{' '}
+          things.
         </h1>
         <div className="hero__cta__buttons">
           <SpecialButtons buttonType="primary" />

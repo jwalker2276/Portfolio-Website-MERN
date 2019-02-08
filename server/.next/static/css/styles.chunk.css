@@ -225,6 +225,7 @@
       margin: 80px auto auto auto; } }
 
 .hero__text {
+  position: relative;
   color: #dceefb;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
@@ -250,6 +251,35 @@
 
 .hero__text__verb {
   color: #54d1db; }
+
+.hero__text__verb-enter {
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0.9; }
+  .hero__text__verb-enter.hero__text__verb-enter-active {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; }
+
+.hero__text__verb-exit {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: opacity .5s, -webkit-transform 1s;
+  transition: opacity .5s, -webkit-transform 1s;
+  transition: transform 1s, opacity .5s;
+  transition: transform 1s, opacity .5s, -webkit-transform 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 0.25; }
+  .hero__text__verb-exit.hero__text__verb-exit-active {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0; }
 
 .hero__cta__buttons {
   margin-top: 24px; }

@@ -15,6 +15,7 @@
 }
 
 .hero__text {
+  position: relative;
   color: $Hero-Text-Color;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
@@ -43,6 +44,29 @@
 
 .hero__text__verb {
   color: $Hero-Text-Special-Color;
+}
+
+.hero__text__verb-enter {
+  transition: transform 1s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0.9;
+  &.hero__text__verb-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero__text__verb-exit {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: transform 1s, opacity .5s;
+  transform: translateY(0);
+  opacity: 0.25;
+  &.hero__text__verb-exit-active {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
 .hero__cta__buttons {
