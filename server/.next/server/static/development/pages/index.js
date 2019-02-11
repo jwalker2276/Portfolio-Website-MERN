@@ -1192,7 +1192,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Navbar; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Logo */ "./components/home/Logo.js");
+/* harmony import */ var jump_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jump.js */ "jump.js");
+/* harmony import */ var jump_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jump_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Logo */ "./components/home/Logo.js");
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/Navbar.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1213,6 +1215,9 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+ // Smooth scroll lib
+
+ // Components
 
 
 
@@ -1228,39 +1233,35 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Navbar).call(this, props));
     _this.state = {
-      isMobileLayout: false,
       menuIconClass: '',
       sidebarClass: 'nav__sidebar--closed'
     };
-    _this.determineLayout = _this.determineLayout.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.toggleSideBar = _this.toggleSideBar.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.setUpSmoothScrolling = _this.setUpSmoothScrolling.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
-  } // Check if props changed
-
+  }
 
   _createClass(Navbar, [{
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps) {
-      if (prevProps.browserWidth !== this.props.browserWidth) {
-        this.determineLayout();
-      }
-    } // Determine if layout should be mobile
-
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.setUpSmoothScrolling();
+    }
   }, {
-    key: "determineLayout",
-    value: function determineLayout() {
-      var maxWidth = 500;
-      var browserWidth = this.props.browserWidth;
-
-      if (browserWidth < maxWidth) {
-        this.setState({
-          isMobileLayout: true
-        });
-      } else {
-        this.setState({
-          isMobileLayout: false
-        });
-      }
+    key: "setUpSmoothScrolling",
+    value: function setUpSmoothScrolling() {
+      // Set up smooth scrolling
+      document.querySelector('.nav__button--skills').addEventListener('click', function () {
+        jump_js__WEBPACK_IMPORTED_MODULE_1___default()('#skills');
+      });
+      document.querySelector('.nav__button--work').addEventListener('click', function () {
+        jump_js__WEBPACK_IMPORTED_MODULE_1___default()('#work');
+      });
+      document.querySelector('.nav__button--about').addEventListener('click', function () {
+        jump_js__WEBPACK_IMPORTED_MODULE_1___default()('#about');
+      });
+      document.querySelector('.nav__button--contact').addEventListener('click', function () {
+        jump_js__WEBPACK_IMPORTED_MODULE_1___default()('#contact');
+      });
     }
   }, {
     key: "toggleSideBar",
@@ -1295,223 +1296,130 @@ function (_React$Component) {
     value: function render() {
       var _this$state2 = this.state,
           menuIconClass = _this$state2.menuIconClass,
-          sidebarClass = _this$state2.sidebarClass; // Mobile layout
-
-      if (this.state.isMobileLayout) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 56
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-          className: "nav",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 57
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 58
-          },
-          __self: this
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "nav__menu__icon",
-          onClick: this.toggleSideBar,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 59
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "nav__menu__line nav__menu__line__top".concat(menuIconClass),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 60
-          },
-          __self: this
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "nav__menu__line nav__menu__line__bottom".concat(menuIconClass),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 61
-          },
-          __self: this
-        }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: sidebarClass,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 65
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-          className: "nav__items",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 66
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "nav__item nav__item--one",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 67
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "#skills",
-          className: "nav__link",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 68
-          },
-          __self: this
-        }, "Skills")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "nav__item nav__item--two",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 72
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "#work",
-          className: "nav__link",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 73
-          },
-          __self: this
-        }, "Work")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "nav__item nav__item--three",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 77
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "#about",
-          className: "nav__link",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 78
-          },
-          __self: this
-        }, "Me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "nav__item  nav__item--four",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 82
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "#contact",
-          className: "nav__link",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 83
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-          className: "nav__item--primary",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 84
-          },
-          __self: this
-        }, "Contact"))))));
-      } // Wider screen devices
-
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+          sidebarClass = _this$state2.sidebarClass;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 60
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 61
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav__menu__icon",
+        onClick: this.toggleSideBar,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav__menu__line nav__menu__line__top".concat(menuIconClass),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav__menu__line nav__menu__line__bottom".concat(menuIconClass),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: sidebarClass,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "nav__items",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 69
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav__item",
+        className: "nav__item nav__item--one",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 70
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#skills",
-        className: "nav__link",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "nav__button nav__button--skills",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 71
         },
         __self: this
       }, "Skills")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav__item",
+        className: "nav__item nav__item--two",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 75
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#work",
-        className: "nav__link",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "nav__button nav__button--work",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 76
         },
         __self: this
       }, "Work")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav__item",
+        className: "nav__item nav__item--three",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 80
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#about",
-        className: "nav__link",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "nav__button nav__button--about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 81
         },
         __self: this
-      }, "Me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav__item",
+      }, "About")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "nav__item  nav__item--four",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 85
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#contact",
-        className: "nav__link",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "nav__button nav__button--contact",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 86
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "nav__item--primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 87
         },
         __self: this
-      }, "Contact")))));
+      }, "Contact"))))));
     }
   }]);
 
@@ -2659,13 +2567,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 
 
@@ -2688,17 +2596,10 @@ var Home =
 function (_React$Component) {
   _inherits(Home, _React$Component);
 
-  function Home(props) {
-    var _this;
-
+  function Home() {
     _classCallCheck(this, Home);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this, props));
-    _this.state = {
-      windowSize: 0
-    };
-    _this.updateWindowSize = _this.updateWindowSize.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
   }
 
   _createClass(Home, [{
@@ -2706,25 +2607,7 @@ function (_React$Component) {
     value: function componentDidMount() {
       // Run actions on mount
       this.props.getProfileData();
-      this.props.getProjectData(); // Get the window size and update state
-
-      window.addEventListener('resize', this.updateWindowSize); // Get inital size
-
-      this.updateWindowSize();
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      // Remove event listener
-      window.removeEventListener('resize', this.updateWindowSize);
-    }
-  }, {
-    key: "updateWindowSize",
-    value: function updateWindowSize() {
-      var width = window.innerWidth;
-      this.setState({
-        windowSize: width
-      });
+      this.props.getProjectData();
     }
   }, {
     key: "render",
@@ -2748,40 +2631,39 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 44
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "landing__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 45
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "hero__section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 46
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        browserWidth: this.state.windowSize,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 47
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Hero__WEBPACK_IMPORTED_MODULE_5__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 48
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Slice__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -2789,14 +2671,14 @@ function (_React$Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 49
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Skills__WEBPACK_IMPORTED_MODULE_7__["default"], {
         skills: skillData,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 52
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Slice__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -2804,14 +2686,14 @@ function (_React$Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 53
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Work__WEBPACK_IMPORTED_MODULE_8__["default"], {
         projects: projectsData,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 54
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Slice__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -2819,7 +2701,7 @@ function (_React$Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 55
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_About__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -2828,19 +2710,19 @@ function (_React$Component) {
         imageId: imageId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 56
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Contact__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 57
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 58
         },
         __self: this
       }));
@@ -3064,6 +2946,17 @@ module.exports = require("axios");
 /***/ (function(module, exports) {
 
 module.exports = require("cloudinary-react");
+
+/***/ }),
+
+/***/ "jump.js":
+/*!**************************!*\
+  !*** external "jump.js" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("jump.js");
 
 /***/ }),
 

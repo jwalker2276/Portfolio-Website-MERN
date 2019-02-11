@@ -1,34 +1,38 @@
 import React, { Fragment } from 'react';
+// Smooth scroll lib
+import Jump from 'jump.js';
+// Components
 import Logo from './Logo';
 
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobileLayout: false,
       menuIconClass: '',
       sidebarClass: 'nav__sidebar--closed'
     };
-    this.determineLayout = this.determineLayout.bind(this);
     this.toggleSideBar = this.toggleSideBar.bind(this);
+    this.setUpSmoothScrolling = this.setUpSmoothScrolling.bind(this);
   }
 
-  // Check if props changed
-  componentDidUpdate(prevProps) {
-    if (prevProps.browserWidth !== this.props.browserWidth) {
-      this.determineLayout();
-    }
+  componentDidMount() {
+    this.setUpSmoothScrolling();
   }
 
-  // Determine if layout should be mobile
-  determineLayout() {
-    const maxWidth = 500;
-    const { browserWidth } = this.props;
-    if (browserWidth < maxWidth) {
-      this.setState({ isMobileLayout: true });
-    } else {
-      this.setState({ isMobileLayout: false });
-    }
+  setUpSmoothScrolling() {
+    // Set up smooth scrolling
+    document.querySelector('.nav__button--skills').addEventListener('click', () => {
+      Jump('#skills');
+    });
+    document.querySelector('.nav__button--work').addEventListener('click', () => {
+      Jump('#work');
+    });
+    document.querySelector('.nav__button--about').addEventListener('click', () => {
+      Jump('#about');
+    });
+    document.querySelector('.nav__button--contact').addEventListener('click', () => {
+      Jump('#contact');
+    });
   }
 
   toggleSideBar() {
@@ -50,73 +54,42 @@ export default class Navbar extends React.Component {
 
   render() {
     const { menuIconClass, sidebarClass } = this.state;
-    // Mobile layout
-    if (this.state.isMobileLayout) {
-      return (
-        <Fragment>
-          <nav className="nav">
-            <Logo />
-            <div className="nav__menu__icon" onClick={this.toggleSideBar}>
-              <div className={`nav__menu__line nav__menu__line__top${menuIconClass}`} />
-              <div className={`nav__menu__line nav__menu__line__bottom${menuIconClass}`} />
-            </div>
-          </nav>
 
-          <div className={sidebarClass}>
-            <ul className="nav__items">
-              <li className="nav__item nav__item--one">
-                <a href="#skills" className="nav__link">
-                  Skills
-                </a>
-              </li>
-              <li className="nav__item nav__item--two">
-                <a href="#work" className="nav__link">
-                  Work
-                </a>
-              </li>
-              <li className="nav__item nav__item--three">
-                <a href="#about" className="nav__link">
-                  Me
-                </a>
-              </li>
-              <li className="nav__item  nav__item--four">
-                <a href="#contact" className="nav__link">
-                  <span className="nav__item--primary">Contact</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </Fragment>
-      );
-    }
-
-    // Wider screen devices
     return (
-      <nav className="nav">
-        <Logo />
-        <ul className="nav__items">
-          <li className="nav__item">
-            <a href="#skills" className="nav__link">
-              Skills
-            </a>
-          </li>
-          <li className="nav__item">
-            <a href="#work" className="nav__link">
-              Work
-            </a>
-          </li>
-          <li className="nav__item">
-            <a href="#about" className="nav__link">
-              Me
-            </a>
-          </li>
-          <li className="nav__item">
-            <a href="#contact" className="nav__link">
-              <span className="nav__item--primary">Contact</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Fragment>
+        <nav className="nav">
+          <Logo />
+          <div className="nav__menu__icon" onClick={this.toggleSideBar}>
+            <div className={`nav__menu__line nav__menu__line__top${menuIconClass}`} />
+            <div className={`nav__menu__line nav__menu__line__bottom${menuIconClass}`} />
+          </div>
+        </nav>
+
+        <nav className={sidebarClass}>
+          <ul className="nav__items">
+            <li className="nav__item nav__item--one">
+              <button type="button" className="nav__button nav__button--skills">
+                Skills
+              </button>
+            </li>
+            <li className="nav__item nav__item--two">
+              <button type="button" className="nav__button nav__button--work">
+                Work
+              </button>
+            </li>
+            <li className="nav__item nav__item--three">
+              <button type="button" className="nav__button nav__button--about">
+                About
+              </button>
+            </li>
+            <li className="nav__item  nav__item--four">
+              <button type="button" className="nav__button nav__button--contact">
+                <span className="nav__item--primary">Contact</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </Fragment>
     );
   }
 }
