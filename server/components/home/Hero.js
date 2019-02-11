@@ -1,5 +1,6 @@
 import React from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import Jump from 'jump.js';
 // Components
 import SpecialButtons from './SpecialButtons';
 
@@ -16,6 +17,14 @@ class Hero extends React.Component {
   componentDidMount() {
     // Change ever 3 seconds
     setInterval(this.changeWord, 3000);
+
+    // Set up smooth scrolling for hero buttons.
+    document.querySelector('.hero__cta__button--primary').addEventListener('click', () => {
+      Jump('#contact');
+    });
+    document.querySelector('.hero__cta__button--secondary').addEventListener('click', () => {
+      Jump('#contact');
+    });
   }
 
   componentWillUnmount() {

@@ -803,7 +803,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-transition-group */ "react-transition-group");
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _SpecialButtons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SpecialButtons */ "./components/home/SpecialButtons.js");
+/* harmony import */ var jump_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jump.js */ "jump.js");
+/* harmony import */ var jump_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jump_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _SpecialButtons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SpecialButtons */ "./components/home/SpecialButtons.js");
 var _jsxFileName = "/Users/jordanwalker/Documents/Github/Portfolio-Website-MERN/server/components/home/Hero.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -823,6 +825,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
  // Components
@@ -852,7 +855,14 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       // Change ever 3 seconds
-      setInterval(this.changeWord, 3000);
+      setInterval(this.changeWord, 3000); // Set up smooth scrolling for hero buttons.
+
+      document.querySelector('.hero__cta__button--primary').addEventListener('click', function () {
+        jump_js__WEBPACK_IMPORTED_MODULE_2___default()('#contact');
+      });
+      document.querySelector('.hero__cta__button--secondary').addEventListener('click', function () {
+        jump_js__WEBPACK_IMPORTED_MODULE_2___default()('#contact');
+      });
     }
   }, {
     key: "componentWillUnmount",
@@ -899,28 +909,28 @@ function (_React$Component) {
         className: "hero__text__wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 65
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "hero__text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 66
         },
         __self: this
       }, "I'm ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hero__text__name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 67
         },
         __self: this
       }, "Jordan"), " , a", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hero__text__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 68
         },
         __self: this
       }, "Web Developer"), " who loves", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_1__["TransitionGroup"], {
@@ -928,7 +938,7 @@ function (_React$Component) {
         className: "hero__text__verb",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 69
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_1__["CSSTransition"], {
@@ -940,35 +950,35 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 70
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hero__text__verb",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 75
         },
         __self: this
       }, verb))), ' ', "things."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hero__cta__buttons",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 80
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_3__["default"], {
         buttonType: "primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 81
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpecialButtons__WEBPACK_IMPORTED_MODULE_3__["default"], {
         buttonType: "secondary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 82
         },
         __self: this
       })));
@@ -2230,15 +2240,7 @@ function (_Component) {
           lineNumber: 81
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#contact",
-        className: "hero__btn__link",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 87
-        },
-        __self: this
-      }, btnText));
+      }, btnText);
     }
   }]);
 

@@ -84,9 +84,7 @@ export default class SpecialButtons extends Component {
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
       >
-        <a href="#contact" className="hero__btn__link">
-          {btnText}
-        </a>
+        {btnText}
       </button>
     );
   }
