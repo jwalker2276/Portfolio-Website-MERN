@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import AOS from 'aos';
 import { getProfileData, getProjectData } from '../reduxState/actions/homePageActions';
 // Components
 import Meta from '../components/common/Meta';
@@ -16,10 +17,21 @@ import Footer from '../components/home/Footer';
 import '../scss/home/homepage.scss';
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.setUpAnimations = this.setUpAnimations.bind(this);
+  }
+
   componentDidMount() {
     // Run actions on mount
     this.props.getProfileData();
     this.props.getProjectData();
+    this.setUpAnimations();
+  }
+
+  setUpAnimations() {
+    // Initialize AOS
+    AOS.init();
   }
 
   render() {

@@ -18,7 +18,7 @@ class Skills extends React.Component {
     }
 
     return (
-      <section className="skills__wrapper" id="skills">
+      <section className="skills__wrapper animation__target" id="skills">
         <div className="skills__content">
           <Title title="skills" accent="my" color="dark" />
           <div className="skills">

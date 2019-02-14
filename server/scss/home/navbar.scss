@@ -6,11 +6,22 @@
 }
 
 .nav__items {
+  z-index: 100;
   display: flex;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
   @media screen and (max-width: $phone-max-width) {
     flex-direction: column;
     padding: 0;
     margin: 0px auto;
+  }
+}
+
+.nav__items.show {
+  transition: opacity 1s ease-in;
+  opacity: 1;
+  @media screen and (max-width: $phone-max-width) {
+    transition: opacity 0.25s ease-in;
   }
 }
 
@@ -36,24 +47,40 @@
 
 .nav__item--one {
   @media screen and (max-width: $phone-max-width) {
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+  }
+  &.show {
     width: 75%;
   }
 }
 
 .nav__item--two {
   @media screen and (max-width: $phone-max-width) {
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+  }
+  &.show {
     width: 50%;
   }
 }
 
 .nav__item--three {
   @media screen and (max-width: $phone-max-width) {
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+  }
+  &.show {
     width: 45%;
   }
 }
 
 .nav__item--four {
   @media screen and (max-width: $phone-max-width) {
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+  }
+  &.show {
     width: 60%;
   }
 }
@@ -74,45 +101,60 @@
   color: $Nav-Color-Highlight;
 }
 
-.nav__sidebar--opened {
+.nav__sidebar {
+  width: auto;
+  height: auto;
+  display: block;
   position: absolute;
   top: 15px;
   right: 5%;
+  z-index: 100;
   @media screen and (max-width: $phone-max-width) {
-    left: 0;
-    top: 0;
     width: 80%;
     height: 100vh;
+    top: 0;
+    left: 0;
   }
 }
 
-.nav__sidebar--closed {
-  width: 0;
-  height: 0;
-  display: none;
+.nav__sidebar.show {
+  @media screen and (max-width: $phone-max-width) {
+    width: 80%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
 }
 
 .nav__menu__icon {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  margin-right: 12px;
+  cursor: pointer;
+  z-index: 100;
 }
 
 .nav__menu__line {
-  width: 35px;
-  height: 5px;
-  margin-right: 16px;
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 45px;
+  top: 10px;
+  right: 0;
   background-color: $Nav-Color-Highlight;
+  transition: all 0.25s ease-in;
 }
 
-.nav__menu__line__top {
-  margin-bottom: 10px;
+.nav__menu__line:nth-of-type(2) {
+  top: 32px;
 }
 
-.nav__menu__line__top--rotated {
-  transform: rotate(45deg) translate(4px, 0px);
+.nav__menu__line.rotate {
+  top: 22px;
+  transform: rotate(135deg);
 }
 
-.nav__menu__line__bottom--rotated {
-  transform: rotate(-45deg) translate(3px, 0px);
+.nav__menu__line.rotate:nth-of-type(2) {
+  transform: rotate(-135deg);
 }

@@ -62,7 +62,7 @@ class Hero extends React.Component {
   render() {
     const { verb } = this.state;
     return (
-      <div className="hero__text__wrapper">
+      <div className="hero__text__wrapper" data-aos="zoom-in">
         <h1 className="hero__text">
           I&apos;m <span className="hero__text__name">Jordan</span> , a{' '}
           <span className="hero__text__title">Web Developer</span> who loves{' '}
@@ -77,7 +77,12 @@ class Hero extends React.Component {
           </TransitionGroup>{' '}
           things.
         </h1>
-        <div className="hero__cta__buttons">
+        <div
+          className="hero__cta__buttons"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="1000"
+        >
           <SpecialButtons buttonType="primary" />
           <SpecialButtons buttonType="secondary" />
         </div>

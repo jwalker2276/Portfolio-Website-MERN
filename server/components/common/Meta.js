@@ -10,6 +10,7 @@ const Meta = () => (
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </Head>
 );
 

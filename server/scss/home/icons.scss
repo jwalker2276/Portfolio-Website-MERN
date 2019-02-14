@@ -2,6 +2,15 @@
   width: 36px;
 }
 
+// Animation
+[data-aos="pop-and-spin"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
 .skill__icon__primary {
   fill: $S-Icon-Primary-Color;
 }

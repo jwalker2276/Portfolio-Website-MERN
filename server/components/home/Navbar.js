@@ -9,7 +9,7 @@ export default class Navbar extends React.Component {
     super(props);
     this.state = {
       menuIconClass: '',
-      sidebarClass: 'nav__sidebar--closed'
+      sidebarClass: ''
     };
     this.toggleSideBar = this.toggleSideBar.bind(this);
     this.setUpSmoothScrolling = this.setUpSmoothScrolling.bind(this);
@@ -39,14 +39,14 @@ export default class Navbar extends React.Component {
     const { menuIconClass, sidebarClass } = this.state;
 
     // Set class to open/close for sidebar
-    if (sidebarClass === 'nav__sidebar--closed') {
-      this.setState({ sidebarClass: 'nav__sidebar--opened' });
+    if (sidebarClass === '') {
+      this.setState({ sidebarClass: 'show' });
     } else {
-      this.setState({ sidebarClass: 'nav__sidebar--closed' });
+      this.setState({ sidebarClass: '' });
     }
     // Set class for menu icon change
     if (menuIconClass === '') {
-      this.setState({ menuIconClass: '--rotated' });
+      this.setState({ menuIconClass: 'rotate' });
     } else {
       this.setState({ menuIconClass: '' });
     }
@@ -60,29 +60,29 @@ export default class Navbar extends React.Component {
         <nav className="nav">
           <Logo />
           <div className="nav__menu__icon" onClick={this.toggleSideBar}>
-            <div className={`nav__menu__line nav__menu__line__top${menuIconClass}`} />
-            <div className={`nav__menu__line nav__menu__line__bottom${menuIconClass}`} />
+            <span className={`nav__menu__line ${menuIconClass}`} />
+            <span className={`nav__menu__line ${menuIconClass}`} />
           </div>
         </nav>
 
-        <nav className={sidebarClass}>
-          <ul className="nav__items">
-            <li className="nav__item nav__item--one">
+        <nav className={`nav__sidebar ${sidebarClass}`}>
+          <ul className={`nav__items ${sidebarClass}`}>
+            <li className={`nav__item nav__item--one ${sidebarClass}`}>
               <button type="button" className="nav__button nav__button--skills">
                 Skills
               </button>
             </li>
-            <li className="nav__item nav__item--two">
+            <li className={`nav__item nav__item--two ${sidebarClass}`}>
               <button type="button" className="nav__button nav__button--work">
                 Work
               </button>
             </li>
-            <li className="nav__item nav__item--three">
+            <li className={`nav__item nav__item--three ${sidebarClass}`}>
               <button type="button" className="nav__button nav__button--about">
                 About
               </button>
             </li>
-            <li className="nav__item  nav__item--four">
+            <li className={`nav__item  nav__item--four ${sidebarClass}`}>
               <button type="button" className="nav__button nav__button--contact">
                 <span className="nav__item--primary">Contact</span>
               </button>
