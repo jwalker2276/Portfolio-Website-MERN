@@ -52,7 +52,12 @@ class Contact extends Component {
         <Slice postion="bottom" color="white" />
         <Title title="Contact" accent="" color="light" />
         <form onSubmit={this.handleSend} className="contact__form">
-          <label className="contact__label" htmlFor="name">
+          <label
+            className="contact__label"
+            htmlFor="name"
+            data-aos="fade-down"
+            data-aos-delay="500"
+          >
             Name
             <input
               className="contact__input"
@@ -63,7 +68,12 @@ class Contact extends Component {
               onChange={this.handleInput}
             />
           </label>
-          <label className="contact__label" htmlFor="email">
+          <label
+            className="contact__label"
+            htmlFor="email"
+            data-aos="fade-down"
+            data-aos-delay="750"
+          >
             Email
             <input
               className="contact__input"
@@ -74,7 +84,12 @@ class Contact extends Component {
               onChange={this.handleInput}
             />
           </label>
-          <label className="contact__label" htmlFor="message">
+          <label
+            className="contact__label"
+            htmlFor="message"
+            data-aos="fade-down"
+            data-aos-delay="1000"
+          >
             Message
             <textarea
               className="contact__input"
@@ -87,7 +102,13 @@ class Contact extends Component {
               onChange={this.handleInput}
             />
           </label>
-          <input className="contact__form__button" type="submit" value="Send" />
+          <input
+            className="contact__form__button"
+            type="submit"
+            value="Send"
+            data-aos="zoom-in-up"
+            data-aos-delay="1500"
+          />
         </form>
         <p className="contact__or">or</p>
         <p className="contact__email">jwalkercreations@gmail.com</p>

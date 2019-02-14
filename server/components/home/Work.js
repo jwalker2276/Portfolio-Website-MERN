@@ -43,6 +43,9 @@ export default class Work extends React.Component {
             <Link href={{ pathname: '/projectinfo', query: { index: projectIndex } }}>
               <a
                 className="work__primary__link website__info__button"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="500"
                 target="_blank"
                 rel="noopener noreferrer"
               >

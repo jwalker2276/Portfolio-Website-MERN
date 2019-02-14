@@ -17,7 +17,11 @@ export default class Project extends Component {
     if (imageIds.length > 0) {
       const mainImageid = imageIds[0];
       image = (
-        <div className="project__image__container">
+        <div
+          className="project__image__container"
+          data-aos="zoom-in-right"
+          data-aos-anchor-placement="top-bottom"
+        >
           <Image cloudName="jwalkercreations-com" publicId={mainImageid} className="project__image">
             <Transformation width="700" height="400" quality="auto" fetchFormat="auto" />
           </Image>
@@ -31,7 +35,12 @@ export default class Project extends Component {
         <div className="project__details">
           <h1 className="project__title">{title}</h1>
           <h3 className="project__type">{type}</h3>
-          <div className="project__buttons">
+          <div
+            className="project__buttons"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+          >
             <a
               href={link}
               className="work__primary__link"

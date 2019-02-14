@@ -27,7 +27,14 @@ class AboutBanner extends React.Component {
         <div className="banner__first">
           <p className="banner__title">Find Me</p>
           <div className="banner__icons">
-            <a className="banner__link" href={github} target="_blank" rel="noopener noreferrer">
+            <a
+              className="banner__link"
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-aos="fade-down"
+              data-aos-delay="250"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="banner__icon__svg"
@@ -38,7 +45,14 @@ class AboutBanner extends React.Component {
                 {gitHubIconPath}
               </svg>
             </a>
-            <a className="banner__link" href={linkedin} target="_blank" rel="noopener noreferrer">
+            <a
+              className="banner__link"
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-aos="fade-down"
+              data-aos-delay="500"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="banner__icon__svg"
@@ -53,7 +67,9 @@ class AboutBanner extends React.Component {
         </div>
         <div className="banner__second">
           <p className="banner__title">Email Me</p>
-          <p className="banner__email">{email}</p>
+          <p className="banner__email" data-aos="fade-up" data-aos-delay="750">
+            {email}
+          </p>
         </div>
       </div>
     );

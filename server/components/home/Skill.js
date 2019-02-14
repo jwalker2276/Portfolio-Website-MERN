@@ -9,7 +9,7 @@ class Skill extends React.Component {
     const { type, skills } = this.props;
 
     return (
-      <div className="skill__group">
+      <div className="skill__group" data-aos="flip-up" data-aos-delay="500" data-aos-duration="500">
         <Icon iconName={type} />
         {/* Title */}
         <h3 className="skill__title">{type}</h3>

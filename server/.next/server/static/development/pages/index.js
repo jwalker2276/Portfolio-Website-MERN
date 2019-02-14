@@ -404,6 +404,8 @@ function (_React$Component) {
         href: github,
         target: "_blank",
         rel: "noopener noreferrer",
+        "data-aos": "fade-down",
+        "data-aos-delay": "250",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30
@@ -417,7 +419,7 @@ function (_React$Component) {
         viewBox: "0 0 25 25",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 38
         },
         __self: this
       }, gitHubIconPath)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -425,9 +427,11 @@ function (_React$Component) {
         href: linkedin,
         target: "_blank",
         rel: "noopener noreferrer",
+        "data-aos": "fade-down",
+        "data-aos-delay": "500",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 48
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -438,28 +442,30 @@ function (_React$Component) {
         viewBox: "0 0 25 25",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 56
         },
         __self: this
       }, linkedInIconPath)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "banner__second",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 68
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "banner__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 69
         },
         __self: this
       }, "Email Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "banner__email",
+        "data-aos": "fade-up",
+        "data-aos-delay": "750",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 70
         },
         __self: this
       }, email)));
@@ -609,6 +615,8 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "contact__label",
         htmlFor: "name",
+        "data-aos": "fade-down",
+        "data-aos-delay": "500",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 55
@@ -623,15 +631,17 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 62
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "contact__label",
         htmlFor: "email",
+        "data-aos": "fade-down",
+        "data-aos-delay": "750",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 71
         },
         __self: this
       }, "Email", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -643,15 +653,17 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 78
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "contact__label",
         htmlFor: "message",
+        "data-aos": "fade-down",
+        "data-aos-delay": "1000",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 87
         },
         __self: this
       }, "Message", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
@@ -665,30 +677,32 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 94
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "contact__form__button",
         type: "submit",
         value: "Send",
+        "data-aos": "zoom-in-up",
+        "data-aos-delay": "1500",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 105
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "contact__or",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 113
         },
         __self: this
       }, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "contact__email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 114
         },
         __self: this
       }, "jwalkercreations@gmail.com"));
@@ -1534,6 +1548,8 @@ function (_Component) {
         var mainImageid = imageIds[0];
         image = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "project__image__container",
+          "data-aos": "zoom-in-right",
+          "data-aos-anchor-placement": "top-bottom",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 20
@@ -1545,7 +1561,7 @@ function (_Component) {
           className: "project__image",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 25
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_1__["Transformation"], {
@@ -1555,7 +1571,7 @@ function (_Component) {
           fetchFormat: "auto",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22
+            lineNumber: 26
           },
           __self: this
         })));
@@ -1565,35 +1581,38 @@ function (_Component) {
         className: "project",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 33
         },
         __self: this
       }, image, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 35
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "project__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 36
         },
         __self: this
       }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "project__type",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 37
         },
         __self: this
       }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__buttons",
+        "data-aos": "fade-up",
+        "data-aos-duration": "1000",
+        "data-aos-delay": "1000",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1603,7 +1622,7 @@ function (_Component) {
         rel: "noopener noreferrer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 44
         },
         __self: this
       }, "Live Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -1615,7 +1634,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 52
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1624,7 +1643,7 @@ function (_Component) {
         rel: "noopener noreferrer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 53
         },
         __self: this
       }, "Learn More")))));
@@ -1696,6 +1715,9 @@ function (_React$Component) {
           skills = _this$props.skills;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "skill__group",
+        "data-aos": "flip-up",
+        "data-aos-delay": "500",
+        "data-aos-duration": "500",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
@@ -2528,6 +2550,9 @@ function (_React$Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "work__primary__link website__info__button",
+        "data-aos": "fade-up",
+        "data-aos-duration": "1000",
+        "data-aos-delay": "500",
         target: "_blank",
         rel: "noopener noreferrer",
         __source: {
