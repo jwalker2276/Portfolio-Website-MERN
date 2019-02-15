@@ -41,6 +41,9 @@
   &:hover {
     opacity: 1;
   }
+  &:focus {
+    outline-color: $Nav-Color-Highlight;
+  }
 }
 
 .slider__image__control__left {

@@ -14,7 +14,7 @@ export default class Work extends React.Component {
         <div className="work__wrapper">
           <Title title="work" accent="my" color="light" />
           <div className="work__projects">
-            <h4>Loading something awesome</h4>
+            <h4 className="work__loading">Loading something awesome...</h4>
           </div>
         </div>
       );
@@ -43,9 +43,6 @@ export default class Work extends React.Component {
             <Link href={{ pathname: '/projectinfo', query: { index: projectIndex } }}>
               <a
                 className="work__primary__link website__info__button"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="500"
                 target="_blank"
                 rel="noopener noreferrer"
               >

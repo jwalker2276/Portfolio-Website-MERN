@@ -24,6 +24,10 @@
     transform: translate(0, -3px);
     box-shadow: 1px 5px 3px $Hero-Btn-Shadow-Color-Close, 0px 8px 5px 1px $Hero-Btn-Shadow-Color-Far;
   }
+  &:focus {
+    border-radius: 5px;
+    outline-color: $Nav-Color-Highlight;
+  }
 }
 
 .hero__cta__button--secondary {
@@ -37,6 +41,10 @@
   &:hover {
     border-color: $Nav-Color-Highlight;
     transform: translate(0, -3px);
+  }
+  &:focus {
+    border-radius: 5px;
+    outline-color: $Nav-Color-Highlight;
   }
 }
 

@@ -140,6 +140,22 @@
   }
 }
 
-.banner__icon__path {
+.banner__link {
   fill: $A-Icon-Color;
+  transition: fill 0.5s ease-in;
+  &:hover {
+    fill: $A-Email-Color;
+  }
+  &:focus {
+    outline-color: $Nav-Color-Highlight;
+  }
+}
+
+.about__loading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+  color: $PD-Details-Title-Color;
 }

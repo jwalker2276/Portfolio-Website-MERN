@@ -3,7 +3,7 @@ import React from 'react';
 class AboutBanner extends React.Component {
   render() {
     if (this.props.contactInfo === undefined) {
-      return <p className="banner__loading">Loading...</p>;
+      return <p className="about__loading">Trying to jump start the engine...</p>;
     }
 
     const gitHubIconPath = (

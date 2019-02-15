@@ -39,7 +39,7 @@ export default class Project extends Component {
             className="project__buttons"
             data-aos="fade-up"
             data-aos-duration="1000"
-            data-aos-delay="1000"
+            data-aos-delay="500"
           >
             <a
               href={link}

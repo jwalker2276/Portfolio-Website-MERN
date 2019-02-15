@@ -38,6 +38,9 @@
   font-size: 16px;
   box-shadow: inset 0px 1px 2px 0px $C-Form-Input-Shadow-Color,
     inset 0px -1px 0px 0px $C-Form-Input-Highlight-Color;
+  &:focus {
+    outline-color: $Nav-Color-Highlight;
+  }
 }
 
 .contact__form__button {
@@ -56,6 +59,14 @@
   font-size: 18px;
   box-shadow: 0px 1px 2px $Button-Shadow-Color-Close, 0px 4px 14px 3px $Button-Shadow-Color-Far;
   -webkit-appearance: none;
+  transition: transform 0.25s ease-in, box-shadow 0.25s ease-in;
+  &:hover {
+    transform: translate(0, -3px);
+    box-shadow: 1px 5px 3px $Hero-Btn-Shadow-Color-Close, 0px 8px 5px 1px $Hero-Btn-Shadow-Color-Far;
+  }
+  &:focus {
+    outline-color: $Nav-Color-Highlight;
+  }
   @media screen and (max-width: $phone-max-width) {
     width: 120px;
   }

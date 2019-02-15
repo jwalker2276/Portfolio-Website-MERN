@@ -15,6 +15,15 @@ class Skills extends React.Component {
       backEndList = this.props.skills.backend;
       knowledgeList = this.props.skills.knowledge;
       toolsList = this.props.skills.tools;
+    } else {
+      return (
+        <section className="skills__wrapper animation__target" id="skills">
+          <div className="skills__content">
+            <Title title="skills" accent="my" color="dark" />
+            <p className="skills__loading">Trying to remember my skills...</p>;
+          </div>
+        </section>
+      );
     }
 
     return (

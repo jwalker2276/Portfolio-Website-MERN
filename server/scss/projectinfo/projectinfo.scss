@@ -22,9 +22,11 @@ body {
   grid-template-columns: 975px auto;
   grid-template-rows: 1fr;
   margin: auto;
+  margin-top: 50px;
   @media screen and (max-width: 1260px) {
     display: flex;
     flex-direction: column;
+    margin-top: 0px;
   }
 }
 
@@ -38,6 +40,7 @@ body {
   background-color: $PD-Details-BK-Color;
   z-index: 10;
   border-left: 5px solid $PD-Border-Color;
+  overflow-x: hidden;
   @media screen and (max-width: 1260px) {
     border-left: 0px solid $PD-Border-Color;
     border-bottom: 5px solid $PD-Border-Color;
@@ -57,6 +60,18 @@ body {
   }
 }
 
+// React animations
+.title-appear {
+  opacity: 0;
+}
+
+.title-appear.title-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+// End of react animations
+//
 .details__type {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -69,6 +84,18 @@ body {
   }
 }
 
+// React animations
+.type-appear {
+  opacity: 0;
+}
+
+.type-appear.type-appear-active {
+  opacity: 1;
+  transition: opacity 1s 1s ease-in;
+}
+
+// End of react animations
+//
 .details__description {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -80,6 +107,18 @@ body {
   line-height: 1.25;
 }
 
+// React animations
+.description-appear {
+  opacity: 0;
+}
+
+.description-appear.description-appear-active {
+  opacity: 1;
+  transition: opacity 1s 1s ease-in;
+}
+
+// End of react animations
+//
 .details__tech {
   margin: 24px auto 48px auto;
   display: flex;
@@ -89,6 +128,18 @@ body {
   }
 }
 
+// React animations
+.tech-appear {
+  opacity: 0;
+}
+
+.tech-appear.tech-appear-active {
+  opacity: 1;
+  transition: opacity 1s 1.5s ease-in;
+}
+
+// End of react animations
+//
 .tech__icon {
   margin: 36px auto 24px auto;
   width: 30px;
@@ -153,8 +204,29 @@ body {
   font-size: 24px;
   box-shadow: 0px 1px 2px $Button-Shadow-Color-Close, 0px 4px 14px 3px $Button-Shadow-Color-Far;
   margin: 0px auto 24px auto;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  &:hover {
+    border-color: $Nav-Color-Highlight;
+    transform: translate(0, -3px);
+    box-shadow: 1px 5px 3px $Hero-Btn-Shadow-Color-Close, 0px 8px 5px 1px $Hero-Btn-Shadow-Color-Far;
+  }
+  &:focus {
+    outline-color: $Nav-Color-Highlight;
+  }
 }
 
+// React animations
+.link-appear {
+  transform: translate(1000px);
+}
+
+.link-appear.link-appear-active {
+  transform: translate(0px);
+  transition: transform 1s 3s cubic-bezier(0.18, 0.63, 0, 0.99);
+}
+
+// End of react animations
+//
 .project-page__message {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;

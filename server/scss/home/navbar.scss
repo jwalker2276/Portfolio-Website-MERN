@@ -92,13 +92,28 @@
   border: none;
   font-size: inherit;
   cursor: pointer;
+  &:hover {
+    color: $Nav-Color-Highlight;
+  }
+  &:focus {
+    outline: none;
+    text-decoration: underline $Nav-Color-Highlight wavy;
+  }
   @media screen and (max-width: $phone-max-width) {
     font-size: 24px;
   }
 }
 
-.nav__item--primary {
+.nav__button.nav__item--primary {
   color: $Nav-Color-Highlight;
+  &:hover {
+    color: $Nav-Color-Main;
+  }
+  &:focus {
+    outline: none;
+    color: $Nav-Color-Main;
+    text-decoration: underline $Nav-Color-Highlight wavy;
+  }
 }
 
 .nav__sidebar {

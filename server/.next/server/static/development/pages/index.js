@@ -340,13 +340,13 @@ function (_React$Component) {
     value: function render() {
       if (this.props.contactInfo === undefined) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          className: "banner__loading",
+          className: "about__loading",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 6
           },
           __self: this
-        }, "Loading...");
+        }, "Trying to jump start the engine...");
       }
 
       var gitHubIconPath = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -684,8 +684,6 @@ function (_Component) {
         className: "contact__form__button",
         type: "submit",
         value: "Send",
-        "data-aos": "zoom-in-up",
-        "data-aos-delay": "1500",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 105
@@ -695,14 +693,14 @@ function (_Component) {
         className: "contact__or",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 107
         },
         __self: this
       }, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "contact__email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 108
         },
         __self: this
       }, "jwalkercreations@gmail.com"));
@@ -1609,7 +1607,7 @@ function (_Component) {
         className: "project__buttons",
         "data-aos": "fade-up",
         "data-aos-duration": "1000",
-        "data-aos-delay": "1000",
+        "data-aos-delay": "500",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
@@ -1925,6 +1923,39 @@ function (_React$Component) {
         backEndList = this.props.skills.backend;
         knowledgeList = this.props.skills.knowledge;
         toolsList = this.props.skills.tools;
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+          className: "skills__wrapper animation__target",
+          id: "skills",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "skills__content",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          title: "skills",
+          accent: "my",
+          color: "dark",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "skills__loading",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          },
+          __self: this
+        }, "Trying to remember my skills..."), ";"));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -1932,14 +1963,14 @@ function (_React$Component) {
         id: "skills",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 30
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "skills__content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 31
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1948,14 +1979,14 @@ function (_React$Component) {
         color: "dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 32
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "skills",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -1963,7 +1994,7 @@ function (_React$Component) {
         skills: frontEndList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 34
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -1971,7 +2002,7 @@ function (_React$Component) {
         skills: backEndList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 35
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -1979,7 +2010,7 @@ function (_React$Component) {
         skills: knowledgeList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 36
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skill__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -1987,7 +2018,7 @@ function (_React$Component) {
         skills: toolsList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 37
         },
         __self: this
       }))));
@@ -2471,12 +2502,13 @@ function (_React$Component) {
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+          className: "work__loading",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 17
           },
           __self: this
-        }, "Loading something awesome")));
+        }, "Loading something awesome...")));
       } // Grab the index for the projectInfo Page.
 
 
@@ -2550,9 +2582,6 @@ function (_React$Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "work__primary__link website__info__button",
-        "data-aos": "fade-up",
-        "data-aos-duration": "1000",
-        "data-aos-delay": "500",
         target: "_blank",
         rel: "noopener noreferrer",
         __source: {

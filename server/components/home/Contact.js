@@ -102,13 +102,7 @@ class Contact extends Component {
               onChange={this.handleInput}
             />
           </label>
-          <input
-            className="contact__form__button"
-            type="submit"
-            value="Send"
-            data-aos="zoom-in-up"
-            data-aos-delay="1500"
-          />
+          <input className="contact__form__button" type="submit" value="Send" />
         </form>
         <p className="contact__or">or</p>
         <p className="contact__email">jwalkercreations@gmail.com</p>
