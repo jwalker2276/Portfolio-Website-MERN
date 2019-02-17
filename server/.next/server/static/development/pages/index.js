@@ -1352,7 +1352,8 @@ function (_React$Component) {
           lineNumber: 61
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
         className: "nav__menu__icon",
         onClick: this.toggleSideBar,
         __source: {

@@ -59,10 +59,10 @@ export default class Navbar extends React.Component {
       <Fragment>
         <nav className="nav">
           <Logo />
-          <div className="nav__menu__icon" onClick={this.toggleSideBar}>
+          <button type="button" className="nav__menu__icon" onClick={this.toggleSideBar}>
             <span className={`nav__menu__line ${menuIconClass}`} />
             <span className={`nav__menu__line ${menuIconClass}`} />
-          </div>
+          </button>
         </nav>
 
         <nav className={`nav__sidebar ${sidebarClass}`}>
