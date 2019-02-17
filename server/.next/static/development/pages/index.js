@@ -693,6 +693,8 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        target: "_blank",
+        rel: "noreferrer noopener",
         className: "footer__link",
         __source: {
           fileName: _jsxFileName,
@@ -703,7 +705,7 @@ function (_Component) {
         className: "footer__span",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 14
         },
         __self: this
       }, " Walker"));

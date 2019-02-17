@@ -7,7 +7,9 @@ class Footer extends Component {
       <div className="footer__wrapper">
         <span className="footer__span">designed and developed by </span>
         <Link href="/dashboard">
-          <a className="footer__link">Jordan</a>
+          <a target="_blank" rel="noreferrer noopener" className="footer__link">
+            Jordan
+          </a>
         </Link>
         <span className="footer__span"> Walker</span>
       </div>

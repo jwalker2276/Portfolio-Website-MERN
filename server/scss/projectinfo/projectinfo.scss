@@ -8,7 +8,10 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: $HP-BK-Dark-Color;
+}
+
+body {
+  background-color: $HP-BK-Mid-Color;
 }
 
 #__next {
@@ -23,6 +26,7 @@ body {
   grid-template-rows: 1fr;
   margin: auto;
   margin-top: 50px;
+  box-shadow: 3px 15px 10px 0px $Button-Shadow-Color-Far, 3px 5px 10px 0 $Button-Shadow-Color-Close;
   @media screen and (max-width: 1260px) {
     display: flex;
     flex-direction: column;
