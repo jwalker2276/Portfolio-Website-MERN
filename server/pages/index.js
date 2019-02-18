@@ -54,13 +54,13 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <Meta />
-        <div className="landing__wrapper">
-          <section className="hero__section">
+        <section name="Landing Page" className="landing__wrapper" aria-label="Landing page">
+          <div className="hero__section">
             <Navbar />
             <Hero />
             <Slice position="top" color="white" />
-          </section>
-        </div>
+          </div>
+        </section>
         <Skills skills={skillData} />
         <Slice position="bottom" color="white" />
         <Work projects={projectsData} />

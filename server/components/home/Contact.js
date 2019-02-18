@@ -60,6 +60,7 @@ class Contact extends Component {
           >
             Name
             <input
+              aria-label="name"
               className="contact__input"
               required
               type="text"
@@ -76,6 +77,7 @@ class Contact extends Component {
           >
             Email
             <input
+              aria-label="email"
               className="contact__input"
               required
               type="email"
@@ -92,6 +94,7 @@ class Contact extends Component {
           >
             Message
             <textarea
+              aria-label="message"
               className="contact__input"
               required
               cols="33"

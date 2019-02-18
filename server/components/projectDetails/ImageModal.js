@@ -4,6 +4,7 @@ import { Image, Transformation } from 'cloudinary-react';
 export default class ImageModal extends Component {
   constructor(props) {
     super(props);
+    this.closeButton = React.createRef();
     this.state = {
       modalClass: 'modal'
     };
@@ -27,6 +28,9 @@ export default class ImageModal extends Component {
     if (showModal) {
       // Set modal div class to show
       this.setState({ modalClass: 'modal modal--show' });
+      console.log('focusing on button');
+      console.log(this.closeButton);
+      this.closeButton.current.focus();
     } else {
       // Set modal div class to hide
       this.setState({ modalClass: 'modal' });
@@ -40,10 +44,21 @@ export default class ImageModal extends Component {
     return (
       <div className={`${modalClass}`}>
         <div className="modal__background__blur" />
-        <button type="button" className="modal__close" onClick={toggleModal}>
+        <button
+          aria-label="Close"
+          type="button"
+          className="modal__close"
+          onClick={toggleModal}
+          ref={this.closeButton}
+        >
           &times;
         </button>
-        <Image className="modal__image" cloudName="jwalkercreations-com" publicId={imageId}>
+        <Image
+          className="modal__image"
+          alt="Website Image"
+          cloudName="jwalkercreations-com"
+          publicId={imageId}
+        >
           <Transformation height="740" width="975" crop="limit" fetchFormat="auto" />
         </Image>
       </div>

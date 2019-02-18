@@ -1,16 +1,8 @@
 {
-  "./noop": [
+  "../scss/projectinfo/projectinfo.scss": [
     {
-      "id": "./node_modules/next/dist/client/noop.js",
-      "name": "./node_modules/next/dist/client/noop.js",
-      "file": "static/chunks/0.js",
-      "publicPath": "static/chunks/0.js"
-    }
-  ],
-  "../scss/home/homepage.scss": [
-    {
-      "id": "./scss/home/homepage.scss",
-      "name": "./scss/home/homepage.scss",
+      "id": "./scss/projectinfo/projectinfo.scss",
+      "name": "./scss/projectinfo/projectinfo.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -21,6 +13,28 @@
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 6,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/home/homepage.scss": [
+    {
+      "id": "./scss/home/homepage.scss",
+      "name": "./scss/home/homepage.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "./noop": [
+    {
+      "id": "./node_modules/next/dist/client/noop.js",
+      "name": "./node_modules/next/dist/client/noop.js",
+      "file": "static/chunks/0.js",
+      "publicPath": "static/chunks/0.js"
     }
   ]
 }

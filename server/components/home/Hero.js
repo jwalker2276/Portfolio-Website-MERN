@@ -62,7 +62,7 @@ class Hero extends React.Component {
   render() {
     const { verb } = this.state;
     return (
-      <div className="hero__text__wrapper" data-aos="zoom-in">
+      <section className="hero__text__wrapper" data-aos="zoom-in">
         <h1 className="hero__text">
           I&apos;m <span className="hero__text__name">Jordan</span> , a{' '}
           <span className="hero__text__title">Web Developer</span> who loves{' '}
@@ -86,7 +86,7 @@ class Hero extends React.Component {
           <SpecialButtons buttonType="primary" />
           <SpecialButtons buttonType="secondary" />
         </div>
-      </div>
+      </section>
     );
   }
 }

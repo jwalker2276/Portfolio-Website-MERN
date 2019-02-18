@@ -178,7 +178,9 @@
 }
 
 .work__secondary__link {
+  box-sizing: content-box;
   color: $Sec-Button-Color;
+  background-color: rgba(0, 0, 0, 0);
   opacity: 0.75;
   border: 1px solid $Sec-Button-Color;
   padding: 10px;

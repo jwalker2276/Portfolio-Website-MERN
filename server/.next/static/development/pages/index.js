@@ -151,6 +151,7 @@ function (_Component) {
         className: "about__profileImg",
         cloudName: "jwalkercreations-com",
         publicId: this.props.imageId,
+        alt: "profile image",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
@@ -163,28 +164,28 @@ function (_Component) {
         fetchFormat: "auto",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 19
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AboutBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
         contactInfo: this.props.contact,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 21
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "about__content__bottom",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "about__bio",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 24
         },
         __self: this
       }, this.props.bio)));
@@ -253,7 +254,7 @@ function (_React$Component) {
             lineNumber: 6
           },
           __self: this
-        }, "Trying to jump start the engine...");
+        }, "Loading ...");
       }
 
       var gitHubIconPath = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -307,6 +308,7 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "aria-label": "Github profile link",
         className: "banner__link",
         href: github,
         target: "_blank",
@@ -326,10 +328,11 @@ function (_React$Component) {
         viewBox: "0 0 25 25",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 39
         },
         __self: this
       }, gitHubIconPath)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "aria-label": "Linkedin profile link",
         className: "banner__link",
         href: linkedin,
         target: "_blank",
@@ -338,7 +341,7 @@ function (_React$Component) {
         "data-aos-delay": "500",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 49
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -349,21 +352,21 @@ function (_React$Component) {
         viewBox: "0 0 25 25",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 58
         },
         __self: this
       }, linkedInIconPath)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "banner__second",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 70
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "banner__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 71
         },
         __self: this
       }, "Email Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -372,7 +375,7 @@ function (_React$Component) {
         "data-aos-delay": "750",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 72
         },
         __self: this
       }, email)));
@@ -530,6 +533,7 @@ function (_Component) {
         },
         __self: this
       }, "Name", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "aria-label": "name",
         className: "contact__input",
         required: true,
         type: "text",
@@ -548,10 +552,11 @@ function (_Component) {
         "data-aos-delay": "750",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 72
         },
         __self: this
       }, "Email", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "aria-label": "email",
         className: "contact__input",
         required: true,
         type: "email",
@@ -560,7 +565,7 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 79
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -570,10 +575,11 @@ function (_Component) {
         "data-aos-delay": "1000",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 89
         },
         __self: this
       }, "Message", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        "aria-label": "message",
         className: "contact__input",
         required: true,
         cols: "33",
@@ -584,7 +590,7 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 96
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -593,21 +599,21 @@ function (_Component) {
         value: "Send",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 108
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "contact__or",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 110
         },
         __self: this
       }, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "contact__email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 111
         },
         __self: this
       }, "jwalkercreations@gmail.com"));
@@ -833,7 +839,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var verb = this.state.verb;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "hero__text__wrapper",
         "data-aos": "zoom-in",
         __source: {
@@ -1240,7 +1246,7 @@ function (_React$Component) {
       var _this$state2 = this.state,
           menuIconClass = _this$state2.menuIconClass,
           sidebarClass = _this$state2.sidebarClass;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 59
@@ -1260,6 +1266,7 @@ function (_React$Component) {
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        "aria-label": "Menu",
         type: "button",
         className: "nav__menu__icon",
         onClick: this.toggleSideBar,
@@ -1272,47 +1279,32 @@ function (_React$Component) {
         className: "nav__menu__line ".concat(menuIconClass),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 68
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "nav__menu__line ".concat(menuIconClass),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 69
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "nav__sidebar ".concat(sidebarClass),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 73
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "nav__items ".concat(sidebarClass),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 74
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav__item nav__item--one ".concat(sidebarClass),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 70
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        className: "nav__button nav__button--skills",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 71
-        },
-        __self: this
-      }, "Skills")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav__item nav__item--two ".concat(sidebarClass),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 75
@@ -1320,14 +1312,14 @@ function (_React$Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
-        className: "nav__button nav__button--work",
+        className: "nav__button nav__button--skills",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 76
         },
         __self: this
-      }, "Work")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav__item nav__item--three ".concat(sidebarClass),
+      }, "Skills")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "nav__item nav__item--two ".concat(sidebarClass),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 80
@@ -1335,14 +1327,14 @@ function (_React$Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
-        className: "nav__button nav__button--about",
+        className: "nav__button nav__button--work",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 81
         },
         __self: this
-      }, "About")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav__item  nav__item--four ".concat(sidebarClass),
+      }, "Work")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "nav__item nav__item--three ".concat(sidebarClass),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 85
@@ -1350,17 +1342,32 @@ function (_React$Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
-        className: "nav__button nav__button--contact",
+        className: "nav__button nav__button--about",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 86
+        },
+        __self: this
+      }, "About")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "nav__item  nav__item--four ".concat(sidebarClass),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "nav__button nav__button--contact",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "nav__item--primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 92
         },
         __self: this
       }, "Contact"))))));
@@ -1465,6 +1472,7 @@ function (_Component) {
           cloudName: "jwalkercreations-com",
           publicId: mainImageid,
           className: "project__image",
+          alt: "project image mockup",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 25
@@ -1477,7 +1485,7 @@ function (_Component) {
           fetchFormat: "auto",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 31
           },
           __self: this
         })));
@@ -1487,28 +1495,28 @@ function (_Component) {
         className: "project",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 38
         },
         __self: this
       }, image, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project__details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 40
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "project__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 41
         },
         __self: this
-      }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "project__type",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 42
         },
         __self: this
       }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1518,7 +1526,7 @@ function (_Component) {
         "data-aos-delay": "500",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1528,7 +1536,7 @@ function (_Component) {
         rel: "noopener noreferrer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 49
         },
         __self: this
       }, "Live Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -1540,16 +1548,17 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 57
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
         className: "work__secondary__link",
         target: "_blank",
         rel: "noopener noreferrer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 58
         },
         __self: this
       }, "Learn More")))));
@@ -1636,7 +1645,7 @@ function (_React$Component) {
           lineNumber: 13
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "skill__title",
         __source: {
           fileName: _jsxFileName,
@@ -1863,7 +1872,7 @@ function (_React$Component) {
             lineNumber: 23
           },
           __self: this
-        }, "Trying to remember my skills..."), ";"));
+        }, "Loading..."), ";"));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -33203,14 +33212,16 @@ function (_React$Component) {
           lineNumber: 56
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        name: "Landing Page",
         className: "landing__wrapper",
+        "aria-label": "Landing page",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 57
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hero__section",
         __source: {
           fileName: _jsxFileName,
@@ -33486,7 +33497,7 @@ var actions = {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -33511,5 +33522,5 @@ module.exports = dll_ecba6b44147cc8018369;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]));;
+},[[5,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=index.js.map

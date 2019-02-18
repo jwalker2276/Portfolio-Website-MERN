@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 // Smooth scroll lib
 import Jump from 'jump.js';
 // Components
@@ -56,10 +56,15 @@ export default class Navbar extends React.Component {
     const { menuIconClass, sidebarClass } = this.state;
 
     return (
-      <Fragment>
+      <header>
         <nav className="nav">
           <Logo />
-          <button type="button" className="nav__menu__icon" onClick={this.toggleSideBar}>
+          <button
+            aria-label="Menu"
+            type="button"
+            className="nav__menu__icon"
+            onClick={this.toggleSideBar}
+          >
             <span className={`nav__menu__line ${menuIconClass}`} />
             <span className={`nav__menu__line ${menuIconClass}`} />
           </button>
@@ -89,7 +94,7 @@ export default class Navbar extends React.Component {
             </li>
           </ul>
         </nav>
-      </Fragment>
+      </header>
     );
   }
 }

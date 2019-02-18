@@ -17,7 +17,6 @@ export default class ImageSlider extends Component {
   componentDidMount() {
     const { imageIds } = this.props;
 
-    // TODO: handle this case
     if (imageIds.length === 0) {
       console.log('No images');
     }
@@ -125,14 +124,10 @@ export default class ImageSlider extends Component {
 
     return (
       <section className="project-page__slider">
-        <ImageModal
-          imageId={allIds[mainImageIndex]}
-          showModal={showModal}
-          toggleModal={this.toggleModal}
-        />
         <div className="slider__container">
           <div className="slider__image__controls">
             <button
+              aria-label="Previous Image"
               type="button"
               value="back"
               onClick={this.moveBack}
@@ -141,6 +136,7 @@ export default class ImageSlider extends Component {
               {moveIcon}
             </button>
             <button
+              aria-label="Next Image"
               type="button"
               value="next"
               onClick={this.moveForward}
@@ -155,6 +151,7 @@ export default class ImageSlider extends Component {
           >
             {allIds.map(imageId => (
               <Image
+                alt="Website Screenshot"
                 key={imageId}
                 className="slider__image"
                 cloudName="jwalkercreations-com"
@@ -166,6 +163,11 @@ export default class ImageSlider extends Component {
             ))}
           </div>
         </div>
+        <ImageModal
+          imageId={allIds[mainImageIndex]}
+          showModal={showModal}
+          toggleModal={this.toggleModal}
+        />
       </section>
     );
   }

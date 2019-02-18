@@ -59,14 +59,14 @@ class projectinfo extends Component {
     return (
       <Fragment>
         <Meta />
-        <div className="project-page__wrapper">
+        <main className="project-page__wrapper">
           <ImageSlider imageIds={imageIds} />
           <section className="project-page__details">
             <CSSTransition in appear timeout={5000} classNames="title">
               <h1 className="details__title">{title}</h1>
             </CSSTransition>
             <CSSTransition in appear timeout={5000} classNames="type">
-              <h4 className="details__type">{type}</h4>
+              <h2 className="details__type">{type}</h2>
             </CSSTransition>
             <CSSTransition in appear timeout={5000} classNames="description">
               <p className="details__description">{description}</p>
@@ -74,7 +74,7 @@ class projectinfo extends Component {
             <CSSTransition in appear timeout={5000} classNames="tech">
               <div className="details__tech">
                 {techIcon}
-                <h4 className="tech__title">Tech Used</h4>
+                <h3 className="tech__title">Tech Used</h3>
                 <ul className="tech__list">
                   {frontend.map(techName => (
                     <li key={techName} className="tech__list__item">
@@ -100,7 +100,7 @@ class projectinfo extends Component {
               </a>
             </CSSTransition>
           </section>
-        </div>
+        </main>
       </Fragment>
     );
   }

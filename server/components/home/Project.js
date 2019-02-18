@@ -22,7 +22,12 @@ export default class Project extends Component {
           data-aos="zoom-in-right"
           data-aos-anchor-placement="top-bottom"
         >
-          <Image cloudName="jwalkercreations-com" publicId={mainImageid} className="project__image">
+          <Image
+            cloudName="jwalkercreations-com"
+            publicId={mainImageid}
+            className="project__image"
+            alt="project image mockup"
+          >
             <Transformation width="700" height="400" quality="auto" fetchFormat="auto" />
           </Image>
         </div>
@@ -34,7 +39,7 @@ export default class Project extends Component {
         {image}
         <div className="project__details">
           <h1 className="project__title">{title}</h1>
-          <h3 className="project__type">{type}</h3>
+          <h2 className="project__type">{type}</h2>
           <div
             className="project__buttons"
             data-aos="fade-up"
@@ -50,9 +55,14 @@ export default class Project extends Component {
               Live Site
             </a>
             <Link href={{ pathname: '/projectinfo', query: { index: projectIndex } }}>
-              <a className="work__secondary__link" target="_blank" rel="noopener noreferrer">
+              <button
+                type="button"
+                className="work__secondary__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Learn More
-              </a>
+              </button>
             </Link>
           </div>
         </div>

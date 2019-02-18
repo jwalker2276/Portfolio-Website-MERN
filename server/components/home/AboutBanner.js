@@ -3,7 +3,7 @@ import React from 'react';
 class AboutBanner extends React.Component {
   render() {
     if (this.props.contactInfo === undefined) {
-      return <p className="about__loading">Trying to jump start the engine...</p>;
+      return <p className="about__loading">Loading ...</p>;
     }
 
     const gitHubIconPath = (
@@ -28,6 +28,7 @@ class AboutBanner extends React.Component {
           <p className="banner__title">Find Me</p>
           <div className="banner__icons">
             <a
+              aria-label="Github profile link"
               className="banner__link"
               href={github}
               target="_blank"
@@ -46,6 +47,7 @@ class AboutBanner extends React.Component {
               </svg>
             </a>
             <a
+              aria-label="Linkedin profile link"
               className="banner__link"
               href={linkedin}
               target="_blank"
