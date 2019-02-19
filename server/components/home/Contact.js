@@ -10,10 +10,12 @@ class Contact extends Component {
       email: '',
       name: '',
       message: '',
-      emailSuccessful: false
+      sendBtnClass: 'contact__form__button',
+      sendBtnText: 'Send'
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSend = this.handleSend.bind(this);
+    this.updateSendButton = this.updateSendButton.bind(this);
   }
 
   handleInput(event) {
@@ -40,10 +42,21 @@ class Contact extends Component {
       .post('/contact', payload)
       .then(res => {
         if (res.status === 200) {
-          this.setState({ emailSuccessful: true });
+          this.updateSendButton();
         }
       })
       .catch(err => console.log(err));
+  }
+
+  updateSendButton() {
+    // Update class for button
+    this.setState({ sendBtnClass: 'contact__form__button success' });
+    // Update button text
+    this.setState({ sendBtnText: 'Message send, thanks' });
+    // Also set inputs back to inital state
+    this.setState({ email: '' });
+    this.setState({ name: '' });
+    this.setState({ message: '' });
   }
 
   render() {
@@ -105,7 +118,7 @@ class Contact extends Component {
               onChange={this.handleInput}
             />
           </label>
-          <input className="contact__form__button" type="submit" value="Send" />
+          <input className={this.state.sendBtnClass} type="submit" value={this.state.sendBtnText} />
         </form>
         <p className="contact__or">or</p>
         <p className="contact__email">jwalkercreations@gmail.com</p>

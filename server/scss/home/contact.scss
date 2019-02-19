@@ -33,7 +33,7 @@
   color: $C-Form-Text-Color;
   border: none;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 5px;
   font-size: 16px;
   box-shadow: inset 0px 1px 2px 0px $C-Form-Input-Shadow-Color,
@@ -50,7 +50,6 @@
   height: 42px;
   border-radius: 5px;
   margin-top: 16px;
-  text-transform: uppercase;
   background-color: $C-Form-Button-BK-Color;
   color: $C-Form-Text-Color;
   border: none;
@@ -59,7 +58,7 @@
   font-size: 18px;
   box-shadow: 0px 1px 2px $Button-Shadow-Color-Close, 0px 4px 14px 3px $Button-Shadow-Color-Far;
   -webkit-appearance: none;
-  transition: transform 0.25s ease-in, box-shadow 0.25s ease-in;
+  transition: transform 0.25s ease-in, box-shadow 0.25s ease-in, width 0.5s ease-in;
   &:hover {
     transform: translate(0, -3px);
     box-shadow: 1px 5px 3px $Hero-Btn-Shadow-Color-Close, 0px 8px 5px 1px $Hero-Btn-Shadow-Color-Far;
@@ -70,6 +69,10 @@
   @media screen and (max-width: $phone-max-width) {
     width: 120px;
   }
+}
+
+.contact__form__button.success {
+  width: 250px;
 }
 
 .contact__or {

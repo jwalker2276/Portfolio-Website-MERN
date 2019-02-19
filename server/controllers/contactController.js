@@ -4,9 +4,13 @@ exports.contact = async (req, res) => {
   const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
     port: process.env.MAIL_PORT,
+    secure: false,
     auth: {
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASS
+    },
+    tls: {
+      rejectUnauthorized: false
     }
   });
 
@@ -14,7 +18,7 @@ exports.contact = async (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'jwalkercreations@gmail.com',
+    to: process.env.MAIL_USER,
     subject: `Message from ${name}`,
     text: message,
     html: `<div classname='email' style="

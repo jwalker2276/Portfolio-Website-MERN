@@ -446,10 +446,12 @@ function (_Component) {
       email: '',
       name: '',
       message: '',
-      emailSuccessful: false
+      sendBtnClass: 'contact__form__button',
+      sendBtnText: 'Send'
     };
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.handleSend = _this.handleSend.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.updateSendButton = _this.updateSendButton.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
@@ -478,12 +480,32 @@ function (_Component) {
 
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/contact', payload).then(function (res) {
         if (res.status === 200) {
-          _this2.setState({
-            emailSuccessful: true
-          });
+          _this2.updateSendButton();
         }
       }).catch(function (err) {
         return console.log(err);
+      });
+    }
+  }, {
+    key: "updateSendButton",
+    value: function updateSendButton() {
+      // Update class for button
+      this.setState({
+        sendBtnClass: 'contact__form__button success'
+      }); // Update button text
+
+      this.setState({
+        sendBtnText: 'Message send, thanks'
+      }); // Also set inputs back to inital state
+
+      this.setState({
+        email: ''
+      });
+      this.setState({
+        name: ''
+      });
+      this.setState({
+        message: ''
       });
     }
   }, {
@@ -494,7 +516,7 @@ function (_Component) {
         id: "contact",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 64
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slice__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -502,7 +524,7 @@ function (_Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 65
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -511,7 +533,7 @@ function (_Component) {
         color: "light",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 66
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -519,7 +541,7 @@ function (_Component) {
         className: "contact__form",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 67
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -529,7 +551,7 @@ function (_Component) {
         "data-aos-delay": "500",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 68
         },
         __self: this
       }, "Name", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -542,7 +564,7 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 75
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -552,7 +574,7 @@ function (_Component) {
         "data-aos-delay": "750",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 85
         },
         __self: this
       }, "Email", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -565,7 +587,7 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 92
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -575,7 +597,7 @@ function (_Component) {
         "data-aos-delay": "1000",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 102
         },
         __self: this
       }, "Message", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
@@ -590,30 +612,30 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 109
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "contact__form__button",
+        className: this.state.sendBtnClass,
         type: "submit",
-        value: "Send",
+        value: this.state.sendBtnText,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 121
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "contact__or",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 123
         },
         __self: this
       }, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "contact__email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 124
         },
         __self: this
       }, "jwalkercreations@gmail.com"));
@@ -33497,7 +33519,7 @@ var actions = {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -33522,5 +33544,5 @@ module.exports = dll_ecba6b44147cc8018369;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]));;
+},[[3,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=index.js.map
