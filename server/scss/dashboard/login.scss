@@ -1,8 +1,8 @@
 .form {
   width: 350px;
-  height: 350px;
+  height: 400px;
   color: $Pri-Button-BK-Color;
-  background-color: $HP-BK-Light-Color;
+  background-color: #e3ecfa;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -13,9 +13,9 @@
 .form__heading {
   text-align: center;
   font-weight: 700;
-  font-size: 2em;
-  margin: 0.5em;
-  color: $Pri-Button-BK-Color;
+  font-size: 36px;
+  margin: 24px auto;
+  color: #102a43;
 }
 
 .form__set {
@@ -29,38 +29,48 @@
 
 .form__label {
   width: 100%;
+  font-size: 16px;
   font-weight: 400;
-  color: $Pri-Button-BK-Color;
+  color: #102a43;
+  margin-bottom: 24px;
 }
 
 .form__error {
   margin: 1em;
   font-weight: 400;
-  font-size: 1em;
-  color: red;
+  font-size: 14px;
+  color: #911111;
 }
 
 .form__input {
   width: 100%;
-  height: 2em;
+  height: 32px;
   box-sizing: border-box;
-  font-size: 1em;
-  border: 1px solid $Pri-Button-BK-Color;
+  font-size: 18px;
+  border: none;
   border-radius: 5px;
   padding-left: 5px;
-  background-color: white;
+  background-color: #f0f4fb;
+  box-shadow: inset 0px 1px 4px 0px rgba(10, 31, 61, 0.5),
+    inset 0px -1px 0px 0px rgba(242, 242, 242, 0.5);
 }
 
 .form__button {
   width: 50%;
-  height: 2em;
-  font-size: 1em;
-  margin: 1em auto;
+  height: 36px;
+  font-size: 16px;
+  margin: 16px auto;
   align-self: center;
   font-weight: 700;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: $Pri-Button-BK-Color;
-  color: $Pri-Button-Text-Color;
+  background-color: #0f609b;
+  color: #f0f4fb;
+  box-shadow: 0px 1px 6px 0px rgba(10, 31, 61, 0.75);
+  transition: transform 0.25s ease-in, box-shadow 0.25s ease-in;
+  &:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0px 4px 10px 0px rgba(10, 31, 61, 0.75);
+  }
 }
