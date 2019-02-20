@@ -35,7 +35,7 @@
 
 .about__content__bottom {
   margin: 64px 0 64px 0;
-  width: 600px;
+  width: 700px;
   height: auto;
   line-height: 1.5;
   @media screen and (max-width: $phone-max-width) {
@@ -49,6 +49,7 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  white-space: pre-line;
   @media screen and (max-width: $phone-max-width) {
     padding: 0px;
   }
