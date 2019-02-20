@@ -1,5 +1,5 @@
 .hero__section {
-  background-color: hsla(0, 0, 0, 0.4);
+  background-color: hsla(0, 0, 0, 0.5);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
   color: $Hero-Text-Color;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  font-size: 72px; // padding-left: 0.75em;
+  font-size: 72px;
   margin: auto;
   max-width: 600px;
   text-shadow: 0px 0px 20px $Hero-Text-Outline-Color;
