@@ -1,8 +1,7 @@
 .group__title {
-  font-size: 1em;
-  color: black;
+  font-size: 24px;
+  color: $Dash-Text;
   font-weight: 600;
-  text-align: center;
 }
 
 .group__form {
@@ -27,20 +26,4 @@
   color: black;
   margin-bottom: 0.5em;
   text-align: center;
-}
-
-.image__upload {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
-
-.image__upload__form {
-  margin: 10px 0;
-  background-color: white;
-}
-
-.project__images__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }

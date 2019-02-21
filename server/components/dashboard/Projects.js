@@ -57,9 +57,9 @@ class Projects extends Component {
     const { projectToUpdate } = this.state;
 
     // Determine which class to apply
-    let buttonClass = 'secondary__button';
+    let buttonClass = 'projects__button';
     if (projectToUpdate === projectNum) {
-      buttonClass = 'secondary__button--active';
+      buttonClass = 'projects__button--active';
     }
 
     return (
@@ -154,13 +154,13 @@ class Projects extends Component {
             {projectNames.map(projectNum => this.determineButton(projectNum))}
           </div>
           <div className="project__nav__right">
-            <button className="secondary__button" type="button" onClick={this.addProject}>
+            <button className="add__button" type="button" onClick={this.addProject}>
               Add Project
             </button>
-            <button className="tertiary__button" type="button" onClick={this.deleteProject}>
+            <button className="delete__button" type="button" onClick={this.deleteProject}>
               Delete Current Project
             </button>
-            <button className="primary__button" type="button" onClick={this.toggleUpdateServer}>
+            <button className="update__button" type="button" onClick={this.toggleUpdateServer}>
               Update Server
             </button>
           </div>

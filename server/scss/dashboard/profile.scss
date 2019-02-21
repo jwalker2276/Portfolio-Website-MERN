@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  background-color: $HP-BK-Mid-Color;
 }
 
 .profile__nav__right {
@@ -23,7 +22,6 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto 1fr;
   grid-gap: 10px;
-  background-color: $HP-BK-Mid-Color;
   padding: 10px;
 }
 
@@ -34,25 +32,21 @@
 .image__edit-card {
   grid-row: 3 / -1;
   grid-column: 1 / 2;
-  background-color: $HP-BK-Mid-Color;
   padding: 10px;
 }
 
 .links__edit-card {
   grid-row: 3 / -1;
   grid-column: 2 / 4;
-  background-color: $HP-BK-Mid-Color;
   padding: 10px;
 }
 
 .bio__edit-card {
   grid-row: 3 / -1;
   grid-column: 4 / -1;
-  background-color: $HP-BK-Mid-Color;
   padding: 10px;
 }
 
 .skill__group {
   grid-row: 2 / -1;
-  background-color: $HP-BK-Light-Color;
 }

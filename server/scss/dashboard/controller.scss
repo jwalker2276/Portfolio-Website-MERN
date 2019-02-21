@@ -1,5 +1,4 @@
 .dashboard__nav {
-  background-color: $HP-BK-Dark-Color;
   padding: 0 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,14 +17,20 @@
 }
 
 .nav__button {
-  border: none;
-  padding: 10px 0px 10px 0px;
   cursor: pointer;
-  color: $HP-BK-Light-Color;
-  background: $HP-BK-Dark-Color;
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-right: 1em;
+  margin-right: 10px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid $Dash-Card-Bk;
+  background-color: rgba(0, 0, 0, 0);
+  color: $Dash-Input;
+  font-size: 16px;
+  transition: background-color 0.25s linear, color 0.25s linear;
+  &:hover {
+    background-color: $Dash-Card-Bk;
+    color: $Dash-Text;
+  }
 }
 
 .nav__button--right {
@@ -33,10 +38,6 @@
 }
 
 .dashboard__content {
-  background-color: $HP-BK-Dark-Color;
-  padding: 50px 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 8% 1fr 1fr;
-  grid-gap: 10px;
+  padding: 0px 50px;
+  background-color: $Dash-Card-Bk;
 }

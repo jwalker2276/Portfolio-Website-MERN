@@ -2677,10 +2677,10 @@ function (_Component) {
 
       var projectToUpdate = this.state.projectToUpdate; // Determine which class to apply
 
-      var buttonClass = 'secondary__button';
+      var buttonClass = 'projects__button';
 
       if (projectToUpdate === projectNum) {
-        buttonClass = 'secondary__button--active';
+        buttonClass = 'projects__button--active';
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2817,7 +2817,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "secondary__button",
+        className: "add__button",
         type: "button",
         onClick: this.addProject,
         __source: {
@@ -2826,7 +2826,7 @@ function (_Component) {
         },
         __self: this
       }, "Add Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "tertiary__button",
+        className: "delete__button",
         type: "button",
         onClick: this.deleteProject,
         __source: {
@@ -2835,7 +2835,7 @@ function (_Component) {
         },
         __self: this
       }, "Delete Current Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "primary__button",
+        className: "update__button",
         type: "button",
         onClick: this.toggleUpdateServer,
         __source: {
@@ -31358,7 +31358,7 @@ var actions = {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./pages/dashboard.js ***!
   \**********************************/
@@ -31383,5 +31383,5 @@ module.exports = dll_ecba6b44147cc8018369;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]));;
+},[[3,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=dashboard.js.map
