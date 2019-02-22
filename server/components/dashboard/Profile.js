@@ -105,7 +105,7 @@ class Profile extends Component {
       <Fragment>
         <nav className="profile__nav">
           <div className="profile__nav__right">
-            <button className="primary__button" type="button" onClick={() => this.updateServer()}>
+            <button className="update__button" type="button" onClick={() => this.updateServer()}>
               Update Server
             </button>
           </div>
@@ -137,35 +137,37 @@ class Profile extends Component {
             updateProfileState={this.updateProfileState}
           />
         </section>
-        <section className="image__edit-card">
-          <h3 className="group__title">Profile Image</h3>
-          <ImageCard imageId={profileImageId} updateProfileState={this.updateProfileState} />
-        </section>
-        <section className="links__edit-card">
-          <h3 className="group__title">Links</h3>
-          <LinksCard
-            linkData={linkedin}
-            linkType="linkedin"
-            title="Linkedin"
-            updateProfileState={this.updateProfileState}
-          />
-          <LinksCard
-            linkData={github}
-            linkType="github"
-            title="Github"
-            updateProfileState={this.updateProfileState}
-          />
-          <LinksCard
-            linkData={email}
-            linkType="email"
-            title="Email"
-            updateProfileState={this.updateProfileState}
-          />
-        </section>
-        <section className="bio__edit-card">
-          <h3 className="group__title">Bio</h3>
-          <BioCard bioData={bio} title="Bio" updateProfileState={this.updateProfileState} />
-        </section>
+        <div className="profile__lower__section__wrapper">
+          <section className="image__edit-card">
+            <h3 className="group__title">Profile Image</h3>
+            <ImageCard imageId={profileImageId} updateProfileState={this.updateProfileState} />
+          </section>
+          <section className="links__edit-card">
+            <h3 className="group__title">Links</h3>
+            <LinksCard
+              linkData={linkedin}
+              linkType="linkedin"
+              title="Linkedin"
+              updateProfileState={this.updateProfileState}
+            />
+            <LinksCard
+              linkData={github}
+              linkType="github"
+              title="Github"
+              updateProfileState={this.updateProfileState}
+            />
+            <LinksCard
+              linkData={email}
+              linkType="email"
+              title="Email"
+              updateProfileState={this.updateProfileState}
+            />
+          </section>
+          <section className="bio__edit-card">
+            <h3 className="group__title">Bio</h3>
+            <BioCard bioData={bio} title="Bio" updateProfileState={this.updateProfileState} />
+          </section>
+        </div>
       </Fragment>
     );
   }

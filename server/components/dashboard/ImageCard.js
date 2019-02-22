@@ -38,12 +38,19 @@ export default class ImageCard extends Component {
 
     const imageUploader = (
       <div className="image__upload">
-        <Image cloudName="jwalkercreations-com" publicId={imageId}>
-          <Transformation height="150" quality="auto" crop="limit" fetchFormat="auto" />
+        <Image
+          cloudName="jwalkercreations-com"
+          publicId={imageId}
+          className="about__image__thumbnail"
+        >
+          <Transformation height="180" quality="auto" crop="limit" fetchFormat="auto" />
         </Image>
         <form className="image__upload__form">
+          <button type="button" className="image__fake__button">
+            Select Image
+          </button>
           <input
-            className="group__from__input"
+            className="about__image__input"
             type="file"
             name="file"
             required

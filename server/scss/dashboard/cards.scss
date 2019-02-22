@@ -2,28 +2,43 @@
   font-size: 24px;
   color: $Dash-Text;
   font-weight: 600;
+  margin: 16px 0 24px 0;
+}
+
+.group__form__label {
+  font-size: 16px;
+  color: $Dash-Text;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 24px;
 }
 
 .group__form {
-  padding: 10px;
+  margin-bottom: 24px;
 }
 
 .group__form__input,
 .group__form__textarea {
+  margin-top: 12px;
   width: 100%;
-  font-size: 1em;
+  font-size: 16px;
   box-sizing: border-box;
-  color: black;
+  color: $Dash-Text;
   border-radius: 5px;
-  background-color: white;
-  padding: 7px;
-  margin: 10px 0;
+  background-color: $Dash-Input;
+  padding: 8px;
   border: none;
+  line-height: 1.25;
+  box-shadow: inset 0px 1px 4px 0px rgba(10, 31, 61, 0.5),
+    inset 0px -1px 0px 0px rgba(242, 242, 242, 0.5);
 }
 
-.group__form__label {
-  font-size: 1em;
-  color: black;
-  margin-bottom: 0.5em;
-  text-align: center;
+.group__submit {
+  width: 160px;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: $Dash_Input;
+  background-color: #0f609b;
 }

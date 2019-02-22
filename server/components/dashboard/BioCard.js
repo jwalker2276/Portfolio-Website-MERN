@@ -36,8 +36,8 @@ class BioCard extends Component {
     const { title } = this.props;
     return (
       <div className="bio__group">
-        <form className="group__form" onSubmit={this.handleSubmit}>
-          <label htmlFor={title} className="group__form__label">
+        <form className="bio__form" onSubmit={this.handleSubmit}>
+          <label htmlFor={title} className="group__form__label bio__form__label">
             {title}
             <textarea
               rows="5"

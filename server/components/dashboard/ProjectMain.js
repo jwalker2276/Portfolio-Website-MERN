@@ -121,7 +121,7 @@ export default class ProjectMain extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <input className="group__submit" type="submit" value="Update Changes" />
+        <input className="group__submit" type="submit" value="Save Changes" />
       </form>
     );
   }

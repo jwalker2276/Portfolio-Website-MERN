@@ -188,7 +188,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "group__form",
+        className: "bio__form",
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
@@ -197,7 +197,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: title,
-        className: "group__form__label",
+        className: "group__form__label bio__form__label",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 40
@@ -293,7 +293,7 @@ function (_Component) {
     _this.changeSection = _this.changeSection.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.logout = _this.logout.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.state = {
-      sectionToRender: 'projects'
+      sectionToRender: 'profile'
     };
     return _this;
   } // Determine which section to render
@@ -563,44 +563,53 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
         cloudName: "jwalkercreations-com",
         publicId: imageId,
+        className: "about__image__thumbnail",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 41
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
-        height: "150",
+        height: "180",
         quality: "auto",
         crop: "limit",
         fetchFormat: "auto",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 46
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
         className: "image__upload__form",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 48
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-        className: "group__from__input",
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+        type: "button",
+        className: "image__fake__button",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, "Select Image"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        className: "about__image__input",
         type: "file",
         name: "file",
         required: true,
         onChange: this.uploadImage,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 52
         },
         __self: this
       })));
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 63
         },
         __self: this
       }, imageUploader);
@@ -1173,7 +1182,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "primary__button",
+        className: "update__button",
         type: "button",
         onClick: function onClick() {
           return _this2.updateServer();
@@ -1237,18 +1246,25 @@ function (_Component) {
           lineNumber: 133
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "image__edit-card",
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "profile__lower__section__wrapper",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 140
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "image__edit-card",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 141
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 142
         },
         __self: this
       }, "Profile Image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageCard__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -1256,21 +1272,21 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 142
+          lineNumber: 143
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "links__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 145
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 146
         },
         __self: this
       }, "Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1280,7 +1296,7 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 147
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1290,7 +1306,7 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 153
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1300,21 +1316,21 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 159
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "bio__edit-card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 166
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "group__title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 166
+          lineNumber: 167
         },
         __self: this
       }, "Bio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BioCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -1323,10 +1339,10 @@ function (_Component) {
         updateProfileState: this.updateProfileState,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 167
+          lineNumber: 168
         },
         __self: this
-      })));
+      }))));
     }
   }]);
 
@@ -2194,7 +2210,7 @@ function (_Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "group__submit",
         type: "submit",
-        value: "Update Changes",
+        value: "Save Changes",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 64
@@ -2477,7 +2493,7 @@ function (_Component) {
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         className: "group__submit",
         type: "submit",
-        value: "Update Changes",
+        value: "Save Changes",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 124
@@ -2687,7 +2703,7 @@ function (_Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "group__submit",
         type: "submit",
-        value: "Update Changes",
+        value: "Save Changes",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 92

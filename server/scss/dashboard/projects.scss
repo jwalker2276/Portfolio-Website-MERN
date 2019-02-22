@@ -54,9 +54,9 @@
   grid-row: 2 / -1;
   grid-column: 1 / -1;
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: auto 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-column-gap: 128px;
 }
 
 .project__images {
@@ -130,11 +130,9 @@
 .project__main {
   grid-row: 2 / -1;
   grid-column: 1 / 2;
-  padding: 10px;
 }
 
 .project__tech {
   grid-row: 2 / -1;
   grid-column: 2 / -1;
-  padding: 10px;
 }

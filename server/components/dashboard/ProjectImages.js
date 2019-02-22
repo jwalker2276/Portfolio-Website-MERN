@@ -61,7 +61,7 @@ export default class ProjectImages extends Component {
           <ProjectImageCard image={image3} imageIndex={3} updateImageId={this.updateImageId} />
           <ProjectImageCard image={image4} imageIndex={4} updateImageId={this.updateImageId} />
         </div>
-        <input className="group__submit" type="submit" value="Update Changes" />
+        <input className="group__submit" type="submit" value="Save Changes" />
       </form>
     );
   }
