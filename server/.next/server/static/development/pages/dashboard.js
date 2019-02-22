@@ -1889,71 +1889,116 @@ function (_Component) {
             lineNumber: 41
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-          htmlFor: "image",
-          className: "group__form__label",
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "image__placeholder",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 42
           },
           __self: this
-        }, "Add Image", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+          className: "image__placeholder__text",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          },
+          __self: this
+        }, "No image stored")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+          htmlFor: "image",
+          className: "image__form__label",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "image__input__wrapper",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+          type: "button",
+          className: "image__fake__button",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          },
+          __self: this
+        }, "Select Image"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
           type: "file",
           name: "file",
-          className: "group__from__input",
+          className: "image__form__input",
           onChange: this.uploadImage,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 50
           },
           __self: this
-        })));
+        }))));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "image__upload",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 63
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
+        className: "image__thumbnail",
         cloudName: "jwalkercreations-com",
         publicId: image,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 64
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
-        height: "100",
+        height: "180",
         quality: "auto",
         crop: "limit",
         fetchFormat: "auto",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 65
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
         htmlFor: "image",
-        className: "group__form__label",
+        className: "image__form__label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 67
         },
         __self: this
-      }, "Change Image", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "image__input__wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+        type: "button",
+        className: "image__fake__button",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }, "Select Image"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         type: "file",
         name: "file",
-        className: "group__from__input",
+        className: "image__form__input",
         onChange: this.uploadImage,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 72
         },
         __self: this
-      })));
+      }))));
     }
   }]);
 

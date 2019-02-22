@@ -39,14 +39,21 @@ export default class ProjectImageCard extends Component {
     if (image === undefined) {
       return (
         <div className="image__upload">
-          <label htmlFor="image" className="group__form__label">
-            Add Image
-            <input
-              type="file"
-              name="file"
-              className="group__from__input"
-              onChange={this.uploadImage}
-            />
+          <div className="image__placeholder">
+            <p className="image__placeholder__text">No image stored</p>
+          </div>
+          <label htmlFor="image" className="image__form__label">
+            <div className="image__input__wrapper">
+              <button type="button" className="image__fake__button">
+                Select Image
+              </button>
+              <input
+                type="file"
+                name="file"
+                className="image__form__input"
+                onChange={this.uploadImage}
+              />
+            </div>
           </label>
         </div>
       );
@@ -54,17 +61,21 @@ export default class ProjectImageCard extends Component {
 
     return (
       <div className="image__upload">
-        <Image cloudName="jwalkercreations-com" publicId={image}>
-          <Transformation height="100" quality="auto" crop="limit" fetchFormat="auto" />
+        <Image className="image__thumbnail" cloudName="jwalkercreations-com" publicId={image}>
+          <Transformation height="180" quality="auto" crop="limit" fetchFormat="auto" />
         </Image>
-        <label htmlFor="image" className="group__form__label">
-          Change Image
-          <input
-            type="file"
-            name="file"
-            className="group__from__input"
-            onChange={this.uploadImage}
-          />
+        <label htmlFor="image" className="image__form__label">
+          <div className="image__input__wrapper">
+            <button type="button" className="image__fake__button">
+              Select Image
+            </button>
+            <input
+              type="file"
+              name="file"
+              className="image__form__input"
+              onChange={this.uploadImage}
+            />
+          </div>
         </label>
       </div>
     );
