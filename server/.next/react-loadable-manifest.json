@@ -1,27 +1,21 @@
 {
-  "../scss/dashboard/dashboard.scss": [
+  "../scss/error/errorpage.scss": [
     {
-      "id": "./scss/dashboard/dashboard.scss",
-      "name": "./scss/dashboard/dashboard.scss",
+      "id": "./scss/error/errorpage.scss",
+      "name": "./scss/error/errorpage.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
   ],
   "undefined": [
     {
-      "id": 4,
+      "id": 3,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 6,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 8,
+      "id": 5,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -31,14 +25,6 @@
     {
       "id": "./scss/home/homepage.scss",
       "name": "./scss/home/homepage.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../scss/projectinfo/projectinfo.scss": [
-    {
-      "id": "./scss/projectinfo/projectinfo.scss",
-      "name": "./scss/projectinfo/projectinfo.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }

@@ -4,19 +4,19 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.nav__buttons__left {
+.dashboard__nav__buttons__left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.nav__buttons__right {
+.dashboard__nav__buttons__right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.nav__button {
+.dashboard__nav__button {
   cursor: pointer;
   margin-right: 10px;
   width: 100px;

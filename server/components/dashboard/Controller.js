@@ -46,25 +46,25 @@ class Controller extends Component {
     return (
       <Fragment>
         <nav className="dashboard__nav">
-          <div className="nav__buttons__left">
+          <div className="dashboard__nav__buttons__left">
             <button
-              className="nav__button"
+              className="dashboard__nav__button"
               type="button"
               onClick={() => this.changeSection('profile')}
             >
               Profile
             </button>
             <button
-              className="nav__button"
+              className="dashboard__nav__button"
               type="button"
               onClick={() => this.changeSection('projects')}
             >
               Projects
             </button>
           </div>
-          <div className="nav__buttons__right">
+          <div className="dashboard__nav__buttons__right">
             <button
-              className="nav__button nav__button--right"
+              className="dashboard__nav__button nav__button--right"
               type="button"
               onClick={() => this.logout()}
             >
