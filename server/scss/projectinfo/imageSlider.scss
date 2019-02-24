@@ -70,6 +70,7 @@
 
 .slider__image {
   box-sizing: border-box;
+  flex-shrink: 0;
   cursor: pointer;
   @media screen and (max-width: 975px) {
     width: 100%;
