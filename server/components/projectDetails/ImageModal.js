@@ -28,8 +28,6 @@ export default class ImageModal extends Component {
     if (showModal) {
       // Set modal div class to show
       this.setState({ modalClass: 'modal modal--show' });
-      console.log('focusing on button');
-      console.log(this.closeButton);
       this.closeButton.current.focus();
     } else {
       // Set modal div class to hide
@@ -59,7 +57,7 @@ export default class ImageModal extends Component {
           cloudName="jwalkercreations-com"
           publicId={imageId}
         >
-          <Transformation height="740" width="975" crop="limit" fetchFormat="auto" />
+          <Transformation width="1024" crop="limit" fetchFormat="auto" />
         </Image>
       </div>
     );

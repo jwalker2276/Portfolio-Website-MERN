@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default class Project extends Component {
   render() {
-    const { imageIds, title, type, id, link } = this.props.data;
+    const { imageIds, title, type, link } = this.props.data;
     const projectIndex = this.props.index;
 
     let image = (
@@ -55,14 +55,14 @@ export default class Project extends Component {
               Live Site
             </a>
             <Link href={{ pathname: '/projectinfo', query: { index: projectIndex } }}>
-              <button
+              <a
                 type="button"
                 className="work__secondary__link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Learn More
-              </button>
+              </a>
             </Link>
           </div>
         </div>

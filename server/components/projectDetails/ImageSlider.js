@@ -17,12 +17,8 @@ export default class ImageSlider extends Component {
   componentDidMount() {
     const { imageIds } = this.props;
 
-    if (imageIds.length === 0) {
-      console.log('No images');
-    }
-
     // If one than one image
-    if (imageIds.length > 1) {
+    if (imageIds.length >= 1) {
       // Remove the mockup image for the homepage
       const displayIds = imageIds.slice(1);
       // Set ids in state
