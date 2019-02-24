@@ -3,7 +3,6 @@ const express = require('express');
 const next = require('next');
 const bodyParser = require('body-parser');
 const passport = require('passport');
-const logger = require('morgan');
 const routes = require('./routes/index');
 const errorHandlers = require('./handlers/errorHandlers');
 const dev = process.env.NODE_ENV !== 'production';
@@ -40,9 +39,6 @@ app.prepare().then(() => {
 
   // Load passport config
   require('./config/passport')(passport);
-
-  //! Development logger
-  server.use(logger('dev'));
 
   //* Routes ************************************************
   server.use('/', routes);

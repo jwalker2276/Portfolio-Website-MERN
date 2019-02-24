@@ -19,12 +19,26 @@
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 9,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
     }
   ],
   "../scss/home/homepage.scss": [
     {
       "id": "./scss/home/homepage.scss",
       "name": "./scss/home/homepage.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../scss/dashboard/dashboard.scss": [
+    {
+      "id": "./scss/dashboard/dashboard.scss",
+      "name": "./scss/dashboard/dashboard.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }

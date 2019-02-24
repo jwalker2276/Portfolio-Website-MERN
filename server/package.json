@@ -38,7 +38,6 @@
     "jwt-decode": "^2.2.0",
     "lodash.isempty": "^4.4.0",
     "mongoose": "^5.3.1",
-    "morgan": "^1.9.1",
     "next": "^7.0.2",
     "next-redux-wrapper": "^2.0.0",
     "node-sass": "^4.10.0",
