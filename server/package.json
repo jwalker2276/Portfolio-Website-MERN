@@ -2,12 +2,12 @@
   "name": "portfolio-website-mern-backend",
   "version": "0.1.0",
   "private": true,
-  "description": "My portfolio backend built with express and node as part of the MERN stack.",
-  "main": "app.js",
+  "description": "My portfolio backend built with next.js, express and node as part of the MERN stack.",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js",
-    "build": "next build"
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
