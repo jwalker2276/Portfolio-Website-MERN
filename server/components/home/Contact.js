@@ -52,7 +52,7 @@ class Contact extends Component {
     // Update class for button
     this.setState({ sendBtnClass: 'contact__form__button success' });
     // Update button text
-    this.setState({ sendBtnText: 'Message send, thanks' });
+    this.setState({ sendBtnText: 'Message sent, thanks' });
     // Also set inputs back to inital state
     this.setState({ email: '' });
     this.setState({ name: '' });

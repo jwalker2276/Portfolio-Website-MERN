@@ -495,7 +495,7 @@ function (_Component) {
       }); // Update button text
 
       this.setState({
-        sendBtnText: 'Message send, thanks'
+        sendBtnText: 'Message sent, thanks'
       }); // Also set inputs back to inital state
 
       this.setState({
