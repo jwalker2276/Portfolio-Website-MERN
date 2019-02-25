@@ -54,6 +54,6 @@ app.prepare().then(() => {
   // Run server
   server.listen(port, err => {
     if (err) throw err;
-    console.log(`Server running on Port > ${port}`);
+    console.log('Server running');
   });
 });
