@@ -6,7 +6,7 @@ const passport = require('passport');
 const routes = require('./routes/index');
 const errorHandlers = require('./handlers/errorHandlers');
 const dev = process.env.NODE_ENV !== 'production';
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 // Import info from .env file
 require('dotenv').config({ path: 'variables.env' });
@@ -51,9 +51,12 @@ app.prepare().then(() => {
   // Handle development errors
   server.use(errorHandlers.developmentErrors);
 
+  // Set port
+  server.set('port', port);
+
   // Run server
   server.listen(port, err => {
     if (err) throw err;
-    console.log('Server running');
+    console.log(`Server running ${port}`);
   });
 });
