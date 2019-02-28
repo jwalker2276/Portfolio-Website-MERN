@@ -148,7 +148,8 @@
     fill: $A-Email-Color;
   }
   &:focus {
-    outline-color: $Nav-Color-Highlight;
+    outline: none;
+    border-bottom: 1px solid $Logo-Color;
   }
 }
 

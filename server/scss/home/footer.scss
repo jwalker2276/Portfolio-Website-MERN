@@ -15,4 +15,8 @@
   color: $F-Text-Color;
   text-decoration: none;
   cursor: not-allowed;
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $Logo-Color;
+  }
 }

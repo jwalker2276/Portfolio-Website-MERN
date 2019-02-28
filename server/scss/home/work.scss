@@ -159,13 +159,14 @@
   font-size: 24px;
   transition: border-color 0.5s ease-in, transform 0.25s ease-in, box-shadow 0.25s ease-in;
   box-shadow: 0px 1px 2px $Button-Shadow-Color-Close, 0px 4px 14px 3px $Button-Shadow-Color-Far;
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $Nav-Color-Highlight;
     transform: translate(0, -3px);
     box-shadow: 1px 5px 3px $Hero-Btn-Shadow-Color-Close, 0px 8px 5px 1px $Hero-Btn-Shadow-Color-Far;
   }
   &:focus {
-    outline-color: $Nav-Color-Highlight;
+    outline: none;
   }
   @media screen and (max-width: $tablet-max-width) {
     font-size: 20px;
@@ -197,13 +198,14 @@
   font-size: 24px;
   box-shadow: 0px 1px 2px rgba(16, 42, 67, 0.75), 0px 4px 5px 1px rgba(16, 42, 67, 0.25);
   transition: border-color 0.5s ease-in, transform 0.25s ease-in, box-shadow 0.25s ease-in;
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $Nav-Color-Highlight;
     transform: translate(0, -3px);
     box-shadow: 1px 5px 3px $Hero-Btn-Shadow-Color-Close, 0px 8px 5px 1px $Hero-Btn-Shadow-Color-Far;
   }
   &:focus {
-    outline-color: $Nav-Color-Highlight;
+    outline: none;
   }
   @media screen and (max-width: $tablet-max-width) {
     font-size: 20px;

@@ -97,7 +97,7 @@
   }
   &:focus {
     outline: none;
-    text-decoration: underline $Nav-Color-Highlight wavy;
+    border-bottom: 1px solid $Nav-Color-Highlight;
   }
   @media screen and (max-width: $phone-max-width) {
     font-size: 24px;
@@ -112,7 +112,7 @@
   &:focus {
     outline: none;
     color: $Nav-Color-Main;
-    text-decoration: underline $Nav-Color-Highlight wavy;
+    border-bottom: 1px solid $Nav-Color-Highlight;
   }
 }
 
@@ -151,15 +151,19 @@
   border: none;
   padding: 0;
   background: none;
+  &:focus {
+    outline-style: dotted;
+    outline-color: $Nav-Color-Highlight;
+  }
 }
 
 .nav__menu__line {
   display: block;
   position: absolute;
   height: 7px;
-  width: 45px;
-  top: 10px;
-  right: 0;
+  width: 43px;
+  top: 13px;
+  right: 3px;
   background-color: $Nav-Color-Highlight;
   transition: all 0.25s ease-in;
 }
@@ -169,7 +173,7 @@
 }
 
 .nav__menu__line.rotate {
-  top: 22px;
+  top: 21px;
   transform: rotate(135deg);
 }
 
