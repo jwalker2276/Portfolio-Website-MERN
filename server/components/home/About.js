@@ -16,7 +16,7 @@ class About extends Component {
             publicId={this.props.imageId}
             alt="profile image"
           >
-            <Transformation height="150" quality="auto" crop="limit" fetchFormat="auto" />
+            <Transformation height="150" quality="100" crop="limit" fetchFormat="auto" />
           </Image>
           <AboutBanner contactInfo={this.props.contact} />
         </div>
