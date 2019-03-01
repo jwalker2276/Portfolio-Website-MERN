@@ -125,6 +125,7 @@
   right: 5%;
   z-index: 100;
   @media screen and (max-width: $phone-max-width) {
+    display: none;
     width: 80%;
     height: 100vh;
     top: 0;
@@ -134,6 +135,7 @@
 
 .nav__sidebar.show {
   @media screen and (max-width: $phone-max-width) {
+    display: block;
     width: 80%;
     height: 100vh;
     top: 0;

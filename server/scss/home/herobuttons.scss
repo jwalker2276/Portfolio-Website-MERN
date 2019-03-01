@@ -1,4 +1,5 @@
 @mixin hero__cta__button {
+  z-index: 150;
   cursor: pointer;
   box-sizing: content-box;
   border-radius: 5px;
