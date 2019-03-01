@@ -17,6 +17,7 @@
   padding: 96px 0 64px 0;
   @media screen and (max-width: $phone-max-width) {
     flex-direction: column;
+    overflow-x: hidden;
   }
 }
 
