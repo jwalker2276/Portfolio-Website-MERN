@@ -111,7 +111,7 @@ class Contact extends Component {
               className="contact__input"
               required
               cols="33"
-              rows="15"
+              rows="8"
               type="text"
               name="message"
               value={this.state.message}

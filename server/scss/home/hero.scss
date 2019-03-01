@@ -11,6 +11,7 @@
   max-width: $desktop-max-width;
   @media screen and (max-width: $phone-max-width) {
     margin: 80px auto auto auto;
+    padding-left: 20px;
   }
 }
 
