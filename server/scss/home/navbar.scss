@@ -101,6 +101,11 @@
   }
   @media screen and (max-width: $phone-max-width) {
     font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.5s 0.5s ease-in;
+    &.show {
+      opacity: 1;
+    }
   }
 }
 
@@ -125,8 +130,7 @@
   right: 5%;
   z-index: 100;
   @media screen and (max-width: $phone-max-width) {
-    display: none;
-    width: 80%;
+    width: 0%;
     height: 100vh;
     top: 0;
     left: 0;
@@ -135,7 +139,6 @@
 
 .nav__sidebar.show {
   @media screen and (max-width: $phone-max-width) {
-    display: block;
     width: 80%;
     height: 100vh;
     top: 0;
@@ -156,6 +159,7 @@
   &:focus {
     outline-style: dotted;
     outline-color: $Nav-Color-Highlight;
+    outline-width: thin;
   }
 }
 

@@ -42,7 +42,9 @@
     opacity: 1;
   }
   &:focus {
+    outline-style: dotted;
     outline-color: $Nav-Color-Highlight;
+    outline-width: thin;
   }
 }
 

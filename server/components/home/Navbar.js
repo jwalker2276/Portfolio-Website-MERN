@@ -73,22 +73,22 @@ export default class Navbar extends React.Component {
         <nav className={`nav__sidebar ${sidebarClass}`}>
           <ul className={`nav__items ${sidebarClass}`}>
             <li className={`nav__item nav__item--one ${sidebarClass}`}>
-              <button type="button" className="nav__button nav__button--skills">
+              <button type="button" className={`nav__button ${sidebarClass} nav__button--skills`}>
                 Skills
               </button>
             </li>
             <li className={`nav__item nav__item--two ${sidebarClass}`}>
-              <button type="button" className="nav__button nav__button--work">
+              <button type="button" className={`nav__button ${sidebarClass} nav__button--work`}>
                 Work
               </button>
             </li>
             <li className={`nav__item nav__item--three ${sidebarClass}`}>
-              <button type="button" className="nav__button nav__button--about">
+              <button type="button" className={`nav__button ${sidebarClass} nav__button--about`}>
                 About
               </button>
             </li>
             <li className={`nav__item  nav__item--four ${sidebarClass}`}>
-              <button type="button" className="nav__button nav__button--contact">
+              <button type="button" className={`nav__button ${sidebarClass} nav__button--contact`}>
                 <span className="nav__item--primary">Contact</span>
               </button>
             </li>

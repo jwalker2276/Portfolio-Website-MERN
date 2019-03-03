@@ -36,6 +36,11 @@
   border: none;
   padding: 0;
   background-color: rgba(0, 0, 0, 0);
+  &:focus {
+    outline-style: dotted;
+    outline-color: $Nav-Color-Highlight;
+    outline-width: thin;
+  }
 }
 
 .modal__image {

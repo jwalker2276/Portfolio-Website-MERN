@@ -215,7 +215,10 @@ body {
     box-shadow: 1px 5px 3px $Hero-Btn-Shadow-Color-Close, 0px 8px 5px 1px $Hero-Btn-Shadow-Color-Far;
   }
   &:focus {
-    outline-color: $Nav-Color-Highlight;
+    outline: none;
+    border-color: $Nav-Color-Highlight;
+    transform: translate(0, -3px);
+    box-shadow: 1px 5px 3px $Hero-Btn-Shadow-Color-Close, 0px 8px 5px 1px $Hero-Btn-Shadow-Color-Far;
   }
 }
 
