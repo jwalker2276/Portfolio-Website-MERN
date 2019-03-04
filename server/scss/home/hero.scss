@@ -28,7 +28,7 @@
     font-size: 60px;
     max-width: 512px;
   }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: $phone-max-width) {
     font-size: 36px;
     max-width: 300px;
   }

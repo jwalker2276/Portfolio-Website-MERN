@@ -12,6 +12,9 @@
     width: 700px;
   }
   @media screen and (max-width: $phone-max-width) {
+    width: 500px;
+  }
+  @media screen and (max-width: $phone-max-width) {
     width: 300px;
     padding: 55px 0;
   }
@@ -31,9 +34,11 @@
   grid-template-columns: 1fr 1fr;
   position: relative;
   margin-bottom: 512px;
-  @media screen and (max-width: $phone-max-width) {
+  @media screen and (max-width: $small-tablet-max-width) {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
+  }
+  @media screen and (max-width: $phone-max-width) {
     margin-bottom: 128px;
   }
 }
@@ -44,8 +49,10 @@
 
 .project__image__container {
   grid-column: 1 / -1;
-  @media screen and (max-width: $phone-max-width) {
+  @media screen and (max-width: $small-tablet-max-width) {
     grid-row: 1 / 2;
+    display: grid;
+    justify-content: center;
   }
 }
 
@@ -68,7 +75,7 @@
   grid-column: 1 / -1;
   justify-self: end;
   align-self: center;
-  @media screen and (max-width: $phone-max-width) {
+  @media screen and (max-width: $small-tablet-max-width) {
     width: 100%;
     grid-row: 2 / -1;
     position: relative;

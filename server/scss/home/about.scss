@@ -38,6 +38,9 @@
   width: 700px;
   height: auto;
   line-height: 1.5;
+  @media screen and (max-width: $small-tablet-max-width) {
+    width: 500px;
+  }
   @media screen and (max-width: $phone-max-width) {
     width: 300px;
     line-height: 1.3;
@@ -62,7 +65,7 @@
   color: $A-Text-Color;
   background-color: $A-Banner-Bk-Color;
   border-radius: 5px;
-  width: 490px;
+  width: 550px;
   height: 80px;
   @media screen and (max-width: $phone-max-width) {
     margin-top: -90px;
