@@ -2,7 +2,7 @@
 
 ## Link to project
 
-Coming Soon
+<https://www.jordanwalker.dev>
 
 ## Description
 
@@ -10,7 +10,11 @@ My portfolio website built on the MERN stack.
 
 ## Built With
 
-Coming Soon
+- React.js
+- Node.js
+- Express.js
+- MongoDB
+- Next.js
 
 ## Designed with Figma
 
