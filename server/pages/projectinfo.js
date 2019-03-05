@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import Meta from '../components/common/Meta';
 import { getProjectData } from '../reduxState/actions/homePageActions';
 // Components
+import Layout from '../components/common/Layout';
 import ImageSlider from '../components/projectDetails/ImageSlider';
 // Style
 import '../scss/projectinfo/projectinfo.scss';
@@ -57,51 +58,53 @@ class projectinfo extends Component {
     const { title, type, description, tech, link, imageIds } = projectData[selectedProject];
     const { frontend, backend, tools } = tech;
     return (
-      <Fragment>
-        <Meta />
-        <main className="project-page__wrapper">
-          <ImageSlider imageIds={imageIds} />
-          <section className="project-page__details">
-            <CSSTransition in appear timeout={5000} classNames="title">
-              <h1 className="details__title">{title}</h1>
-            </CSSTransition>
-            <CSSTransition in appear timeout={5000} classNames="type">
-              <h2 className="details__type">{type}</h2>
-            </CSSTransition>
-            <CSSTransition in appear timeout={5000} classNames="description">
-              <p className="details__description">{description}</p>
-            </CSSTransition>
-            <CSSTransition in appear timeout={5000} classNames="tech">
-              <div className="details__tech">
-                {techIcon}
-                <h3 className="tech__title">Tech Used</h3>
-                <ul className="tech__list">
-                  {frontend.map(techName => (
-                    <li key={techName} className="tech__list__item">
-                      {techName}
-                    </li>
-                  ))}
-                  {backend.map(techName => (
-                    <li key={techName} className="tech__list__item">
-                      {techName}
-                    </li>
-                  ))}
-                  {tools.map(techName => (
-                    <li key={techName} className="tech__list__item">
-                      {techName}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </CSSTransition>
-            <CSSTransition in appear timeout={5000} classNames="link">
-              <a href={link} className="details__link">
-                Live Site
-              </a>
-            </CSSTransition>
-          </section>
-        </main>
-      </Fragment>
+      <Layout>
+        <Fragment>
+          <Meta />
+          <main className="project-page__wrapper">
+            <ImageSlider imageIds={imageIds} />
+            <section className="project-page__details">
+              <CSSTransition in appear timeout={5000} classNames="title">
+                <h1 className="details__title">{title}</h1>
+              </CSSTransition>
+              <CSSTransition in appear timeout={5000} classNames="type">
+                <h2 className="details__type">{type}</h2>
+              </CSSTransition>
+              <CSSTransition in appear timeout={5000} classNames="description">
+                <p className="details__description">{description}</p>
+              </CSSTransition>
+              <CSSTransition in appear timeout={5000} classNames="tech">
+                <div className="details__tech">
+                  {techIcon}
+                  <h3 className="tech__title">Tech Used</h3>
+                  <ul className="tech__list">
+                    {frontend.map(techName => (
+                      <li key={techName} className="tech__list__item">
+                        {techName}
+                      </li>
+                    ))}
+                    {backend.map(techName => (
+                      <li key={techName} className="tech__list__item">
+                        {techName}
+                      </li>
+                    ))}
+                    {tools.map(techName => (
+                      <li key={techName} className="tech__list__item">
+                        {techName}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </CSSTransition>
+              <CSSTransition in appear timeout={5000} classNames="link">
+                <a href={link} className="details__link">
+                  Live Site
+                </a>
+              </CSSTransition>
+            </section>
+          </main>
+        </Fragment>
+      </Layout>
     );
   }
 }

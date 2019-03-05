@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import AOS from 'aos';
 import { getProfileData, getProjectData } from '../reduxState/actions/homePageActions';
 // Components
+import Layout from '../components/common/Layout';
 import Meta from '../components/common/Meta';
 import Navbar from '../components/home/Navbar';
 import Hero from '../components/home/Hero';
@@ -52,23 +53,25 @@ class Home extends React.Component {
     }
 
     return (
-      <React.Fragment>
-        <Meta />
-        <section name="Landing Page" className="landing__wrapper" aria-label="Landing page">
-          <div className="hero__section">
-            <Navbar />
-            <Hero />
-            <Slice position="top" color="white" />
-          </div>
-        </section>
-        <Skills skills={skillData} />
-        <Slice position="bottom" color="white" />
-        <Work projects={projectsData} />
-        <Slice position="top" color="white" />
-        <About contact={contactData} bio={bioData} imageId={imageId} />
-        <Contact />
-        <Footer />
-      </React.Fragment>
+      <Layout>
+        <React.Fragment>
+          <Meta />
+          <section name="Landing Page" className="landing__wrapper" aria-label="Landing page">
+            <div className="hero__section">
+              <Navbar />
+              <Hero />
+              <Slice position="top" color="white" />
+            </div>
+          </section>
+          <Skills skills={skillData} />
+          <Slice position="bottom" color="white" />
+          <Work projects={projectsData} />
+          <Slice position="top" color="white" />
+          <About contact={contactData} bio={bioData} imageId={imageId} />
+          <Contact />
+          <Footer />
+        </React.Fragment>
+      </Layout>
     );
   }
 }
