@@ -13,11 +13,18 @@
 
 .skills {
   display: flex;
-  justify-content: space-evenly;
   padding: 96px 0 64px 0;
+  justify-content: space-evenly;
   @media screen and (max-width: $phone-max-width) {
     flex-direction: column;
     overflow-x: hidden;
+  }
+}
+
+// For edge
+@supports (-ms-ime-align: auto) {
+  .skills {
+    justify-content: space-around;
   }
 }
 
