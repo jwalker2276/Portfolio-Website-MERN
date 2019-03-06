@@ -8,7 +8,8 @@ export default class ProjectMain extends Component {
       type: '',
       link: '',
       description: '',
-      id: ''
+      id: '',
+      codeLink: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.setInitialState = this.setInitialState.bind(this);
@@ -34,18 +35,22 @@ export default class ProjectMain extends Component {
       if (this.props.id !== this.state.id) {
         this.setInitialState();
       }
+      if (this.props.codeLink !== this.state.codeLink) {
+        this.setInitialState();
+      }
     }
   }
 
   // This method loads props into this.state
   setInitialState() {
-    const { title, type, link, description, id } = this.props;
+    const { title, type, link, description, id, codeLink } = this.props;
 
     this.setState({ title });
     this.setState({ type });
     this.setState({ link });
     this.setState({ description });
     this.setState({ id });
+    this.setState({ codeLink });
   }
 
   // This method updates this.state from input
@@ -58,12 +63,13 @@ export default class ProjectMain extends Component {
   // This method updates parent state from this.state
   async handleSubmit(event) {
     event.preventDefault();
-    const { title, type, link, description } = this.state;
+    const { title, type, link, description, codeLink } = this.state;
     // Update project state
     this.props.updateProjectState('title', title);
     this.props.updateProjectState('type', type);
     this.props.updateProjectState('link', link);
     this.props.updateProjectState('description', description);
+    this.props.updateProjectState('codeLink', codeLink);
 
     // Generator id for project
     const projectId = await title
@@ -76,7 +82,7 @@ export default class ProjectMain extends Component {
   }
 
   render() {
-    const { title, type, link, description } = this.state;
+    const { title, type, link, description, codeLink } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <label className="group__form__label" htmlFor="title">
@@ -106,6 +112,16 @@ export default class ProjectMain extends Component {
             type="text"
             name="link"
             value={link}
+            onChange={this.handleChange}
+          />
+        </label>
+        <label className="group__form__label" htmlFor="codeLink">
+          Code Link
+          <input
+            className="group__form__input"
+            type="text"
+            name="codeLink"
+            value={codeLink}
             onChange={this.handleChange}
           />
         </label>

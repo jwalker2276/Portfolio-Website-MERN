@@ -43,6 +43,10 @@ const projectSchema = new Schema({
   imageIds: {
     type: [String],
     required: false
+  },
+  codeLink: {
+    type: String,
+    required: true
   }
 });
 

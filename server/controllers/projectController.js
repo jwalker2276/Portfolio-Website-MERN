@@ -34,7 +34,7 @@ exports.checkProjectData = (req, res, next) => {
   let hasErrors = false;
 
   // These values must have data
-  const { projectId, title, type, link, description } = req.body;
+  const { projectId, title, type, link, description, codeLink } = req.body;
 
   // Check for undefined or empty values
   if (projectId === undefined || projectId === '') {
@@ -62,6 +62,11 @@ exports.checkProjectData = (req, res, next) => {
     hasErrors = true;
   }
 
+  if (codeLink === undefined || codeLink === '') {
+    errors.codeLink = 'Code link was left blank';
+    hasErrors = true;
+  }
+
   // Check for any errors stored
   if (hasErrors) {
     // Check for any problems before moving on.
@@ -84,7 +89,8 @@ exports.setProject = (req, res) => {
     frontendTech,
     backendTech,
     toolsTech,
-    imageIds
+    imageIds,
+    codeLink
   } = req.body;
 
   // Set project search id
@@ -112,6 +118,9 @@ exports.setProject = (req, res) => {
 
   // Set project image ids array
   projectFields.imageIds = imageIds;
+
+  // Set project code link
+  projectFields.codeLink = codeLink;
 
   // Search for existing project
   Project.findOne({ id: req.body.projectId }).then(project => {
