@@ -125,6 +125,7 @@ class Projects extends Component {
           backend: [],
           tools: []
         },
+        codeLink: '',
         id: ''
       };
     }

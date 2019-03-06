@@ -24,7 +24,8 @@ class Project extends Component {
       frontend: '',
       backend: '',
       tools: '',
-      id: ''
+      id: '',
+      codeLink: ''
     };
   }
 
@@ -50,7 +51,7 @@ class Project extends Component {
   async updateInitalState(projectData) {
     // Check if any project data is available
     if (projectData !== undefined) {
-      const { title, type, link, description, imageIds, tech, id } = projectData;
+      const { title, type, link, description, imageIds, tech, id, codeLink } = projectData;
 
       this.setState({ title });
       this.setState({ type });
@@ -58,6 +59,7 @@ class Project extends Component {
       this.setState({ description });
       this.setState({ id });
       this.setState({ imageIds });
+      this.setState({ codeLink });
 
       // Convert tech arrays to strings for editing
       const frontendString = await this.convertArrayToString(tech.frontend);
@@ -108,7 +110,18 @@ class Project extends Component {
       axios.defaults.headers.common['Authorization'] = token;
     }
 
-    const { title, type, link, description, imageIds, frontend, backend, tools, id } = this.state;
+    const {
+      title,
+      type,
+      link,
+      description,
+      imageIds,
+      frontend,
+      backend,
+      tools,
+      id,
+      codeLink
+    } = this.state;
 
     // Convert strings to arrays for payload
     const frontendTechArr = await this.convertStringToArray(frontend);
@@ -131,7 +144,8 @@ class Project extends Component {
       frontendTech: frontendTechArr,
       backendTech: backendTechArr,
       toolsTech: toolsTechArr,
-      imageIds: cleanedImageIds
+      imageIds: cleanedImageIds,
+      codeLink
     };
 
     // Call post action
@@ -139,7 +153,17 @@ class Project extends Component {
   }
 
   render() {
-    const { title, type, link, description, imageIds, frontend, backend, tools } = this.state;
+    const {
+      title,
+      type,
+      link,
+      description,
+      imageIds,
+      frontend,
+      backend,
+      tools,
+      codeLink
+    } = this.state;
 
     if (frontend === undefined) return null;
 
@@ -157,6 +181,7 @@ class Project extends Component {
             link={link}
             description={description}
             updateProjectState={this.updateProjectState}
+            codeLink={codeLink}
           />
         </div>
         <div className="project__tech">
