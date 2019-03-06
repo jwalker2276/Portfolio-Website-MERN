@@ -55,7 +55,9 @@ class projectinfo extends Component {
 
     if (projectData === null) return <p className="project-page__message">Loading .... </p>;
 
-    const { title, type, description, tech, link, imageIds } = projectData[selectedProject];
+    const { title, type, description, tech, link, imageIds, codeLink } = projectData[
+      selectedProject
+    ];
     const { frontend, backend, tools } = tech;
     return (
       <Layout>
@@ -97,9 +99,24 @@ class projectinfo extends Component {
                 </div>
               </CSSTransition>
               <CSSTransition in appear timeout={5000} classNames="link">
-                <a href={link} className="details__link">
-                  Live Site
-                </a>
+                <div className="details__links">
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="details__link"
+                  >
+                    Live Site
+                  </a>
+                  <a
+                    href={codeLink}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="details__codelink"
+                  >
+                    Source Code
+                  </a>
+                </div>
               </CSSTransition>
             </section>
           </main>
