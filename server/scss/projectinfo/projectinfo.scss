@@ -55,7 +55,7 @@ body {
 .details__title {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  font-size: 64px;
+  font-size: 48px;
   text-align: center;
   color: $PD-Details-Title-Color;
   margin: 24px auto 0px auto;
@@ -108,7 +108,7 @@ body {
   text-align: center;
   margin: 0;
   max-width: 28em;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 // React animations
@@ -124,7 +124,7 @@ body {
 // End of react animations
 //
 .details__tech {
-  margin: 24px auto 48px auto;
+  margin: 8px auto 32px auto;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 1260px) {
