@@ -33,8 +33,8 @@ class Skills extends React.Component {
           <div className="skills">
             <Skill type="Front-end" skills={frontEndList} />
             <Skill type="Back-end" skills={backEndList} />
-            <Skill type="Tools" skills={knowledgeList} />
-            <Skill type="Knowledge" skills={toolsList} />
+            <Skill type="Tools" skills={toolsList} />
+            <Skill type="Knowledge" skills={knowledgeList} />
           </div>
         </div>
       </section>
