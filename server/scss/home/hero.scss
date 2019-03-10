@@ -9,9 +9,12 @@
 .hero__text__wrapper {
   margin: auto;
   max-width: $desktop-max-width;
+  @media screen and (max-width: $small-tablet-max-width) {
+    padding-left: 60px;
+  }
   @media screen and (max-width: $phone-max-width) {
     margin: 80px auto auto auto;
-    padding-left: 20px;
+    padding-left: 30px;
   }
 }
 
@@ -22,15 +25,19 @@
   font-weight: 600;
   font-size: 72px;
   margin: auto;
-  max-width: 600px;
+  max-width: 745px;
   text-shadow: 0px 0px 20px $Hero-Text-Outline-Color;
   @media screen and (max-width: $labtop-max-width) {
     font-size: 60px;
-    max-width: 512px;
+    max-width: 625px;
+  }
+  @media screen and (max-width: $small-tablet-max-width) {
+    font-size: 48px;
+    max-width: 575px;
   }
   @media screen and (max-width: $phone-max-width) {
-    font-size: 36px;
-    max-width: 300px;
+    font-size: 30px;
+    max-width: 360px;
   }
 }
 
@@ -41,6 +48,10 @@
 .hero__text__title {
   color: $Hero-Text-Special-Color;
   text-decoration: underline;
+}
+
+.hero__text__word {
+  color: $Hero-Text-Color;
 }
 
 .hero__text__verb {

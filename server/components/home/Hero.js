@@ -8,7 +8,7 @@ class Hero extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      verb: 'building',
+      verb: 'solves problems.',
       index: 0
     };
     this.changeWord = this.changeWord.bind(this);
@@ -16,7 +16,7 @@ class Hero extends React.Component {
 
   componentDidMount() {
     // Change ever 3 seconds
-    setInterval(this.changeWord, 3000);
+    setInterval(this.changeWord, 6000);
 
     // Set up smooth scrolling for hero buttons.
     document.querySelector('.hero__cta__button--primary').addEventListener('click', () => {
@@ -34,7 +34,7 @@ class Hero extends React.Component {
 
   changeWord() {
     // List of words to cycle through
-    const verbs = [' building ', ' learning ', ' designing '];
+    const verbs = ['builds websites.', 'solves problems.'];
     // This current index in state
     const { index } = this.state;
     // The next word to use based on index
@@ -64,18 +64,19 @@ class Hero extends React.Component {
     return (
       <section className="hero__text__wrapper" data-aos="zoom-in">
         <h1 className="hero__text">
-          I&apos;m <span className="hero__text__name">Jordan</span> , a{' '}
-          <span className="hero__text__title">Web Developer</span> who loves{' '}
+          My name is <span className="hero__text__name">Jordan</span> , a{' '}
+          <span className="hero__text__title">Front-end Developer</span>{' '}
           <TransitionGroup component="span" className="hero__text__verb">
             <CSSTransition
               classNames="hero__text__verb"
               key={verb}
               timeout={{ enter: 3000, exit: 3000 }}
             >
-              <span className="hero__text__verb">{verb}</span>
+              <span className="hero__text__word">
+                who <span className="hero__text__verb">{verb}</span>
+              </span>
             </CSSTransition>
-          </TransitionGroup>{' '}
-          things.
+          </TransitionGroup>
         </h1>
         <div
           className="hero__cta__buttons"
