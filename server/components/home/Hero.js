@@ -65,7 +65,7 @@ class Hero extends React.Component {
       <section className="hero__text__wrapper" data-aos="zoom-in">
         <h1 className="hero__text">
           My name is <span className="hero__text__name">Jordan</span> , a{' '}
-          <span className="hero__text__title">Front-end Developer</span>{' '}
+          <span className="hero__text__title">Web Developer</span>{' '}
           <TransitionGroup component="span" className="hero__text__verb">
             <CSSTransition
               classNames="hero__text__verb"
