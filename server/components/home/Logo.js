@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Logo = () => (
-  <a href="https://www.jordanwalker.dev" className="nav__logo__anchor">
+  <a
+    href="https://www.jordanwalker.dev"
+    className="nav__logo__anchor"
+    aria-label="Home Page"
+  >
     <svg
       className="nav__logo"
       width="100%"
