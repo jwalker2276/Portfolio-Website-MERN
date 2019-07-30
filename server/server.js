@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const compression = require('compression');
 const next = require('next');
 const bodyParser = require('body-parser');
 const passport = require('passport');
@@ -29,6 +30,9 @@ app.prepare().then(() => {
   const server = express();
 
   //* Middleware ********************************************
+
+  // Compress responses
+  server.use(compression());
 
   // Take requests and turn them into properites on req.body
   server.use(bodyParser.urlencoded({ extended: false }));
