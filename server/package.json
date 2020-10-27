@@ -40,7 +40,7 @@
     "jwt-decode": "^2.2.0",
     "lodash.isempty": "^4.4.0",
     "mongoose": "^5.10.11",
-    "next": "^7.0.3",
+    "next": "^9.3.2",
     "next-redux-wrapper": "^2.0.0",
     "node-sass": "^4.14.1",
     "nodemailer": "^5.1.1",
